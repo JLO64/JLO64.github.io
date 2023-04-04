@@ -5,8 +5,11 @@ navbar_entries:
   - title: blog
     url: blog
 
-  - title: website
-    url: https://www.abhinav.co
+  - title: comics
+    url: https://leagueofcomicgeeks.com/profile/jlo64/collection
+
+  - title: feed
+    url: feed.xml
 
 project_entries:
   - title: Project 1
