@@ -1,17 +1,20 @@
 navbar_entries:
-  - title: about
-    url: about
+  - title: Home
+    url: /
 
-  - title: blog
+  - title: Blog
     url: blog
 
-  - title: github
+  - title: About
+    url: about
+
+  - title: GitHub
     url: https://github.com/JLO64
 
-  - title: mastodon
+  - title: Mastodon
     url: https://fosstodon.org/@JLO64
 
-  - title: feed
+  - title: Feed
     url: feed.xml
 
 project_entries:
@@ -27,6 +30,7 @@ project_entries:
   - title: USC Bus API
     url: https://github.com/JLO64/USC_Bus_Times_API
     desc: A python API for checking the USC bus schedule
+    highlight: WIP
 
 old_project_entries:
   - title: Soopr
