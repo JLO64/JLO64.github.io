@@ -4,8 +4,13 @@ author: Julian Lopez
 title: (Hacking Game Consoles - Part I) Nintendo 3DS
 ---
 
-## Table of contents
-- [Table of contents](#table-of-contents)
+<figure>
+  <img src="/images/post0/nintendo3ds-white-back.jpg" width="100%" />
+  <figcaption style="text-align:center">My childhood in a nutshell</figcaption>
+</figure>
+
+
+### Table of contents
 - [Introduction](#introduction)
 - [Hacking explained](#hacking-explained)
 - [Hacking my 3DS](#hacking-my-3ds)
@@ -14,6 +19,7 @@ title: (Hacking Game Consoles - Part I) Nintendo 3DS
 - [The Piracy Issue](#the-piracy-issue)
 - [Links](#links)
 
+
 ## Introduction
 
 As weird as it sounds to say this, if you have a video game console you should try hacking it!
@@ -21,19 +27,25 @@ And I'm not suggesting you do this to pirate games.
 But before I get into that let me give you a bit of a personal backstory.
 
 As a pre-teen, I grew up with my favorite gadget in the world, my aqua-blue Nintendo 3DS.
-I got it in 2011 right before the first price drop, which meant that I got to be a part of something called the ambassador program which let me download several free Gameboy Advance games.
+I got it in 2011 right before the first price drop, which meant that I got to be a part of something called the ambassador program which let me download several Gameboy Advance games for free.
 
-Metroid Fusion is still one of the scariest games I've ever played! (Insert scary Samus)
+<figure>
+  <img src="/images/post0/Metroid-Fusion-Boxart.png" width="70%" />
+  <figcaption style="text-align:center">Metroid Fusion is still one of the scariest games I've ever played!</figcaption>
+</figure>
 
 It was great, and I literally took it with me everywhere I went.
 However, in 2013 I lost it while meeting up with a friend of mine at Central Park in New York City.
 
 Years after the fact I came across a post on an obscure forum from someone who found a 3DS at that same location that matched the description of mine...
-(Overreact)
 
-Fast forward to 2021, and I was at a really cool retro game store in East LA called GameHogs. I was trying to find a launch PS3 for reasons I'll discuss later when I came across this...
-(Show 3DS)
-The exact same model of 3DS that I had growing up as a kid!
+Fast forward to 2021, and I was at a really cool retro game store in East LA called GameHogs.
+I was trying to find a launch PS3 when I came across the exact same model of 3DS I had growing up as a kid!
+
+<figure>
+  <img src="/images/post0/Metroid-Fusion-Boxart.png" width="100%" />
+  <figcaption style="text-align:center">She's as beautiful as the day I lost her</figcaption>
+</figure>
 
 I had to buy it, partially out of a sense of nostalgia, but also because I knew that if I hacked it I could do some really cool stuff with it.
 
@@ -45,15 +57,20 @@ Simply put, you bought this gadget so you should be able to do what you want wit
 
 A close analogy is buying a car and tricking it out with a custom paintjob and redoing the interior.
 
+
+
 Honestly I think people call it hacking instead of modding because hacking sounds way cooler.
-(Put hacking screen effects)
 
 ## Hacking my 3DS
-So I'm not going to get too into the details of how to hack a 3DS, this isn't meant to be a tutorial video and the exact methods are always changing.
-That being said there's a link in the description down below to a website called 3ds.hacks.guide.
-All you need to do is follow the steps listed on there and you'll be good to go.
+So I'm not going to get too into the details of how to hack a 3DS, this isn't meant to be a tutorial  and the exact methods are always changing.
+That being said, vist [3ds.hacks.guide](https://3ds.hacks.guide) for the most up to date information on how to hack your 3DS.
+All you need to do is follow the steps listed on there and you'll be good to go. What I will cover though are some of the apps you can install and what they bring to the table.
 
-What I will cover though are some of the apps you can install and what they bring to the table.
+
+<figure>
+  <img src="/images/post0/3ds-hacks-guide.png" width="100%" />
+  <figcaption style="text-align:center">Metroid Fusion is still one of the scariest games I've ever played!</figcaption>
+</figure>
 
 First off, installers that allow you to install apps directly to the homescreen end with the extension ".cia".
 So of cource, the app you use to install these files is called FBI
@@ -118,7 +135,11 @@ Plus, when I first got this particular 3DS the Nintento eShop (show eshop logo) 
 No matter what I tried I couldn't get it to download 
 On my Nintendo Switch I flat out refuse to pirate any games, but I do dump the rom files from my cartrages onto it so I don't have to worry about losing my cartridges.
 If only there was a console manufacturer that openly allowed homebrew software to be run on their platforms
-(fade in xbox)
+
+<figure>
+  <img src="/images/post0/3ds-eshop.png" width="100%" />
+  <figcaption style="text-align:center">I loved browsing the eShop, even when I didn't have any cash. </figcaption>
+</figure>
 
 ## The future of Homebrew
 Talk about Japanese law

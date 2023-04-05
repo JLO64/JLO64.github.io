@@ -1,4 +1,4 @@
-title: Julian's Tech Blog
+title: Julian's Tech Corner
 author: Julian Lopez
 url: https://JLO64.github.io # root address of the site
 description: > # description of the site (multiple lines allowed)
@@ -6,7 +6,7 @@ description: > # description of the site (multiple lines allowed)
 
 permalink: /:slug
 
-favicon: "./arkos.png" # relative path to site's favicon
+#favicon: "./arkos.png" # relative path to site's favicon
 
 #twitter:
 #    username: abhinav # update or delete this
