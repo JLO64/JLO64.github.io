@@ -126,7 +126,7 @@ Unless you bought in early like me you couldn't buy or play any of them.
 However, thanks to the efforts of those in the homebrew community, you can now use that same "emulator" to run whatever GBA games you want!
 
 <figure>
-  <img src="/images/post0/3ds-metroid-fusion.png" width="85%" />
+  <img src="/images/post0/3ds-metroid-fusion.png" width="100%" />
   <figcaption style="text-align:center">Metroid Fusion is still one of the scariest games I've ever played!</figcaption>
 </figure>
 
