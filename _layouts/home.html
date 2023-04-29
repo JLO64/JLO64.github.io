@@ -18,7 +18,7 @@ layout: default
 
 {% if site.theme_config.show_blog == true %}
   <h2>{{ site.theme_config.home.title_blog }}</h2>
-  {% include post_list.html %}
+  {% include post_list.html limit=site.theme_config.home.post_limit %}
 {% endif %}
 
 {% if site.theme_config.show_projects == true %}

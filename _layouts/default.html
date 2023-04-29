@@ -15,23 +15,17 @@
           •
           &nbsp;
           {%- endif -%}
-          {%- if site.soopr -%}
-          Powered by <a href="https://jekyllthemes.dev/" target="_blank" rel="noreferrer">Jekyll</a>
+          Powered by <a href="https://jekyllrb.com" target="_blank" rel="noreferrer">Jekyll</a>
           &nbsp;
           •
           &nbsp;
-          {%- endif -%}
-          Theme&nbsp; <a href="https://github.com/abhinavs/moonwalk" target="_blank" rel="noreferrer">Moonwalk</a>
+          Based on&nbsp; <a href="https://github.com/abhinavs/moonwalk" target="_blank" rel="noreferrer">Moonwalk</a>
+          •
+          &nbsp;
+          Hosted on&nbsp; <a href="https://pages.github.com/" target="_blank" rel="noreferrer">GitHub Pages</a>
         </div>
       </div>
     </main>
 
-    {%- if site.soopr -%}
-      {%- if site.soopr.publish_token and jekyll.environment == "production" -%}
-        <script async defer data-soopr-token="{{site.soopr.publish_token}}" src="https://sdk.soopr.co/soopr.js"></script>
-      {%- else -%}
-        <script async defer src="https://sdk.soopr.co/soopr.js"></script>
-      {%- endif -%}
-    {%- endif -%}
   </body>
 </html>

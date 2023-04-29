@@ -2,11 +2,11 @@ navbar_entries:
   - title: Home
     url: /
 
-  - title: Blog
-    url: blog
+  - title: Archive
+    url: /archive
 
   - title: About
-    url: about
+    url: /about
 
   - title: GitHub
     url: https://github.com/JLO64
@@ -14,7 +14,7 @@ navbar_entries:
   - title: Mastodon
     url: https://fosstodon.org/@JLO64
 
-  - title: Feed
+  - title: RSS
     url: feed.xml
 
 project_entries:

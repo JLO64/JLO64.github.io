@@ -33,10 +33,11 @@ theme_config:
   show_tags: true # show tags in a blog posts
   # options for "home" page
   home:
-    title_blog: Blog
+    title_blog: Latest Blog Posts
     title_projects: Projects
     title_misc_list: Details
     title_old_projects: Old Projects
+    post_limit: 5 # number of posts to show in home page
 
 exclude:
   - example_posts
@@ -52,3 +53,5 @@ sass:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+use_commentbox: false # set to true to enable commentbox.io comments

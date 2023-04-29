@@ -175,6 +175,9 @@ mark {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+.text-notupcase {
+  letter-spacing: 1px;
+}
 p code, li code {
   background-color: var(--bg-secondary);
   padding: 0.2rem;
@@ -212,4 +215,7 @@ p code, li code {
   font-weight: bold;
   text-transform: lowercase;
   //border: 1px solid var(--text-secondary);
+}
+.tag a {
+  text-decoration: none;
 }

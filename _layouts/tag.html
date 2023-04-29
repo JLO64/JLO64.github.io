@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<header>
+    {% if site.theme_config.show_navbar == true %}
+      {% include horizontal_list.html collection=site.data.home.navbar_entries %}
+      <div class="dashed"></div>
+    {% endif %}
+</header>
+
+
+<header>
+    <h1>Blog Archive</h1>
+    <h2>Tag: {{ page.tag }}</h2>
+</header>
+
+{% for post in site.posts %}
+  {% if post.tags contains page.tag %}
+  <li class="post-list-item">
+    <span class="home-date">
+      {{ post.date | date: site.theme_config.date_format }}»
+    </span>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a><br>
+    {% for tag in post.tags %}
+    <span class="tag">
+      <a href="{{ site.url }}/archive/{{ tag }}">{{ tag }}</a>
+    </span>
+    {% endfor %}
+  </li>
+  {% endif %}
+{% endfor %}

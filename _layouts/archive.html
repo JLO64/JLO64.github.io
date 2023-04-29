@@ -6,10 +6,13 @@ layout: default
     {% include horizontal_list.html collection=site.data.home.navbar_entries %}
     <div class="dashed"></div>
   {% endif %}
-  </header>
+</header>
 
 <header>
-  <h1>Blog Posts</h1>
+  <h1>Blog Archive</h1>
 </header>
+
+{% include tag_list.html %}
+
 
 {% include post_list.html %}

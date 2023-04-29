@@ -11,4 +11,6 @@ layout: default
 <h1 class="post-title">{{ page.title }}</h1>
 {% include date_and_social_share.html %}
 {{ content }}
-{% include comments.html %}
+{% if site.show_comments == true %}
+  {% include comments.html %}
+{% endif %}

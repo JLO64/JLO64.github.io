@@ -1,9 +1,9 @@
 <p class="post-date text-bold">
   {% if page.author %}
-    <span class="text-upcase">{{ page.author }}</span> / 
+    <span class="text-notupcase">{{ page.author }}</span> / 
   {% endif %}
   {% if page.date %}
-    <span class="text-upcase">{{ page.date | date: "%B %Y"}}</span>
+    <span class="text-notupcase">{{ page.date | date: "%B %d %Y"}}</span>
   {% endif %}
 
 {% if site.theme_config.show_reading_time == true %}
@@ -17,15 +17,12 @@
 {% endif %}
 </p>
 
-<div class="soopr-btn"
-   data-twitter="SooprCo"
->
-</div>
-
 {% if site.theme_config.show_tags == true %}
   <div class="">
     {% for tag in page.tags %}
-    <span class="tag">{{ tag }}</span>
+    <span class="tag">
+      <a href="{{ site.url }}/archive/{{ tag }}">{{ tag }}</a>
+    </span>
     {% endfor %}
   </div>
 {% endif %}
