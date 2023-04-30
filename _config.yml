@@ -53,5 +53,6 @@ sass:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 use_commentbox: false # set to true to enable commentbox.io comments
