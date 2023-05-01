@@ -80,7 +80,7 @@ html {
       --headings: #74c0fc;
       --links: #91A7FF;
       --highlight: #41C7C7;
-      --bg: #1f242A;
+      --bg: #000000;
       --bg-secondary: #323945;
       --text: #adb5bd;
       --text-secondary: #9CA3AF;
@@ -91,8 +91,9 @@ html {
 html[data-theme="dark"] { @include dark-appearance; }
 
 @media (prefers-color-scheme: dark) {
-  body[data-theme="auto"] { @include dark-appearance; }
+  html { @include dark-appearance; }
 }
+  
 // -------------------------------------------- //
 
 html, body {

@@ -14,5 +14,5 @@ layout: default
 
 {% include tag_list.html %}
 
-
-{% include post_list.html %}
+{% assign show_year = site.theme_config.show_year_in_archive %}
+{% include post_list.html show_year=show_year %}

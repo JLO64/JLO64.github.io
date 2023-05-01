@@ -1,6 +1,13 @@
-{% if site.posts.size > 0 %}
+{% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+{% assign current_year = "" %}
+{% if sorted_posts.size > 0 %}
   <ul>
-    {% for post in site.posts limit:include.limit %}
+    {% for post in sorted_posts limit:include.limit %}
+      {% assign post_year = post.date | date: "%Y" %}
+      {% if post_year != current_year and include.show_year %}
+        <h2>{{ post_year }}</h2>
+        {% assign current_year = post_year %}
+      {% endif %}
       <li class="post-list-item">
         <span class="home-date">
           {{ post.date | date: site.theme_config.date_format }} -

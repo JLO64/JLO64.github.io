@@ -27,6 +27,7 @@ theme_config:
   # following keys are using to create home layout
   show_projects: true # show projects as cards, add in _data/home.yml
   show_blog: true # show blog posts added in _posts
+  show_year_in_archive: true # show year in archive page
   show_old_projects: false # show old projects as cards, add in _data/home.yml
   show_misc_list: false # show generic vertical list for misc details, add _data/home.yml
   show_reading_time: false # show number of words and reading time in the blog posts
@@ -42,9 +43,6 @@ theme_config:
 exclude:
   - example_posts
 
-soopr:
-  publish_token: "" # sign up at https://www.soopr.co to get your publish token and personalize share and reaction options
-
 highlighter: rouge
 
 sass:
@@ -59,5 +57,3 @@ plugins:
 # Optional. The default date format, used if none is specified in the tag.
 last-modified-at:
     date-format: "%B %d %Y"
-
-use_commentbox: false # set to true to enable commentbox.io comments
