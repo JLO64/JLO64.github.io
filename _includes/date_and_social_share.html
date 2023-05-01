@@ -1,10 +1,20 @@
 <p class="post-date text-bold">
   {% if page.author %}
-    <span class="text-notupcase">{{ page.author }}</span> / 
+   <span class="text-notupcase">{{ page.author }}</span> /
   {% endif %}
+
+  {% capture last_modified_date %}{% last_modified_at %}{% endcapture %}
+  {% capture current_date %}{{ page.date | date: site.theme_config.date_format }}{% endcapture %}
   {% if page.date %}
-    <span class="text-notupcase">{{ page.date | date: "%B %d %Y"}}</span>
+    Posted On:
+    <span class="text-notupcase">{{ current_date }}</span>
+    {% if last_modified_date != current_date %}
+      / Last Modified:
+      <span class="text-notupcase">{{ last_modified_date }}</span>
+    {% endif %}
   {% endif %}
+  
+
 
 {% if site.theme_config.show_reading_time == true %}
   {% capture words %}

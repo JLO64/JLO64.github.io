@@ -1,0 +1,32 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // get the width of the container
+      let containerWidth = document.querySelector('.post-title').offsetWidth;
+
+      // get all img elements
+      let imgElements = document.querySelectorAll('img');
+
+      // update the src attribute of each img element
+      imgElements.forEach(function (imgElement) {
+        // get the current data-src attribute value
+        let currentSrc = imgElement.getAttribute('data-src');
+
+        //update the src attribute with the new width
+        let newSrc = currentSrc.replace(/w-\d+/, 'w-' + containerWidth);
+        imgElement.setAttribute('src', newSrc);
+      });
+
+      // get all source elements
+      let sourceElements = document.querySelectorAll('source');
+
+      // update the srcset attribute of each source element
+      sourceElements.forEach(function (sourceElement) {
+        // get the current data-srcset attribute value
+        let currentSrcset = sourceElement.getAttribute('data-srcset');
+
+        // update the srcset attribute with the new width
+        let newSrcset = currentSrcset.replace(/w-\d+/, 'w-' + containerWidth);
+        sourceElement.setAttribute('srcset', newSrcset);
+      });
+    });
+  </script>

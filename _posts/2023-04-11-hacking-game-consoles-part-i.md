@@ -1,6 +1,5 @@
 ---
 layout: post
-author: Julian Lopez
 title: (Hacking Game Consoles - Part I) Nintendo 3DS
 tags: [3ds, hacking, homebrew]
 ---

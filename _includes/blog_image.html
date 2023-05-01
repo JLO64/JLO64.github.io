@@ -1,8 +1,5 @@
 <picture>
-    <source srcset="{{ include.url }}?tr=w-1440,f-webp," type="image/webp" width="100%" media="(min-width: 2000px)" />
-    <source srcset="{{ include.url }}?tr=w-720,f-webp," type="image/webp" width="100%" media="(min-width: 1300px)" />
-    <source srcset="{{ include.url }}?tr=w-480,f-webp," type="image/webp" width="100%" media="(min-width: 700px)" />
-    <source srcset="{{ include.url }}?tr=w-240,f-webp," type="image/webp" width="100%" media="(min-width: 400px)" />
-    <img src="{{ include.url }}?tr=w-480" width="100%"  alt="{{ include.alt }}" />
+    <source data-srcset="{{ include.url }}?tr=w-1440,f-webp," type="image/webp" width="100%" />
+    <img data-src="{{ include.url }}?tr=w-480" width="100%"  alt="{{ include.alt }}" />
     <figcaption style="text-align:center">{{ include.caption }}</figcaption>
  </picture>  
