@@ -257,3 +257,25 @@ p code, li code {
   margin-right: auto;
 
 }
+
+// KB Club css stuff
+.kb-club a {
+	text-decoration: none;
+  color: #212121;
+  font-weight: bold;
+  padding: .25rem 0;
+  font-family: sans-serif;
+  transition: .4s;
+  background: #C8E6C9;
+}
+
+.kb-club-bg,
+.kb-club-no-bg {
+  background: #C8E6C9;
+	padding: .25rem .5rem;
+}
+
+.kb-club-bg {
+	background: #4CAF50;
+	color: #212121;
+}
