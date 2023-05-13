@@ -1,31 +1,92 @@
 <script type="text/javascript">
   window.addEventListener('load', themeChange);
-  const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", event => {
+    const newColorScheme = event.matches ? "dark" : "light";
+    switchToColorTheme(newColorScheme);
+});
+  currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+  isDarkMode = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  moonSvgCode = '';
+  sunSvgCode = '';
+  fetch('../assets/svg/toggle_moon.html')
+  .then(response => response.text())
+  .then(data => {moonSvgCode = data;})
+  .then(console.log(moonSvgCode));
+  fetch('../assets/svg/toggle_sun.html')
+  .then(response => response.text())
+  .then(data => {sunSvgCode = data;})
+  .then(console.log(sunSvgCode));
+
   if (currentTheme)
-    document.documentElement.setAttribute('data-theme', currentTheme);
+    if (currentTheme === 'dark')
+      switchToColorTheme('dark', true);
+    else
+      switchToColorTheme('light', true);
+  else
+    if (isDarkMode)
+      switchToColorTheme('dark', true);
+    else
+      switchToColorTheme('light', true);
+
+  function switchToColorTheme(themeChangeto, pageload = false) {
+    if (!pageload)
+    {
+      document.documentElement.classList.add('transition');
+      transition();
+    }
+    if (themeChangeto === 'light')
+    {
+      document.documentElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'light');
+    }
+    else
+    {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
+    }
+    // if the button "document.querySelector('.theme-toggle');" has loaded, if not wait 100ms and try again
+    if (!document.getElementById('darkModeButton'))
+    {
+      setTimeout(function() {
+        changeButtonSVG(themeChangeto);
+       }, 300);
+    }
+    else
+      changeButtonSVG(themeChangeto);
+  }
+  
+  function changeButtonSVG(themeChangeto) {
+    let button = document.getElementById('darkModeButton');
+    let svg = button.querySelector('svg');
+    if (themeChangeto === 'light')
+    {
+      svg.innerHTML = moonSvgCode;
+      svg.setAttribute('viewBox', '0 0 40 40');
+    }
+    else
+    {
+      svg.innerHTML = sunSvgCode;
+      svg.setAttribute('viewBox', '0 0 40 40');
+    }   
+  }
+
+  function transition(){
+    document.documentElement.classList.add('transition');
+    window.setTimeout(() => {
+      document.documentElement.classList.remove('transition');
+    }, 1000);
+  }
 
   function themeChange() {
     let button = document.querySelector('.theme-toggle');
 
     button.addEventListener('click', function (e) {
       let currentTheme = document.documentElement.getAttribute('data-theme');
-      if (currentTheme === 'dark') {
-        transition();
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-      } else {
-        transition();
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-      }
-    });
-
-    let transition = () => {
-      document.documentElement.classList.add('transition');
-      window.setTimeout(() => {
-        document.documentElement.classList.remove('transition');
-      }, 1000);
-    }
+      if (currentTheme === 'light')
+        switchToColorTheme('dark');
+      else
+        switchToColorTheme('light');
+  });
   }
 </script>
 
