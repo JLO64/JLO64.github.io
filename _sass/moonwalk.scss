@@ -129,13 +129,25 @@ html, body {
     color: var(--text);
 }
 
-body {
-  background-image: url(/assets/svg/background.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
- }
- 
+@media (min-width: 768px) {
+  body {
+    background-image: url(/assets/svg/background.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover
+   }
+}
+
+@media (max-width: 768px) {
+  body {
+    background-image: url(/assets/svg/background-mobile.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover
+   }
+}
 
 h1, h2, h3, h4, h5, h6 {
     color: var(--headings);
