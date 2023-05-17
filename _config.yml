@@ -57,3 +57,5 @@ plugins:
 # Optional. The default date format, used if none is specified in the tag.
 last-modified-at:
     date-format: "%B %d %Y"
+
+timezone: America/Los_Angeles

@@ -57,7 +57,6 @@ li { margin: 0.4em 0; }
   max-width: 720px;
   margin: 0 auto;
   padding: 4em 2em;
-  
 }
 
 table, th, td {
@@ -128,28 +127,29 @@ html, body {
     color: var(--text);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   body {
     background-image: url(/assets/svg/background.svg);
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover
+    background-size: cover;
    }
   .w {
-    background: var(--bg-secondary-opaque)
+    background: var(--bg-secondary-opaque);
   }
 }
 
-@media (max-width: 768px) {
+// white/black background for mobile devices and ipad
+@media (max-width: 800px), only screen and (min-device-width: 768px) and (max-device-width: 1180px) and (-webkit-min-device-pixel-ratio: 1.5) {
   body {
-    background-image: url(/assets/svg/background-mobile.svg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover
-   }
+    background-image: none;
+  }
+  .w {
+    background: none;
+  }
 }
+ 
 
 h1, h2, h3, h4, h5, h6 {
     color: var(--headings);
