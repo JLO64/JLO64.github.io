@@ -80,6 +80,29 @@ blockquote {
   p { margin: 0; }
 }
 
+.theme-toggle {
+  color: var(--text);
+  background-color: transparent;
+  padding: 4px;
+  cursor: pointer;
+  margin: 1em;
+  position: fixed;
+  right: 0;
+  top: 0;
+  border: 2px transparent solid;
+  outline: none;
+  display: none;
+  animation: rotate_360 10s linear infinite;
+}
+
+.theme-toggle:hover {
+  color: var(--links);
+  outline: none;
+}
+.theme-toggle:focus {
+  outline: none;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -127,7 +150,7 @@ html, body {
     color: var(--text);
 }
 
-@media (min-width: 800px) {
+@media (min-width: 800px) and (orientation: landscape) {
   body {
     background-image: url(/assets/svg/background.svg);
     background-size: 100%;
@@ -138,17 +161,28 @@ html, body {
   .w {
     background: var(--bg-secondary-opaque);
   }
+  .theme-toggle {
+    display: block;
+  }
 }
 
-// white/black background for mobile devices and ipad
-@media (max-width: 800px), only screen and (min-device-width: 768px) and (max-device-width: 1180px) and (-webkit-min-device-pixel-ratio: 1.5) {
-  body {
-    background-image: none;
-  }
-  .w {
-    background: none;
-  }
-}
+//// white/black background for mobile devices and ipad
+//@media (max-width: 800px) {
+//  body {
+//    background-image: none;
+//  }
+//  .w {
+//    background: none;
+//  }
+//}
+//@media only screen and (min-device-width: 768px) and (max-device-width: 1180px) and (-webkit-min-device-pixel-ratio: 1.5) {
+//  body {
+//    background-image: none;
+//  }
+//  .w {
+//    background: none;
+//  }
+//}
  
 
 h1, h2, h3, h4, h5, h6 {
@@ -177,27 +211,6 @@ html.transition *:after {
     transition-delay: 0 !important;
 }
 
-.theme-toggle {
-  color: var(--text);
-  background-color: transparent;
-  padding: 4px;
-  cursor: pointer;
-  margin: 1em;
-  position: fixed;
-  right: 0;
-  top: 0;
-  border: 2px transparent solid;
-  outline: none;
-}
-
-.theme-toggle:hover {
-  color: var(--links);
-  outline: none;
-}
-.theme-toggle:focus {
-  outline: none;
-}
-
 @keyframes rotate_360 {
   from {
     transform: rotate(0deg);
@@ -205,10 +218,6 @@ html.transition *:after {
   to {
     transform: rotate(360deg);
   }
-}
-
-.theme-toggle {
-  animation: rotate_360 10s linear infinite;
 }
 
 .dashed {
