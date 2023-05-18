@@ -56,7 +56,8 @@ li { margin: 0.4em 0; }
 .w {
   max-width: 720px;
   margin: 0 auto;
-  padding: 4em 2em;
+  padding: 2em 2em;
+  background: var(--bg-secondary-opaque);
 }
 
 table, th, td {
@@ -101,6 +102,56 @@ blockquote {
 }
 .theme-toggle:focus {
   outline: none;
+}
+
+
+//ring background
+.progress-ring {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.progress-ring__circle {
+  stroke: silver;
+  stroke-dasharray: 10 20 60 10 500;
+}
+
+.progress-ring__circle--regular {
+  animation: rotate-rings 13s linear infinite;
+  stroke-width: 10;
+}
+
+.progress-ring__circle--thin {
+  animation: rotate-rings 5s linear infinite;
+  stroke-width: 6;
+}
+
+.progress-ring__circle--thick {
+  animation: rotate-rings 16s linear infinite;
+  stroke-width: 20;
+}
+@keyframes rotate-rings {
+  from {
+    transform: rotate(0deg);
+    transform-origin: bottom right;
+  }
+  to {
+    transform: rotate(360deg);
+    transform-origin: bottom right;
+  }
+}
+.background-svg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-color: var(--bg);
+  display: none;
 }
 
 img {
@@ -150,31 +201,19 @@ html, body {
     color: var(--text);
 }
 
-@media (min-width: 800px) and (orientation: landscape) {
-  body {
-    background-image: url(/assets/svg/background.svg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-   }
-  .w {
-    background: var(--bg-secondary-opaque);
-  }
+@media (min-width: 800px) and (orientation: landscape) and (hover: hover) and (pointer: fine) {
   .theme-toggle {
     display: block;
   }
+  .background-svg {
+    display: inline;
+  }
+  html, body {
+    background-color: #00000000;
+}
 }
 
-//// white/black background for mobile devices and ipad
-//@media (max-width: 800px) {
-//  body {
-//    background-image: none;
-//  }
-//  .w {
-//    background: none;
-//  }
-//}
+// white/black background for mobile devices and ipad
 //@media only screen and (min-device-width: 768px) and (max-device-width: 1180px) and (-webkit-min-device-pixel-ratio: 1.5) {
 //  body {
 //    background-image: none;
@@ -272,7 +311,7 @@ p code, li code {
 .credits {
   font-size: 0.8em;
   color: var(--text);
-  margin: 8em auto -4em auto;
+  margin: 8em auto 0em auto;
   text-align: center;
   a {
     color: var(--text);
