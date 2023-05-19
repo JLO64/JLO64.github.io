@@ -57,7 +57,7 @@ li { margin: 0.4em 0; }
   max-width: 720px;
   margin: 0 auto;
   padding: 2em 2em;
-  background: var(--bg-secondary-opaque);
+  background: var(--w-mobile-background);
 }
 
 table, th, td {
@@ -167,17 +167,18 @@ html {
     --text: #374151;
     --text-secondary: #6b7280;
     --links: #6366f1;
-    --highlight: #FFECB2; // light yellow
+    --highlight: #dedede;
     --code-text: #9D174D;
     --share-text: #999;
     --tag: #dedede;
+    --w-mobile-background: #f3f4f6;
 }
 // -------------- THEME SWITCHER -------------- //
 @mixin dark-appearance {
   html, body  {
       --headings: #74c0fc;
       --links: #91A7FF;
-      --highlight: #41C7C7;
+      --highlight: #a9a9a9;
       --bg: #000000;
       --bg-secondary: #323945;
       --bg-secondary-opaque: rgba(0, 0, 0, 0.8);
@@ -186,6 +187,7 @@ html {
       --code-text: #91A7FF;
       --share-text: #C4C4C4;
       --tag: #323945;
+      --w-mobile-background: #000000;
   };
 }
 html[data-theme="dark"] { @include dark-appearance; }
@@ -210,19 +212,11 @@ html, body {
   }
   html, body {
     background-color: #00000000;
-}
-}
-
-// white/black background for mobile devices and ipad
-//@media only screen and (min-device-width: 768px) and (max-device-width: 1180px) and (-webkit-min-device-pixel-ratio: 1.5) {
-//  body {
-//    background-image: none;
-//  }
-//  .w {
-//    background: none;
-//  }
-//}
- 
+  }
+  .w {
+    background: var(--bg-secondary-opaque);
+  }
+} 
 
 h1, h2, h3, h4, h5, h6 {
     color: var(--headings);
@@ -311,7 +305,7 @@ p code, li code {
 .credits {
   font-size: 0.8em;
   color: var(--text);
-  margin: 8em auto 0em auto;
+  margin: 2em auto 0em auto;
   text-align: center;
   a {
     color: var(--text);

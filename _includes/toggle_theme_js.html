@@ -4,29 +4,36 @@
     const newColorScheme = event.matches ? "dark" : "light";
     switchToColorTheme(newColorScheme);
 });
-  currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
   isDarkMode = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-  moonSvgCode = '';
-  sunSvgCode = '';
-  fetch('../assets/svg/toggle_moon.html')
-  .then(response => response.text())
-  .then(data => {moonSvgCode = data;})
-  .then(console.log(moonSvgCode));
-  fetch('../assets/svg/toggle_sun.html')
-  .then(response => response.text())
-  .then(data => {sunSvgCode = data;})
-  .then(console.log(sunSvgCode));
+  
+  const isDesktop = window.matchMedia('(min-width: 800px) and (orientation: landscape) and (hover: hover) and (pointer: fine)');
+  if (isDesktop.matches)
+  {
+    localStorageTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+    moonSvgCode = '';
+    sunSvgCode = '';
+    fetch('../assets/svg/toggle_moon.html')
+    .then(response => response.text())
+    .then(data => {moonSvgCode = data;})
+    .then(console.log(moonSvgCode));
+    fetch('../assets/svg/toggle_sun.html')
+    .then(response => response.text())
+    .then(data => {sunSvgCode = data;})
+    .then(console.log(sunSvgCode));
+    
+    if (localStorageTheme)
+    {
+      if (localStorageTheme === 'dark')
+        switchToColorTheme('dark', true);
+      else
+        switchToColorTheme('light', true);
+    }
+  }
 
-  if (currentTheme)
-    if (currentTheme === 'dark')
-      switchToColorTheme('dark', true);
-    else
-      switchToColorTheme('light', true);
+  if (isDarkMode)
+    switchToColorTheme('dark', true);
   else
-    if (isDarkMode)
-      switchToColorTheme('dark', true);
-    else
-      switchToColorTheme('light', true);
+    switchToColorTheme('light', true);
 
   function switchToColorTheme(themeChangeto, pageload = false) {
     if (!pageload)
