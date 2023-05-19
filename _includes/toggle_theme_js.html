@@ -15,11 +15,9 @@
     fetch('../assets/svg/toggle_moon.html')
     .then(response => response.text())
     .then(data => {moonSvgCode = data;})
-    .then(console.log(moonSvgCode));
     fetch('../assets/svg/toggle_sun.html')
     .then(response => response.text())
     .then(data => {sunSvgCode = data;})
-    .then(console.log(sunSvgCode));
     
     if (localStorageTheme)
     {
@@ -29,11 +27,13 @@
         switchToColorTheme('light', true);
     }
   }
-
-  if (isDarkMode)
-    switchToColorTheme('dark', true);
   else
-    switchToColorTheme('light', true);
+  {
+    if (isDarkMode)
+      switchToColorTheme('dark', true);
+    else
+      switchToColorTheme('light', true);
+  }
 
   function switchToColorTheme(themeChangeto, pageload = false) {
     if (!pageload)
@@ -51,7 +51,6 @@
       document.documentElement.setAttribute('data-theme', 'dark');
       localStorage.setItem('theme', 'dark');
     }
-    // if the button "document.querySelector('.theme-toggle');" has loaded, if not wait 100ms and try again
     if (!document.getElementById('darkModeButton'))
     {
       setTimeout(function() {
