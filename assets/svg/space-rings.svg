@@ -1,0 +1,16 @@
+<svg style="background-color: Black;" class="background-svg" width="100%" height="100%">
+    <filter id='grainy'>
+        <feTurbulence type='turbulence' baseFrequency='0.5' />
+    </filter>
+    <rect fill='rgba(0, 0, 0, 0)' width='100%' height='100%' filter='url(#grainy)'/>
+    <svg class="progress-ring background-svg">
+        <circle class="progress-ring__circle progress-ring__circle--thin" fill="transparent" cx="100%" cy="100%" r="160"/>
+        <circle class="progress-ring__circle progress-ring__circle--regular" fill="transparent" cx="100%" cy="100%" r="1000"/>
+        <circle class="progress-ring__circle progress-ring__circle--thick" fill="transparent" cx="100%" cy="100%" r="1500"/>
+        <circle class="progress-ring__circle progress-ring__circle--thick" fill="transparent" cx="100%" cy="100%" r="760"/>
+        <circle class="progress-ring__circle progress-ring__circle--regular" fill="transparent" cx="100%" cy="100%" r="300"/>
+        <circle class="progress-ring__circle progress-ring__circle--thin" fill="transparent" cx="100%" cy="100%" r="450"/>
+        <circle class="progress-ring__circle progress-ring__circle--thin" fill="transparent" cx="100%" cy="100%" r="1200"/>
+        <circle class="progress-ring__circle progress-ring__circle--regular" fill="transparent" cx="100%" cy="100%" r="1800"/>
+    </svg>
+</svg>
