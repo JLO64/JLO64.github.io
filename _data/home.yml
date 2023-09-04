@@ -18,6 +18,10 @@ navbar_entries:
     url: feed.xml
 
 project_entries:
+  - title: The Secret Ochiken
+    url: https://tsukuraku.github.io/
+    desc: A blog on the history behind traditional Japanese performers.
+
   - title: McDonald's Screenshot Generator
     url: https://github.com/JLO64/Generate-McDonalds-Mobile-Screenshot
     desc: Generates fake McDonald's app screenshots on AWS Lambda
@@ -25,16 +29,6 @@ project_entries:
   - title: USC Bus Website
     url: https://github.com/usc-bus/usc-bus.github.io
     desc: A website to check on USC bus maps/times
-    highlight: WIP
-
-  - title: USC Bus API
-    url: https://github.com/JLO64/USC_Bus_Times_API
-    desc: A python API for checking the USC bus schedule
-    highlight: WIP
-  
-  - title: TsukuRaku's Rakugo Blog
-    url: https://tsukuraku.github.io/
-    desc: A blog on famous Rakugo performers
     highlight: WIP
 
 old_project_entries:

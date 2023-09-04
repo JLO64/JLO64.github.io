@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Finding Flags on a Website
-tags: [website]
 ---
 
 A while back, I was on a website that had a weird link near the bottom that was titled "Capture the Flag". Clicking on it, directed me to a "secret" page that described how there were six hidden flags throughout the site with in format "GXYZ{***}". If you managed to find a flag, you could have your name added to a "hall of fame" along with the number of flags you had found.

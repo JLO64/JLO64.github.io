@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Cleaning My 3DS
-tags: [3ds, maintenance]
 ---
 
 ## Table of contents

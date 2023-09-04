@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Generating Fake McDonald's Screenshots With AWS/OpenAI
-tags: [cloud, ai, python]
 github: Generate-McDonalds-Mobile-Screenshot
 ---
 

@@ -1,7 +1,6 @@
 ---
 layout: post
-title: (Hacking Game Consoles - Part I) Nintendo 3DS
-tags: [3ds, homebrew]
+title: Hacking My Nintendo 3DS
 ---
 
 {% include blog_image.html url="https://ik.imagekit.io/jlo64/post1/nintendo3ds-white-back.jpg" caption="My childhood in a nutshell." alt="An aqua-blue Nintendo 3DS with a stylus on a white background" %}
