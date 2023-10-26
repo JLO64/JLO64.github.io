@@ -3,8 +3,6 @@ layout: post
 title: How I Listen To Music
 ---
 
-# How I Listen To Music
-
 Growing up as a Kid I loved listening to anime music on my iPod. I started out by purchasing songs off of iTunes for $0.99, but there weren’t that many songs on there from shows that I liked. (In hindsight, they might have had them but with Japamese titles which I couldn’t read/search.) The one place I was able to easily find these songs was on YouTube so I used that as my source. I would grab the URLs I wanted and go visit some sketchy YoaTube to MP3 websites, import the MP3s into iTunes, then sync my iPod.
 
 Over a decade later and the way I listen to my music has not fundamentally changed. I used Apple Music / Spotify for a while but the music selecton still wasn’t great for me especially for Video game soundtracks. YouTube Music was almost pertect but I had issues with certain tracks being removed and readded from listening availibilty. Thus I’ve stuck to transferring MP3s to my phone although I’ve made a few improvements on the overall process.
