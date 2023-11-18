@@ -43,6 +43,7 @@ theme_config:
 
 exclude:
   - example_posts
+  - imagekit.py
 
 highlighter: rouge
 
