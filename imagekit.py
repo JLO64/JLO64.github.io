@@ -1,11 +1,14 @@
 import base64, os, sys, re
+from dotenv import load_dotenv
+
+load_dotenv()
 
 from imagekitio import ImageKit
 from imagekitio.models.UploadFileRequestOptions import UploadFileRequestOptions
 imagekit = ImageKit(
-    private_key='private_4h7ssF7ToH26QSTMu4k+LQxQ22Q=',
-    public_key='public_IBT2z34MhhVI7KfK6wSL7sebLjY=',
-    url_endpoint='https://ik.imagekit.io/jlo64'
+    private_key = os.getenv('imagekit_private_key'),
+    public_key = os.getenv('imagekit_public_key'),
+    url_endpoint = os.getenv('imagekit_url_endpoint')
 )
 
 def import_markdown(file_path):
