@@ -16,7 +16,8 @@ bundle exec jekyll build
 echo -e \n Pushing contents of _site to GitHub
 
 # Push the contents of the _site folder to the github-pages branch, overwriting everything in the branch
-git checkout gh-pages && git rm -r --cached --ignore-unmatch . && git add _site/ --force && git commit -m "Add contents of _site folder to gh-pages branch" && git push origin gh-pages
+git checkout gh-pages && git rm -r --cached --ignore-unmatch . && git add _site/* --force && git commit -m "Add contents of _site folder to gh-pages branch" && git push origin gh-pages
+
 
 
 
