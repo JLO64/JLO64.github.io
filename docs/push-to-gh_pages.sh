@@ -12,5 +12,5 @@ bundle exec jekyll build
 sudo sed -i '/destination: docs/d' _config.yml
 
 git add ./docs/
-git commit -m "Updated website"
+git commit -m "Updated website: $(date '+%Y-%m-%d %H:%M')"
 git push origin master
