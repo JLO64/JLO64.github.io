@@ -7,11 +7,10 @@ cd "$(dirname "$0")"
 python3 imagekit.py
 
 # Build the Jekyll site
-echo "destination: github_site" >> _config.yml
+echo "destination: docs" >> _config.yml
 bundle exec jekyll build
-sudo sed -i '/destination: github_site/d' _config.yml
+sudo sed -i '/destination: docs/d' _config.yml
 
-
-git add --all
-git commit -m "Updated site"
+git add ./docs/
+git commit -m "Updated website"
 git push origin master
