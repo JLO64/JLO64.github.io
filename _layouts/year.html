@@ -8,11 +8,11 @@ layout: default
   {% endif %}
 </header>
 
+{% assign year = page.date | date: "%Y" %}
+
 <header>
-  <h1>Posts Archive</h1>
+    <h1>Posts Published In {{ year }}</h1>
 </header>
 
-{% include tag_list.html %}
+{% include post_list.html year=year %}
 
-{% assign show_year = site.theme_config.show_year_in_archive %}
-{% include post_list.html show_year=show_year %}

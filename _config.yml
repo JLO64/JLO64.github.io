@@ -55,8 +55,14 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-last-modified-at
+  - jekyll-archives
 
 # Optional. The default date format, used if none is specified in the tag.
 last-modified-at:
     date-format: "%B %d %Y"
 
+jekyll-archives:
+  enabled: [year]
+  layout: year
+  permalinks:
+    year: '/posts/:year/'
