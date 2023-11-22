@@ -166,7 +166,7 @@ html {
     --headings: #1e293b;
     --text: #374151;
     --text-secondary: #6b7280;
-    --links: #6366f1;
+    --links: #74c0fc;
     --highlight: #dedede;
     --code-text: #9D174D;
     --share-text: #999;
@@ -177,7 +177,7 @@ html {
 @mixin dark-appearance {
   html, body  {
       --headings: #74c0fc;
-      --links: #91A7FF;
+      --links: #74c0fc;
       --highlight: #a9a9a9;
       --bg: #000000;
       --bg-secondary: #323945;
