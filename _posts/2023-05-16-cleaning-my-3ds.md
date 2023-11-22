@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Cleaning My 3DS
+permalink: /posts/:year/:slug
 ---
 
 ## Table of contents

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Hacking My Nintendo 3DS
+permalink: /posts/:year/:slug
 ---
 
 {% include blog_image.html url="https://ik.imagekit.io/jlo64/post1/nintendo3ds-white-back.jpg" caption="My childhood in a nutshell." alt="An aqua-blue Nintendo 3DS with a stylus on a white background" %}

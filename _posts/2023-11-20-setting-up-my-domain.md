@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Setting Up My Domain
-permalink: /posts/:year/:title
+permalink: /posts/:year/:slug
 ---
 
 ## Why did I buy a domain?
