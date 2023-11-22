@@ -7,7 +7,11 @@ cd "$(dirname "$0")"
 python3 imagekit.py
 
 # Build the Jekyll site
+echo "destination: github_site" >> _config.yml
 bundle exec jekyll build
+sudo sed -i '/destination: github_site/d' _config.yml
 
-# Push the contents of the _site folder to the github-pages branch, overwriting everything in the branch
-git push origin `git subtree split --prefix _site master`:gh-pages --force
+
+git add --all
+git commit -m "Updated site"
+git push origin master
