@@ -2,6 +2,8 @@
 layout: post
 title: Setting Up My Domain
 permalink: /posts/:year/:slug
+tags:
+ - web
 ---
 
 ## Why did I buy a domain?

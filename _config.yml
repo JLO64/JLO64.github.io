@@ -62,7 +62,12 @@ last-modified-at:
     date-format: "%B %d %Y"
 
 jekyll-archives:
-  enabled: [year]
-  layout: year
+  enabled:
+    - year 
+    - tags
+  layouts:
+    year: year
+    tag: tag
   permalinks:
     year: '/posts/:year/'
+    tag: '/posts/tag/:name/'

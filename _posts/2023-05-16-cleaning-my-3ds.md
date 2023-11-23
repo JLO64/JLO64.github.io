@@ -2,6 +2,8 @@
 layout: post
 title: Cleaning My 3DS
 permalink: /posts/:year/:slug
+tags:
+ - 3ds
 ---
 
 ## Table of contents

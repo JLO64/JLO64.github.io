@@ -11,8 +11,16 @@ layout: default
 <header>
   <h1>Posts Archive</h1>
 </header>
+<ul>
+  <h2>Tags</h2>
+  {% for tag in site.tags %}
+  <span class="tag">
+    <a href="{{ site.url }}/posts/tag/{{ tag[0] }}">{{ tag[0] }}</a>
+  </span>
+{% endfor %}
 
-{% include tag_list.html %}
+</ul>
+
 
 {% assign show_year = site.theme_config.show_year_in_archive %}
 {% include post_list.html show_year=show_year %}

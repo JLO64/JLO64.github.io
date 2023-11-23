@@ -2,30 +2,33 @@
 layout: default
 ---
 <header>
-    {% if site.theme_config.show_navbar == true %}
-      {% include horizontal_list.html collection=site.data.home.navbar_entries %}
-      <div class=not-dashed></div>
-    {% endif %}
-</header>
-
-
-<header>
-    <h1>Blog Archive</h1>
-    <h2>Tag: {{ page.tag }}</h2>
-</header>
-
-{% for post in site.posts %}
-  {% if post.tags contains page.tag %}
-  <li class="post-list-item">
-    <span class="home-date">
-      {{ post.date | date: site.theme_config.date_format }}»
-    </span>
-    <a href="{{ post.url | relative_url }}">{{ post.title }}</a><br>
-    {% for tag in post.tags %}
-    <span class="tag">
-      <a href="{{ site.url }}/archive/{{ tag }}">{{ tag }}</a>
-    </span>
-    {% endfor %}
-  </li>
+  {% if site.theme_config.show_navbar == true %}
+    {% include horizontal_list.html collection=site.data.home.navbar_entries %}
+    <div class=not-dashed></div>
   {% endif %}
-{% endfor %}
+</header>
+
+<h1>Posts With Tag '{{ page.title }}'</h1>
+
+{% assign current_year = "" %}
+
+<ul>
+  {% for post in page.posts %}
+    {% assign post_year = post.date | date: "%Y" %}
+    {% if post_year != current_year and include.show_year %}
+      <h2><a href="/posts/{{ post_year }}">{{ post_year }}</a></h2>
+      {% assign current_year = post_year %}
+    {% endif %}
+    <li class="post-list-item">
+      <span class="home-date">
+        {{ post.date | date: site.theme_config.date_format }} -
+      </span>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a><br>
+      {% for tag in post.tags %}
+        <span class="tag">
+          <a href="{{ site.url }}/posts/tag/{{ tag }}">{{ tag }}</a>
+        </span>
+      {% endfor %}
+    </li>
+  {% endfor %}
+</ul>

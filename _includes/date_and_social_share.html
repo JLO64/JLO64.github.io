@@ -14,24 +14,13 @@
     {% endif %}
   {% endif %}
   
-
-
-{% if site.theme_config.show_reading_time == true %}
-  {% capture words %}
-  {{ content | number_of_words | minus: 180 }}
-  {% endcapture %}
-  {% unless words contains '-' %}
-  {{ words | strip | prepend: '(' | append: ' Words, ' }}
-  {{ words | plus: 180 | divided_by: 180 | append: ' Minutes)' }}
-  {% endunless %}
-{% endif %}
 </p>
 
 {% if site.theme_config.show_tags == true %}
   <div class="">
     {% for tag in page.tags %}
     <span class="tag">
-      <a href="{{ site.url }}/archive/{{ tag }}">{{ tag }}</a>
+      <a href="{{ site.url }}/posts/tag/{{ tag }}">{{ tag }}</a>
     </span>
     {% endfor %}
   </div>
