@@ -71,3 +71,4 @@ jekyll-archives:
   permalinks:
     year: '/posts/:year/'
     tag: '/posts/tag/:name/'
+

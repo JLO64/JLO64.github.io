@@ -176,6 +176,8 @@ html {
     --share-text: #999;
     --tag: #dedede;
     --w-mobile-background: #f3f4f6;
+    --scrollbar-foreground: #74c0fc;
+    --scrollbar-background: white;
 }
 // -------------- THEME SWITCHER -------------- //
 @mixin dark-appearance {
@@ -195,6 +197,8 @@ html {
       --share-text: #C4C4C4;
       --tag: #323945;
       --w-mobile-background: #000000;
+      --scrollbar-foreground: #74c0fc;
+      --scrollbar-background: black;
   };
 }
 html[data-theme="dark"] { @include dark-appearance; }
