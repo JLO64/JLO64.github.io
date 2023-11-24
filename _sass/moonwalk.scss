@@ -56,17 +56,17 @@ p {
 li { margin: 0.4em 0; }
 
 .w {
-  max-width: 50vw;
   margin: 0 auto;
   padding: 2em 2em;
   background: var(--w-mobile-background);
+  // max-width: 50vw;
 }
 
 .credit-container  {
-  max-width: 50vw;
   margin: 0 auto;
   padding: 2em 2em;
   background: var(--w-mobile-background);
+  // max-width: 50vw;
 }
 
 table, th, td {
@@ -233,9 +233,11 @@ html, body {
   }
   .w {
     background: var(--bg-secondary-opaque);
+    max-width: 50vw;
   }
   .credit-container  {
     background: var(--bg-secondary-opaque);
+    max-width: 50vw;
   }
 } 
 
