@@ -9,6 +9,10 @@
     <main class="page-content" aria-label="Content">
       <div class="w">
         {{ content }}
+      </div>
+      <div class="credit-container">
+        <div class="not-dashed"></div>
+        <br>
         <div class="credits">
           {%- if site.theme_config.show_copyright == true -%}
           &copy;&nbsp;{{ "now" | date: "%Y" }}&nbsp;{{site.author}}
