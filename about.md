@@ -4,7 +4,7 @@ title: About
 ---
 
 <figure>
-  <img src="/images/profile_photo.jpg" alt="A picture of young me with a dumb look on my face and a bunch on cash on the floor"/>
+  <img src="/images/profile_photo.jpg" alt="A picture of young me with a dumb look on my face and a bunch on cash on the floor" style="border: none; border-radius: 3rem;"/>
   <figcaption style="text-align:center">Don't ask what bank I robbed...</figcaption>
 </figure>
 

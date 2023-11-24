@@ -11,7 +11,7 @@ ul.horizontal-list {
   }
 
   li a {
-    text-decoration: none;
+    // text-decoration: none;
     font-weight: normal
   }
 
@@ -30,7 +30,7 @@ ul.horizontal-list {
   border-radius: 0.5em;
 
   .header {
-    color: var(--links);
+    color: var(--link-text);
   }
 
   .body {

@@ -49,7 +49,9 @@ hr.page-break {
   &:after { content: attr(data-content) '-----' }
 }
 
-p { margin: 1em 0; }
+p {
+  margin: 1em 0; 
+}
 
 li { margin: 0.4em 0; }
 
@@ -97,7 +99,7 @@ blockquote {
 }
 
 .theme-toggle:hover {
-  color: var(--links);
+  color: var(--link-text);
   outline: none;
 }
 .theme-toggle:focus {
@@ -166,9 +168,11 @@ html {
     --headings: #1e293b;
     --text: #374151;
     --text-secondary: #6b7280;
-    --links: #6366f1;
+    --link-text: black;
+    --link-underline: #74c0fc;
+    --link-underline-hover: black;
     --highlight: #dedede;
-    --code-text: #9D174D;
+    --code-text: #74c0fc;
     --share-text: #999;
     --tag: #dedede;
     --w-mobile-background: #f3f4f6;
@@ -176,8 +180,11 @@ html {
 // -------------- THEME SWITCHER -------------- //
 @mixin dark-appearance {
   html, body  {
-      --headings: #ffffff;
-      --links: #74c0fc;
+      // --headings: #ffffff;
+      --headings: #74c0fc;
+      --link-text: #FFF;
+      --link-underline: #74c0fc;
+      --link-underline-hover: white;
       --highlight: #a9a9a9;
       --bg: #000000;
       --bg-secondary: #323945;
@@ -231,9 +238,17 @@ blockquote {
   background-color: var(--bg-secondary);
   border: 1px var(--border) solid;
 }
+
 a {
-  color: var(--links);
+  color: var(--link-text);
+  text-decoration-color: var(--link-underline);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
+a:hover {
+  text-decoration-color: var(--link-underline-hover);
+}
+
 *:target { background-color: var(--bg-secondary); }
 
 html.transition,
@@ -277,9 +292,7 @@ mark {
 .home-date {
   font-family: "Roboto Mono", "Courier New", monospace;
 }
-.post-list-item a {
-  text-decoration: none;
-}
+
 .text-bold {
   font-weight: bold;
 }
@@ -291,7 +304,6 @@ mark {
   letter-spacing: 1px;
 }
 p code, li code {
-  background-color: var(--bg-secondary);
   padding: 0.2rem;
   color: var(--code-text);
   font-weight: bold;
@@ -307,14 +319,6 @@ p code, li code {
   color: var(--text);
   margin: 2em auto 0em auto;
   text-align: center;
-  a {
-    color: var(--text);
-    text-decoration: none;
-    font-weight: bold;
-  }
-  a:hover {
-    color: var(--links);
-  }
 }
 .tag {
   font-family: "Roboto Mono", "Courier New", monospace;

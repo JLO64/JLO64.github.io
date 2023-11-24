@@ -2,16 +2,13 @@
   {% for item in include.collection %}
 
     <li class="card">
-      <a href="{{ item.url }}">
-        <span class="header">
-          {{ item.title }}
+      <span class="header">
+        <a href="{{ item.url }}">{{ item.title }}</a>
+        {% if item.highlight %}
+          <mark>{{ item.highlight }}</mark>
+        {% endif %}
 
-          {% if item.highlight %}
-            <mark>{{ item.highlight }}</mark>
-          {% endif %}
-
-        </span>
-
+      </span>
         <hr />
 
         {% if item.desc != false %}
@@ -19,7 +16,6 @@
           {{ item.desc }}
         </p>
         {% endif %}
-      </a>
     </li>
 
   {% endfor %}
