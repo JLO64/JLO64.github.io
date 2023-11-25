@@ -11,6 +11,8 @@ echo -e "\ndestination: docs" >> _config.yml
 bundle exec jekyll build
 sudo sed -i '/destination: docs/d' _config.yml
 
+python3 check-new-post.py
+
 git add ./docs/
 git commit -m "Updated website: $(date '+%Y-%m-%d %H:%M')"
 git push origin master

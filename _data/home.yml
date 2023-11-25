@@ -4,6 +4,9 @@ navbar_entries:
 
   - title: Posts
     url: /posts
+  
+  - title: Subscribe
+    url: /subscribe
 
   - title: About
     url: /about
@@ -14,8 +17,8 @@ navbar_entries:
   - title: Mastodon
     url: https://fosstodon.org/@JLO64
 
-  - title: RSS
-    url: feed.xml
+  # - title: RSS
+  #   url: /feed.xml
 
 project_entries:
   - title: "Knights of Columbus Council #2431"
