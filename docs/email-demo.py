@@ -1,16 +1,16 @@
 import os
-import mailchimp_transactional as MailchimpTransactional
-from mailchimp_transactional.api_client import ApiClientError
 from dotenv import load_dotenv
+from mailchimp_marketing import Client
 
 load_dotenv()
 
-def run():
-  try:
-    mailchimp = MailchimpTransactional.Client(os.getenv('mailchimp_api_key'))
-    response = mailchimp.users.ping()
-    print('API called successfully: {}'.format(response))
-  except ApiClientError as error:
-    print('An exception occurred: {}'.format(error.text))
+mailchimp = Client()
+mailchimp.set_config({
+  "api_key": os.getenv('mailchimp_marketing_api_key'),
+  "server": os.getenv('mailchimp_marketing_server_prefix')
+})
 
-run()
+response = mailchimp.ping.get()
+print(response)
+
+

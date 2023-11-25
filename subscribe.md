@@ -5,7 +5,7 @@ title: Subscribe
 
 ## Email
 
-Enter your email address below to (eventually) be added to my mailing list. You will then receive in your inbox my blog posts in email form.
+Enter your email address below to be added to my mailing list. You will then (eventually) receive in your inbox my blog posts in email form.
 
 <div id="mc_embed_shell">
       <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
@@ -18,6 +18,7 @@ Enter your email address below to (eventually) be added to my mailing list. You 
     <form action="https://gmail.us21.list-manage.com/subscribe/post?u=13c80bf5e6bf53b95cb516b77&amp;id=dfb816090c&amp;f_id=0074ebe6f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
         <div id="mc_embed_signup_scroll">
             <div class="mc-field-group"><label for="mce-EMAIL">Email Address </label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""><span id="mce-EMAIL-HELPERTEXT" class="helper_text" style="background:none;"></span></div>
+<div hidden=""><input type="hidden" name="tags" value="2867829"></div>
         <div id="mce-responses" class="clear foot">
             <div class="response" id="mce-error-response" style="display: none;"></div>
             <div class="response" id="mce-success-response" style="display: none;"></div>
