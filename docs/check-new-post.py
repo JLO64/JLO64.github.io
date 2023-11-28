@@ -42,7 +42,8 @@ def extract_h1_tag(html_file):
 
 
 def post_blog_to_mastodon(title, url):
-    # mastodon.status_post(title + ": " + url)
+    print("Posting to Mastodon")
+    mastodon.status_post( " " title + ": " + url)
     print(title + ": " + url)
 
 def main():
