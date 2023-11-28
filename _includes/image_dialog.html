@@ -1,0 +1,50 @@
+<script>
+    window.addEventListener('load', dialogButtonInitializer);
+    
+    function dialogButtonInitializer() {
+        const all_pictures = document.querySelectorAll('picture');
+        const closeDialogButton = document.getElementById('data-close')
+        const dialog = document.querySelector('dialog')
+        const dialogContent = document.getElementById('img-dialog-content');
+        const body = document.querySelector('body');
+    
+        all_pictures.forEach(openDialogButton => {
+            openDialogButton.addEventListener('click', (event) => {
+                // Copy the contents of the clicked picture into the dialog content
+                let htmlContent = event.target.outerHTML;
+                htmlContent = htmlContent.replace(/\?tr=w-480/g, '');
+                dialogContent.innerHTML = htmlContent;
+
+                dialog.showModal()
+                body.style.overflow = 'hidden';
+          })
+      })
+    
+      closeDialogButton.addEventListener('click', () => {
+          dialog.close();
+          body.style.overflow = '';
+      })
+    
+      dialog.addEventListener('click', (event) => {
+          const dialogDimentions = dialog.getBoundingClientRect()
+          if (
+              event.clientX < dialogDimentions.left ||
+              event.clientX > dialogDimentions.right ||
+              event.clientY < dialogDimentions.top ||
+              event.clientY > dialogDimentions.bottom
+          ) {
+              dialog.close()
+              body.style.overflow = '';
+          }
+      })
+    }
+    </script>
+    
+    <dialog id="img-dialog">
+        <a id="data-close" class="closedialogbutton">
+          <span class="closebar1"></span>
+          <span class="closebar2"></span>
+        </a>
+        <div id="img-dialog-content"></div>
+    </dialog>
+    

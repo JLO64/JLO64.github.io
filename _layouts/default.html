@@ -6,6 +6,9 @@
     {% if site.theme_config.appearance_toggle %}
       {% include toggle_theme_button.html %}
     {% endif %}
+
+    {% include image_dialog.html %}
+    
     <main class="page-content" aria-label="Content">
       <div class="w">
         {{ content }}

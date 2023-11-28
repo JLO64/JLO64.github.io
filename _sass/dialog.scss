@@ -1,0 +1,66 @@
+#img-dialog {
+    z-index: 10;
+    margin: auto;
+    background: none;
+    border: none;
+    border-radius: none;
+    // width: 40rem;
+    max-width: 80%;
+    // max-height: 80%;
+    min-height: 9rem;
+    animation: popin 0.3s;
+  }
+#img-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  animation: fadein_onlyopacity 0.2s ease-out;
+}
+.closedialogbutton {
+  height: 1.875rem;
+  width: 2.0625rem;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  margin-bottom: 1rem;
+  background: var(--bg-secondary);
+  z-index: 100;
+  border-radius: 0.6rem;
+  border: none;
+  padding: 0.5rem;
+}
+
+.closebar1, .closebar2 {
+  margin-top: 0.1875rem;
+  background: #999;
+  width: 2.0625rem;
+  height: 0.25rem;
+  position: absolute;
+  margin-top: 0.8125rem;
+}
+
+.closebar1 {
+  transform: rotate(45deg);
+}
+.closebar2 {
+  transform: rotate(-45deg);
+}
+
+@keyframes popin {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadein_onlyopacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

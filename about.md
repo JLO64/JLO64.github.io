@@ -11,4 +11,4 @@ title: About
 
 My name is Julian Lopez and this is my personal site! I am a student at the University of Southern California studying Economics/Mathematics.
 
-Feel free to email me at admin@julianlopez.net
+Feel free to email me at <a href="mailto:admin@julianlopez.net">admin@julianlopez.net</a>
