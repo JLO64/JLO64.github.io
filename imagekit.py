@@ -38,7 +38,7 @@ def upload_image(filename, imagekit_foldername):
     
     print(" Uploading " + filename)
     upload = imagekit.upload(
-        file=open("images/" + filename.replace("images/", ""), "rb"),
+        file=open("images/" + filename.replace("/images/", "").replace("images/", ""), "rb"),
         file_name=filename,
         options=options
     )
@@ -58,10 +58,10 @@ for post_filename in os.listdir(post_folder):
     if len(blog_image_filepaths) > 0:
         print( " " + str(len(blog_image_filepaths)) + " images to process found")
         for image_filepath in blog_image_filepaths:
-            image_filename = image_filepath.replace("../images/", "")
+            image_filename = image_filepath.replace("../images/", "").replace("/images", "")
             image_url = upload_image(filename=image_filename, imagekit_foldername="/www_julianlopez_net/" + post_filename.replace(".md","") + "/")
             markdown_text = markdown_text.replace(image_filepath, image_url)
-            os.remove(image_filepath.replace("../", ""))
+            os.remove(image_filepath.replace("../", "").replace("/images", "images"))
             print(" " + image_filepath + " has been deleted")
         overwrite_file_with_markdown(post_folder + post_filename, markdown_text)
     else:

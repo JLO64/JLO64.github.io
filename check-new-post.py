@@ -1,4 +1,5 @@
 import requests, os, re
+from bs4 import BeautifulSoup
 import xml.etree.ElementTree as ET
 from dotenv import load_dotenv
 
@@ -40,9 +41,16 @@ def extract_h1_tag(html_file):
     match = re.search(h1_regex, html_content)
     return match.group(1)
 
+def extract_tags(html_file):
+    with open(html_file, 'r') as f:
+        html_content = f.read()
+    soup = BeautifulSoup(html_content, 'html.parser')
+    tags = [a.text for a in soup.find_all('a')]
+    return tags
 
-def post_blog_to_mastodon(title, url):
-    # mastodon.status_post(title + ": " + url)
+def post_blog_to_mastodon(title, url, tags):
+    print("Posting to Mastodon")
+    mastodon.status_post( title + ": " + url)
     print(title + ": " + url)
 
 def main():
@@ -53,6 +61,7 @@ def main():
     for new_post_url in new_posts:
         new_post_html_loc =  "docs/"+  new_post_url.replace("https://www.julianlopez.net/", "") + ".html"
         post_title = extract_h1_tag(new_post_html_loc)
-        post_blog_to_mastodon(post_title, new_post_url)
+        post_tags = extract_tags(new_post_html_loc)
+        post_blog_to_mastodon(post_title, new_post_url, post_tags)
 
 main()
