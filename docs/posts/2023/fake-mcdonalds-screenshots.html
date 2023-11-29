@@ -193,7 +193,7 @@
             openDialogButton.addEventListener('click', (event) => {
                 // Copy the contents of the clicked picture into the dialog content
                 let htmlContent = event.target.outerHTML;
-                htmlContent = htmlContent.replace(/\?tr=w-480/g, '');
+                htmlContent = htmlContent.replace(/\?tr=w-480/g, '').replace(/max-height: 60vh/g, '');
                 dialogContent.innerHTML = htmlContent;
 
                 dialog.showModal()
@@ -301,8 +301,8 @@
 </iframe>
 
 <picture>
-    <source srcset="https://ik.imagekit.io/jlo64/post2/banner.jpg?tr=w-720,f-webp," type="image/webp" width="100%" />
-    <img src="https://ik.imagekit.io/jlo64/post2/banner.jpg?tr=w-480" width="100%" alt="The McDonald's app" style="border-radius: 1rem;" title="The McDonald's app" />
+    <source srcset="https://ik.imagekit.io/jlo64/post2/banner.jpg?tr=w-720,f-webp," type="image/webp" />
+    <img src="https://ik.imagekit.io/jlo64/post2/banner.jpg?tr=w-480" alt="The McDonald's app" style="border-radius: 1rem; max-height: 60vh;" title="The McDonald's app" />
     <figcaption style="text-align:center">Honestly the deals you can get through points are amazing.</figcaption>
  </picture>
 
@@ -354,13 +354,13 @@ However, unlike these labels which are just text on a white background, I’d ne
 I then imported it into GIMP, erased a bunch of stuff within it, and split it into two images, one for the top half and one for the bottom half.</p>
 
 <picture>
-    <source srcset="https://ik.imagekit.io/jlo64/post2/top_half.jpg?tr=w-720,f-webp," type="image/webp" width="50%" />
-    <img src="https://ik.imagekit.io/jlo64/post2/top_half.jpg?tr=w-480" width="100%" alt="" style="border-radius: 1rem;" title="" />
+    <source srcset="https://ik.imagekit.io/jlo64/post2/top_half.jpg?tr=w-720,f-webp," type="image/webp" />
+    <img src="https://ik.imagekit.io/jlo64/post2/top_half.jpg?tr=w-480" alt="" style="border-radius: 1rem; max-height: 60vh;" title="" />
     <figcaption style="text-align:center"></figcaption>
  </picture>
 <picture>
-    <source srcset="https://ik.imagekit.io/jlo64/post2/bottom_half.jpg?tr=w-720,f-webp," type="image/webp" width="50%" />
-    <img src="https://ik.imagekit.io/jlo64/post2/bottom_half.jpg?tr=w-480" width="100%" alt="" style="border-radius: 1rem;" title="" />
+    <source srcset="https://ik.imagekit.io/jlo64/post2/bottom_half.jpg?tr=w-720,f-webp," type="image/webp" />
+    <img src="https://ik.imagekit.io/jlo64/post2/bottom_half.jpg?tr=w-480" alt="" style="border-radius: 1rem; max-height: 60vh;" title="" />
     <figcaption style="text-align:center">It's weird seeing so much blank space in this image</figcaption>
  </picture>
 
@@ -418,8 +418,8 @@ After that I uploaded the data to the API and it took just shy of 30-45 minutes 
 The longest part wasn’t the actual training, but waiting in the queue to get my turn to train</p>
 
 <picture>
-    <source srcset="https://ik.imagekit.io/jlo64/post2/gpt-spreadsheet.png?tr=w-720,f-webp," type="image/webp" width="100%" />
-    <img src="https://ik.imagekit.io/jlo64/post2/gpt-spreadsheet.png?tr=w-480" width="100%" alt="" style="border-radius: 1rem;" title="" />
+    <source srcset="https://ik.imagekit.io/jlo64/post2/gpt-spreadsheet.png?tr=w-720,f-webp," type="image/webp" />
+    <img src="https://ik.imagekit.io/jlo64/post2/gpt-spreadsheet.png?tr=w-480" alt="" style="border-radius: 1rem; max-height: 60vh;" title="" />
     <figcaption style="text-align:center">222 lines of McDonald's.</figcaption>
  </picture>
 
@@ -478,8 +478,8 @@ From there it downloads the image and saves it to the photos app.</p>
 <h2 id="the-final-product">The final product</h2>
 
 <picture>
-    <source srcset="https://ik.imagekit.io/jlo64/post2/1D99F7A8-6145-492B-9ED4-5A365A12DA81.jpeg?tr=w-720,f-webp," type="image/webp" width="50%" />
-    <img src="https://ik.imagekit.io/jlo64/post2/1D99F7A8-6145-492B-9ED4-5A365A12DA81.jpeg?tr=w-480" width="100%" alt="" style="border-radius: 1rem;" title="" />
+    <source srcset="https://ik.imagekit.io/jlo64/post2/1D99F7A8-6145-492B-9ED4-5A365A12DA81.jpeg?tr=w-720,f-webp," type="image/webp" />
+    <img src="https://ik.imagekit.io/jlo64/post2/1D99F7A8-6145-492B-9ED4-5A365A12DA81.jpeg?tr=w-480" alt="" style="border-radius: 1rem; max-height: 60vh;" title="" />
     <figcaption style="text-align:center">A 100% fake screenshot.</figcaption>
  </picture>
 

@@ -192,7 +192,7 @@
             openDialogButton.addEventListener('click', (event) => {
                 // Copy the contents of the clicked picture into the dialog content
                 let htmlContent = event.target.outerHTML;
-                htmlContent = htmlContent.replace(/\?tr=w-480/g, '');
+                htmlContent = htmlContent.replace(/\?tr=w-480/g, '').replace(/max-height: 60vh/g, '');
                 dialogContent.innerHTML = htmlContent;
 
                 dialog.showModal()

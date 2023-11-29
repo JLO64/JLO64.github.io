@@ -192,7 +192,7 @@
             openDialogButton.addEventListener('click', (event) => {
                 // Copy the contents of the clicked picture into the dialog content
                 let htmlContent = event.target.outerHTML;
-                htmlContent = htmlContent.replace(/\?tr=w-480/g, '');
+                htmlContent = htmlContent.replace(/\?tr=w-480/g, '').replace(/max-height: 60vh/g, '');
                 dialogContent.innerHTML = htmlContent;
 
                 dialog.showModal()
@@ -293,6 +293,28 @@
       
       <li class="post-list-item">
         <span class="home-date">
+          November 28 2023 -
+        </span>
+        <a href="/posts/2023/what-i-carry-in-my-pockets">What I Carry In My Pockets</a><br>
+        
+          <span class="tag">
+            <a href="https://www.julianlopez.net/tag/notebooks">notebooks</a>
+          </span>
+        
+          <span class="tag">
+            <a href="https://www.julianlopez.net/tag/fountain-pens">fountain-pens</a>
+          </span>
+        
+          <span class="tag">
+            <a href="https://www.julianlopez.net/tag/writing">writing</a>
+          </span>
+        
+      </li>
+    
+      
+      
+      <li class="post-list-item">
+        <span class="home-date">
           November 20 2023 -
         </span>
         <a href="/posts/2023/setting-up-my-domain">Setting Up My Domain</a><br>
@@ -330,20 +352,6 @@
           August 31 2023 -
         </span>
         <a href="/posts/2023/good-customer-support">Good Customer Support</a><br>
-        
-      </li>
-    
-      
-      
-      <li class="post-list-item">
-        <span class="home-date">
-          July 30 2023 -
-        </span>
-        <a href="/posts/2023/finding-flags-on-a-website">Finding Flags on a Website</a><br>
-        
-          <span class="tag">
-            <a href="https://www.julianlopez.net/tag/web">web</a>
-          </span>
         
       </li>
     

@@ -193,7 +193,7 @@
             openDialogButton.addEventListener('click', (event) => {
                 // Copy the contents of the clicked picture into the dialog content
                 let htmlContent = event.target.outerHTML;
-                htmlContent = htmlContent.replace(/\?tr=w-480/g, '');
+                htmlContent = htmlContent.replace(/\?tr=w-480/g, '').replace(/max-height: 60vh/g, '');
                 dialogContent.innerHTML = htmlContent;
 
                 dialog.showModal()
@@ -300,8 +300,8 @@
 
 
 <picture>
-    <source srcset="https://ik.imagekit.io/jlo64/post1/nintendo3ds-white-back.jpg?tr=w-720,f-webp," type="image/webp" width="100%" />
-    <img src="https://ik.imagekit.io/jlo64/post1/nintendo3ds-white-back.jpg?tr=w-480" width="100%" alt="An aqua-blue Nintendo 3DS with a stylus on a white background" style="border-radius: 1rem;" title="An aqua-blue Nintendo 3DS with a stylus on a white background" />
+    <source srcset="https://ik.imagekit.io/jlo64/post1/nintendo3ds-white-back.jpg?tr=w-720,f-webp," type="image/webp" />
+    <img src="https://ik.imagekit.io/jlo64/post1/nintendo3ds-white-back.jpg?tr=w-480" alt="An aqua-blue Nintendo 3DS with a stylus on a white background" style="border-radius: 1rem; max-height: 60vh;" title="An aqua-blue Nintendo 3DS with a stylus on a white background" />
     <figcaption style="text-align:center">My childhood in a nutshell.</figcaption>
  </picture>
 
@@ -336,8 +336,8 @@ I was trying to find a launch PS3 when I came across the exact same model of 3DS
 I had to buy it, partially out of a sense of nostalgia, but also because I knew that if I hacked it I could do some really cool stuff with it.</p>
 
 <picture>
-    <source srcset="https://ik.imagekit.io/jlo64/post1/my-3ds.png?tr=w-720,f-webp," type="image/webp" width="100%" />
-    <img src="https://ik.imagekit.io/jlo64/post1/my-3ds.png?tr=w-480" width="100%" alt="an aqua-blue 3DS being held" style="border-radius: 1rem;" title="an aqua-blue 3DS being held" />
+    <source srcset="https://ik.imagekit.io/jlo64/post1/my-3ds.png?tr=w-720,f-webp," type="image/webp" />
+    <img src="https://ik.imagekit.io/jlo64/post1/my-3ds.png?tr=w-480" alt="an aqua-blue 3DS being held" style="border-radius: 1rem; max-height: 60vh;" title="an aqua-blue 3DS being held" />
     <figcaption style="text-align:center">She's as beautiful as the day I lost her.</figcaption>
  </picture>
 
@@ -357,8 +357,8 @@ That being said, you can visit <a href="https://3ds.hacks.guide">3ds.hacks.guide
 What I will cover are some of the apps you can install and what they bring to the table.</p>
 
 <picture>
-    <source srcset="https://ik.imagekit.io/jlo64/post1/3ds-hacks-guide.png?tr=w-720,f-webp," type="image/webp" width="100%" />
-    <img src="https://ik.imagekit.io/jlo64/post1/3ds-hacks-guide.png?tr=w-480" width="100%" alt="a screenshot of the 3ds.hacks.guide website" style="border-radius: 1rem;" title="a screenshot of the 3ds.hacks.guide website" />
+    <source srcset="https://ik.imagekit.io/jlo64/post1/3ds-hacks-guide.png?tr=w-720,f-webp," type="image/webp" />
+    <img src="https://ik.imagekit.io/jlo64/post1/3ds-hacks-guide.png?tr=w-480" alt="a screenshot of the 3ds.hacks.guide website" style="border-radius: 1rem; max-height: 60vh;" title="a screenshot of the 3ds.hacks.guide website" />
     <figcaption style="text-align:center">All you need to do is follow the steps listed on here and you'll be good to go.</figcaption>
  </picture>
 
@@ -368,8 +368,8 @@ With this app, you can either install app from files on your SD card, or you can
 Apps that have their source code posted on github often have these QR codes as well.</p>
 
 <picture>
-    <source srcset="https://ik.imagekit.io/jlo64/post1/fbi-qr.png?tr=w-720,f-webp," type="image/webp" width="100%" />
-    <img src="https://ik.imagekit.io/jlo64/post1/fbi-qr.png?tr=w-480" width="100%" alt="a screenshot of the FBI app scanning a QR code" style="border-radius: 1rem;" title="a screenshot of the FBI app scanning a QR code" />
+    <source srcset="https://ik.imagekit.io/jlo64/post1/fbi-qr.png?tr=w-720,f-webp," type="image/webp" />
+    <img src="https://ik.imagekit.io/jlo64/post1/fbi-qr.png?tr=w-480" alt="a screenshot of the FBI app scanning a QR code" style="border-radius: 1rem; max-height: 60vh;" title="a screenshot of the FBI app scanning a QR code" />
     <figcaption style="text-align:center">This is by far the coolest feature I've ever seen built into homebrew!</figcaption>
  </picture>
 
@@ -384,8 +384,8 @@ It’s a super easy way to not only download homebrew apps and games but keep th
 I’ve often followed the development of this port on <a href="https://gbatemp.net/threads/release-wordle-ds-a-clone-of-wordle-for-the-ds-i.607796/">GBAtemp</a> where the developer frequently posts updates and fun little tidbits about this app and the New York Times version of Wordle.</p>
 
 <picture>
-    <source srcset="https://ik.imagekit.io/jlo64/post1/ds-wordle.png?tr=w-720,f-webp," type="image/webp" width="100%" />
-    <img src="https://ik.imagekit.io/jlo64/post1/ds-wordle.png?tr=w-480" width="100%" alt="a photo of a 3DS running the Wordle DS app with a qr code on the bottom screen" style="border-radius: 1rem;" title="a photo of a 3DS running the Wordle DS app with a qr code on the bottom screen" />
+    <source srcset="https://ik.imagekit.io/jlo64/post1/ds-wordle.png?tr=w-720,f-webp," type="image/webp" />
+    <img src="https://ik.imagekit.io/jlo64/post1/ds-wordle.png?tr=w-480" alt="a photo of a 3DS running the Wordle DS app with a qr code on the bottom screen" style="border-radius: 1rem; max-height: 60vh;" title="a photo of a 3DS running the Wordle DS app with a qr code on the bottom screen" />
     <figcaption style="text-align:center">It even generates a QR code so you can still share your score online.</figcaption>
  </picture>
 
@@ -393,16 +393,16 @@ I’ve often followed the development of this port on <a href="https://gbatemp.n
 I have <a href="https://github.com/Cam-2002/Minesweeper-3DS">Minesweeper</a>, an app that showcases <a href="https://github.com/memeToasty/3ds_sorting">different sorting algorithms</a>, and a port of a <a href="https://github.com/LukeZGD/DDLC-LOVE">perfectly harmless dating simulator</a> made by the hacker known as 4chan.</p>
 
 <picture>
-    <source srcset="https://ik.imagekit.io/jlo64/post1/3ds-bad-apple.png?tr=w-720,f-webp," type="image/webp" width="100%" />
-    <img src="https://ik.imagekit.io/jlo64/post1/3ds-bad-apple.png?tr=w-480" width="100%" alt="a photo of the Bad Apple video playing on a 3DS" style="border-radius: 1rem;" title="a photo of the Bad Apple video playing on a 3DS" />
+    <source srcset="https://ik.imagekit.io/jlo64/post1/3ds-bad-apple.png?tr=w-720,f-webp," type="image/webp" />
+    <img src="https://ik.imagekit.io/jlo64/post1/3ds-bad-apple.png?tr=w-480" alt="a photo of the Bad Apple video playing on a 3DS" style="border-radius: 1rem; max-height: 60vh;" title="a photo of the Bad Apple video playing on a 3DS" />
     <figcaption style="text-align:center">Of course, you can play Bad Apple on it.</figcaption>
  </picture>
 
 <p>Even better, custom themes are a thing! All you have to do is download <a href="https://github.com/astronautlevel2/Anemone3DS">Anemone3DS</a> and use the built in qr code scanner to download themes from the <a href="https://3dsthemes.com/">3DS Theme Shop</a>.</p>
 
 <picture>
-    <source srcset="https://ik.imagekit.io/jlo64/post1/winxp-theme.png?tr=w-720,f-webp," type="image/webp" width="100%" />
-    <img src="https://ik.imagekit.io/jlo64/post1/winxp-theme.png?tr=w-480" width="100%" alt="a photo of a 3DS with a Windows XP theme" style="border-radius: 1rem;" title="a photo of a 3DS with a Windows XP theme" />
+    <source srcset="https://ik.imagekit.io/jlo64/post1/winxp-theme.png?tr=w-720,f-webp," type="image/webp" />
+    <img src="https://ik.imagekit.io/jlo64/post1/winxp-theme.png?tr=w-480" alt="a photo of a 3DS with a Windows XP theme" style="border-radius: 1rem; max-height: 60vh;" title="a photo of a 3DS with a Windows XP theme" />
     <figcaption style="text-align:center">I have a thing for retro looks.</figcaption>
  </picture>
 
@@ -413,8 +413,8 @@ I have <a href="https://github.com/Cam-2002/Minesweeper-3DS">Minesweeper</a>, an
 If you have a model that was released later in the 3DS’s lifespan (which is confusingly called the “New” 3DS), with improved clockspeeds and more RAM, you can even emulate PlayStation One games!</p>
 
 <picture>
-    <source srcset="https://ik.imagekit.io/jlo64/post1/3ds-balloon-fight.png?tr=w-720,f-webp," type="image/webp" width="100%" />
-    <img src="https://ik.imagekit.io/jlo64/post1/3ds-balloon-fight.png?tr=w-480" width="100%" alt="a photo of a 3DS running the NES game balloon fight" style="border-radius: 1rem;" title="a photo of a 3DS running the NES game balloon fight" />
+    <source srcset="https://ik.imagekit.io/jlo64/post1/3ds-balloon-fight.png?tr=w-720,f-webp," type="image/webp" />
+    <img src="https://ik.imagekit.io/jlo64/post1/3ds-balloon-fight.png?tr=w-480" alt="a photo of a 3DS running the NES game balloon fight" style="border-radius: 1rem; max-height: 60vh;" title="a photo of a 3DS running the NES game balloon fight" />
     <figcaption style="text-align:center">Hands down my favorite game on the NES.</figcaption>
  </picture>
 
@@ -427,8 +427,8 @@ Unless you bought in early like me you couldn’t buy or play any of them.
 However, thanks to the efforts of those in the homebrew community, you can now use that same “emulator” to run whatever GBA games you want!</p>
 
 <picture>
-    <source srcset="https://ik.imagekit.io/jlo64/post1/3ds-metroid-fusion.png?tr=w-720,f-webp," type="image/webp" width="100%" />
-    <img src="https://ik.imagekit.io/jlo64/post1/3ds-metroid-fusion.png?tr=w-480" width="100%" alt="a photo of a 3DS running the Gameboy Advance game Metroid Fusion" style="border-radius: 1rem;" title="a photo of a 3DS running the Gameboy Advance game Metroid Fusion" />
+    <source srcset="https://ik.imagekit.io/jlo64/post1/3ds-metroid-fusion.png?tr=w-720,f-webp," type="image/webp" />
+    <img src="https://ik.imagekit.io/jlo64/post1/3ds-metroid-fusion.png?tr=w-480" alt="a photo of a 3DS running the Gameboy Advance game Metroid Fusion" style="border-radius: 1rem; max-height: 60vh;" title="a photo of a 3DS running the Gameboy Advance game Metroid Fusion" />
     <figcaption style="text-align:center">Metroid Fusion is still one of the scariest games I've ever played!</figcaption>
  </picture>
 
@@ -438,8 +438,8 @@ However, when I first got this particular 3DS the Nintento eShop was still runni
 No matter what I did I couldn’t get it to download, it would always initiate the download and then fail.</p>
 
 <picture>
-    <source srcset="https://ik.imagekit.io/jlo64/post1/dead-eshop.png?tr=w-720,f-webp," type="image/webp" width="100%" />
-    <img src="https://ik.imagekit.io/jlo64/post1/dead-eshop.png?tr=w-480" width="100%" alt="a photo of the Nintendo eShop on a 3DS failing to load" style="border-radius: 1rem;" title="a photo of the Nintendo eShop on a 3DS failing to load" />
+    <source srcset="https://ik.imagekit.io/jlo64/post1/dead-eshop.png?tr=w-720,f-webp," type="image/webp" />
+    <img src="https://ik.imagekit.io/jlo64/post1/dead-eshop.png?tr=w-480" alt="a photo of the Nintendo eShop on a 3DS failing to load" style="border-radius: 1rem; max-height: 60vh;" title="a photo of the Nintendo eShop on a 3DS failing to load" />
     <figcaption style="text-align:center">It was fun while it lasted.</figcaption>
  </picture>
 
