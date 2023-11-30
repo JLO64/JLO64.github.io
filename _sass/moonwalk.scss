@@ -59,6 +59,7 @@ li { margin: 0.4em 0; }
   margin: 0 auto;
   padding: 2em 2em;
   background: var(--w-mobile-background);
+  max-width: 50rem
 }
 
 .credit-container  {
@@ -232,6 +233,7 @@ html, body {
   .w {
     background: var(--bg-secondary-opaque);
     max-width: 45vw;
+    min-height: 80vh;
   }
   .credit-container  {
     background: var(--bg-secondary-opaque);
