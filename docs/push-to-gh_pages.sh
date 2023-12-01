@@ -4,7 +4,7 @@
 cd "$(dirname "$0")"
 
 # Run the imagekit.py script
-python3 imagekit.py
+# python3 imagekit.py
 
 # Build the Jekyll site
 echo -e "\ndestination: docs" >> _config.yml
