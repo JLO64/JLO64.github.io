@@ -1,9 +1,9 @@
 ul.horizontal-list {
   display: flex;
-  //justify-content: space-between;
+  justify-content: space-evenly;
   margin-top: 0em;
-  // margin-left: -40px;
   flex-wrap: wrap;
+  padding-inline-start: 0;
 
   li {
     display:inline;
