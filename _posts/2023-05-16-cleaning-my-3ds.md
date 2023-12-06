@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cleaning My 3DS
-permalink: /posts/:year/:slug
+permalink: /posts/:year/:month/:slug
 tags:
  - 3ds
 ---

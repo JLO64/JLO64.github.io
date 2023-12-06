@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Finding Flags on a Website
-permalink: /posts/:year/:slug
+permalink: /posts/:year/:month/:slug
 tags:
  - web
 ---

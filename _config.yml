@@ -1,6 +1,5 @@
 title: Domain of a Knight
 author: Julian Lopez
-#url: https://www.julianlopez.net # root address of the site
 url: https://www.julianlopez.net
 description: > # description of the site (multiple lines allowed)
   This my personal website for my random tech stuff.
@@ -71,7 +70,3 @@ jekyll-archives:
   permalinks:
     year: '/posts/:year/'
     tag: '/tag/:name/'
-
-
-
-

@@ -2,7 +2,7 @@
 layout: post
 title: Generating Fake McDonald's Screenshots With AWS/OpenAI
 github: Generate-McDonalds-Mobile-Screenshot
-permalink: /posts/:year/:slug
+permalink: /posts/:year/:month/:slug
 ---
 
 {% include blog_image.html url="https://ik.imagekit.io/jlo64/post2/banner.jpg" caption="Honestly the deals you can get through points are amazing." alt="The McDonald's app" %}

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Setting Up My Domain
-permalink: /posts/:year/:slug
+permalink: /posts/:year/:month/:slug
 tags:
  - web
 ---

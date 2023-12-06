@@ -1,0 +1,23 @@
+@media (min-width: 800px) and (orientation: landscape) and (hover: hover) and (pointer: fine) {
+    .theme-toggle {
+      display: block;
+    }
+    .background-svg {
+      display: inline;
+    }
+    html, body {
+      background-color: #00000000;
+      border: none;
+      border-radius: 0rem;
+    }
+    .w {
+      background: var(--bg-secondary-opaque);
+      max-width: 60vw;
+      min-height: 80vh;
+    }
+    .credit-container  {
+      background: var(--bg-secondary-opaque);
+      max-width: 60vw;
+    }
+  } 
+  

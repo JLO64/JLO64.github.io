@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Good Customer Support
-permalink: /posts/:year/:slug
+permalink: /posts/:year/:month/:slug
 ---
 
 Having to make a phone call and talk to a companies customer support always sucks. Nowhere has this been more apparent to me than when I have been on hold for over an hour to talk to my university's financial aid department. However, there have been some rare instances where I found my experiences almost enjoyable.

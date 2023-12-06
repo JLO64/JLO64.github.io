@@ -1,7 +1,7 @@
 ---
 layout: post
 title: What I Carry In My Pockets
-permalink: /posts/:year/:slug
+permalink: /posts/:year/:month/:slug
 tags:
     - notebooks
     - fountain-pens

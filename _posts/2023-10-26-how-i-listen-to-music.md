@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How I Listen To Music
-permalink: /posts/:year/:slug
+permalink: /posts/:year/:month/:slug
 ---
 
 Growing up as a Kid I loved listening to anime music on my iPod. I started out by purchasing songs off of iTunes for $0.99, but there weren’t that many songs on there from shows that I liked. (In hindsight, they might have had them but with Japamese titles which I couldn’t read/search.) The one place I was able to easily find these songs was on YouTube so I used that as my source. I would grab the URLs I wanted and go visit some sketchy YoaTube to MP3 websites, import the MP3s into iTunes, then sync my iPod.
