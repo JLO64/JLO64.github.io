@@ -8,24 +8,24 @@ layout: default
   <div class=not-dashed></div>
 {% endif %}
 
-  <h1 class="h1-website-title">{{ site.title }}</h1>
-  {% if site.theme_config.show_description == true %}
-    <p>{{ site.description }}</p>
-  {% endif %}
+  <h1 class="h1-website-title" style="margin-left: -0.5rem;">{{ site.title }}</h1>
+  <div style="margin: 0 auto;" class="homepage_flex_divs">
+    <p style="text-align: center;">{{ site.description }}</p>
+  </div>  
 </header>
 
 {{ content }}
-
-{% if site.theme_config.show_blog == true %}
-  <h2>{{ site.theme_config.home.title_blog }}</h2>
-  {% include post_list.html limit=site.theme_config.home.post_limit %}
-  <a class=home-page-read-more href="/posts">Read More</a>
-{% endif %}
-
-{% if site.theme_config.show_projects == true %}
-  <h2>{{ site.theme_config.home.title_projects }}</h2>
-  {% include card_list.html collection=site.data.home.project_entries %}
-{% endif %}
+<div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+  <div class="homepage_flex_divs">
+    <h2>{{ site.theme_config.home.title_blog }}</h2>
+    {% include post_list.html limit=5 %}
+    <a class=home-page-read-more href="/posts">Read More</a>
+  </div>
+  <div class="homepage_flex_divs">
+    <h2>{{ site.theme_config.home.title_projects }}</h2>
+    {% include card_list.html collection=site.data.home.project_entries %}
+  </div>
+</div>
 
 {% if site.theme_config.show_misc_list == true %}
   <h2>{{ site.theme_config.home.title_misc_list }}</h2>
