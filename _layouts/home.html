@@ -10,11 +10,10 @@ layout: default
 
   <h1 class="h1-website-title" style="margin-left: -0.5rem;">{{ site.title }}</h1>
   <div style="margin: 0 auto;" >
-    <p style="text-align: center;">{{ site.description }}</p>
+    <p style="text-align: center; max-width: 34rem; margin: 0 auto;">{{ site.description }}</p>
   </div>  
 </header>
-
-{{ content }}
+<!-- {{ content }} -->
 <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
   <div class="homepage_flex_divs">
     <h2>{{ site.theme_config.home.title_blog }}</h2>
@@ -26,21 +25,3 @@ layout: default
     {% include card_list.html collection=site.data.home.project_entries %}
   </div>
 </div>
-
-{% if site.theme_config.show_misc_list == true %}
-  <h2>{{ site.theme_config.home.title_misc_list }}</h2>
-  {% include vertical_list.html collection=site.data.home.misc_entries %}
-{% endif %}
-
-{% if site.theme_config.show_old_projects == true %}
-  <h2>{{ site.theme_config.home.title_old_projects }}</h2>
-  {% include card_list.html collection=site.data.home.old_project_entries %}
-{% endif %}
-
-
-{% if site.theme_config.show_footer == true %}
-  <footer>
-    <div class=not-dashed></div>
-    {% include horizontal_list.html collection=site.data.home.footer_entries %}
-  </footer>
-{% endif %}

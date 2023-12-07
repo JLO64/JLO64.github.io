@@ -16,15 +16,13 @@
   
 </p>
 
-{% if site.theme_config.show_tags == true %}
-  <div class="">
-    {% for tag in page.tags %}
-    <span class="tag">
-      <a href="{{ site.url }}/tag/{{ tag }}">{{ tag }}</a>
-    </span>
-    {% endfor %}
-  </div>
-{% endif %}
+<div class="">
+  {% for tag in page.tags %}
+  <span class="tag">
+    <a href="{{ site.url }}/tag/{{ tag }}">{{ tag }}</a>
+  </span>
+  {% endfor %}
+</div>
 
 {% if page.github %}
   <iframe
