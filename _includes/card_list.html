@@ -2,20 +2,18 @@
   {% for item in include.collection %}
 
     <li class="card">
-      <span class="header">
-        <a href="{{ item.url }}">{{ item.title }}</a>
-        {% if item.highlight %}
-          <mark>{{ item.highlight }}</mark>
-        {% endif %}
-
-      </span>
-        <hr />
-
-        {% if item.desc != false %}
-        <p class="body">
-          {{ item.desc }}
-        </p>
-        {% endif %}
+      <a href="{{ item.url }}" style="text-decoration: none;">
+        <span class="header">
+          <h4>{{ item.title }}</h4>
+          {% if item.highlight %}
+            <mark>{{ item.highlight }}</mark>
+          {% endif %}
+        </span>
+          <hr />
+          {% if item.desc != false %}
+            <p class="body">{{ item.desc }}</p>
+          {% endif %}
+        </a>
     </li>
 
   {% endfor %}

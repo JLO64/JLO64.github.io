@@ -1,10 +1,18 @@
+// ul.horizontal-list::-webkit-scrollbar {
+//   display: none;
+// }
+
 ul.horizontal-list {
   display: flex;
   justify-content: space-evenly;
   margin: 0 auto;
   flex-wrap: wrap;
   padding-inline-start: 0;
-  max-width: 40vw;
+  // height: 30rem;
+  // overflow: auto;
+  // scrollbar-width: none;
+  // -ms-overflow-style: none;
+  
 
   li {
     display:inline;
@@ -12,21 +20,31 @@ ul.horizontal-list {
   }
 
   li a {
-    // text-decoration: none;
+    font-weight: normal;
+    font-size: 1.3rem;
+  }
+
+  li h4 {
     font-weight: normal;
     font-size: 1.1rem;
+    color: var(--link-text);
+    margin: 0;
+    height: 4.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
 }
 
 .card {
   padding: 1.3rem 1rem 0rem 1rem;
-  border: 0.2rem solid var(--headings);
+  // border: 0.2rem solid var(--headings);
   width: 14rem;
   height: auto;
   text-align: center;
   align-items: center;
-  background-color: var(--bg-secondary);
+  background-color: var(--code-background);
   margin-bottom: 1.5rem;
   border-radius: 2rem;
 
@@ -36,6 +54,8 @@ ul.horizontal-list {
 
   hr {
     margin: 0.5em 0;
+    // padding: 2rem;
+    border-style: solid;
   }
 
 }

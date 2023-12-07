@@ -15,6 +15,8 @@ html {
     --w-mobile-background: #ffffff;
     --scrollbar-foreground: #74c0fc;
     --scrollbar-background: white;
+    --code-background: #cfd2e2b2;
+    // --code-background: #b3b6c5b2;
 }
 // -------------- THEME SWITCHER -------------- //
 @mixin dark-appearance {
@@ -35,6 +37,7 @@ html {
       --w-mobile-background: #000000;
       --scrollbar-foreground: #74c0fc;
       --scrollbar-background: black;
+      --code-background: #1a1f35b2;
   };
 }
 html[data-theme="dark"] { @include dark-appearance; }
