@@ -305,3 +305,24 @@ ul {
 .homepage_flex_divs {
   width: 90vw;
 }
+
+ul.horizontal-list {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  padding-inline-start: 0;  
+
+  li {
+    display:inline;
+    margin: 0 0 1.5rem 0;
+  }
+
+  li a {
+    font-weight: normal;
+    font-size: 1.3rem;
+  }
+
+  
+
+}

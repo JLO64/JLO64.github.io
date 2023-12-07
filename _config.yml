@@ -39,6 +39,7 @@ theme_config:
 exclude:
   - example_posts
   - imagekit.py
+  - docs
 
 highlighter: rouge
 
@@ -66,4 +67,5 @@ jekyll-archives:
   permalinks:
     year: '/posts/:year/'
     tag: '/tag/:name/'
+
 
