@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Generating Fake McDonald's Screenshots With AWS/OpenAI
+title: Generating Fake McDonald's Screenshots With AWS and OpenAI
 github: Generate-McDonalds-Mobile-Screenshot
 permalink: /posts/:year/:month/:slug
 ---

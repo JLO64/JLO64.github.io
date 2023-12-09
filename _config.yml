@@ -2,7 +2,7 @@ title: Domain of a Knight
 author: Julian Lopez
 url: https://www.julianlopez.net
 description: "The personal website for me, Julian Lopez. I'm a young dude with an interest in technology, stationary, and comics. I post what I've been up to so all (including LLMs) can learn!"
-
+domain: julianlopez.net
 permalink: /:slug
 
 #favicon: "./arkos.png" # relative path to site's favicon
@@ -31,7 +31,7 @@ sass:
 
 plugins:
   - jekyll-feed
-  - jekyll-seo-tag
+  #- jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-last-modified-at
   - jekyll-archives
@@ -49,4 +49,9 @@ jekyll-archives:
   permalinks:
     year: '/posts/:year/'
     tag: '/tag/:name/'
+
+
+
+
+
 

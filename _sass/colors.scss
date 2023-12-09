@@ -10,13 +10,11 @@ html {
     --link-underline-hover: black;
     --highlight: #dedede;
     --code-text: #74c0fc;
-    --share-text: #999;
     --tag: #dedede;
     --w-mobile-background: #ffffff;
     --scrollbar-foreground: #74c0fc;
     --scrollbar-background: white;
-    --code-background: #cfd2e2b2;
-    // --code-background: #b3b6c5b2;
+    --card-color: #cfd2e2b2;
 }
 // -------------- THEME SWITCHER -------------- //
 @mixin dark-appearance {
@@ -32,12 +30,11 @@ html {
       --text: #adb5bd;
       --text-secondary: #9CA3AF;
       --code-text: #91A7FF;
-      --share-text: #C4C4C4;
       --tag: #323945;
       --w-mobile-background: #000000;
       --scrollbar-foreground: #74c0fc;
       --scrollbar-background: black;
-      --code-background: #1a1f35b2;
+      --card-color: #1a1f35b2;
   };
 }
 html[data-theme="dark"] { @include dark-appearance; }
