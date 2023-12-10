@@ -7,7 +7,7 @@ cd "$(dirname "$0")"
 # python3 imagekit.py
 
 # Build the Jekyll site
-echo -e "\ndestination: docs" >> _config.yml
+echo -e "destination: docs" >> _config.yml
 bundle exec jekyll build
 sudo sed -i '/destination: docs/d' _config.yml
 
