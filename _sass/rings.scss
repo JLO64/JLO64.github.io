@@ -1,0 +1,47 @@
+.progress-ring {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .progress-ring__circle {
+    stroke: silver;
+    stroke-dasharray: 10 20 60 10 500;
+  }
+  
+  .progress-ring__circle--regular {
+    animation: rotate-rings 13s linear infinite;
+    stroke-width: 10;
+  }
+  
+  .progress-ring__circle--thin {
+    animation: rotate-rings 5s linear infinite;
+    stroke-width: 6;
+  }
+  
+  .progress-ring__circle--thick {
+    animation: rotate-rings 16s linear infinite;
+    stroke-width: 20;
+  }
+  @keyframes rotate-rings {
+    from {
+      transform: rotate(0deg);
+      transform-origin: bottom right;
+    }
+    to {
+      transform: rotate(360deg);
+      transform-origin: bottom right;
+    }
+  }
+  .background-svg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-color: var(--bg);
+    display: none;
+  }

@@ -81,56 +81,6 @@ blockquote {
   outline: none;
 }
 
-
-//ring background
-.progress-ring {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.progress-ring__circle {
-  stroke: silver;
-  stroke-dasharray: 10 20 60 10 500;
-}
-
-.progress-ring__circle--regular {
-  animation: rotate-rings 13s linear infinite;
-  stroke-width: 10;
-}
-
-.progress-ring__circle--thin {
-  animation: rotate-rings 5s linear infinite;
-  stroke-width: 6;
-}
-
-.progress-ring__circle--thick {
-  animation: rotate-rings 16s linear infinite;
-  stroke-width: 20;
-}
-@keyframes rotate-rings {
-  from {
-    transform: rotate(0deg);
-    transform-origin: bottom right;
-  }
-  to {
-    transform: rotate(360deg);
-    transform-origin: bottom right;
-  }
-}
-.background-svg {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  background-color: var(--bg);
-  display: none;
-}
-
 img {
   max-width: 100%;
   display: block;
@@ -273,22 +223,10 @@ ul {
   padding-inline-start: 1.5rem;
 }
 
-.home-page-read-more {
-  padding-inline-start: 1rem;
-}
-
-
 .container-404 {
   margin: 1em auto;
   max-width: 60em;
   text-align: center;
-}
-
-.h1-404 {
-  margin: 30px 0;
-  font-size: 4em;
-  line-height: 1;
-  letter-spacing: -1px;
 }
 
 .homepage_flex_divs {

@@ -7,9 +7,11 @@ layout: default
       {% include horizontal_list.html collection=site.data.home.navbar_entries %}
       <div class=not-dashed></div>
     {% endif %}
-    </header>
-<h1 class="post-title">{{ page.title }}</h1>
-{% include date_and_social_share.html %}
+</header>
+{% if page.title %}
+  <h1 class="post-title">{{ page.title }}</h1>
+  {% include date_and_social_share.html %}
+{% endif %}
 {{ content }}
 
 <a href="mailto:admin@julianlopez.net?subject=Re: {{ page.title }}">Send me your thoughts via Email</a>

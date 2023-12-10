@@ -15,10 +15,8 @@ layout: default
   <h2>Tags</h2>
   {% for tag in site.tags %}
   <span class="tag">
-    <a href="{{ site.url }}/tag/{{ tag[0] }}">{{ tag[0] }}</a>
+    <a href="/tag/{{ tag[0] }}">{{ tag[0] }}</a>
   </span>
-{% endfor %}
-
+  {% endfor %}
 </ul>
-
 {% include post_list.html show_year=true %}
