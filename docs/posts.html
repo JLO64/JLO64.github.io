@@ -321,10 +321,11 @@
 
   if (sites.length > 0) {
     const choiceIndex = Math.floor(Math.random() * sites.length)
-    window.open(sites[choiceIndex].attributes.href.value, '_blank').focus()
+    window.location.href = sites[choiceIndex].attributes.href.value
   }
 }
 </script>
+
 
 
 
