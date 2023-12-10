@@ -62,6 +62,7 @@ def main():
         new_post_html_loc =  "docs/"+  new_post_url.replace("https://www.julianlopez.net/", "") + ".html"
         post_title = extract_h1_tag(new_post_html_loc)
         post_tags = extract_tags(new_post_html_loc)
-        post_blog_to_mastodon(post_title, new_post_url, post_tags)
+        print(post_tags)
+        # post_blog_to_mastodon(post_title, new_post_url, post_tags)
 
 main()
