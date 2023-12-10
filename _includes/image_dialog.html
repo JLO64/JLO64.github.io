@@ -12,7 +12,7 @@
             openDialogButton.addEventListener('click', (event) => {
                 // Copy the contents of the clicked picture into the dialog content
                 let htmlContent = event.target.outerHTML;
-                htmlContent = htmlContent.replace(/\?tr=w-480/g, '').replace(/max-height: 60vh/g, '');
+                htmlContent = htmlContent.replace(/\?tr=w-480/g, '').replace(/max-height: 60vh/g, '').replace(/border-radius: 1rem;/g, '');
                 dialogContent.innerHTML = htmlContent;
 
                 dialog.showModal()
@@ -41,10 +41,10 @@
     </script>
     
     <dialog id="img-dialog">
-        <a id="data-close" class="closedialogbutton">
-          <span class="closebar1"></span>
-          <span class="closebar2"></span>
-        </a>
+        <button id="data-close" class="closedialogbutton" autofocus="true">
+            <span class="closebar1"></span>
+            <span class="closebar2"></span>
+        </button>
         <div id="img-dialog-content"></div>
     </dialog>
     
