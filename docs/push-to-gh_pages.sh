@@ -9,7 +9,7 @@ python3 imagekit.py
 # Build the Jekyll site
 echo -e "destination: docs" >> _config.yml
 bundle exec jekyll build
-sudo sed -i '/destination: docs/d' _config.yml
+sed -i '/destination: docs/d' _config.yml
 
 python3 check-new-post.py
 
