@@ -14,10 +14,12 @@
     background: var(--bg-secondary-opaque);
     max-width: 60vw;
     min-height: 80vh;
+    border-radius: 4rem 4rem 0 0;
   }
   .credit-container  {
     background: var(--bg-secondary-opaque);
     max-width: 60vw;
+    border-radius: 0 0 4rem 4rem;
   }
   .homepage_flex_divs {
     max-width: 30vw
