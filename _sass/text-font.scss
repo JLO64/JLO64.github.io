@@ -23,12 +23,6 @@
   transition: 0.2s ease-out;
   color: var(--link-text);
 }
-.h1-website-title:hover {
-  font-size: 4rem;
-  text-shadow: 0 0 2rem var(--link-underline);
-  color: var(--link-underline);
-  
-}
 
 pre, code {
   font-family: "Courier New", monospace;
@@ -46,9 +40,6 @@ pre, code {
 }
 .tag a {
   text-decoration: none;
-}
-.tag:hover {
-  font-size: 120%;
 }
 
 body {
@@ -73,9 +64,5 @@ ul.horizontal-list {
   li a {
     font-weight: 500;
     font-size: 1.5rem;
-  }
-  li a:hover {
-    font-weight: 999;
-    font-size: 1.8rem;
   }
 }

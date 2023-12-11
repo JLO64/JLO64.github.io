@@ -35,6 +35,7 @@
     overflow: auto;
     height: 27rem;
   }
+
   a:hover {
     text-decoration-color: var(--link-underline);
     color: var(--link-underline);
@@ -44,4 +45,13 @@
     text-underline-offset: 0.4rem;
     text-shadow: 0 0 1rem var(--link-underline);
   }
+  .tag:hover {
+    font-size: 120%;
+  }
+  .h1-website-title:hover {
+    font-size: 4rem;
+    text-shadow: 0 0 2rem var(--link-underline);
+    color: var(--link-underline);
+  }
+  
 } 
