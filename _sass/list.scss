@@ -1,58 +1,68 @@
 .project-card {
-  scrollbar-color: var(--scrollbar-foreground) var(--scrollbar-background);
-}
-
-.project-card {
   display: flex;
   justify-content: space-evenly;
+  scrollbar-color: var(--scrollbar-foreground) var(--scrollbar-background);
   margin: 0 auto;
   flex-wrap: wrap;
   padding-inline-start: 0;
   -ms-overflow-style: none;
+  // align-content: center;
   // https://stackoverflow.com/questions/18651345/gradient-opacity-on-the-bottom-of-div
+}
 
-  li {
-    display:inline;
-    margin: 0 0 1.5rem 0;
+.card {
+  // padding: 1.3rem 1rem 0rem 1rem;
+  // border: 0.2rem solid var(--headings);
+  width: 14rem;
+  height: fit-content;
+  text-align: center;
+  align-items: center;
+  background-color: var(--card-color);
+  border-radius: 2rem;
+  padding: 0.5rem;
+  display:inline;
+  margin: 0.8rem 0;
+  transition: 0.2s ease-out;
+  .body {
+    font-size: 0.8rem;
   }
-
-  li a {
+  hr {
+    margin: 0.5rem 0;
+    border-style: solid;
+  }
+  a {
     font-weight: normal;
     font-size: 1.3rem;
+    text-decoration: none;
   }
-
-  li h4 {
+  h3 {
     font-weight: normal;
     font-size: 1.1rem;
     color: var(--link-text);
     margin: 0;
-    height: 4.7rem;
+    padding: 0 0.5rem;
+    height: 4.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: auto;
+    margin-top: 0.5rem;
   }
-
-}
-
-.card {
-  padding: 1.3rem 1rem 0rem 1rem;
-  // border: 0.2rem solid var(--headings);
-  width: 14rem;
-  height: auto;
-  text-align: center;
-  align-items: center;
-  background-color: var(--card-color);
-  margin-bottom: 1.5rem;
-  border-radius: 2rem;
-
-  .body {
-    font-size: 0.8rem;
+  p {
+    margin: 0;
+    height: 4.2rem;
+    align-items: center;
+    display: flex;
+    width: auto;
+    justify-content: center;
   }
-
-  hr {
-    margin: 0.5em 0;
-    // padding: 2rem;
-    border-style: solid;
+  mark {
+    padding: 0.1rem 0.3rem;
+    background-color: var(--highlight);
+    border-radius: 20%;
+    font-size: 0.6em;
+    letter-spacing: 0.1rem;
+    margin-left: 0.3rem;
+    font-weight: 500;
   }
-
 }

@@ -34,7 +34,7 @@ project_entries:
     url: https://jpn-blog.julianlopez.net/
     desc: A blog I had to make for a Japanese course at USC.
 
-  # - title: USC Bus Website
-  #   url: https://github.com/usc-bus/usc-bus.github.io
-  #   desc: A website to check on USC bus maps/times
-  #   highlight: WIP
+  - title: USC Bus Website
+    url: https://github.com/usc-bus/usc-bus.github.io
+    desc: A website to check on USC bus maps/times
+    highlight: WIP

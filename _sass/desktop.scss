@@ -15,7 +15,8 @@
     background: var(--bg-secondary-opaque);
     max-width: 60vw;
     border-radius: 4rem;
-    border: 0.5rem solid #74c0fc;
+    border: 0.5rem solid var(--link-underline);
+    box-shadow: 0 0 1.5rem var(--link-underline);
   }
   .page-content{
     padding-bottom: 2rem;
@@ -33,25 +34,34 @@
   }
   .project-card {
     overflow: auto;
-    height: 27rem;
+    height: 36rem;
   }
-
   a:hover {
     text-decoration-color: var(--link-underline);
     color: var(--link-underline);
     font-weight: 990;
-    font-size: 114%;
+    font-size: 110%;
     text-decoration-thickness: 0.2rem;
     text-underline-offset: 0.4rem;
     text-shadow: 0 0 1rem var(--link-underline);
   }
-  .tag:hover {
-    font-size: 120%;
-  }
+  // p:hover {font-size: 101%;}
+  .tag:hover {font-size: 120%;}
   .h1-website-title:hover {
     font-size: 4rem;
     text-shadow: 0 0 2rem var(--link-underline);
     color: var(--link-underline);
   }
-  
+  // h2:hover, h3:hover, h4:hover, h5:hover  {font-size: 110%;}  
+  h1:hover  {font-size: 2.5rem;}  
+  h2:hover  {font-size: 2rem;}
+  .card:hover {
+    border: 0.3rem solid var(--link-underline);
+    box-shadow: 0 0 0.8rem var(--link-underline);
+    a {
+      text-shadow: none;
+      font-size: 100%;
+      font-weight: normal;
+    }
+  }
 } 

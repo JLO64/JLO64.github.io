@@ -9,8 +9,6 @@ body {
   border: none;
 }
 
-h2, h3, h4, h5 { margin-top: 1.5em; }
-
 hr { margin: 1em 0; }
 
 hr.page-break {
@@ -19,10 +17,6 @@ hr.page-break {
 
   &:before { content: '-----' }
   &:after { content: attr(data-content) '-----' }
-}
-
-p {
-  margin: 1em 0; 
 }
 
 li { margin: 0.4em 0; }
@@ -89,9 +83,6 @@ body {
     color: var(--text);
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: var(--headings);
-}
 p, strong, b, em, small, li, hr, table, figcaption {
     color: var(--text);
 }
@@ -129,12 +120,6 @@ html.transition *:after {
 .not-dashed {
   border-top: 1px var(--text) solid;
   margin: 0.5em 0;
-}
-mark {
-  padding: 0.4em;
-  background-color: var(--highlight);
-  font-size: 0.6em;
-  letter-spacing: 1px;
 }
 
 .text-upcase {

@@ -1,15 +1,11 @@
 <ul class="project-card">
   {% for item in include.collection %}
-
     <li class="card">
-      <a href="{{ item.url }}" style="text-decoration: none;">
+      <a href="{{ item.url }}">
         <span class="header">
-          <h4>{{ item.title }}</h4>
-          {% if item.highlight %}
-            <mark>{{ item.highlight }}</mark>
-          {% endif %}
+          <h3>{{ item.title }} {% if item.highlight %}<mark>{{ item.highlight }}</mark>{% endif %}</h3>
         </span>
-          <hr />
+          <!-- <hr /> -->
           {% if item.desc != false %}
             <p class="body">{{ item.desc }}</p>
           {% endif %}
