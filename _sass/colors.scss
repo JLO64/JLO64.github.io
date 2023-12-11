@@ -9,12 +9,12 @@ html {
     --link-underline: #74c0fc;
     --link-underline-hover: black;
     --highlight: #dedede;
-    --code-text: #74c0fc;
+    --code-text: black;
     --tag: #dedede;
     --w-mobile-background: #ffffff;
     --scrollbar-foreground: #74c0fc;
     --scrollbar-background: #c0c0c0;
-    --card-color: #cfd2e2b2;
+    --card-color: #cfd2e2;
 }
 // -------------- THEME SWITCHER -------------- //
 @mixin dark-appearance {
@@ -29,12 +29,12 @@ html {
       --bg-secondary-opaque: rgba(0, 0, 0, 0.8);
       --text: #adb5bd;
       --text-secondary: #9CA3AF;
-      --code-text: #74c0fc;
+      --code-text: white;
       --tag: #323945;
       --w-mobile-background: #000000;
       --scrollbar-foreground: #74c0fc;
       --scrollbar-background: #c0c0c0;
-      --card-color: #1a1f35b2;
+      --card-color: rgb(26, 31, 53);
   };
 }
 html[data-theme="dark"] { @include dark-appearance; }

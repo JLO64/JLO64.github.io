@@ -4,9 +4,6 @@ html {
 }
 
 body {
-  font-family:  "Inter", -apple-system, "avenir next", avenir, roboto, noto, ubuntu, "helvetica neue", helvetica, sans-serif;
-  font-size: 1.1rem;
-  line-height: 2;
   margin: 0;
   min-height: 100%;
   border: none;
@@ -34,7 +31,7 @@ li { margin: 0.4em 0; }
   margin: 0 auto;
   padding: 2em 2em;
   background: var(--w-mobile-background);
-  max-width: 50rem;
+  // max-width: 62rem;
 }
 
 table, th, td {
@@ -106,16 +103,6 @@ blockquote {
   border: 1px var(--border) solid;
 }
 
-a {
-  color: var(--link-text);
-  text-decoration-color: var(--link-underline);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
-}
-a:hover {
-  text-decoration-color: var(--link-underline-hover);
-}
-
 *:target { background-color: var(--bg-secondary); }
 
 html.transition,
@@ -150,9 +137,6 @@ mark {
   letter-spacing: 1px;
 }
 
-.text-bold {
-  font-weight: bold;
-}
 .text-upcase {
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -249,7 +233,11 @@ ul.horizontal-list {
     font-weight: normal;
     font-size: 1.3rem;
   }
+}
 
-  
-
+.tag {
+  padding: 0.4em 1em;
+  margin-right: 0.5em;
+  border-radius: 1em;
+  background-color: var(--card-color);
 }

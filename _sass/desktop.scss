@@ -9,11 +9,11 @@
     background-color: #00000000;
     border: none;
     border-radius: 0rem;
+    font-size: 1.1rem;
   }
   .w {
     background: var(--bg-secondary-opaque);
-    max-width: 56vw;
-    // min-height: 80vh;
+    max-width: 60vw;
     border-radius: 4rem;
     border: 0.5rem solid #74c0fc;
   }
@@ -22,14 +22,26 @@
     padding-top: 2rem;
   }
   .homepage_flex_divs {
-    max-width: 28vw;
+    max-width: 30vw;
   }
   ul.horizontal-list {
     max-width: 40vw;
+    li a:hover {
+      font-weight: 999;
+      font-size: 1.8rem;
+    }
   }
   .project-card {
     overflow: auto;
     height: 27rem;
   }
+  a:hover {
+    text-decoration-color: var(--link-underline);
+    color: var(--link-underline);
+    font-weight: 990;
+    font-size: 114%;
+    text-decoration-thickness: 0.2rem;
+    text-underline-offset: 0.4rem;
+    text-shadow: 0 0 1rem var(--link-underline);
+  }
 } 
-  
