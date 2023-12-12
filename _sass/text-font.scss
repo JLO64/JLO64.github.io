@@ -1,14 +1,14 @@
 @font-face {
   font-family: 'Red Hat Display';
   font-weight: 1 999;
-  font-display: block;
+  // font-display: block;
   src: url(/assets/fonts/RedHatDisplay-VariableFont_wght.ttf) format("truetype-variations");
 }
 @font-face {
   font-family: 'Ubuntu';
   font-style: italic;
   font-weight: 700;
-  font-display: block;
+  // font-display: block;
   src: url(/assets/fonts/custom-Ubuntu-BoldItalic.woff2) format('woff2');
   unicode-range: U+0000-00FF;
 }
@@ -31,7 +31,7 @@ pre, code {
 }
 
 .tag {
-  font-family:  "Red Hat Display", sans-serif;
+  font-family:  "Red Hat Display";
   color: var(--link-text);
   font-size: 0.8rem;
   font-weight: 800;
@@ -42,7 +42,7 @@ pre, code {
 }
 
 body {
-  font-family:  "Red Hat Display", sans-serif;
+  font-family:  "Red Hat Display";
   font-size: 1.1rem;
   font-weight: 500;
   line-height: 2;

@@ -1,7 +1,8 @@
 html {
     --bg: #FFF;
     --bg-secondary: #f3f4f6;
-    --bg-secondary-opaque: rgba(243, 244, 246, 0.8);
+    // --bg-secondary-opaque: rgba(243, 244, 246, 0.8);
+    --bg-secondary-opaque: rgba(243, 244, 246, 0.95);
     --headings: #1e293b;
     --text: #374151;
     --text-secondary: #6b7280;
@@ -26,7 +27,8 @@ html {
       --highlight: #a9a9a9;
       --bg: #000000;
       --bg-secondary: #323945;
-      --bg-secondary-opaque: rgba(0, 0, 0, 0.8);
+      // --bg-secondary-opaque: rgba(0, 0, 0, 0.8);
+      --bg-secondary-opaque: rgba(0, 0, 0, 1);
       --text: #adb5bd;
       --text-secondary: #9CA3AF;
       --code-text: white;

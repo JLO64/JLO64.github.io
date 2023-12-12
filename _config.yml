@@ -14,9 +14,6 @@ theme_config:
   appearance_toggle: true # if appearance can be switched by user
   date_format: "%B %d %Y" # customize how date is formatted
   show_navbar: true # show horizontal navbar
-  home:
-    title_blog: Latest Blog Posts
-    title_projects: Projects
 
 exclude:
   - example_posts

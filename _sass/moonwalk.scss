@@ -198,7 +198,10 @@ ul {
   text-align: center;
 }
 
-.homepage_flex_divs {
+.homepage_flex_divs_posts {
+  width: 90vw;
+}
+.homepage_flex_divs_projects {
   width: 90vw;
 }
 
@@ -225,4 +228,11 @@ ul.horizontal-list {
   margin-right: 0.5em;
   border-radius: 1em;
   background-color: var(--card-color);
+}
+
+.blog_image {
+  border-radius: 1.5rem;
+  height: 40vh;
+  transition: 0.2s ease-in;
+  border: 0.3rem solid var(--link-underline);
 }

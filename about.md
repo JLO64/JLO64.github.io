@@ -2,13 +2,3 @@
 layout: about
 title: About
 ---
-
-<picture>
-  <img src="/images/profile_photo.jpg" alt="A picture of young me with a dumb look on my face and a bunch on cash on the floor" style="border: none; border-radius: 3rem;"/>
-  <figcaption style="text-align:center">Don't ask what bank I robbed...</figcaption>
-</picture>
-
-
-My name is Julian Lopez and this is my personal site! I am a student at the University of Southern California studying Economics/Mathematics.
-
-Feel free to email me at <a href="mailto:admin@julianlopez.net">admin@julianlopez.net</a>

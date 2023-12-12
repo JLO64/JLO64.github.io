@@ -15,18 +15,21 @@
     background: var(--bg-secondary-opaque);
     max-width: 60vw;
     border-radius: 4rem;
-    border: 0.5rem solid var(--link-underline);
-    box-shadow: 0 0 1.5rem var(--link-underline);
+    // border: 0.5rem solid var(--link-underline);
+    animation: w_breathe 1s infinite alternate linear;
   }
   .page-content{
     padding-bottom: 2rem;
     padding-top: 2rem;
   }
-  .homepage_flex_divs {
-    max-width: 30vw;
+  .homepage_flex_divs_posts {
+    max-width: 25vw;
+  }
+  .homepage_flex_divs_projects {
+    max-width: 33vw;
   }
   ul.horizontal-list {
-    max-width: 40vw;
+    // max-width: 40vw;
     li a:hover {
       font-weight: 999;
       font-size: 1.8rem;
@@ -43,25 +46,31 @@
     font-size: 110%;
     text-decoration-thickness: 0.2rem;
     text-underline-offset: 0.4rem;
-    text-shadow: 0 0 1rem var(--link-underline);
+    // text-shadow: 0 0 1rem var(--link-underline);
+    animation: a_breathe 0.7s infinite alternate ease-in-out;
   }
-  // p:hover {font-size: 101%;}
   .tag:hover {font-size: 120%;}
   .h1-website-title:hover {
     font-size: 4rem;
     text-shadow: 0 0 2rem var(--link-underline);
     color: var(--link-underline);
   }
-  // h2:hover, h3:hover, h4:hover, h5:hover  {font-size: 110%;}  
   h1:hover  {font-size: 2.5rem;}  
   h2:hover  {font-size: 2rem;}
   .card:hover {
-    border: 0.3rem solid var(--link-underline);
-    box-shadow: 0 0 0.8rem var(--link-underline);
+    animation: card_breathe 0.7s infinite alternate ease-in-out;
+    padding: 1rem;
     a {
       text-shadow: none;
       font-size: 100%;
       font-weight: normal;
     }
+  }
+  .blog_image:hover {
+    border-radius: 0.5rem;
+    height: 60vh;
+    cursor: pointer;
+    border: none;
+    animation: img_breathe 0.7s infinite alternate ease-in-out;
   }
 } 

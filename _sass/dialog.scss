@@ -4,9 +4,6 @@
     background: none;
     border: none;
     border-radius: none;
-    // width: 40rem;
-    // max-width: 90%;
-    // max-height: 90%;
     min-height: 9rem;
     animation: popin 0.3s;
   }
@@ -19,6 +16,13 @@
   img {
     max-width: 90vw;
     max-height: 90vh;
+    border-radius: 0rem;
+    border: none;
+    animation: none;
+    height: auto;
+  }
+  img:hover {
+    cursor: auto;
   }
 }
 

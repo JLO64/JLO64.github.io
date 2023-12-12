@@ -6,22 +6,19 @@
   flex-wrap: wrap;
   padding-inline-start: 0;
   -ms-overflow-style: none;
-  // align-content: center;
+  padding: 0.9rem 0;
   // https://stackoverflow.com/questions/18651345/gradient-opacity-on-the-bottom-of-div
 }
 
 .card {
-  // padding: 1.3rem 1rem 0rem 1rem;
-  // border: 0.2rem solid var(--headings);
-  width: 14rem;
+  width: 15rem;
   height: fit-content;
   text-align: center;
   align-items: center;
   background-color: var(--card-color);
   border-radius: 2rem;
-  padding: 0.5rem;
+  padding: 0.4rem;
   display:inline;
-  margin: 0.8rem 0;
   transition: 0.2s ease-out;
   .body {
     font-size: 0.8rem;
@@ -59,9 +56,9 @@
   mark {
     padding: 0.1rem 0.3rem;
     background-color: var(--highlight);
-    border-radius: 20%;
+    border-radius: 0.4rem;
     font-size: 0.6em;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.05rem;
     margin-left: 0.3rem;
     font-weight: 500;
   }

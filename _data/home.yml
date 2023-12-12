@@ -21,6 +21,7 @@ project_entries:
   - title: "Knights of Columbus Council #2431"
     url: https://kofc.julianlopez.net/
     desc: The website for my council.
+    # highlight: WIP
 
   - title: The Secret Ochiken
     url: https://tsukuraku.github.io/
@@ -37,4 +38,4 @@ project_entries:
   - title: USC Bus Website
     url: https://github.com/usc-bus/usc-bus.github.io
     desc: A website to check on USC bus maps/times
-    highlight: WIP
+    # highlight: Dead
