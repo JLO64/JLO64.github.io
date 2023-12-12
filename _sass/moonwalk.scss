@@ -11,14 +11,6 @@ body {
 
 hr { margin: 1em 0; }
 
-hr.page-break {
-  text-align: center;
-  border: 0;
-
-  &:before { content: '-----' }
-  &:after { content: attr(data-content) '-----' }
-}
-
 li { margin: 0.4em 0; }
 
 .w {
@@ -113,22 +105,11 @@ html.transition *:after {
   }
 }
 
-.dashed {
-  border-top: 1px var(--text) dashed;
-  margin: 0.5em 0;
-}
 .not-dashed {
   border-top: 1px var(--text) solid;
   margin: 0.5em 0;
 }
 
-.text-upcase {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-.text-notupcase {
-  letter-spacing: 1px;
-}
 p code, li code {
   padding: 0.2rem;
   color: var(--code-text);
@@ -148,21 +129,6 @@ p code, li code {
   color: var(--text);
   margin: 0 auto;
   text-align: center;
-}
-
-.photocolumn {
-  float: left;
-  width: 45%;
-  padding: 5px;
-}
-
-.photorow::after {
-  content: "";
-  clear: both;
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-
 }
 
 // KB Club css stuff

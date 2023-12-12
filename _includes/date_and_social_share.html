@@ -1,28 +1,28 @@
-<p style="font-weight: bold;">
-  {% if page.author %}
-   <span class="text-notupcase">{{ page.author }}</span> /
-  {% endif %}
-
+<p style="font-weight: bold; margin-top: 2.5rem; margin-bottom: 0rem;">
   {% capture last_modified_date %}{% last_modified_at %}{% endcapture %}
   {% capture current_date %}{{ page.date | date: site.theme_config.date_format }}{% endcapture %}
   {% if page.date %}
     Posted On:
-    <span class="text-notupcase">{{ current_date }}</span>
+    <span>{{ current_date }}</span>
     {% if last_modified_date != current_date %}
       / Last Modified:
-      <span class="text-notupcase">{{ last_modified_date }}</span>
+      <span>{{ last_modified_date }}</span>
     {% endif %}
   {% endif %}
-  
 </p>
 
-<div class="">
-  {% for tag in page.tags %}
-  <span class="tag">
-    <a href="{{ site.url }}/tag/{{ tag }}">{{ tag }}</a>
-  </span>
-  {% endfor %}
-</div>
+{% if page.tags.size > 0 %}
+  <div class="">
+    <span style="font-weight: bold;">Tags: </span>
+    {% for tag in page.tags %}
+      <span class="tag">
+        <a href="{{ site.url }}/tag/{{ tag }}">{{ tag }}</a>
+      </span>
+    {% endfor %}
+  </div>
+{% endif %}
+
+<p style="font-weight: bold; margin: 0rem;"><span>Written by {{ site.author }}</span></p>
 
 {% if page.github %}
   <iframe
