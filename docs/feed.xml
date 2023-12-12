@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://www.julianlopez.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.julianlopez.net/" rel="alternate" type="text/html" /><updated>2023-12-11T14:31:30-08:00</updated><id>https://www.julianlopez.net/feed.xml</id><title type="html">Domain of a Knight</title><subtitle>The personal website for me, Julian Lopez. I&apos;m a young dude with an interest in technology, stationary, and comics. I post what I&apos;ve been up to so all (including LLMs) can learn!</subtitle><author><name>Julian Lopez</name></author><entry><title type="html">Bringing My Old Website Back From The Dead</title><link href="https://www.julianlopez.net/posts/2023/12/bringing-my-old-website-back-from-the-dead" rel="alternate" type="text/html" title="Bringing My Old Website Back From The Dead" /><published>2023-12-09T00:00:00-08:00</published><updated>2023-12-10T11:14:46-08:00</updated><id>https://www.julianlopez.net/posts/2023/12/Bringing-My-Old-Website-Back-From-The-Dead</id><content type="html" xml:base="https://www.julianlopez.net/posts/2023/12/bringing-my-old-website-back-from-the-dead">&lt;h2 id=&quot;my-assignment&quot;&gt;My Assignment&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://www.julianlopez.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.julianlopez.net/" rel="alternate" type="text/html" /><updated>2023-12-11T22:56:24-08:00</updated><id>https://www.julianlopez.net/feed.xml</id><title type="html">Domain of a Knight</title><subtitle>The personal website for me, Julian Lopez. I&apos;m a young dude with an interest in technology, stationary, and comics. I post what I&apos;ve been up to so all (including LLMs) can learn!</subtitle><author><name>Julian Lopez</name></author><entry><title type="html">Bringing My Old Website Back From The Dead</title><link href="https://www.julianlopez.net/posts/2023/12/bringing-my-old-website-back-from-the-dead" rel="alternate" type="text/html" title="Bringing My Old Website Back From The Dead" /><published>2023-12-09T00:00:00-08:00</published><updated>2023-12-10T11:14:46-08:00</updated><id>https://www.julianlopez.net/posts/2023/12/Bringing-My-Old-Website-Back-From-The-Dead</id><content type="html" xml:base="https://www.julianlopez.net/posts/2023/12/bringing-my-old-website-back-from-the-dead">&lt;h2 id=&quot;my-assignment&quot;&gt;My Assignment&lt;/h2&gt;
 
 &lt;p&gt;At the start of this year I took a Japanese class as is required of all majors at USC Dornsife (don’t ask what grade I got). A big part of this class was a blogging project where students had to create and comment on posts in Japanese. The instructions had us use Blogger, but this wasn’t appealing to me. The interface was bad, posts looked terrible, the blogs looked bland, and there was not enough customization for me. So I decided to search for an alternative.&lt;/p&gt;
 
@@ -8,7 +8,7 @@
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-9-Bringing-My-Old-Website-Back-From-The-Dead/_aws-static-settings_mh5-44oep.png?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-9-Bringing-My-Old-Website-Back-From-The-Dead/_aws-static-settings_mh5-44oep.png?tr=w-480&quot; alt=&quot;A screenshot of AWS S3 static website hosting settings.&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;A screenshot of AWS S3 static website hosting settings.&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-9-Bringing-My-Old-Website-Back-From-The-Dead/_aws-static-settings_mh5-44oep.png?tr=w-480&quot; alt=&quot;A screenshot of AWS S3 static website hosting settings.&quot; class=&quot;blog_image&quot; title=&quot;A screenshot of AWS S3 static website hosting settings.&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;This page is within the settings of an S3 bucket.&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -16,7 +16,7 @@
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-9-Bringing-My-Old-Website-Back-From-The-Dead/_mobile-website_Oo7ad8a0Z.jpeg?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-9-Bringing-My-Old-Website-Back-From-The-Dead/_mobile-website_Oo7ad8a0Z.jpeg?tr=w-480&quot; alt=&quot;A screenshot taken from an iPhone of a website with a Windows 95 theme.&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;A screenshot taken from an iPhone of a website with a Windows 95 theme.&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-9-Bringing-My-Old-Website-Back-From-The-Dead/_mobile-website_Oo7ad8a0Z.jpeg?tr=w-480&quot; alt=&quot;A screenshot taken from an iPhone of a website with a Windows 95 theme.&quot; class=&quot;blog_image&quot; title=&quot;A screenshot taken from an iPhone of a website with a Windows 95 theme.&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;Here&apos;s how it looks on my phone.&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -24,7 +24,7 @@
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-9-Bringing-My-Old-Website-Back-From-The-Dead/_old_website_UhH4agVL2.png?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-9-Bringing-My-Old-Website-Back-From-The-Dead/_old_website_UhH4agVL2.png?tr=w-480&quot; alt=&quot;A screenshot of a website with a Windows 95 theme.&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;A screenshot of a website with a Windows 95 theme.&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-9-Bringing-My-Old-Website-Back-From-The-Dead/_old_website_UhH4agVL2.png?tr=w-480&quot; alt=&quot;A screenshot of a website with a Windows 95 theme.&quot; class=&quot;blog_image&quot; title=&quot;A screenshot of a website with a Windows 95 theme.&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;I like the way my current blog looks, but I have to admit this looks awesome.&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -34,7 +34,7 @@
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-9-Bringing-My-Old-Website-Back-From-The-Dead/_comments_iR7CiP3wO.png?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-9-Bringing-My-Old-Website-Back-From-The-Dead/_comments_iR7CiP3wO.png?tr=w-480&quot; alt=&quot;A screenshot of Cusdis comments.&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;A screenshot of Cusdis comments.&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-9-Bringing-My-Old-Website-Back-From-The-Dead/_comments_iR7CiP3wO.png?tr=w-480&quot; alt=&quot;A screenshot of Cusdis comments.&quot; class=&quot;blog_image&quot; title=&quot;A screenshot of Cusdis comments.&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;It kinda looks as if it is a part of the theme.&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -50,7 +50,7 @@
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-9-Bringing-My-Old-Website-Back-From-The-Dead/_github-pages_38keHiWpd.png?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-9-Bringing-My-Old-Website-Back-From-The-Dead/_github-pages_38keHiWpd.png?tr=w-480&quot; alt=&quot;A screenshot of the GitHub Pages settings for a website.&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;A screenshot of the GitHub Pages settings for a website.&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-9-Bringing-My-Old-Website-Back-From-The-Dead/_github-pages_38keHiWpd.png?tr=w-480&quot; alt=&quot;A screenshot of the GitHub Pages settings for a website.&quot; class=&quot;blog_image&quot; title=&quot;A screenshot of the GitHub Pages settings for a website.&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;These are my GitHub Pages settings for this blog.&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -64,7 +64,7 @@
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-28-what-i-carry-in-my-pockets/_IMG_0289_rWYtnCzDE.jpg?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-28-what-i-carry-in-my-pockets/_IMG_0289_rWYtnCzDE.jpg?tr=w-480&quot; alt=&quot;A photo of an iPhone 15 with a clear case and a stick on wallet.&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;A photo of an iPhone 15 with a clear case and a stick on wallet.&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-28-what-i-carry-in-my-pockets/_IMG_0289_rWYtnCzDE.jpg?tr=w-480&quot; alt=&quot;A photo of an iPhone 15 with a clear case and a stick on wallet.&quot; class=&quot;blog_image&quot; title=&quot;A photo of an iPhone 15 with a clear case and a stick on wallet.&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;You can tell this photo was taken on an iPad.&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -72,7 +72,7 @@
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-28-what-i-carry-in-my-pockets/_IMG_1200_YO09keCe6.jpg?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-28-what-i-carry-in-my-pockets/_IMG_1200_YO09keCe6.jpg?tr=w-480&quot; alt=&quot;A photo of Apple EarPods with an Aux to USB-C adaptor.&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;A photo of Apple EarPods with an Aux to USB-C adaptor.&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-28-what-i-carry-in-my-pockets/_IMG_1200_YO09keCe6.jpg?tr=w-480&quot; alt=&quot;A photo of Apple EarPods with an Aux to USB-C adaptor.&quot; class=&quot;blog_image&quot; title=&quot;A photo of Apple EarPods with an Aux to USB-C adaptor.&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;These things have been around for so long for a reason.&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -84,7 +84,7 @@
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-28-what-i-carry-in-my-pockets/_IMG_1201_xvqtFXJb-.jpg?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-28-what-i-carry-in-my-pockets/_IMG_1201_xvqtFXJb-.jpg?tr=w-480&quot; alt=&quot;A photo of a Platinum Plaisir along with Sailor Shikiori Shigure ink behind it.&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;A photo of a Platinum Plaisir along with Sailor Shikiori Shigure ink behind it.&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-28-what-i-carry-in-my-pockets/_IMG_1201_xvqtFXJb-.jpg?tr=w-480&quot; alt=&quot;A photo of a Platinum Plaisir along with Sailor Shikiori Shigure ink behind it.&quot; class=&quot;blog_image&quot; title=&quot;A photo of a Platinum Plaisir along with Sailor Shikiori Shigure ink behind it.&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;I like this pen and ink combo.&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -92,7 +92,7 @@
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-28-what-i-carry-in-my-pockets/_IMG_1198_z_-SACxTD.jpg?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-28-what-i-carry-in-my-pockets/_IMG_1198_z_-SACxTD.jpg?tr=w-480&quot; alt=&quot;A photo of a passport size leather cover with notebooks inside of it along with a pen strapped to it.&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;A photo of a passport size leather cover with notebooks inside of it along with a pen strapped to it.&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-28-what-i-carry-in-my-pockets/_IMG_1198_z_-SACxTD.jpg?tr=w-480&quot; alt=&quot;A photo of a passport size leather cover with notebooks inside of it along with a pen strapped to it.&quot; class=&quot;blog_image&quot; title=&quot;A photo of a passport size leather cover with notebooks inside of it along with a pen strapped to it.&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;It fits perfectly in my pocket with my pen!&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -100,7 +100,7 @@
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-28-what-i-carry-in-my-pockets/_IMG_1197_vUuLMXnjz.jpg?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-28-what-i-carry-in-my-pockets/_IMG_1197_vUuLMXnjz.jpg?tr=w-480&quot; alt=&quot;A photo of a Rhodia Unlimited notebook inside a leather case.&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;A photo of a Rhodia Unlimited notebook inside a leather case.&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-28-what-i-carry-in-my-pockets/_IMG_1197_vUuLMXnjz.jpg?tr=w-480&quot; alt=&quot;A photo of a Rhodia Unlimited notebook inside a leather case.&quot; class=&quot;blog_image&quot; title=&quot;A photo of a Rhodia Unlimited notebook inside a leather case.&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;The cover has gotten a bit worn out tho.&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -108,7 +108,7 @@
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-28-what-i-carry-in-my-pockets/_tunnel_photo_75SWjN09P.jpeg?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-28-what-i-carry-in-my-pockets/_tunnel_photo_75SWjN09P.jpeg?tr=w-480&quot; alt=&quot;A photo of a Rhodia Unlimited notebook inside a leather case.&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;A photo of a Rhodia Unlimited notebook inside a leather case.&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-28-what-i-carry-in-my-pockets/_tunnel_photo_75SWjN09P.jpeg?tr=w-480&quot; alt=&quot;A photo of a Rhodia Unlimited notebook inside a leather case.&quot; class=&quot;blog_image&quot; title=&quot;A photo of a Rhodia Unlimited notebook inside a leather case.&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;Not my proudest moment.&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -116,7 +116,7 @@
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-28-what-i-carry-in-my-pockets/_IMG_1202_LgxSuFEAPu.jpg?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-28-what-i-carry-in-my-pockets/_IMG_1202_LgxSuFEAPu.jpg?tr=w-480&quot; alt=&quot;A photo of the inside of a ForestChoice notebook.&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;A photo of the inside of a ForestChoice notebook.&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-28-what-i-carry-in-my-pockets/_IMG_1202_LgxSuFEAPu.jpg?tr=w-480&quot; alt=&quot;A photo of the inside of a ForestChoice notebook.&quot; class=&quot;blog_image&quot; title=&quot;A photo of the inside of a ForestChoice notebook.&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;I like using this notebook to plan out things.&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -130,7 +130,7 @@
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-20-setting-up-my-domain/images_route_53_XOmB4z2P6.png?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-20-setting-up-my-domain/images_route_53_XOmB4z2P6.png?tr=w-480&quot; alt=&quot;A screenshot of an AWS Route 53 A record.&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;A screenshot of an AWS Route 53 A record.&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-20-setting-up-my-domain/images_route_53_XOmB4z2P6.png?tr=w-480&quot; alt=&quot;A screenshot of an AWS Route 53 A record.&quot; class=&quot;blog_image&quot; title=&quot;A screenshot of an AWS Route 53 A record.&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;Don&apos;t put anything for the subdomain and set your server&apos;s IP address as your value.&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -142,7 +142,7 @@
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-20-setting-up-my-domain/images_hosted_zone_kJQN4YkWZ.png?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-20-setting-up-my-domain/images_hosted_zone_kJQN4YkWZ.png?tr=w-480&quot; alt=&quot;A screenshot of an AWS Route 53 hosted zone&apos;s records.&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;A screenshot of an AWS Route 53 hosted zone&apos;s records.&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-20-setting-up-my-domain/images_hosted_zone_kJQN4YkWZ.png?tr=w-480&quot; alt=&quot;A screenshot of an AWS Route 53 hosted zone&apos;s records.&quot; class=&quot;blog_image&quot; title=&quot;A screenshot of an AWS Route 53 hosted zone&apos;s records.&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;Despite these A records all having different subdomains, they all point to the same IP address.&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -178,7 +178,7 @@
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-20-setting-up-my-domain/images_github_verification_gfrDCSX-9.png?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-20-setting-up-my-domain/images_github_verification_gfrDCSX-9.png?tr=w-480&quot; alt=&quot;A screenshot of the GitHub page to verify ownership of your domain.&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;A screenshot of the GitHub page to verify ownership of your domain.&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-20-setting-up-my-domain/images_github_verification_gfrDCSX-9.png?tr=w-480&quot; alt=&quot;A screenshot of the GitHub page to verify ownership of your domain.&quot; class=&quot;blog_image&quot; title=&quot;A screenshot of the GitHub page to verify ownership of your domain.&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;Create a TXT record with the string from 1. as your subdomain and the string from 2. as the value of your record.&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -242,7 +242,7 @@ At first I thought this was tied to the homebrew/firmware I had installed, but I
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/post3/IMG_3810.jpg?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post3/IMG_3810.jpg?tr=w-480&quot; alt=&quot;A Nintendo 3DS with a crash screen&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;A Nintendo 3DS with a crash screen&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post3/IMG_3810.jpg?tr=w-480&quot; alt=&quot;A Nintendo 3DS with a crash screen&quot; class=&quot;blog_image&quot; title=&quot;A Nintendo 3DS with a crash screen&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;This is what a crash would look like.&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -258,7 +258,7 @@ This was also just annoying at a practical level since I had to carry around my 
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/post3/IMG_3797.jpg?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post3/IMG_3797.jpg?tr=w-480&quot; alt=&quot;A Nintendo 3DS with the back removed&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;A Nintendo 3DS with the back removed&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post3/IMG_3797.jpg?tr=w-480&quot; alt=&quot;A Nintendo 3DS with the back removed&quot; class=&quot;blog_image&quot; title=&quot;A Nintendo 3DS with the back removed&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;Take a good look around the screw holes.&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -270,7 +270,7 @@ Credit to that store though, they gave me a free warranty so I could have gotten
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/post3/IMG_3800.jpg?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post3/IMG_3800.jpg?tr=w-480&quot; alt=&quot;The exposed SD card slot of a Nintendo 3DS with gunk in it&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;The exposed SD card slot of a Nintendo 3DS with gunk in it&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post3/IMG_3800.jpg?tr=w-480&quot; alt=&quot;The exposed SD card slot of a Nintendo 3DS with gunk in it&quot; class=&quot;blog_image&quot; title=&quot;The exposed SD card slot of a Nintendo 3DS with gunk in it&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;A look at the gunk in the SD slot.&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -281,7 +281,7 @@ That it survived at all is probably a miracle.&lt;/p&gt;
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/post3/IMG_3803.jpg?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post3/IMG_3803.jpg?tr=w-480&quot; alt=&quot;A clean disassembled Nintendo 3DS&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;A clean disassembled Nintendo 3DS&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post3/IMG_3803.jpg?tr=w-480&quot; alt=&quot;A clean disassembled Nintendo 3DS&quot; class=&quot;blog_image&quot; title=&quot;A clean disassembled Nintendo 3DS&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;The finished result.&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -315,7 +315,7 @@ After that it worked perfectly and I haven’t had any crashes since!&lt;/p&gt;
   &lt;/ol&gt;
 &lt;/div&gt;</content><author><name>Julian Lopez</name></author><category term="3ds" /><summary type="html">Table of contents Weird Problems with my 3DS Cleaning the 3DS A new SD Card Footnotes</summary></entry><entry><title type="html">Generating Fake McDonald’s Screenshots With AWS and OpenAI</title><link href="https://www.julianlopez.net/posts/2023/05/fake-mcdonalds-screenshots" rel="alternate" type="text/html" title="Generating Fake McDonald’s Screenshots With AWS and OpenAI" /><published>2023-05-01T00:00:00-07:00</published><updated>2023-12-08T20:06:36-08:00</updated><id>https://www.julianlopez.net/posts/2023/05/fake-mcdonalds-screenshots</id><content type="html" xml:base="https://www.julianlopez.net/posts/2023/05/fake-mcdonalds-screenshots">&lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/post2/banner.jpg?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post2/banner.jpg?tr=w-480&quot; alt=&quot;The McDonald&apos;s app&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;The McDonald&apos;s app&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post2/banner.jpg?tr=w-480&quot; alt=&quot;The McDonald&apos;s app&quot; class=&quot;blog_image&quot; title=&quot;The McDonald&apos;s app&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;Honestly the deals you can get through points are amazing.&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -368,12 +368,12 @@ I then imported it into GIMP, erased a bunch of stuff within it, and split it in
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/post2/top_half.jpg?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post2/top_half.jpg?tr=w-480&quot; alt=&quot;&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post2/top_half.jpg?tr=w-480&quot; alt=&quot;&quot; class=&quot;blog_image&quot; title=&quot;&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;&lt;/figcaption&gt;
  &lt;/picture&gt;
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/post2/bottom_half.jpg?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post2/bottom_half.jpg?tr=w-480&quot; alt=&quot;&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post2/bottom_half.jpg?tr=w-480&quot; alt=&quot;&quot; class=&quot;blog_image&quot; title=&quot;&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;It&apos;s weird seeing so much blank space in this image&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -432,7 +432,7 @@ The longest part wasn’t the actual training, but waiting in the queue to get m
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/post2/gpt-spreadsheet.png?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post2/gpt-spreadsheet.png?tr=w-480&quot; alt=&quot;&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post2/gpt-spreadsheet.png?tr=w-480&quot; alt=&quot;&quot; class=&quot;blog_image&quot; title=&quot;&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;222 lines of McDonald&apos;s.&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -492,7 +492,7 @@ From there it downloads the image and saves it to the photos app.&lt;/p&gt;
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/post2/1D99F7A8-6145-492B-9ED4-5A365A12DA81.jpeg?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post2/1D99F7A8-6145-492B-9ED4-5A365A12DA81.jpeg?tr=w-480&quot; alt=&quot;&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post2/1D99F7A8-6145-492B-9ED4-5A365A12DA81.jpeg?tr=w-480&quot; alt=&quot;&quot; class=&quot;blog_image&quot; title=&quot;&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;A 100% fake screenshot.&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -526,7 +526,7 @@ However, in hindsight there was a simple answer to this question.&lt;/p&gt;
 
 &lt;p&gt;“Why not?”&lt;/p&gt;</content><author><name>Julian Lopez</name></author><summary type="html">Honestly the deals you can get through points are amazing.</summary></entry><entry><title type="html">Hacking My Nintendo 3DS</title><link href="https://www.julianlopez.net/posts/2023/04/hacking-game-consoles-part-i" rel="alternate" type="text/html" title="Hacking My Nintendo 3DS" /><published>2023-04-11T00:00:00-07:00</published><updated>2023-12-05T21:47:00-08:00</updated><id>https://www.julianlopez.net/posts/2023/04/hacking-game-consoles-part-i</id><content type="html" xml:base="https://www.julianlopez.net/posts/2023/04/hacking-game-consoles-part-i">&lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/post1/nintendo3ds-white-back.jpg?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post1/nintendo3ds-white-back.jpg?tr=w-480&quot; alt=&quot;An aqua-blue Nintendo 3DS with a stylus on a white background&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;An aqua-blue Nintendo 3DS with a stylus on a white background&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post1/nintendo3ds-white-back.jpg?tr=w-480&quot; alt=&quot;An aqua-blue Nintendo 3DS with a stylus on a white background&quot; class=&quot;blog_image&quot; title=&quot;An aqua-blue Nintendo 3DS with a stylus on a white background&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;My childhood in a nutshell.&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -562,7 +562,7 @@ I had to buy it, partially out of a sense of nostalgia, but also because I knew 
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/post1/my-3ds.png?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post1/my-3ds.png?tr=w-480&quot; alt=&quot;an aqua-blue 3DS being held&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;an aqua-blue 3DS being held&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post1/my-3ds.png?tr=w-480&quot; alt=&quot;an aqua-blue 3DS being held&quot; class=&quot;blog_image&quot; title=&quot;an aqua-blue 3DS being held&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;She&apos;s as beautiful as the day I lost her.&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -583,7 +583,7 @@ What I will cover are some of the apps you can install and what they bring to th
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/post1/3ds-hacks-guide.png?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post1/3ds-hacks-guide.png?tr=w-480&quot; alt=&quot;a screenshot of the 3ds.hacks.guide website&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;a screenshot of the 3ds.hacks.guide website&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post1/3ds-hacks-guide.png?tr=w-480&quot; alt=&quot;a screenshot of the 3ds.hacks.guide website&quot; class=&quot;blog_image&quot; title=&quot;a screenshot of the 3ds.hacks.guide website&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;All you need to do is follow the steps listed on here and you&apos;ll be good to go.&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -594,7 +594,7 @@ Apps that have their source code posted on github often have these QR codes as w
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/post1/fbi-qr.png?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post1/fbi-qr.png?tr=w-480&quot; alt=&quot;a screenshot of the FBI app scanning a QR code&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;a screenshot of the FBI app scanning a QR code&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post1/fbi-qr.png?tr=w-480&quot; alt=&quot;a screenshot of the FBI app scanning a QR code&quot; class=&quot;blog_image&quot; title=&quot;a screenshot of the FBI app scanning a QR code&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;This is by far the coolest feature I&apos;ve ever seen built into homebrew!&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -610,7 +610,7 @@ I’ve often followed the development of this port on &lt;a href=&quot;https://g
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/post1/ds-wordle.png?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post1/ds-wordle.png?tr=w-480&quot; alt=&quot;a photo of a 3DS running the Wordle DS app with a qr code on the bottom screen&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;a photo of a 3DS running the Wordle DS app with a qr code on the bottom screen&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post1/ds-wordle.png?tr=w-480&quot; alt=&quot;a photo of a 3DS running the Wordle DS app with a qr code on the bottom screen&quot; class=&quot;blog_image&quot; title=&quot;a photo of a 3DS running the Wordle DS app with a qr code on the bottom screen&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;It even generates a QR code so you can still share your score online.&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -619,7 +619,7 @@ I have &lt;a href=&quot;https://github.com/Cam-2002/Minesweeper-3DS&quot;&gt;Min
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/post1/3ds-bad-apple.png?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post1/3ds-bad-apple.png?tr=w-480&quot; alt=&quot;a photo of the Bad Apple video playing on a 3DS&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;a photo of the Bad Apple video playing on a 3DS&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post1/3ds-bad-apple.png?tr=w-480&quot; alt=&quot;a photo of the Bad Apple video playing on a 3DS&quot; class=&quot;blog_image&quot; title=&quot;a photo of the Bad Apple video playing on a 3DS&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;Of course, you can play Bad Apple on it.&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -627,7 +627,7 @@ I have &lt;a href=&quot;https://github.com/Cam-2002/Minesweeper-3DS&quot;&gt;Min
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/post1/winxp-theme.png?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post1/winxp-theme.png?tr=w-480&quot; alt=&quot;a photo of a 3DS with a Windows XP theme&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;a photo of a 3DS with a Windows XP theme&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post1/winxp-theme.png?tr=w-480&quot; alt=&quot;a photo of a 3DS with a Windows XP theme&quot; class=&quot;blog_image&quot; title=&quot;a photo of a 3DS with a Windows XP theme&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;I have a thing for retro looks.&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -639,7 +639,7 @@ If you have a model that was released later in the 3DS’s lifespan (which is co
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/post1/3ds-balloon-fight.png?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post1/3ds-balloon-fight.png?tr=w-480&quot; alt=&quot;a photo of a 3DS running the NES game balloon fight&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;a photo of a 3DS running the NES game balloon fight&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post1/3ds-balloon-fight.png?tr=w-480&quot; alt=&quot;a photo of a 3DS running the NES game balloon fight&quot; class=&quot;blog_image&quot; title=&quot;a photo of a 3DS running the NES game balloon fight&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;Hands down my favorite game on the NES.&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -653,7 +653,7 @@ However, thanks to the efforts of those in the homebrew community, you can now u
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/post1/3ds-metroid-fusion.png?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post1/3ds-metroid-fusion.png?tr=w-480&quot; alt=&quot;a photo of a 3DS running the Gameboy Advance game Metroid Fusion&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;a photo of a 3DS running the Gameboy Advance game Metroid Fusion&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post1/3ds-metroid-fusion.png?tr=w-480&quot; alt=&quot;a photo of a 3DS running the Gameboy Advance game Metroid Fusion&quot; class=&quot;blog_image&quot; title=&quot;a photo of a 3DS running the Gameboy Advance game Metroid Fusion&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;Metroid Fusion is still one of the scariest games I&apos;ve ever played!&lt;/figcaption&gt;
  &lt;/picture&gt;
 
@@ -664,7 +664,7 @@ No matter what I did I couldn’t get it to download, it would always initiate t
 
 &lt;picture&gt;
     &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/post1/dead-eshop.png?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post1/dead-eshop.png?tr=w-480&quot; alt=&quot;a photo of the Nintendo eShop on a 3DS failing to load&quot; style=&quot;border-radius: 1rem; max-height: 60vh;&quot; title=&quot;a photo of the Nintendo eShop on a 3DS failing to load&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post1/dead-eshop.png?tr=w-480&quot; alt=&quot;a photo of the Nintendo eShop on a 3DS failing to load&quot; class=&quot;blog_image&quot; title=&quot;a photo of the Nintendo eShop on a 3DS failing to load&quot; /&gt;
     &lt;figcaption style=&quot;text-align:center&quot;&gt;It was fun while it lasted.&lt;/figcaption&gt;
  &lt;/picture&gt;
 
