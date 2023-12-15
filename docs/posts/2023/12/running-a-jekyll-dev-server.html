@@ -6,7 +6,7 @@
 
   <title>
     
-    fountain-pens
+    Running a Jekyll Dev Server
     
   </title>
 
@@ -16,19 +16,19 @@
   <meta name="author" content="Julian Lopez">
   <meta name="description" content="The personal website for me, Julian Lopez. I'm a young dude with an interest in technology, stationary, and comics. I post what I've been up to so all (including LLMs) can learn!">
   <link rel="canonical" href="https://www.julianlopez.net">
-  <meta property="og:title" content="fountain-pens">
+  <meta property="og:title" content="Running a Jekyll Dev Server">
   <meta property="og:locale" content="en_US">
   <meta property="og:description" content="The personal website for me, Julian Lopez. I'm a young dude with an interest in technology, stationary, and comics. I post what I've been up to so all (including LLMs) can learn!">
-  <meta property="og:url" content="/tag/fountain-pens/">
+  <meta property="og:url" content="/posts/2023/12/running-a-jekyll-dev-server">
   <meta property="og:site_name" content="Domain of a Knight">
   
-  <meta property="og:image" content="https://ik.imagekit.io/jlo64/www_julianlopez_net/opengraph-images/default.png">
-  <meta name="twitter:image" content="https://ik.imagekit.io/jlo64/www_julianlopez_net/opengraph-images/default.png">
+  <meta property="og:image" content="https://ik.imagekit.io/jlo64/www_julianlopez_net/opengraph-images/tr:l-text,i-Running%20a%20Jekyll%20Dev%20Server,tg-b,co-74c0fc,fs-80,w-1200,pa-80_0_0_0,ff-Ubuntu,lfo-center,l-end/template.png">
+  <meta name="twitter:image" content="https://ik.imagekit.io/jlo64/www_julianlopez_net/opengraph-images/tr:l-text,i-Running%20a%20Jekyll%20Dev%20Server,tg-b,co-74c0fc,fs-80,w-1200,pa-80_0_0_0,ff-Ubuntu,lfo-center,l-end/template.png">
   
   <meta name="twitter:card" content="summary_large_image">
   <meta property="twitter:domain" content="julianlopez.net">
-  <meta property="twitter:url" content="/tag/fountain-pens/">
-  <meta name="twitter:title" content="fountain-pens">
+  <meta property="twitter:url" content="/posts/2023/12/running-a-jekyll-dev-server">
+  <meta name="twitter:title" content="Running a Jekyll Dev Server">
   <meta name="twitter:description" content="The personal website for me, Julian Lopez. I'm a young dude with an interest in technology, stationary, and comics. I post what I've been up to so all (including LLMs) can learn!">
 
   <!-- Favicon -->
@@ -234,8 +234,8 @@
     <main class="page-content" aria-label="Content">
       <div class="w">
         <header>
-  
-    <ul class="horizontal-list">
+    
+      <ul class="horizontal-list">
   
     <li>
       <a href="/">Home</a>
@@ -269,53 +269,87 @@
   
 </ul>
 
-    <div class=not-dashed></div>
-  
+      <div class=not-dashed></div>
+    
 </header>
 
-<h1>Posts With Tag 'fountain-pens'</h1>
+  <h1 class="post-title">Running a Jekyll Dev Server</h1>
+  <p style="font-weight: bold; margin-top: 2.5rem; margin-bottom: 0rem;">
+  
+  
+  
+    Posted On:
+    <span>December 12 2023</span>
+    
+      / Last Modified:
+      <span>December 14 2023</span>
+    
+  
+</p>
+
+
+  <div class="">
+    <span style="font-weight: bold;">Tags: </span>
+    
+      <span class="tag">
+        <a href="/tag/nginx">nginx</a>
+      </span>
+    
+      <span class="tag">
+        <a href="/tag/jekyll">jekyll</a>
+      </span>
+    
+      <span class="tag">
+        <a href="/tag/webdev">webdev</a>
+      </span>
+    
+  </div>
+
+
+<p style="font-weight: bold; margin: 0rem;"><span>Written by Julian Lopez</span></p>
 
 
 
-<ul>
-  
-    
-    
-    <li class="post-list-item">
-        November 28 2023 -
-      <a href="/posts/2023/11/what-i-carry-in-my-pockets">What I Carry In My Pockets</a><br>
-      
-        <span class="tag">
-          <a href="https://www.julianlopez.net/tag/notebooks">notebooks</a>
-        </span>
-      
-        <span class="tag">
-          <a href="https://www.julianlopez.net/tag/fountain-pens">fountain-pens</a>
-        </span>
-      
-        <span class="tag">
-          <a href="https://www.julianlopez.net/tag/writing">writing</a>
-        </span>
-      
-    </li>
-  
-    
-    
-    <li class="post-list-item">
-        November 10 2023 -
-      <a href="/posts/2023/11/am-i-worth-my-tools">Am I Worth My Tools?</a><br>
-      
-        <span class="tag">
-          <a href="https://www.julianlopez.net/tag/fountain-pens">fountain-pens</a>
-        </span>
-      
-        <span class="tag">
-          <a href="https://www.julianlopez.net/tag/thoughts">thoughts</a>
-        </span>
-      
-    </li>
-  
-</ul>
+
+<h2 id="my-plugin-problem">My Plugin Problem</h2>
+
+<p>Here’s a quick breakdown of how my writing process for this blog works. I have a server in my bedroom which I remote into within VS Code my laptop or iPad via VS Code. From there I create and edit markdown files within my Jekyll site repository and publish them via Git. (I’m probably going to be changing my workflow significantly soon thanks to <a href="https://obsidian.md/">Obsidian</a>, and I’ll write more in depth then.)</p>
+
+<p>In order to preview my website I use a VS Code extension called <a href="https://marketplace.visualstudio.com/items?itemName=Dedsec727.jekyll-run">Jekyll Run</a>. All it really does is run the command <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code> within your site directory and serves your site at <code class="language-plaintext highlighter-rouge">localhost:4000</code>. Since I run it off my server and because I want to test this preview on my phone, I add <code class="language-plaintext highlighter-rouge">--host=0.0.0.0</code> to the launch options of this plugin. This way I can just connect to port 4000 of my server’s IP address from my phone’s web browser and access the preview from there.</p>
+
+<p>The actual preview itself works great, but I’ve been having issues with the plugin not terminating when I disconnect from my server. Thus, when I reconnect and try to launch it again it errors out since the port (4000 in my case) is occupied. There’s a plugin setting that’s meant to fix this, but it does nothing in my case. I suspect that the author of it never tested an SSH use case. I’ve submitted a <a href="https://github.com/Kanna727/jekyll-run/issues/67">GitHub Issue</a>, but I doubt I this will get fixed anytime soon.</p>
+
+<h2 id="the-solution">The Solution</h2>
+
+<p>Something I’ve thought of recently is just launching the command <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve --host=0.0.0.0</code> on startup and just leaving it running on my server. It’s a dead simple fix that requires no thought. Besides, now that I’m transitioning my writing to Obsidian for my writing I want to use a plugin called “Permalink Opener” to open a preview of what I’m writing. Switching between Obsidian and VS Code just to activate a plugin wouldn’t the best experience. (It’s got one major issue though that I’m gonna be submitting a PR for soon.)</p>
+
+<p>I also want to change the port I use to something other than 4000 since I might need that open for other applications. That can be easily done by appending <code class="language-plaintext highlighter-rouge">-P PORT_NUMBER</code> with you substituting your port number in of course.</p>
+
+<p>To run this command on boot I appended the below line to my <code class="language-plaintext highlighter-rouge">crontab</code> file.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@reboot cd PATH_TO_YOUR_JEKYLL_DIRECTORY &amp;&amp; bundle exec jekyll serve --host=0.0.0.0 -P PORT_NUMBER
+</code></pre></div></div>
+
+<h2 id="creating-a-jekyll-subdomain">Creating A Jekyll Subdomain</h2>
+
+<p>Now while this is perfectly workable so far, I’d rather have a real URL to connect to instead of having to type in a port number after my domain. Thus I decided to add a “jekyll” subdomain to my site. This is literally the same thing as what I wrote about in my <a href="2023-11-20-setting-up-my-domain.md">previous post on adding subdomains</a> so I won’t be going into too much detail about it here. Below is what I added to my Nginx config.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server {
+    listen 80;
+    server_name jekyll.julianlopez.net;
+    location / {
+       proxy_pass http://localhost:JEKYLL_PORT;
+    }
+}
+</code></pre></div></div>
+
+<p><img src="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-12-Running-a-Jekyll-Dev-Server/_route53_I8iJ4bRVP.png" alt="Here is the AWS Route 53 domain record I set up for this subdomain." />(A screenshot of an AWS Route 53 domain record.)</p>
+
+<p>If you’re going to copy what I’m doing, make sure that the port you’re using is open on your router and firewall in addition to Nginx being properly configured. Otherwise, you’ll only be able to access this preview from your local</p>
+
+<p>With that, I’m done! If you want to check out the changes I’m going to be making to my site before I publish them, visit <a href="http://jekyll.julianlopez.net">jekyll.julianlopez.net</a>.</p>
+
+
+<a href="mailto:admin@julianlopez.net?subject=Re: Running a Jekyll Dev Server">Send me your thoughts via Email</a>
         <div class="not-dashed" style="margin-top: 5rem;"></div>
         <br>
         <div class="credits">
