@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://www.julianlopez.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.julianlopez.net/" rel="alternate" type="text/html" /><updated>2023-12-14T20:00:34-08:00</updated><id>https://www.julianlopez.net/feed.xml</id><title type="html">Domain of a Knight</title><subtitle>The personal website for me, Julian Lopez. I&apos;m a young dude with an interest in technology, stationary, and comics. I post what I&apos;ve been up to so all (including LLMs) can learn!</subtitle><author><name>Julian Lopez</name></author><entry><title type="html">Running a Jekyll Dev Server</title><link href="https://www.julianlopez.net/posts/2023/12/running-a-jekyll-dev-server" rel="alternate" type="text/html" title="Running a Jekyll Dev Server" /><published>2023-12-12T00:00:00-08:00</published><updated>2023-12-14T20:00:04-08:00</updated><id>https://www.julianlopez.net/posts/2023/12/Running-a-Jekyll-Dev-Server</id><content type="html" xml:base="https://www.julianlopez.net/posts/2023/12/running-a-jekyll-dev-server">&lt;h2 id=&quot;my-plugin-problem&quot;&gt;My Plugin Problem&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://www.julianlopez.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.julianlopez.net/" rel="alternate" type="text/html" /><updated>2023-12-14T20:08:49-08:00</updated><id>https://www.julianlopez.net/feed.xml</id><title type="html">Domain of a Knight</title><subtitle>The personal website for me, Julian Lopez. I&apos;m a young dude with an interest in technology, stationary, and comics. I post what I&apos;ve been up to so all (including LLMs) can learn!</subtitle><author><name>Julian Lopez</name></author><entry><title type="html">Running a Jekyll Dev Server</title><link href="https://www.julianlopez.net/posts/2023/12/running-a-jekyll-dev-server" rel="alternate" type="text/html" title="Running a Jekyll Dev Server" /><published>2023-12-12T00:00:00-08:00</published><updated>2023-12-14T20:08:39-08:00</updated><id>https://www.julianlopez.net/posts/2023/12/Running-a-Jekyll-Dev-Server</id><content type="html" xml:base="https://www.julianlopez.net/posts/2023/12/running-a-jekyll-dev-server">&lt;h2 id=&quot;my-plugin-problem&quot;&gt;My Plugin Problem&lt;/h2&gt;
 
 &lt;p&gt;Here’s a quick breakdown of how my writing process for this blog works. I have a server in my bedroom which I remote into within VS Code my laptop or iPad via VS Code. From there I create and edit markdown files within my Jekyll site repository and publish them via Git. (I’m probably going to be changing my workflow significantly soon thanks to &lt;a href=&quot;https://obsidian.md/&quot;&gt;Obsidian&lt;/a&gt;, and I’ll write more in depth then.)&lt;/p&gt;
 
@@ -18,7 +18,7 @@
 
 &lt;h2 id=&quot;creating-a-jekyll-subdomain&quot;&gt;Creating A Jekyll Subdomain&lt;/h2&gt;
 
-&lt;p&gt;Now while this is perfectly workable so far, I’d rather have a real URL to connect to instead of having to type in a port number after my domain. Thus I decided to add a “jekyll” subdomain to my site. This is literally the same thing as what I wrote about in my &lt;a href=&quot;2023-11-20-setting-up-my-domain.md&quot;&gt;previous post on adding subdomains&lt;/a&gt; so I won’t be going into too much detail about it here. Below is what I added to my Nginx config.&lt;/p&gt;
+&lt;p&gt;Now while this is perfectly workable so far, I’d rather have a real URL to connect to instead of having to type in a port number after my domain. Thus I decided to add a “jekyll” subdomain to my site. This is literally the same thing as what I wrote about in my &lt;a href=&quot;2023-11-20-setting-up-my-domain.md&quot;&gt;previous post on adding subdomains&lt;/a&gt; so I won’t be going into too much detail about it here. Below is what I added to my Nginx config and my AWS route 53 settings.&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;server {
     listen 80;
@@ -28,8 +28,11 @@
     }
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-12-Running-a-Jekyll-Dev-Server/_route53_I8iJ4bRVP.png&quot; alt=&quot;Here is the AWS Route 53 domain record I set up for this subdomain.&quot; /&gt;(A screenshot of an AWS Route 53 domain record.)&lt;/p&gt;
+&lt;picture&gt;
+    &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-12-Running-a-Jekyll-Dev-Server/_route53_I8iJ4bRVP.png?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
+    &lt;img src=&quot;https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-12-Running-a-Jekyll-Dev-Server/_route53_I8iJ4bRVP.png?tr=w-480&quot; alt=&quot;A screenshot of an AWS Route 53 domain record.&quot; class=&quot;blog_image&quot; title=&quot;A screenshot of an AWS Route 53 domain record.&quot; /&gt;
+    &lt;figcaption style=&quot;text-align:center&quot;&gt;Here is the AWS Route 53 domain record I set up for this subdomain.&lt;/figcaption&gt;
+ &lt;/picture&gt;
 
 &lt;p&gt;If you’re going to copy what I’m doing, make sure that the port you’re using is open on your router and firewall in addition to Nginx being properly configured. Otherwise, you’ll only be able to access this preview from your local&lt;/p&gt;
 
