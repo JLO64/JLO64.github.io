@@ -6,7 +6,11 @@ tags:
  - 3ds
 ---
 
-{% include blog_image.html url="https://ik.imagekit.io/jlo64/post1/nintendo3ds-white-back.jpg" caption="My childhood in a nutshell." alt="An aqua-blue Nintendo 3DS with a stylus on a white background" %}
+<picture>
+    <source srcset="https://ik.imagekit.io/jlo64/post1/nintendo3ds-white-back.jpg?tr=w-720,f-webp," type="image/webp">
+    <img src="https://ik.imagekit.io/jlo64/post1/nintendo3ds-white-back.jpg?tr=w-480" alt="An aqua-blue Nintendo 3DS with a stylus on a white background" class="blog_image" title="An aqua-blue Nintendo 3DS with a stylus on a white background">
+    <figcaption style="text-align:center">My childhood in a nutshell.</figcaption>
+ </picture>
 
 ## Table of contents
 - [Introduction](#introduction)
@@ -36,7 +40,11 @@ Fast forward to 2021, and I was at a really cool retro game store in East LA cal
 I was trying to find a launch PS3 when I came across the exact same model of 3DS I had growing up as a kid!
 I had to buy it, partially out of a sense of nostalgia, but also because I knew that if I hacked it I could do some really cool stuff with it.
 
-{% include blog_image.html url="https://ik.imagekit.io/jlo64/post1/my-3ds.png" caption="She's as beautiful as the day I lost her." alt="an aqua-blue 3DS being held" %}
+<picture>
+    <source srcset="https://ik.imagekit.io/jlo64/post1/my-3ds.png?tr=w-720,f-webp," type="image/webp">
+    <img src="https://ik.imagekit.io/jlo64/post1/my-3ds.png?tr=w-480" alt="an aqua-blue 3DS being held" class="blog_image" title="an aqua-blue 3DS being held">
+    <figcaption style="text-align:center">She's as beautiful as the day I lost her.</figcaption>
+ </picture>
 
 ## Hacking explained 
 Let's get this out of the way though, hacking a game console is not illegal!
@@ -54,14 +62,22 @@ I'm not going to get too deep into the details of how to hack a 3DS, this isn't 
 That being said, you can visit [3ds.hacks.guide](https://3ds.hacks.guide) for the most up to date information on how to do so.
 What I will cover are some of the apps you can install and what they bring to the table.
 
-{% include blog_image.html url="https://ik.imagekit.io/jlo64/post1/3ds-hacks-guide.png" caption="All you need to do is follow the steps listed on here and you'll be good to go." alt="a screenshot of the 3ds.hacks.guide website" %}
+<picture>
+    <source srcset="https://ik.imagekit.io/jlo64/post1/3ds-hacks-guide.png?tr=w-720,f-webp," type="image/webp">
+    <img src="https://ik.imagekit.io/jlo64/post1/3ds-hacks-guide.png?tr=w-480" alt="a screenshot of the 3ds.hacks.guide website" class="blog_image" title="a screenshot of the 3ds.hacks.guide website">
+    <figcaption style="text-align:center">All you need to do is follow the steps listed on here and you'll be good to go.</figcaption>
+ </picture>
 
 First off, installers that allow you to install apps directly to the homescreen end with the extension ".cia".
 So of course, the app you use to install these files is called [FBI](https://github.com/Steveice10/FBI).
 With this app, you can either install app from files on your SD card, or you can scan a QR code 
 Apps that have their source code posted on github often have these QR codes as well.
 
-{% include blog_image.html url="https://ik.imagekit.io/jlo64/post1/fbi-qr.png" caption="This is by far the coolest feature I've ever seen built into homebrew!" alt="a screenshot of the FBI app scanning a QR code" %}
+<picture>
+    <source srcset="https://ik.imagekit.io/jlo64/post1/fbi-qr.png?tr=w-720,f-webp," type="image/webp">
+    <img src="https://ik.imagekit.io/jlo64/post1/fbi-qr.png?tr=w-480" alt="a screenshot of the FBI app scanning a QR code" class="blog_image" title="a screenshot of the FBI app scanning a QR code">
+    <figcaption style="text-align:center">This is by far the coolest feature I've ever seen built into homebrew!</figcaption>
+ </picture>
 
 However, you don't have to use this to install all of your software.
 The app [Universal Updater](https://github.com/Universal-Team/Universal-Updater) acts as a sort of 3DS app store with plenty of new apps and updates for them being posted on there.
@@ -73,16 +89,28 @@ My favorite homebrew game you can install from there is based off of a fairly po
 It's surprisingly convenient having two screens to play it on and what's even better is that it uses the same list of words as the official version!
 I've often followed the development of this port on [GBAtemp](https://gbatemp.net/threads/release-wordle-ds-a-clone-of-wordle-for-the-ds-i.607796/) where the developer frequently posts updates and fun little tidbits about this app and the New York Times version of Wordle.
 
-{% include blog_image.html url="https://ik.imagekit.io/jlo64/post1/ds-wordle.png" caption="It even generates a QR code so you can still share your score online." alt="a photo of a 3DS running the Wordle DS app with a qr code on the bottom screen" %}
+<picture>
+    <source srcset="https://ik.imagekit.io/jlo64/post1/ds-wordle.png?tr=w-720,f-webp," type="image/webp">
+    <img src="https://ik.imagekit.io/jlo64/post1/ds-wordle.png?tr=w-480" alt="a photo of a 3DS running the Wordle DS app with a qr code on the bottom screen" class="blog_image" title="a photo of a 3DS running the Wordle DS app with a qr code on the bottom screen">
+    <figcaption style="text-align:center">It even generates a QR code so you can still share your score online.</figcaption>
+ </picture>
 
 This of course isn't the only piece of homebrew software I've downloaded for my 3DS.
 I have [Minesweeper](https://github.com/Cam-2002/Minesweeper-3DS), an app that showcases [different sorting algorithms](https://github.com/memeToasty/3ds_sorting), and a port of a [perfectly harmless dating simulator](https://github.com/LukeZGD/DDLC-LOVE) made by the hacker known as 4chan.
 
-{% include blog_image.html url="https://ik.imagekit.io/jlo64/post1/3ds-bad-apple.png" caption="Of course, you can play Bad Apple on it." alt="a photo of the Bad Apple video playing on a 3DS" %}
+<picture>
+    <source srcset="https://ik.imagekit.io/jlo64/post1/3ds-bad-apple.png?tr=w-720,f-webp," type="image/webp">
+    <img src="https://ik.imagekit.io/jlo64/post1/3ds-bad-apple.png?tr=w-480" alt="a photo of the Bad Apple video playing on a 3DS" class="blog_image" title="a photo of the Bad Apple video playing on a 3DS">
+    <figcaption style="text-align:center">Of course, you can play Bad Apple on it.</figcaption>
+ </picture>
 
 Even better, custom themes are a thing! All you have to do is download [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS) and use the built in qr code scanner to download themes from the [3DS Theme Shop](https://3dsthemes.com/).
 
-{% include blog_image.html url="https://ik.imagekit.io/jlo64/post1/winxp-theme.png" caption="I have a thing for retro looks." alt="a photo of a 3DS with a Windows XP theme" %}
+<picture>
+    <source srcset="https://ik.imagekit.io/jlo64/post1/winxp-theme.png?tr=w-720,f-webp," type="image/webp">
+    <img src="https://ik.imagekit.io/jlo64/post1/winxp-theme.png?tr=w-480" alt="a photo of a 3DS with a Windows XP theme" class="blog_image" title="a photo of a 3DS with a Windows XP theme">
+    <figcaption style="text-align:center">I have a thing for retro looks.</figcaption>
+ </picture>
 
 ## Emulating Old Games
 But honestly, my favorite apps are the emulators people have developed for it.
@@ -90,7 +118,11 @@ But honestly, my favorite apps are the emulators people have developed for it.
 Atari 2600, NES, SNES, Genesis and plenty more retro consoles have emulators developed by fans with insane coding skills.
 If you have a model that was released later in the 3DS's lifespan (which is confusingly called the "New" 3DS), with improved clockspeeds and more RAM, you can even emulate PlayStation One games!
 
-{% include blog_image.html url="https://ik.imagekit.io/jlo64/post1/3ds-balloon-fight.png" caption="Hands down my favorite game on the NES." alt="a photo of a 3DS running the NES game balloon fight" %}
+<picture>
+    <source srcset="https://ik.imagekit.io/jlo64/post1/3ds-balloon-fight.png?tr=w-720,f-webp," type="image/webp">
+    <img src="https://ik.imagekit.io/jlo64/post1/3ds-balloon-fight.png?tr=w-480" alt="a photo of a 3DS running the NES game balloon fight" class="blog_image" title="a photo of a 3DS running the NES game balloon fight">
+    <figcaption style="text-align:center">Hands down my favorite game on the NES.</figcaption>
+ </picture>
 
 
 Make no mistake, developing software for this is no easy feat.
@@ -101,14 +133,22 @@ For some reason, Nintendo never sold any of the GameBoy Advance games they relea
 Unless you bought in early like me you couldn't buy or play any of them.
 However, thanks to the efforts of those in the homebrew community, you can now use that same "emulator" to run whatever GBA games you want!
 
-{% include blog_image.html url="https://ik.imagekit.io/jlo64/post1/3ds-metroid-fusion.png" caption="Metroid Fusion is still one of the scariest games I've ever played!" alt="a photo of a 3DS running the Gameboy Advance game Metroid Fusion" %}
+<picture>
+    <source srcset="https://ik.imagekit.io/jlo64/post1/3ds-metroid-fusion.png?tr=w-720,f-webp," type="image/webp">
+    <img src="https://ik.imagekit.io/jlo64/post1/3ds-metroid-fusion.png?tr=w-480" alt="a photo of a 3DS running the Gameboy Advance game Metroid Fusion" class="blog_image" title="a photo of a 3DS running the Gameboy Advance game Metroid Fusion">
+    <figcaption style="text-align:center">Metroid Fusion is still one of the scariest games I've ever played!</figcaption>
+ </picture>
 
 ## The Piracy Issue
 To be blunt I'm ok with pirating games for my 3DS, but that's because its a dead platform and me downloading games in 2023 for it doesn't take away any potential earning from developers.
 However, when I first got this particular 3DS the Nintento eShop was still running so I tried downloading _Mario & Luigi: Dream Team_ which is on the larger side of 3DS games.
 No matter what I did I couldn't get it to download, it would always initiate the download and then fail.
 
-{% include blog_image.html url="https://ik.imagekit.io/jlo64/post1/dead-eshop.png" caption="It was fun while it lasted." alt="a photo of the Nintendo eShop on a 3DS failing to load" %}
+<picture>
+    <source srcset="https://ik.imagekit.io/jlo64/post1/dead-eshop.png?tr=w-720,f-webp," type="image/webp">
+    <img src="https://ik.imagekit.io/jlo64/post1/dead-eshop.png?tr=w-480" alt="a photo of the Nintendo eShop on a 3DS failing to load" class="blog_image" title="a photo of the Nintendo eShop on a 3DS failing to load">
+    <figcaption style="text-align:center">It was fun while it lasted.</figcaption>
+ </picture>
 
 By contrast, using a pirate site such as [hShop](https://hshop.xyz/) in conjunction with FBI I was able to successfully download/install the game.
 

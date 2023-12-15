@@ -5,11 +5,15 @@ github: Generate-McDonalds-Mobile-Screenshot
 permalink: /posts/:year/:month/:slug
 tags:
   - python
-  - AWS
-  - OpenAI
+  - openai
+  - aws
 ---
 
-{% include blog_image.html url="https://ik.imagekit.io/jlo64/post2/banner.jpg" caption="Honestly the deals you can get through points are amazing." alt="The McDonald's app" %}
+<picture>
+    <source srcset="https://ik.imagekit.io/jlo64/post2/banner.jpg?tr=w-720,f-webp," type="image/webp">
+    <img src="https://ik.imagekit.io/jlo64/post2/banner.jpg?tr=w-480" alt="The McDonald's app" class="blog_image" title="The McDonald's app">
+    <figcaption style="text-align:center">Honestly the deals you can get through points are amazing.</figcaption>
+ </picture>
 
 ## Table of contents
 - [My Problem](#my-problem)
@@ -56,8 +60,16 @@ However, unlike these labels which are just text on a white background, I'd need
 First I ordered an Oreo McFlurry from a McDonald's with my phone and took a screenshot of the order confirmation page.
 I then imported it into GIMP, erased a bunch of stuff within it, and split it into two images, one for the top half and one for the bottom half.
 
-{% include blog_image.html url="https://ik.imagekit.io/jlo64/post2/top_half.jpg" width="50%" %}
-{% include blog_image.html url="https://ik.imagekit.io/jlo64/post2/bottom_half.jpg" width="50%" caption="It's weird seeing so much blank space in this image" %}
+<picture>
+    <source srcset="https://ik.imagekit.io/jlo64/post2/top_half.jpg?tr=w-720,f-webp," type="image/webp">
+    <img src="https://ik.imagekit.io/jlo64/post2/top_half.jpg?tr=w-480" alt="" class="blog_image" title="">
+    <figcaption style="text-align:center"></figcaption>
+ </picture>
+<picture>
+    <source srcset="https://ik.imagekit.io/jlo64/post2/bottom_half.jpg?tr=w-720,f-webp," type="image/webp">
+    <img src="https://ik.imagekit.io/jlo64/post2/bottom_half.jpg?tr=w-480" alt="" class="blog_image" title="">
+    <figcaption style="text-align:center">It's weird seeing so much blank space in this image</figcaption>
+ </picture>
 
 The reason I split it into two images was because I didn't to have a limit to how many items I could have in the order.
 If I had stuck with just the original screenshot, the order text could have gone off the bottom of the screen so I figured stitching two images together would be an easy fix.
@@ -112,7 +124,11 @@ So I spent just over an hour going the McDonald's app for the location I go to a
 After that I uploaded the data to the API and it took just shy of 30-45 minutes to train.
 The longest part wasn't the actual training, but waiting in the queue to get my turn to train
 
-{% include blog_image.html url="https://ik.imagekit.io/jlo64/post2/gpt-spreadsheet.png" caption="222 lines of McDonald's." %}
+<picture>
+    <source srcset="https://ik.imagekit.io/jlo64/post2/gpt-spreadsheet.png?tr=w-720,f-webp," type="image/webp">
+    <img src="https://ik.imagekit.io/jlo64/post2/gpt-spreadsheet.png?tr=w-480" alt="" class="blog_image" title="">
+    <figcaption style="text-align:center">222 lines of McDonald's.</figcaption>
+ </picture>
 
 At this point the model I trained was very good at guessing prices for individual menu items.
 It was even able to provide the correct price even when I mistyped the name of an item.
@@ -169,7 +185,11 @@ From there it downloads the image and saves it to the photos app.
 
 ## The final product
 
-{% include blog_image.html url="https://ik.imagekit.io/jlo64/post2/1D99F7A8-6145-492B-9ED4-5A365A12DA81.jpeg" caption="A 100% fake screenshot." width="50%" %}
+<picture>
+    <source srcset="https://ik.imagekit.io/jlo64/post2/1D99F7A8-6145-492B-9ED4-5A365A12DA81.jpeg?tr=w-720,f-webp," type="image/webp">
+    <img src="https://ik.imagekit.io/jlo64/post2/1D99F7A8-6145-492B-9ED4-5A365A12DA81.jpeg?tr=w-480" alt="" class="blog_image" title="">
+    <figcaption style="text-align:center">A 100% fake screenshot.</figcaption>
+ </picture>
 
 And with that I was done.
 I had a means to fake McDonald's screenshots on my phone in order to not use my mom's phone.

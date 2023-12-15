@@ -13,7 +13,11 @@ Recently I decided to purchase a domain through AWS Route 53 for the purpose of 
 
 Having it point towards my home server was super easy, all I had to do was create an A record in my DNS records with no subdomain and the value being my server IP address. After I did that, it worked perfectly! All I had to do in order to connect to my server via SSH was just type in the domain and login info and it worked!
 
-{% include blog_image.html url="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-20-setting-up-my-domain/images_route_53_XOmB4z2P6.png" caption="Don't put anything for the subdomain and set your server's IP address as your value." alt="A screenshot of an AWS Route 53 A record." %}
+<picture>
+    <source srcset="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-20-setting-up-my-domain/images_route_53_XOmB4z2P6.png?tr=w-720,f-webp," type="image/webp">
+    <img src="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-20-setting-up-my-domain/images_route_53_XOmB4z2P6.png?tr=w-480" alt="A screenshot of an AWS Route 53 A record." class="blog_image" title="A screenshot of an AWS Route 53 A record.">
+    <figcaption style="text-align:center">Don't put anything for the subdomain and set your server's IP address as your value.</figcaption>
+ </picture>
 
 ## Subdomains are awesome!
 
@@ -21,7 +25,11 @@ However, I got inspired by [a post by Chris Coyier](https://chriscoyier.net/2023
 
 Af first, I was at a complete loss at how to do this. I was able to create subdomains within the AWS console, but I couldn't route them to my server. Eventually I figured out that within DNS records you can only have an IP address, you can't have an IP address *and* port number there. Instead what you have to do is create A records for your desired subdomain and have them point to the exact same IP address as the initial A record.
 
-{% include blog_image.html url="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-20-setting-up-my-domain/images_hosted_zone_kJQN4YkWZ.png" caption="Despite these A records all having different subdomains, they all point to the same IP address." alt="A screenshot of an AWS Route 53 hosted zone's records."%}
+<picture>
+    <source srcset="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-20-setting-up-my-domain/images_hosted_zone_kJQN4YkWZ.png?tr=w-720,f-webp," type="image/webp">
+    <img src="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-20-setting-up-my-domain/images_hosted_zone_kJQN4YkWZ.png?tr=w-480" alt="A screenshot of an AWS Route 53 hosted zone's records." class="blog_image" title="A screenshot of an AWS Route 53 hosted zone's records.">
+    <figcaption style="text-align:center">Despite these A records all having different subdomains, they all point to the same IP address.</figcaption>
+ </picture>
 
 Now all these subdomains were being routed properly to my server, but once at the server they were not being routed to the port they needed to use. For that I had to set up Nginx to properly forward my requests to my port of choice.
 
@@ -54,7 +62,11 @@ After restarting Nginx (I ran `/etc/init.d/nginx restart` as root), I no longer 
 
 I could have my blog accessible through my domain through Nginx served off my server since it's a static Jekyll site. However, I like using GitHub Pages for for my site hosting since it provides SSL certificates without having to do anything extra. Additionally, I like the idea of showing off my site assets (HTML/CSS/JS) if anyone wants to copy something I made. Thankfully, GitHub Pages allows you to use your domain along with a subdomain to host your website. All you have to do is verify your domian via DNS records, then add a filenamed `CNAME` containing your subdomain and domain (in my case: `https://www.julianlopez.net/`)
 
-{% include blog_image.html url="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-20-setting-up-my-domain/images_github_verification_gfrDCSX-9.png" caption="Create a TXT record with the string from 1. as your subdomain and the string from 2. as the value of your record." alt="A screenshot of the GitHub page to verify ownership of your domain." %}
+<picture>
+    <source srcset="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-20-setting-up-my-domain/images_github_verification_gfrDCSX-9.png?tr=w-720,f-webp," type="image/webp">
+    <img src="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-20-setting-up-my-domain/images_github_verification_gfrDCSX-9.png?tr=w-480" alt="A screenshot of the GitHub page to verify ownership of your domain." class="blog_image" title="A screenshot of the GitHub page to verify ownership of your domain.">
+    <figcaption style="text-align:center">Create a TXT record with the string from 1. as your subdomain and the string from 2. as the value of your record.</figcaption>
+ </picture>
 
 If you want to host more than one website on your same GitHub account you just need to repeat all these steps, but also change the url in your Jekyll `_config.yml` file to your subdomain and domain.
 

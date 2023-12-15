@@ -18,7 +18,11 @@ Ever since I bought my 3DS from a retro game store[^1], I've been having some we
 After playing a game for a while (10 minutes+), the system would freeze and I'd get an error on the bottom screen.
 At first I thought this was tied to the homebrew/firmware I had installed, but I couldn't find anything online regarding similar behavior.
 
-{% include blog_image.html url="https://ik.imagekit.io/jlo64/post3/IMG_3810.jpg" caption="This is what a crash would look like." alt="A Nintendo 3DS with a crash screen" %}
+<picture>
+    <source srcset="https://ik.imagekit.io/jlo64/post3/IMG_3810.jpg?tr=w-720,f-webp," type="image/webp">
+    <img src="https://ik.imagekit.io/jlo64/post3/IMG_3810.jpg?tr=w-480" alt="A Nintendo 3DS with a crash screen" class="blog_image" title="A Nintendo 3DS with a crash screen">
+    <figcaption style="text-align:center">This is what a crash would look like.</figcaption>
+ </picture>
 
 Additionally it only had a 1 in 3 chance of turning on when you pressed the power button.
 Removing the SD card and reinserting it seemed to help, but that might have been a placebo.
@@ -30,7 +34,11 @@ This was also just annoying at a practical level since I had to carry around my 
 
 ## Cleaning the 3DS
 
-{% include blog_image.html url="https://ik.imagekit.io/jlo64/post3/IMG_3797.jpg" caption="Take a good look around the screw holes." alt="A Nintendo 3DS with the back removed" %}
+<picture>
+    <source srcset="https://ik.imagekit.io/jlo64/post3/IMG_3797.jpg?tr=w-720,f-webp," type="image/webp">
+    <img src="https://ik.imagekit.io/jlo64/post3/IMG_3797.jpg?tr=w-480" alt="A Nintendo 3DS with the back removed" class="blog_image" title="A Nintendo 3DS with the back removed">
+    <figcaption style="text-align:center">Take a good look around the screw holes.</figcaption>
+ </picture>
 
 Removing the back of the 3DS (which only took 4 phillips screws) revealed yet another problem.
 There was some sort of yellowish residue around the screw holes, which was also present in between the "seams" on the bottom of the 3DS.
@@ -38,14 +46,22 @@ My best guess is that at some point the previous owner (probably a dumb kid) spi
 They then probably repaired it, but didn't do a great job of cleaning it and only did the bare minimum to get it working.
 Credit to that store though, they gave me a free warranty so I could have gotten it fixed for free, but given that I hacked it and was running homebrew I didn't want to push my luck.
 
-{% include blog_image.html url="https://ik.imagekit.io/jlo64/post3/IMG_3800.jpg" caption="A look at the gunk in the SD slot." alt="The exposed SD card slot of a Nintendo 3DS with gunk in it" %}
+<picture>
+    <source srcset="https://ik.imagekit.io/jlo64/post3/IMG_3800.jpg?tr=w-720,f-webp," type="image/webp">
+    <img src="https://ik.imagekit.io/jlo64/post3/IMG_3800.jpg?tr=w-480" alt="The exposed SD card slot of a Nintendo 3DS with gunk in it" class="blog_image" title="The exposed SD card slot of a Nintendo 3DS with gunk in it">
+    <figcaption style="text-align:center">A look at the gunk in the SD slot.</figcaption>
+ </picture>
 
 Disassembling it further revealed that the SD card slot was also full of this gunk.
 This was causing extra friction with the SD card which was why it was so hard to close the cover.
 The fact that this gunk was also present here makes me think that this 3DS was submerged in some sort of liquid.
 That it survived at all is probably a miracle.
 
-{% include blog_image.html url="https://ik.imagekit.io/jlo64/post3/IMG_3803.jpg" caption="The finished result." alt="A clean disassembled Nintendo 3DS" %}
+<picture>
+    <source srcset="https://ik.imagekit.io/jlo64/post3/IMG_3803.jpg?tr=w-720,f-webp," type="image/webp">
+    <img src="https://ik.imagekit.io/jlo64/post3/IMG_3803.jpg?tr=w-480" alt="A clean disassembled Nintendo 3DS" class="blog_image" title="A clean disassembled Nintendo 3DS">
+    <figcaption style="text-align:center">The finished result.</figcaption>
+ </picture>
 
 It took me several hours, but I got rid of any trace of the gunk.
 Unfortunately, I didn't have any rubbing alcohol (and I wasn't crazy enough to use water) so I had to use a bunch of disposable alcohol wipes and just rub the plastic as hard as I could.

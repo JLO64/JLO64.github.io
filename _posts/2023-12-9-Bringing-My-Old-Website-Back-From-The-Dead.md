@@ -6,7 +6,7 @@ tags:
   - webdev
   - jekyll
   - blogging
-  - AWS
+  - aws
 ---
 
 ## My Assignment
@@ -17,21 +17,37 @@ I didn't want to rent a server since I wanted to spend as little cash as possibl
 
 Prior to looking into this, I thought all websites required a server to run 24/7 in order to serve files and process user queries. This is kinda half true. Website information can be precompiled and stored on a publicly accessible file system without the need for any computational resources. Sites that are made this way are called "Static Websites". Since I wasn't doing anything fancy I decided to go with this opinion which still left me with many choices for where to store these files. To my surprise, you can actually configure an [AWS S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html) to host a website which was great since I had used this service plenty of times before.
 
-{% include blog_image.html url="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-9-Bringing-My-Old-Website-Back-From-The-Dead/_aws-static-settings_mh5-44oep.png" caption="This page is within the settings of an S3 bucket." alt="A screenshot of AWS S3 static website hosting settings." %}
+<picture>
+    <source srcset="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-9-Bringing-My-Old-Website-Back-From-The-Dead/_aws-static-settings_mh5-44oep.png?tr=w-720,f-webp," type="image/webp">
+    <img src="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-9-Bringing-My-Old-Website-Back-From-The-Dead/_aws-static-settings_mh5-44oep.png?tr=w-480" alt="A screenshot of AWS S3 static website hosting settings." class="blog_image" title="A screenshot of AWS S3 static website hosting settings.">
+    <figcaption style="text-align:center">This page is within the settings of an S3 bucket.</figcaption>
+ </picture>
 
 To actually create and generate this blog I decided to go with [Jekyll](https://jekyllrb.com/) which is probably one of the most popular and thus best documented options out there. Plus, there are a bunch of free to use themes to customize the way your site looks. I went with [windows-95](https://github.com/h01000110/windows-95) which has a retro look that I like and works surprisingly well on mobile!
 
-{% include blog_image.html url="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-9-Bringing-My-Old-Website-Back-From-The-Dead/_mobile-website_Oo7ad8a0Z.jpeg" caption="Here's how it looks on my phone." alt="A screenshot taken from an iPhone of a website with a Windows 95 theme." %}
+<picture>
+    <source srcset="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-9-Bringing-My-Old-Website-Back-From-The-Dead/_mobile-website_Oo7ad8a0Z.jpeg?tr=w-720,f-webp," type="image/webp">
+    <img src="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-9-Bringing-My-Old-Website-Back-From-The-Dead/_mobile-website_Oo7ad8a0Z.jpeg?tr=w-480" alt="A screenshot taken from an iPhone of a website with a Windows 95 theme." class="blog_image" title="A screenshot taken from an iPhone of a website with a Windows 95 theme.">
+    <figcaption style="text-align:center">Here's how it looks on my phone.</figcaption>
+ </picture>
 
 All I needed to do to add a post was to create a markdown file in the `_posts` directory, build the site by running the command `bundle exec jekyll build` in the root directory of the website, then sync said directory to my S3 bucket. Just with that [I had something good enough for my class](http://julian-lopez-usc-jpn3-blog.s3.us-west-2.amazonaws.com/index.html)!
 
-{% include blog_image.html url="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-9-Bringing-My-Old-Website-Back-From-The-Dead/_old_website_UhH4agVL2.png" caption="I like the way my current blog looks, but I have to admit this looks awesome." alt="A screenshot of a website with a Windows 95 theme." %}
+<picture>
+    <source srcset="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-9-Bringing-My-Old-Website-Back-From-The-Dead/_old_website_UhH4agVL2.png?tr=w-720,f-webp," type="image/webp">
+    <img src="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-9-Bringing-My-Old-Website-Back-From-The-Dead/_old_website_UhH4agVL2.png?tr=w-480" alt="A screenshot of a website with a Windows 95 theme." class="blog_image" title="A screenshot of a website with a Windows 95 theme.">
+    <figcaption style="text-align:center">I like the way my current blog looks, but I have to admit this looks awesome.</figcaption>
+ </picture>
 
 ## Commenting Was Required
 
 However, the assignment didn't involve just writing and posting blogs. We were required to write comments on other's posts which was fun since it forced us to read each other's blogs. However, there was a catch. According to the rubric, users had to be able to submit comments without creating or signing in to an account. While this seems relatively simple, most embeddable comment services require users to login to something (typically a Google/Facebook account) as an anti spam measure. I initially used [CommentBox](https://commentbox.io) (which worked great) but they require an account login. I had to switch to [Cusdis](https://cusdis.com/#pricing) which surprisingly fit well with my site theme. Both of these options are free up to a certain point (100+ comments per month) which is great since my site got nowhere near that limit
 
-{% include blog_image.html url="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-9-Bringing-My-Old-Website-Back-From-The-Dead/_comments_iR7CiP3wO.png" caption="It kinda looks as if it is a part of the theme." alt="A screenshot of Cusdis comments." %}
+<picture>
+    <source srcset="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-9-Bringing-My-Old-Website-Back-From-The-Dead/_comments_iR7CiP3wO.png?tr=w-720,f-webp," type="image/webp">
+    <img src="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-9-Bringing-My-Old-Website-Back-From-The-Dead/_comments_iR7CiP3wO.png?tr=w-480" alt="A screenshot of Cusdis comments." class="blog_image" title="A screenshot of Cusdis comments.">
+    <figcaption style="text-align:center">It kinda looks as if it is a part of the theme.</figcaption>
+ </picture>
 
 I'm still not fully content with having to rely on a 3rd party service like this (especially one that I doubt will exist for years to come) but it's something I can't really bother myself to change. I doubt I'll ever make any effort to save these comments, buttttttttt who knows.
 
@@ -43,7 +59,11 @@ Both of these issues can be fixed on an S3 hosted website, but the process isn't
 
 By chance, I found out (no joke, I got it from the URL of a [manga fan page](https://hiatus-hiatus.github.io)) that GitHub has a service called [GitHub Pages](https://pages.github.com) to host static websites. It is wayyyyy better than using an S3 bucket, automatically provides HTTPS, has support for custom domains, and has version history through Git. Ever since I The only issue with it is that the source files have to be on a GitHub repository, which are public unless you pony up the $4/month for a GitHub Pro subscription. I'm fine with the [source files of my blog being public](https://github.com/JLO64/JLO64.github.io), but I'd rather not have others snoop around the source files of my other sites.
 
-{% include blog_image.html url="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-9-Bringing-My-Old-Website-Back-From-The-Dead/_github-pages_38keHiWpd.png" caption="These are my GitHub Pages settings for this blog." alt="A screenshot of the GitHub Pages settings for a website." %}
+<picture>
+    <source srcset="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-9-Bringing-My-Old-Website-Back-From-The-Dead/_github-pages_38keHiWpd.png?tr=w-720,f-webp," type="image/webp">
+    <img src="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-9-Bringing-My-Old-Website-Back-From-The-Dead/_github-pages_38keHiWpd.png?tr=w-480" alt="A screenshot of the GitHub Pages settings for a website." class="blog_image" title="A screenshot of the GitHub Pages settings for a website.">
+    <figcaption style="text-align:center">These are my GitHub Pages settings for this blog.</figcaption>
+ </picture>
 
 (As it turns out, Netlify also supports auto HTTPS, custom domains, and pushing files via Git. This is in addition to being easier to work with for hosting multiple websites and not requiring a subscription to hide source files. This has made me seriously consider switching to them for hosting my all my websites.)
 

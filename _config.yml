@@ -47,3 +47,4 @@ jekyll-archives:
     year: '/posts/:year/'
     tag: '/tag/:name/'
 
+# verbose: true
