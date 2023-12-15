@@ -28,7 +28,7 @@ To run this command on boot I appended the below line to my `crontab` file.
 
 ## Creating A Jekyll Subdomain
 
-Now while this is perfectly workable so far, I'd rather have a real URL to connect to instead of having to type in a port number after my domain. Thus I decided to add a "jekyll" subdomain to my site. This is literally the same thing as what I wrote about in my [previous post on adding subdomains](2023-11-20-setting-up-my-domain.md) so I won't be going into too much detail about it here. Below is what I added to my Nginx config.
+Now while this is perfectly workable so far, I'd rather have a real URL to connect to instead of having to type in a port number after my domain. Thus I decided to add a "jekyll" subdomain to my site. This is literally the same thing as what I wrote about in my [previous post on adding subdomains](2023-11-20-setting-up-my-domain.md) so I won't be going into too much detail about it here. Below is what I added to my Nginx config and my AWS route 53 settings.
 
 ```
 server {
@@ -39,11 +39,12 @@ server {
     }
 }
 ```
-
-![Here is the AWS Route 53 domain record I set up for this subdomain.](/images/route53.png)(A screenshot of an AWS Route 53 domain record.)
-
-
-
+<picture>
+    <source srcset="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-12-Running-a-Jekyll-Dev-Server/_route53_I8iJ4bRVP.png?tr=w-720,f-webp," type="image/webp">
+    <img src="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-12-12-Running-a-Jekyll-Dev-Server/_route53_I8iJ4bRVP.png?tr=w-480" alt="A screenshot of an AWS Route 53 domain record." class="blog_image" title="A screenshot of an AWS Route 53 domain record.">
+    <figcaption style="text-align:center">Here is the AWS Route 53 domain record I set up for this subdomain.</figcaption>
+ </picture>
+ 
 If you're going to copy what I'm doing, make sure that the port you're using is open on your router and firewall in addition to Nginx being properly configured. Otherwise, you'll only be able to access this preview from your local 
 
 With that, I'm done! If you want to check out the changes I'm going to be making to my site before I publish them, visit [jekyll.julianlopez.net](http://jekyll.julianlopez.net).
