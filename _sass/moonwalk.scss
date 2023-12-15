@@ -190,9 +190,11 @@ ul.horizontal-list {
 }
 
 .tag {
-  padding: 0.4em 1em;
-  margin-right: 0.5em;
-  border-radius: 1em;
+  box-shadow: 0 0 0 0.3rem var(--card-color);
+  transition: 0.2s ease-in;
+  margin: 2rem 0.5rem;
+  border-radius: 0.5rem;
+  padding: 0 0.1rem;
   background-color: var(--card-color);
 }
 

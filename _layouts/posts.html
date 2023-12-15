@@ -13,10 +13,9 @@ layout: default
 </header>
 <ul>
   <h2>Tags</h2>
-  {% for tag in site.tags %}
-  <span class="tag">
-    <a href="/tag/{{ tag[0] }}">{{ tag[0] }}</a>
-  </span>
+  {% for tags in site.tags %}
+  {% assign tag = tags[0] %}
+    <span class="tag"><a href="/tag/{{ tag }}">{{ tag | replace: "-", " " }}</a></span>
   {% endfor %}
 </ul>
 

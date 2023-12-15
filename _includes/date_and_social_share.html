@@ -15,9 +15,7 @@
   <div class="">
     <span style="font-weight: bold;">Tags: </span>
     {% for tag in page.tags %}
-      <span class="tag">
-        <a href="/tag/{{ tag }}">{{ tag }}</a>
-      </span>
+      <span class="tag"><a href="/tag/{{ tag }}">{{ tag | replace: "-", " " }}</a></span>
     {% endfor %}
   </div>
 {% endif %}

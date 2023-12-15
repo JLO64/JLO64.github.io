@@ -49,7 +49,9 @@
     // text-shadow: 0 0 1rem var(--link-underline);
     animation: a_breathe 0.7s infinite alternate ease-in-out;
   }
-  .tag:hover {font-size: 120%;}
+  .tag:hover {
+    box-shadow: 0 0 0 0.6rem var(--card-color);
+  }
   .h1-website-title:hover {
     font-size: 4rem;
     text-shadow: 0 0 2rem var(--link-underline);
