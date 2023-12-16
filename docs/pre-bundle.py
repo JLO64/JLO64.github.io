@@ -33,6 +33,6 @@ def main():
             return
         markdown_text = import_markdown(post_folder + post_filename)
 
-        overwrite_file_with_markdown(post_folder + post_filename, replace_post_md_links(markdown_text))
+        # overwrite_file_with_markdown(post_folder + post_filename, replace_post_md_links(markdown_text))
 
 main()

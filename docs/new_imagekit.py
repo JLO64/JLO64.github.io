@@ -29,7 +29,7 @@ def upload_image(filename, imagekit_foldername):
     print(" Uploading " + filename)
     upload = imagekit.upload(
         file=open("images/" + filename.replace("/images/", "").replace("images/", ""), "rb"),
-        file_name=os.path.splitext(filename)[0] + "-" + str(datetime.now().strftime('%Y-%m-%d')),
+        file_name= str(datetime.now().strftime('%Y-%m-%d')) + "-" + os.path.splitext(filename)[0],
         options=options
     )
     print(" " + filename + " was uploaded")
