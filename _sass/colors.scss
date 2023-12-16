@@ -1,14 +1,10 @@
 html {
     --bg: #FFF;
     --bg-secondary: #f3f4f6;
-    // --bg-secondary-opaque: rgba(243, 244, 246, 0.8);
     --bg-secondary-opaque: rgba(243, 244, 246, 0.95);
     --headings: #1e293b;
     --text: #374151;
     --text-secondary: #6b7280;
-    --link-text: black;
-    --link-underline: #74c0fc;
-    --link-underline-hover: black;
     --highlight: #dedede;
     --code-text: black;
     --code-block: rgb(112, 255, 112);
@@ -17,18 +13,28 @@ html {
     --scrollbar-foreground: #74c0fc;
     --scrollbar-background: #c0c0c0;
     --card-color: #cfd2e2;
+
+    // link colors
+    --link-text: black;
+    --link-underline: #74c0fc;
+    --link-underline-hover: black;
+    --github: #0D1117;
+    --vscode: #23A9F2;
+    --obsidian: #633AB7;
+    --aws: #FF9900;
+    --apple: #666666;
+    --youtube: #FA0000;
+    --jetpens: #9FB22C;
+    --jekyll: #BA1C21;
+    --julian: #4B5162;
 }
 // -------------- THEME SWITCHER -------------- //
 @mixin dark-appearance {
   html, body  {
       --headings: #74c0fc;
-      --link-text: #FFF;
-      --link-underline: #74c0fc;
-      --link-underline-hover: white;
       --highlight: #a9a9a9;
       --bg: #000000;
       --bg-secondary: #323945;
-      // --bg-secondary-opaque: rgba(0, 0, 0, 0.8);
       --bg-secondary-opaque: rgba(0, 0, 0, 1);
       --text: #adb5bd;
       --text-secondary: #9CA3AF;
@@ -39,6 +45,20 @@ html {
       --scrollbar-foreground: #74c0fc;
       --scrollbar-background: #c0c0c0;
       --card-color: rgb(26, 31, 53);
+
+      // link colors
+      --link-text: #FFF;
+      --link-underline: #74c0fc;
+      --link-underline-hover: white;
+      --github: white;
+      --vscode: #23A9F2;
+      --obsidian: #633AB7;
+      --aws: #FF9900;
+      --apple: #666666;
+      --youtube: #FA0000;
+      --jetpens: #9FB22C;
+      --jekyll: #BA1C21;
+      --julian: #4B5162;
   };
 }
 html[data-theme="dark"] { @include dark-appearance; }

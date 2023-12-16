@@ -3,8 +3,8 @@ layout: post
 title: Setting Up My Domain
 permalink: /posts/:year/:month/:slug
 tags:
- - webdev
- - nginx
+  - webdev
+  - nginx
 ---
 
 ## Why did I buy a domain?

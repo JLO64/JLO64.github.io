@@ -202,5 +202,11 @@ ul.horizontal-list {
   border-radius: 1.5rem;
   height: 40vh;
   transition: 0.2s ease-in;
-  border: 0.3rem solid var(--link-underline);
+  animation: img_border_breathe 0.7s infinite alternate;
+}
+
+picture {
+  figcaption {
+    margin-top: 0.5rem;
+  }
 }
