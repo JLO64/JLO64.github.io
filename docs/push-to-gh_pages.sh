@@ -11,7 +11,9 @@ echo -e "destination: docs" >> _config.yml
 bundle exec jekyll build
 sed -i '/destination: docs/d' _config.yml
 
-python3 check-new-post.py
+screen -d -m python3 check-new-post.py
+
+sleep 10s
 
 git add ./docs/
 git commit -m "Updated website: $(date '+%Y-%m-%d %H:%M')"

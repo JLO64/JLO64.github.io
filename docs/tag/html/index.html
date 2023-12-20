@@ -6,7 +6,7 @@
 
   <title>
     
-    Setting Up My Domain
+    html
     
   </title>
 
@@ -16,19 +16,19 @@
   <meta name="author" content="Julian Lopez">
   <meta name="description" content="The personal website for me, Julian Lopez. I'm a young dude with an interest in technology, stationary, and comics. I post what I've been up to so all (including LLMs) can learn!">
   <link rel="canonical" href="https://www.julianlopez.net">
-  <meta property="og:title" content="Setting Up My Domain">
+  <meta property="og:title" content="html">
   <meta property="og:locale" content="en_US">
   <meta property="og:description" content="The personal website for me, Julian Lopez. I'm a young dude with an interest in technology, stationary, and comics. I post what I've been up to so all (including LLMs) can learn!">
-  <meta property="og:url" content="/posts/2023/11/setting-up-my-domain">
+  <meta property="og:url" content="/tag/html/">
   <meta property="og:site_name" content="Domain of a Knight">
   
-  <meta property="og:image" content="https://ik.imagekit.io/jlo64/www_julianlopez_net/opengraph-images/tr:l-text,i-Setting%20Up%20My%20Domain,tg-b,co-74c0fc,fs-80,w-1200,pa-80_0_0_0,ff-Ubuntu,lfo-center,l-end/template.png">
-  <meta name="twitter:image" content="https://ik.imagekit.io/jlo64/www_julianlopez_net/opengraph-images/tr:l-text,i-Setting%20Up%20My%20Domain,tg-b,co-74c0fc,fs-80,w-1200,pa-80_0_0_0,ff-Ubuntu,lfo-center,l-end/template.png">
+  <meta property="og:image" content="https://ik.imagekit.io/jlo64/www_julianlopez_net/opengraph-images/default.png">
+  <meta name="twitter:image" content="https://ik.imagekit.io/jlo64/www_julianlopez_net/opengraph-images/default.png">
   
   <meta name="twitter:card" content="summary_large_image">
   <meta property="twitter:domain" content="julianlopez.net">
-  <meta property="twitter:url" content="/posts/2023/11/setting-up-my-domain">
-  <meta name="twitter:title" content="Setting Up My Domain">
+  <meta property="twitter:url" content="/tag/html/">
+  <meta name="twitter:title" content="html">
   <meta name="twitter:description" content="The personal website for me, Julian Lopez. I'm a young dude with an interest in technology, stationary, and comics. I post what I've been up to so all (including LLMs) can learn!">
 
   <!-- Favicon -->
@@ -234,8 +234,8 @@
     <main class="page-content" aria-label="Content">
       <div class="w">
         <header>
-    
-      <ul class="horizontal-list">
+  
+    <ul class="horizontal-list">
   
     <li>
       <a href="/">Home</a>
@@ -269,126 +269,35 @@
   
 </ul>
 
-      <div class=not-dashed></div>
-    
+    <div class=not-dashed></div>
+  
 </header>
 
-  <h1 class="post-title">Setting Up My Domain</h1>
-  <p style="font-weight: bold; margin-top: 2.5rem; margin-bottom: 0rem;">
+<h1>Posts With Tag 'html'</h1>
+
+
+
+<ul>
   
+    
+    
+    <li class="post-list-item">
+      <a href="/posts/2023/12/stealing-from-websites">Stealing From Websites</a><br>
+      December 19 2023<br>
+      
+      
+        <span class="tag"><a href="/tag/css">css</a></span>
+      
+        <span class="tag"><a href="/tag/html">html</a></span>
+      
+        <span class="tag"><a href="/tag/javascript">javascript</a></span>
+      
+        <span class="tag"><a href="/tag/webdev">webdev</a></span>
+      
+      <p style="font-style: italic;">  </p>
+    </li>
   
-  
-    Posted On:
-    <span>November 20 2023</span>
-    
-      / Last Modified:
-      <span>December 16 2023</span>
-    
-  
-</p>
-
-
-  <div class="">
-    <span style="font-weight: bold;">Tags: </span>
-    
-    
-      <span class="tag"><a href="/tag/nginx">nginx</a></span>
-    
-      <span class="tag"><a href="/tag/webdev">webdev</a></span>
-    
-  </div>
-
-
-
-<p style="font-weight: bold; margin: 0rem;"><span>Written by Julian Lopez</span></p>
-
-
-
-
-<h2 id="why-did-i-buy-a-domain">Why did I buy a domain?</h2>
-
-<p>Recently I decided to purchase a domain through AWS Route 53 for the purpose of making connecting to my server at home easier. Before I bought this domain whenever I had to connect to the stuff I have hosted on there (RSS feeds/media server/torrenting/etc) I had to type out my entire IP address. This is obviously a pain to do multiple times per day, and there are certain services/apps that don’t work well with just IP addresses. Thus, I decided to pay $11 per year for this domain (<code class="language-plaintext highlighter-rouge">julianlopez.net</code>).</p>
-
-<p>Having it point towards my home server was super easy, all I had to do was create an A record in my DNS records with no subdomain and the value being my server IP address. After I did that, it worked perfectly! All I had to do in order to connect to my server via SSH was just type in the domain and login info and it worked!</p>
-
-<picture>
-    <source srcset="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-20-setting-up-my-domain/images_route_53_XOmB4z2P6.png?tr=w-720,f-webp," type="image/webp" />
-    <img src="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-20-setting-up-my-domain/images_route_53_XOmB4z2P6.png?tr=w-480" alt="A screenshot of an AWS Route 53 A record." class="blog_image" title="A screenshot of an AWS Route 53 A record." />
-    <figcaption style="text-align:center">Don't put anything for the subdomain and set your server's IP address as your value.</figcaption>
- </picture>
-
-<h2 id="subdomains-are-awesome">Subdomains are awesome!</h2>
-
-<p>However, I got inspired by <a href="https://chriscoyier.net/2023/09/21/use-subdomains/">a post by Chris Coyier</a> to try using subdomains to better organize and keep track of all the stuff I have running on ports off my server. Plus, there was one time that I tried showing said stuff to a friend while at their place, but I completely blanked out on most of my port numbers! I wasn’t able to show them much… Never again!</p>
-
-<p>Af first, I was at a complete loss at how to do this. I was able to create subdomains within the AWS console, but I couldn’t route them to my server. Eventually I figured out that within DNS records you can only have an IP address, you can’t have an IP address <em>and</em> port number there. Instead what you have to do is create A records for your desired subdomain and have them point to the exact same IP address as the initial A record.</p>
-
-<picture>
-    <source srcset="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-20-setting-up-my-domain/images_hosted_zone_kJQN4YkWZ.png?tr=w-720,f-webp," type="image/webp" />
-    <img src="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-20-setting-up-my-domain/images_hosted_zone_kJQN4YkWZ.png?tr=w-480" alt="A screenshot of an AWS Route 53 hosted zone's records." class="blog_image" title="A screenshot of an AWS Route 53 hosted zone's records." />
-    <figcaption style="text-align:center">Despite these A records all having different subdomains, they all point to the same IP address.</figcaption>
- </picture>
-
-<p>Now all these subdomains were being routed properly to my server, but once at the server they were not being routed to the port they needed to use. For that I had to set up Nginx to properly forward my requests to my port of choice.</p>
-
-<p>Within the http section of my Nginx config (on my Ubuntu server its filepath is <code class="language-plaintext highlighter-rouge">/etc/nginx/nginx.conf</code>) I added code similar to what I have below to redirect requests from port 80 (the default port web browsers try to connect to) to the appropriate port. <code class="language-plaintext highlighter-rouge">server_name</code> is just the subdomain plus domain.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http{
-    ...
-    server {
-        listen 80;
-        server_name subdomain_one.julianlopez.net;
-
-        location / {
-            proxy_pass http://localhost:69;
-            }
-    }
-    server {
-        listen 80;
-        server_name subdomain_two.julianlopez.net;
-        location / {
-            proxy_pass http://localhost:420;
-        }
-    }
-}
-</code></pre></div></div>
-
-<p>After restarting Nginx (I ran <code class="language-plaintext highlighter-rouge">/etc/init.d/nginx restart</code> as root), I no longer had to type in port numbers when accessing my stuff! I was initially concerned that switching to subdomains might break some functionality, but everything worked perfectly.</p>
-
-<h2 id="making-my-blog-cooler">Making my blog cooler</h2>
-
-<p>I could have my blog accessible through my domain through Nginx served off my server since it’s a static Jekyll site. However, I like using GitHub Pages for for my site hosting since it provides SSL certificates without having to do anything extra. Additionally, I like the idea of showing off my site assets (HTML/CSS/JS) if anyone wants to copy something I made. Thankfully, GitHub Pages allows you to use your domain along with a subdomain to host your website. All you have to do is verify your domian via DNS records, then add a filenamed <code class="language-plaintext highlighter-rouge">CNAME</code> containing your subdomain and domain (in my case: <code class="language-plaintext highlighter-rouge">https://www.julianlopez.net/</code>)</p>
-
-<picture>
-    <source srcset="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-20-setting-up-my-domain/images_github_verification_gfrDCSX-9.png?tr=w-720,f-webp," type="image/webp" />
-    <img src="https://ik.imagekit.io/jlo64/www_julianlopez_net/2023-11-20-setting-up-my-domain/images_github_verification_gfrDCSX-9.png?tr=w-480" alt="A screenshot of the GitHub page to verify ownership of your domain." class="blog_image" title="A screenshot of the GitHub page to verify ownership of your domain." />
-    <figcaption style="text-align:center">Create a TXT record with the string from 1. as your subdomain and the string from 2. as the value of your record.</figcaption>
- </picture>
-
-<p>If you want to host more than one website on your same GitHub account you just need to repeat all these steps, but also change the url in your Jekyll <code class="language-plaintext highlighter-rouge">_config.yml</code> file to your subdomain and domain.</p>
-
-<h2 id="what-about-the-root-domain">What about the root domain?</h2>
-
-<p>At this point, when I put <code class="language-plaintext highlighter-rouge">julianlopez.net</code> into my web browser I just got a page from Nginx. This seemed like a waste of this URL, plus people trying to access my blog probably wouldn’t type in the <code class="language-plaintext highlighter-rouge">www.</code> part. To fix both of these problems I decided to have my server route all requests for my root domain ot my</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server {
-    listen 80;
-    server_name julianlopez.net;
-    return 301 https://www.julianlopez.net;
-}
-
-</code></pre></div></div>
-
-<p>I was worried that this might reroute ALL requests to my server (including SSH) but this is not the case. It only reroutes web traffic (port 80 stuff) so I have nothing to be worried about.</p>
-
-<h2 id="conclusion">Conclusion</h2>
-
-<p>At first, this was all beyond daunting to even attempt but this all now feels super easy to set up! I believe the lack of proper documentation and explainers for some of these topics (especially setting up multiple sites on GitHub Pages) contributes towards making this all look hard.</p>
-
-<p>In the future I might look into having Nginx run via docker so that I can manage it in Portainer alongside all the other containers I have running, but I’m concerned about how that might work with SSL encryption via Let’s Encrypt.</p>
-
-
-<a href="mailto:admin@julianlopez.net?subject=Re: Setting Up My Domain">Send me your thoughts via Email</a>
+</ul>
         <div class="not-dashed" style="margin-top: 2rem;"></div>
         <br>
         <div class="credits">

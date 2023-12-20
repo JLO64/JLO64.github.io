@@ -1,4 +1,74 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://www.julianlopez.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.julianlopez.net/" rel="alternate" type="text/html" /><updated>2023-12-17T21:39:20-08:00</updated><id>https://www.julianlopez.net/feed.xml</id><title type="html">Domain of a Knight</title><subtitle>The personal website for me, Julian Lopez. I&apos;m a young dude with an interest in technology, stationary, and comics. I post what I&apos;ve been up to so all (including LLMs) can learn!</subtitle><author><name>Julian Lopez</name></author><entry><title type="html">Running a Jekyll Dev Server</title><link href="https://www.julianlopez.net/posts/2023/12/running-a-jekyll-dev-server" rel="alternate" type="text/html" title="Running a Jekyll Dev Server" /><published>2023-12-12T00:00:00-08:00</published><updated>2023-12-14T20:08:39-08:00</updated><id>https://www.julianlopez.net/posts/2023/12/Running-a-Jekyll-Dev-Server</id><content type="html" xml:base="https://www.julianlopez.net/posts/2023/12/running-a-jekyll-dev-server">&lt;h2 id=&quot;my-plugin-problem&quot;&gt;My Plugin Problem&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://www.julianlopez.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.julianlopez.net/" rel="alternate" type="text/html" /><updated>2023-12-19T21:37:18-08:00</updated><id>https://www.julianlopez.net/feed.xml</id><title type="html">Domain of a Knight</title><subtitle>The personal website for me, Julian Lopez. I&apos;m a young dude with an interest in technology, stationary, and comics. I post what I&apos;ve been up to so all (including LLMs) can learn!</subtitle><author><name>Julian Lopez</name></author><entry><title type="html">Stealing From Websites</title><link href="https://www.julianlopez.net/posts/2023/12/stealing-from-websites" rel="alternate" type="text/html" title="Stealing From Websites" /><published>2023-12-19T00:00:00-08:00</published><updated>2023-12-19T21:36:19-08:00</updated><id>https://www.julianlopez.net/posts/2023/12/stealing-from-websites</id><content type="html" xml:base="https://www.julianlopez.net/posts/2023/12/stealing-from-websites">&lt;p&gt;The term “steal” has a bunch of negative connotations, but I feel that taking HTML/CSS/JS from other’s websites be viewed as a bad thing. Personally, I would feel more than pleased to learn that someone decided to steal code from my site for their own use! However, instead of just copying other’s websites, I’ve decided to showcase where I’ve been sourcing stuff from. That way, people looking to copy my code can compare against its origin.&lt;/p&gt;
+
+&lt;p&gt;In order to better illustrate what I will be talking about, I have included CodePen samples. Feel free to directly copy what I’ve typed up!&lt;/p&gt;
+
+&lt;h2 id=&quot;underlined-linkschris-coyier&quot;&gt;&lt;a href=&quot;https://chriscoyier.net/&quot;&gt;Underlined Links(Chris Coyier)&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Out of all the RSS feeds I read, I probably click on Chris Coyier’s posts the most. He has a great mix of random tech stuff, things going on in his life, and new things in the webdev world. So it only makes sense that his website would have have stuff worth copying from!&lt;/p&gt;
+
+&lt;p&gt;Immediately, when you first visit his website you notice that a bunch of links are underlined with a gold color. That’s neat, but when you hover over them with your cursor the line changes color!&lt;/p&gt;
+
+&lt;p class=&quot;codepen&quot; data-height=&quot;300&quot; data-theme-id=&quot;dark&quot; data-default-tab=&quot;css,result&quot; data-slug-hash=&quot;eYxqWdb&quot; data-user=&quot;JLO64&quot; style=&quot;height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;&quot;&gt;
+  &lt;span&gt;See the Pen &lt;a href=&quot;https://codepen.io/JLO64/pen/eYxqWdb&quot;&gt;
+  Underline Links Hover&lt;/a&gt; by Julian Lopez (&lt;a href=&quot;https://codepen.io/JLO64&quot;&gt;@JLO64&lt;/a&gt;)
+  on &lt;a href=&quot;https://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/span&gt;
+&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://cpwebassets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;This is a small thing, but it adds such a layer of interactivity to websites and I’m surprised it’s not more common.&lt;/p&gt;
+
+&lt;h2 id=&quot;text-glowingrobin-rendle&quot;&gt;&lt;a href=&quot;https://robinrendle.com/&quot;&gt;Text Glowing(Robin Rendle)&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;This site has three themes: Light, Dark, and Communist (seriously lol). Under the Communist theme the title text flickers. My first assumption was that the title text was a gif on loop. However, the text could be highlighted meaning that this wasn’t the case. Instead, there was an animation being applied to that element and all it was doing was changing the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;text-shadow&lt;/code&gt; property.&lt;/p&gt;
+
+&lt;p class=&quot;codepen&quot; data-height=&quot;300&quot; data-theme-id=&quot;dark&quot; data-default-tab=&quot;css,result&quot; data-slug-hash=&quot;KKJOmQG&quot; data-user=&quot;JLO64&quot; style=&quot;height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;&quot;&gt;
+  &lt;span&gt;See the Pen &lt;a href=&quot;https://codepen.io/JLO64/pen/KKJOmQG&quot;&gt;
+  Untitled&lt;/a&gt; by Julian Lopez (&lt;a href=&quot;https://codepen.io/JLO64&quot;&gt;@JLO64&lt;/a&gt;)
+  on &lt;a href=&quot;https://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/span&gt;
+&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://cpwebassets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Unfortunately this effect doesn’t work that well on a white background. Still, I think it’s a neat effect to add to my links.&lt;/p&gt;
+
+&lt;h2 id=&quot;random-posts512kb-club&quot;&gt;&lt;a href=&quot;https://512kb.club/&quot;&gt;Random Posts(512kb Club)&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;So for the longest time I’ve been meaning to add a way to read a random post. Initially I thought I couldn’t add a way to do this on a static site. I had thoughts about using an external service to do this, like having an AWS Lambda function that had an array containing links to all the posts on my site and returning one of them at random. Then I came across the implementation of this site.&lt;/p&gt;
+
+&lt;p class=&quot;codepen&quot; data-height=&quot;300&quot; data-theme-id=&quot;dark&quot; data-default-tab=&quot;js,result&quot; data-slug-hash=&quot;oNmKVBW&quot; data-user=&quot;JLO64&quot; style=&quot;height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;&quot;&gt;
+  &lt;span&gt;See the Pen &lt;a href=&quot;https://codepen.io/JLO64/pen/oNmKVBW&quot;&gt;
+  Random &amp;lt;a&amp;gt; Link&lt;/a&gt; by Julian Lopez (&lt;a href=&quot;https://codepen.io/JLO64&quot;&gt;@JLO64&lt;/a&gt;)
+  on &lt;a href=&quot;https://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/span&gt;
+&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://cpwebassets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;I’m going to be honest. I was kinda pissed off when I saw this solution working with minimal effort and code. I was prepared to go all out and try to use cloud solutions for this. Seeing this work made me feel stupid!&lt;/p&gt;
+
+&lt;h2 id=&quot;email-linkgarrit-franke&quot;&gt;&lt;a href=&quot;https://garrit.xyz/&quot;&gt;Email link(Garrit Franke)&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;At the bottom of all posts on this website I noticed there was a link to “Reply via E-Mail”. Clicking on it created a draft email in my personal inbox on the web. I thought that there would be a bunch of complicated JavaScript behind this, but it was just one line of HTML!&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;a href=&quot;mailto:admin@example.net?subject=Re: An Example Subject&quot;&amp;gt;Email Link&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Out of all the things I’ve shown off here, this is the one that is the simplest, yet adds the most functionality to my site. I don’t really like the idea of adding comments to my site since I know that they will be something that is hardly ever used and that I can not control effectively. Besides, I’d have to rely on a third party service &lt;a href=&quot;/posts/2023/12/bringing-my-old-website-back-from-the-dead&quot;&gt;like I did on my old site&lt;/a&gt; which I’d rather not do for my blog. This eliminates those concerns by using a simple tool that we all have.&lt;/p&gt;
+
+&lt;h2 id=&quot;website-iconsyoutube&quot;&gt;Website Icons(YouTube)&lt;/h2&gt;
+&lt;p&gt;Typically in the description of their videos YouTubers put links to their social media. To the left of these links, icons representing the sites they point towards have been added. From a user perspective, these are great since they help show where you are being sent to.&lt;/p&gt;
+
+&lt;p class=&quot;codepen&quot; data-height=&quot;300&quot; data-theme-id=&quot;dark&quot; data-default-tab=&quot;css,result&quot; data-slug-hash=&quot;YzBmgxY&quot; data-user=&quot;JLO64&quot; style=&quot;height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;&quot;&gt;
+  &lt;span&gt;See the Pen &lt;a href=&quot;https://codepen.io/JLO64/pen/YzBmgxY&quot;&gt;
+  Untitled&lt;/a&gt; by Julian Lopez (&lt;a href=&quot;https://codepen.io/JLO64&quot;&gt;@JLO64&lt;/a&gt;)
+  on &lt;a href=&quot;https://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/span&gt;
+&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://cpwebassets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;While the method YouTube and I use are different, the results are the same. Before looking into this, I had no clue that you could edit what comes before a link or any element with just CSS. You can even use this to add a mail icon to the email links I highlighted above!&lt;/p&gt;
+
+&lt;p&gt;That said, this is a manual process so not all of the external links on my site have an icon. I’ve thought about automating this but then I would lose control over the exact Favicon and color being used for links.&lt;/p&gt;
+
+&lt;h2 id=&quot;using-this-code-effectively&quot;&gt;Using This Code Effectively&lt;/h2&gt;
+
+&lt;p&gt;Individually, these are all neat effects and tricks but when combined well they result in something worth being proud of. There is no single thing on my site that I can point to and say “this makes my website look good”. It’s the combination of a bunch of little details that makes anything in life look good. As such, I have to thank the people who took the time to make their websites look pretty which made mine better as well.&lt;/p&gt;</content><author><name>Julian Lopez</name></author><category term="webdev" /><category term="html" /><category term="css" /><category term="javascript" /><summary type="html">The term “steal” has a bunch of negative connotations, but I feel that taking HTML/CSS/JS from other’s websites be viewed as a bad thing. Personally, I would feel more than pleased to learn that someone decided to steal code from my site for their own use! However, instead of just copying other’s websites, I’ve decided to showcase where I’ve been sourcing stuff from. That way, people looking to copy my code can compare against its origin.</summary></entry><entry><title type="html">Running a Jekyll Dev Server</title><link href="https://www.julianlopez.net/posts/2023/12/running-a-jekyll-dev-server" rel="alternate" type="text/html" title="Running a Jekyll Dev Server" /><published>2023-12-12T00:00:00-08:00</published><updated>2023-12-14T20:08:39-08:00</updated><id>https://www.julianlopez.net/posts/2023/12/Running-a-Jekyll-Dev-Server</id><content type="html" xml:base="https://www.julianlopez.net/posts/2023/12/running-a-jekyll-dev-server">&lt;h2 id=&quot;my-plugin-problem&quot;&gt;My Plugin Problem&lt;/h2&gt;
 
 &lt;p&gt;Here’s a quick breakdown of how my writing process for this blog works. I have a server in my bedroom which I remote into within VS Code my laptop or iPad via VS Code. From there I create and edit markdown files within my Jekyll site repository and publish them via Git. (I’m probably going to be changing my workflow significantly soon thanks to &lt;a href=&quot;https://obsidian.md/&quot;&gt;Obsidian&lt;/a&gt;, and I’ll write more in depth then.)&lt;/p&gt;
 
@@ -351,215 +421,4 @@ After that it worked perfectly and I haven’t had any crashes since!&lt;/p&gt;
       &lt;p&gt;GameHogs in East Los Angeles. They have by far the sketchiest storefront I’ve ever been inside, but the interior is amazing. I’ve never seen such a large selection of games, much less retro games! Highly recommend if you’re in the area. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>Julian Lopez</name></author><category term="3ds" /><summary type="html">Table of contents Weird Problems with my 3DS Cleaning the 3DS A new SD Card Footnotes</summary></entry><entry><title type="html">Generating Fake McDonald’s Screenshots With AWS and OpenAI</title><link href="https://www.julianlopez.net/posts/2023/05/fake-mcdonalds-screenshots" rel="alternate" type="text/html" title="Generating Fake McDonald’s Screenshots With AWS and OpenAI" /><published>2023-05-01T00:00:00-07:00</published><updated>2023-12-14T20:00:04-08:00</updated><id>https://www.julianlopez.net/posts/2023/05/fake-mcdonalds-screenshots</id><content type="html" xml:base="https://www.julianlopez.net/posts/2023/05/fake-mcdonalds-screenshots">&lt;picture&gt;
-    &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/post2/banner.jpg?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post2/banner.jpg?tr=w-480&quot; alt=&quot;The McDonald&apos;s app&quot; class=&quot;blog_image&quot; title=&quot;The McDonald&apos;s app&quot; /&gt;
-    &lt;figcaption style=&quot;text-align:center&quot;&gt;Honestly the deals you can get through points are amazing.&lt;/figcaption&gt;
- &lt;/picture&gt;
-
-&lt;h2 id=&quot;table-of-contents&quot;&gt;Table of contents&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;#my-problem&quot;&gt;My Problem&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#generating-images-in-the-cloud&quot;&gt;Generating Images in the Cloud&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#making-the-canvas&quot;&gt;Making the Canvas&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#its-all-in-the-details&quot;&gt;It’s all in the details&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#chatgpt-can-do-almost-anything&quot;&gt;ChatGPT can do (almost) anything&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#training-a-custom-gpt-3-model&quot;&gt;Training a custom GPT-3 model&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#drawing-it-all-together&quot;&gt;Drawing it all together&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#apple-shortcuts-is-awesome&quot;&gt;Apple Shortcuts is awesome&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#the-final-product&quot;&gt;The final product&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;my-problem&quot;&gt;My Problem&lt;/h2&gt;
-&lt;p&gt;Several months ago, I had a dumb first world problem.
-Typically my mom likes to order food from McDonald’s using the app, that way she gets points she can redeem for free food. However, in order to pick up at the counter you need to show the order confirmation screen on your phone.&lt;/p&gt;
-
-&lt;p&gt;She (being my mother) would then force me to take her phone and pick up the order for her.
-I don’t mind being the one to pick up the food, but I don’t like having to use her phone to do it.&lt;/p&gt;
-
-&lt;p&gt;If only there was a way I could make a fake screenshot of the McDonald’s app with the her order info in it…&lt;/p&gt;
-
-&lt;h2 id=&quot;generating-images-in-the-cloud&quot;&gt;Generating Images in the Cloud&lt;/h2&gt;
-&lt;p&gt;A loooong time ago, I made an inventory system built on AWS for a community service thing that donated computers to low income individuals/families.
-The main thing it was designed to keep track of was all of the computers that we received/refurbished/donated.&lt;/p&gt;
-
-&lt;p&gt;Initially, in order to tell which computer was which, we placed masking tape and wrote on them with sharpies.
-However, people’s (my) handwriting sucked so you often come across many computers with illegible ID numbers.
-To fix this I wanted to have an app where you could create an entry for a computer and enter in all of its specs and other relevant information.
-Then it would create a PNG with an ID number and a QR code that could be printed on a label and stuck on the computer.&lt;/p&gt;
-
-&lt;p&gt;In order to do this, I made an Android app that would create a new entry in a DynamoDB database with all of the appropriate fields.
-Then the app would trigger a Lambda function that would generate the PNG using information from that entry (ID number and computer type), and upload it to an S3 bucket where it could be accessed elsewhere. Looking back on this, I hate this and I am glad that I don’t have any of this code anymore.&lt;/p&gt;
-
-&lt;figure&gt;
-  &lt;img src=&quot;https://mermaid.ink/img/pako:eNpFkMtuwjAQRX9lNCsqwYpdFpVCjNiQijaswF0M8QQs4oeMoyoi_DsmUDGreZzRvbpXrJ1izLBp3V99ohBhK6SFVPk-tyo4rSD3_hdms8-hCEyRYVPA0sbQD7CYiN6ScWLx8XoauZLODN8_sPlaDVBM1mQOil5EMRJVdOGNJMXnUeyr-SgFg9AX31L_z-Q4RcPBkFbJ7fWBS4wnNiwxS63ihro2SpT2llDqoqt6W2MWQ8dT7LxKzoWmYyCDWUPtJW092Z1z75mVTr7KZyJjMLc7mIZblg?type=png&quot; alt=&quot;Diagram of AWS backend&quot; /&gt;
-  &lt;figcaption style=&quot;text-align:center&quot;&gt;I&apos;m going off my memory here, so this is probably wrong.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Fundamentally, generating a fake McDonald’s screenshot would be much simpler than this since I don’t need to deal with any of the database stuff.
-However, unlike these labels which are just text on a white background, I’d need to have a background image and place text on top of it.&lt;/p&gt;
-
-&lt;h2 id=&quot;making-the-canvas&quot;&gt;Making the Canvas&lt;/h2&gt;
-
-&lt;p&gt;First I ordered an Oreo McFlurry from a McDonald’s with my phone and took a screenshot of the order confirmation page.
-I then imported it into GIMP, erased a bunch of stuff within it, and split it into two images, one for the top half and one for the bottom half.&lt;/p&gt;
-
-&lt;picture&gt;
-    &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/post2/top_half.jpg?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post2/top_half.jpg?tr=w-480&quot; alt=&quot;&quot; class=&quot;blog_image&quot; title=&quot;&quot; /&gt;
-    &lt;figcaption style=&quot;text-align:center&quot;&gt;&lt;/figcaption&gt;
- &lt;/picture&gt;
-&lt;picture&gt;
-    &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/post2/bottom_half.jpg?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post2/bottom_half.jpg?tr=w-480&quot; alt=&quot;&quot; class=&quot;blog_image&quot; title=&quot;&quot; /&gt;
-    &lt;figcaption style=&quot;text-align:center&quot;&gt;It&apos;s weird seeing so much blank space in this image&lt;/figcaption&gt;
- &lt;/picture&gt;
-
-&lt;p&gt;The reason I split it into two images was because I didn’t to have a limit to how many items I could have in the order.
-If I had stuck with just the original screenshot, the order text could have gone off the bottom of the screen so I figured stitching two images together would be an easy fix.&lt;/p&gt;
-
-&lt;h2 id=&quot;its-all-in-the-details&quot;&gt;It’s all in the details&lt;/h2&gt;
-&lt;p&gt;I initially kept the time in the upper left cover, but if I tried ordering at night and the time was 1:00 PM it could potentially give me away.
-Luckily, Apple really likes using “Helvetica” in their software so I was able to easily download a ttf file and use it to generate the time.&lt;/p&gt;
-
-&lt;p&gt;The rest of the text was not so easy to fake.
-I used an online text analyzer to figure out what font McDonald’s uses, and it wasn’t able to nail it down 100%.
-Additionally, all of the fonts it was suggesting were paid fonts, so I couldn’t just download them.
-After some trial and error I settled on “Heebo Black” which isn’t a perfect match, but it’s close enough for a brief glance.
-If anyone were to take a closer look in comparison to the real app this would probably be the first thing they notice.&lt;/p&gt;
-
-&lt;p&gt;Thankfully, because I used Apple Pay when I placed my order, I didn’t have to worry about providing a real debit card number.
-Without getting too into it, my understanding is that Apple Pay generates a different card number for each transaction.
-Thus I was able to just use a random number generator to generate a four digit number and use that as the card number.&lt;/p&gt;
-
-&lt;p&gt;However, the toughest issue was the cost of the order which I needed a way to guess.&lt;/p&gt;
-
-&lt;h2 id=&quot;chatgpt-can-do-almost-anything&quot;&gt;ChatGPT can do (almost) anything&lt;/h2&gt;
-&lt;p&gt;The answer (of course) was to use AI!&lt;/p&gt;
-
-&lt;p&gt;Prior to this project, I had been screwing around with OpenAI’s APIs and they are shockingly easy to work with.
-Plus, they’re super cheap!&lt;/p&gt;
-
-&lt;p&gt;To oversimplify a bit, the newer an AI model is the better it is.
-When I started working on this project OpenAI had released an endpoint for a model called GPT-3.5 Turbo intended for chat (which I think is what ChatGPT uses).
-(Now they are up to GPT-4)
-Since that was the best model they had available at that time, I decided to use it.&lt;/p&gt;
-
-&lt;p&gt;I got it working pretty quickly, but there were some serious problems.
-For one, it wasn’t very good at pricing things.
-Multiple queries with the exact same prompt would yield wildly different results.
-When guessing how much a Big Mac cost I would get responces that ranged from $2.99 to $5.99.
-This is because McDonald’s prices vary wildly across America, but whenever I tried to specify SoCal/California pricing it just refused to generate a number.&lt;/p&gt;
-
-&lt;p&gt;Additionally, no matter what I gave it as a prompt, I couldn’t get it to output in a standardized format.
-For instance, I wanted it to output $2.99 as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2.99&lt;/code&gt; but I would typically get &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$2.99&lt;/code&gt;.
-No problem, I can easily use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.replace(&apos;$&apos;, &apos;&apos;)&lt;/code&gt; to get rid of the dollar sign.
-But what was even more frustrating was that I had gotten got outputs like  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Your cost would be $2.99&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Total Cost: 2.99&lt;/code&gt;, and others like that instead of just the number I wanted.&lt;/p&gt;
-
-&lt;p&gt;I could have tried fixed these problems, but I decided to take a different approach towards using the API.&lt;/p&gt;
-
-&lt;h2 id=&quot;training-a-custom-gpt-3-model&quot;&gt;Training a custom GPT-3 model&lt;/h2&gt;
-&lt;p&gt;Thankfully the chat endpoint wasn’t the only offering OpenAI had with their API.&lt;/p&gt;
-
-&lt;p&gt;Something I had been wanting to try for a while was training my own GPT-3 model.
-In short, its as easy as making a spreadsheet with a bunch of example inputs and outputs, putting it through an OpenAI JSONL formatter, and then uploading it to the API.&lt;/p&gt;
-
-&lt;p&gt;So I spent just over an hour going the McDonald’s app for the location I go to and logged the prices for almost everything there.
-After that I uploaded the data to the API and it took just shy of 30-45 minutes to train.
-The longest part wasn’t the actual training, but waiting in the queue to get my turn to train&lt;/p&gt;
-
-&lt;picture&gt;
-    &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/post2/gpt-spreadsheet.png?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post2/gpt-spreadsheet.png?tr=w-480&quot; alt=&quot;&quot; class=&quot;blog_image&quot; title=&quot;&quot; /&gt;
-    &lt;figcaption style=&quot;text-align:center&quot;&gt;222 lines of McDonald&apos;s.&lt;/figcaption&gt;
- &lt;/picture&gt;
-
-&lt;p&gt;At this point the model I trained was very good at guessing prices for individual menu items.
-It was even able to provide the correct price even when I mistyped the name of an item.
-However, it still wasn’t able to generate a total price for multiple items.
-In order to get around this, I decided to have my code call the API for each item and add each result together.&lt;/p&gt;
-
-&lt;p&gt;While I could have added additional training so it could process multiple items at once, I decided not to do that since the API was already pretty fast and this would only shave off a second or two.
-It’s not worth it for me to spend an hour plus formating the data for that small of a speed increase.
-Plus, in my experience I don’t trust a GPT-3 model to do addition correctly.
-While GPT-4 is probably better overall, for my future OpenAI projects I’m going to break up my tasks and combine them with coding instead of trying to do it all in one API call.&lt;/p&gt;
-
-&lt;h2 id=&quot;drawing-it-all-together&quot;&gt;Drawing it all together&lt;/h2&gt;
-
-&lt;p&gt;Now that all the data is loaded, it just needs to be drawn on top of the edited screenshots.&lt;/p&gt;
-
-&lt;p&gt;Thankfully drawing is super easy in Python using PIL(Pillow).
-On my laptop all I had to do was install it with pip, type out a few lines of code, and I was done.
-The only hard part was figuring out the coordinates for where to draw the text, but that was just a matter of trial and error.&lt;/p&gt;
-
-&lt;p&gt;Unfortunately, it wasn’t this easy to use PIL on AWS Lambda.
-Typically (for Python) you bundle your code and its dependencies into a zip file and upload it to AWS.
-However, for some reason I couldn’t get my code to run properly on Lambda with its bundled dependencies (in this case PIL).
-This could have been a big problem since as far as I know, this is the only way to upload pip dependencies to Lambda.&lt;/p&gt;
-
-&lt;p&gt;Thankfully, I was able to get around this by using layers.
-In short, someone else had already bundled PIL into a zip file and uploaded it to AWS.
-With the ARN of that layer, I was able to use it in my Lambda function without having to bundle it myself.
-If it weren’t for this guy I would have been kinda screwed.&lt;/p&gt;
-
-&lt;p&gt;Overall Azure Functions are a lot easier to work with since you can actually prepackage your code with its dependencies and upload it directly to Azure within VS Code.
-For this and other reasons, I might consider redeploying this project on Azure in the future.&lt;/p&gt;
-
-&lt;h2 id=&quot;apple-shortcuts-is-awesome&quot;&gt;Apple Shortcuts is awesome&lt;/h2&gt;
-
-&lt;p&gt;Having a script that can generate a fake McDonald’s order is cool, but it’s not very useful if I have to run it on my laptop every time I want to use it.&lt;/p&gt;
-
-&lt;p&gt;Luckily I only had to develop for iOS since it’s what my phone runs and I’m the only one who’s ever going to use this.
-Unfortunately, I don’t have a Mac so I can’t use Xcode to develop an app.
-Plus, back then I wasn’t as knowledgeable about web development as I am now.&lt;/p&gt;
-
-&lt;p&gt;As it turns out, Apple has a built in app called Shortcuts that lets users create/share scripts that can be run from the home screen or with Siri.
-Despite the drag and drop interface that is akin to Scratch, it is surprisingly powerful and has access to many system features.
-For the purposes of this project, it is able to make HTTP requests and save images locally.&lt;/p&gt;
-
-&lt;figure&gt;
-  &lt;img src=&quot;https://mermaid.ink/img/pako:eNpVkEFrwzAMhf-K8Lk5beyQwyBpt15WCCRQWN2DaiuNIbZTR2aUJP997nLYppMkvif03iSU1yRy0fb-S3UYGJqddJCqOJmq846g7nxgFfkMWfYKc8c8wP6tgUC3SCPPUE7FsYYPtBeNUrrqzkkH79EpNt4t67lyVRsmCw4tzbA9NQGNIw37qsme4JA-6c8rvf1DD8GohJf_7lxwJHh5BnIPA3MhNsJSsGh0MjM9UCm4I0tS5KnV1GLsWQrploRiZF_fnRI5h0gbEQeNTDuD14BW5C32Y9oO6D69_51JG_bhsAb2k9vyDa7BaUA?type=png&quot; alt=&quot;Diagram of screenshot generation&quot; /&gt;
-  &lt;figcaption style=&quot;text-align:center&quot;&gt;Honestly this is pretty simple.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;So I set up mmy script which asks for the name of the person who placed the order, the items they ordered, and what their order code was.
-Then it appends this data to a URL and makes a GET request to the AWS Lambda function I set up earlier.
-From there it downloads the image and saves it to the photos app.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-final-product&quot;&gt;The final product&lt;/h2&gt;
-
-&lt;picture&gt;
-    &lt;source srcset=&quot;https://ik.imagekit.io/jlo64/post2/1D99F7A8-6145-492B-9ED4-5A365A12DA81.jpeg?tr=w-720,f-webp,&quot; type=&quot;image/webp&quot; /&gt;
-    &lt;img src=&quot;https://ik.imagekit.io/jlo64/post2/1D99F7A8-6145-492B-9ED4-5A365A12DA81.jpeg?tr=w-480&quot; alt=&quot;&quot; class=&quot;blog_image&quot; title=&quot;&quot; /&gt;
-    &lt;figcaption style=&quot;text-align:center&quot;&gt;A 100% fake screenshot.&lt;/figcaption&gt;
- &lt;/picture&gt;
-
-&lt;p&gt;And with that I was done.
-I had a means to fake McDonald’s screenshots on my phone in order to not use my mom’s phone.
-All that was left was to use it in action…&lt;/p&gt;
-
-&lt;p&gt;That Saturday I had my mother place an order off of her phone so that I could pick it up using only what I had made.
-I then walked up to the counter more anxious than I had ever been picking up a Big Mac.
-The person behind it then barely gave my phone a glance before handing me my order.
-Success!&lt;/p&gt;
-
-&lt;p&gt;Given this response, if I so desired I could easily use this to get free food and steal from McDonald’s and its patrons.
-However, I am not a criminal and have chosen to never do this.
-In order to avoid encouraging such bad behaviors (and so that I don’t get sued) I haven’t posted the full code for this project on GitHub.
-Instead, I only pushed the code and assets for the image generation and the OpenAI API call, the AWS Lambda function, and the Apple Shortcut is not included.
-If someone so desired, they could probably easily replace those missing parts with their own code.
-That being said, if you have the know-how to do so, you probably have better things to do.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-obvious-easy-solution-to-my-dumb-problem&quot;&gt;The (Obvious) Easy Solution to my Dumb Problem&lt;/h2&gt;
-&lt;p&gt;Of course, I immediately set about bragging about what I made to anyone I knew.
-One person I told was a friend of mine who is a nurse and didn’t fully understand what I was talking about.
-That being said, she asked a very simple question that I couldn’t answer.&lt;/p&gt;
-
-&lt;p&gt;“Why couldn’t you ask your mom to send you a screenshot?”&lt;/p&gt;
-
-&lt;p&gt;I was dumbfounded.
-On this same line of thought, why did I have to create a way for this code to guess the price?
-I could have easily added a field for me to input the price in the shortcut and it would’ve eliminate the need to use the OpenAI API.
-However, in hindsight there was a simple answer to this question.&lt;/p&gt;
-
-&lt;p&gt;“Why not?”&lt;/p&gt;</content><author><name>Julian Lopez</name></author><category term="python" /><category term="openai" /><category term="aws" /><summary type="html">Honestly the deals you can get through points are amazing.</summary></entry></feed>
+&lt;/div&gt;</content><author><name>Julian Lopez</name></author><category term="3ds" /><summary type="html">Table of contents Weird Problems with my 3DS Cleaning the 3DS A new SD Card Footnotes</summary></entry></feed>

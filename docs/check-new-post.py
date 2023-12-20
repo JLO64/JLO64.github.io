@@ -1,4 +1,4 @@
-import requests, os, re
+import requests, os, re, time
 from bs4 import BeautifulSoup
 import xml.etree.ElementTree as ET
 from dotenv import load_dotenv
@@ -52,6 +52,7 @@ def post_blog_to_mastodon(title, url, tags):
     print("Posting to Mastodon")
     post_text = title + ": " + url + "\n#"
     post_text += ' #'.join(tags)
+    time.sleep(180)
     mastodon.status_post(post_text)
     print(post_text)
 
