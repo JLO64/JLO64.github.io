@@ -123,12 +123,33 @@ p code, li code {
 }
 
 .credits {
-  // position: absolute;
-  bottom: 0;
-  font-size: 0.8em;
+  // bottom: 0;
   color: var(--text);
   margin: 0 auto;
   text-align: center;
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-inline-start: 0rem;
+    margin: 0 auto 0.7rem auto;
+    li{
+      display: block;
+      min-width: fit-content;
+      margin: 0 0.1rem;
+      font-size: 0.9rem;
+    }
+  }
+  p{
+    // min-width: 80vw;
+    margin: 0rem auto;
+    // font-size: 120%;
+  }  
+  div{
+    // min-width: 80vw;
+    display: inline-block;
+    // margin: 0.2rem auto;
+  }
 }
 
 // KB Club css stuff
@@ -141,21 +162,50 @@ p code, li code {
   transition: .4s;
   background: #C8E6C9;
 }
-
+.kb-club a:hover, .kb-club p:hover{
+  animation: none;
+  color: #212121;
+}
 .kb-club-bg,
 .kb-club-no-bg {
   background: #C8E6C9;
 	padding: .25rem .5rem;
 }
-
 .kb-club-bg {
 	background: #4CAF50;
 	color: #212121;
 }
 
+// darktheme.club css stuff
+.darktheme-club a {
+	text-decoration: none;
+  color: #212121;
+  font-weight: bold;
+  padding: .25rem 0;
+  font-family: sans-serif;
+  transition: .4s;
+  background: #c2c2c2;
+}
+.darktheme-club a:hover{
+  animation: none;
+  color: #212121;
+}
+.darktheme-club p:hover{
+  animation: none;
+  color: #d6d6d6;
+}
+.darktheme-club-bg,
+.darktheme-club-no-bg {
+  background: #c2c2c2;
+	padding: .25rem .5rem;
+}
+.darktheme-club-bg {
+	background: #272727;
+	color: #c2c2c2;
+}
+
 ul {
-  // padding-inline-start: 40px;
-  padding-inline-start: 1.5rem;
+  padding-inline-start: 0rem;
 }
 
 .container-404 {
@@ -190,10 +240,10 @@ ul.horizontal-list {
 }
 
 .tag {
-  box-shadow: 0 0 0 0.3rem var(--card-color);
+  box-shadow: 0 0 0 0.35rem var(--card-color);
   transition: 0.2s ease-in;
   margin: 2rem 0.5rem;
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
   padding: 0 0.1rem;
   background-color: var(--card-color);
 }
@@ -210,3 +260,26 @@ picture {
     margin-top: 0.5rem;
   }
 }
+
+.post-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-inline-start: 0rem;
+}
+
+.post-list-item {
+  display: block;
+  width: 18rem;
+  margin: 0 0.5rem;
+}
+
+.limit-homepage-posts
+{
+  ul{
+    li:nth-of-type(1n+4) {
+      display: none;
+    }
+  }
+}
+

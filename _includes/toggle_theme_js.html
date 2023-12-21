@@ -66,15 +66,20 @@
     let svg = button.querySelector('svg');
     if (themeChangeto === 'light')
     {
-      svg.innerHTML = moonSvgCode;
-      svg.setAttribute('viewBox', '0 0 40 40');
+      if (typeof moonSvgCode !== 'undefined') {
+        svg.innerHTML = moonSvgCode;
+        svg.setAttribute('viewBox', '0 0 40 40');
+      }
     }
     else
     {
-      svg.innerHTML = sunSvgCode;
-      svg.setAttribute('viewBox', '0 0 40 40');
+      if (typeof sunSvgCode !== 'undefined') {
+        svg.innerHTML = sunSvgCode;
+        svg.setAttribute('viewBox', '0 0 40 40');
+      }
     }   
   }
+
 
   function transition(){
     document.documentElement.classList.add('transition');

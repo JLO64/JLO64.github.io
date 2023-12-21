@@ -20,12 +20,13 @@ layout: default
       {% assign current_year = post_year %}
     {% endif %}
     <li class="post-list-item">
-        {{ post.date | date: site.theme_config.date_format }} -
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a><br>
+      {{ post.date | date: site.theme_config.date_format }}<br>
       {% assign sorted_post_tags = post.tags | sort %}
       {% for tag in sorted_post_tags %}
         <span class="tag"><a href="/tag/{{ tag }}">{{ tag | replace: "-", " " }}</a></span>
       {% endfor %}
+      <p style="font-style: italic;"> {{ post.description }} </p>
     </li>
   {% endfor %}
 </ul>

@@ -13,18 +13,20 @@ layout: default
 </header>
 <ul>
   <h2>Tags</h2>
+  <p style="line-height: 2.5;">
   {% assign sorted_site_tags = site.tags | sort %}
   {% for tags in sorted_site_tags %}
     {% assign tag = tags[0] %}
     <span class="tag"><a href="/tag/{{ tag }}">{{ tag | replace: "-", " " }}</a></span>
   {% endfor %}
+  </p>
   
 </ul>
 
-<h2 style="padding-inline-start: 1.5rem;"><a class="button random" href="#100" onclick="randomSite(); return false;">Read a Random Post</a></h2>
+<h2 style="padding-inline-start: 0rem;"><a class="button random" href="#100" onclick="randomSite(); return false;">Read a Random Post</a></h2>
 
 <script>
-  function randomSite() {
+function randomSite() {
   const sites = document.getElementsByClassName('post_link')
 
   if (sites.length > 0) {

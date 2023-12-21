@@ -23,10 +23,10 @@
     padding-top: 2rem;
   }
   .homepage_flex_divs_posts {
-    max-width: 25vw;
+    // max-width: 25vw;
   }
   .homepage_flex_divs_projects {
-    max-width: 33vw;
+    // max-width: 33vw;
   }
   ul.horizontal-list {
     // max-width: 40vw;
@@ -37,13 +37,14 @@
   }
   .project-card {
     overflow: auto;
-    height: 36rem;
+    max-height: 36rem;
+    align-content: flex-start;
   }
   a:hover {
     text-decoration-color: var(--link-underline);
     color: var(--link-underline);
-    font-weight: 990;
-    font-size: 110%;
+    font-weight: 800;
+    // font-size: 110%;
     text-decoration-thickness: 0.2rem;
     text-underline-offset: 0.4rem;
     // text-shadow: 0 0 1rem var(--link-underline);
@@ -75,4 +76,17 @@
     border: none;
     animation: img_glow_breathe 0.7s infinite alternate ease-in-out;
   }
-} 
+  .limit-homepage-posts
+  {
+    ul{
+      li:nth-of-type(1n+4) {
+        display: block;
+      }
+    }
+  }
+  .credits {
+    ul {
+      justify-content: space-evenly;
+    }
+  }
+}

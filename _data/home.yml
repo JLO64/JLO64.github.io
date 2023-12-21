@@ -23,9 +23,9 @@ project_entries:
     desc: The website for my council.
     # highlight: WIP
 
-  - title: The Secret Ochiken
-    url: https://tsukuraku.github.io/
-    desc: A blog on the history behind traditional Japanese performers.
+  # - title: The Secret Ochiken
+  #   url: https://tsukuraku.github.io/
+  #   desc: A blog on the history behind traditional Japanese performers.
 
   - title: McDonald's Screenshot Generator
     url: https://github.com/JLO64/Generate-McDonalds-Mobile-Screenshot

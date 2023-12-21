@@ -100,7 +100,6 @@
             height: 1rem; 
             width: 1rem;
             margin-right: 0.2rem;
-             
             background: url('https://upload.wikimedia.org/wikipedia/commons/7/74/Apple_logo_dark_grey.svg') no-repeat center center / contain;
             :hover{
                 height: 1.3rem; 
@@ -120,7 +119,6 @@
             height: 1rem; 
             width: 1rem;
             margin-right: 0.2rem;
-             
             background: url('https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg') no-repeat center center / contain;
         }
 
@@ -186,8 +184,7 @@
         display: inline-block;
         height: 1rem; 
         width: 1rem;
-        margin-right: 0.2rem;
-         
+        margin-right: 0.1rem;
         background: url('/assets/images/link-images/jekyll.png') no-repeat center center / contain;
     }
 
@@ -202,7 +199,6 @@
         display: inline-block;
         height: 1rem; 
         width: 1rem;
-         
         margin-right: 0.2rem;
         background: url('https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg') no-repeat center center / contain;
         filter: invert(33%) sepia(9%) saturate(938%) hue-rotate(187deg) brightness(91%) contrast(93%);
@@ -227,4 +223,20 @@ a[href*="mailto:"]::before{
     filter: invert(70%) sepia(8%) saturate(2681%) hue-rotate(174deg) brightness(102%) contrast(98%);    
     margin-right: 0.2rem;
     background: url('https://raw.githubusercontent.com/FortAwesome/Font-Awesome/dcdc48a561e3db6e6caa2002f14d77f68aa01ed6/svgs/solid/envelope.svg') no-repeat center center / contain;
+}
+
+a[href*="feed.xml"]:hover{
+    text-shadow: 0 0 1.1rem #F99A39;
+    color: #F99A39;
+    text-decoration-color: #F99A39;
+    animation: none;
+}
+a[href*="feed.xml"]::before{
+    content: "";
+    display: inline-block;
+    height: 0.9rem; 
+    width: 0.9rem;
+    filter: invert(71%) sepia(66%) saturate(1831%) hue-rotate(333deg) brightness(102%) contrast(95%);
+    margin-right: 0.2rem;
+    background: url('https://raw.githubusercontent.com/FortAwesome/Font-Awesome/dcdc48a561e3db6e6caa2002f14d77f68aa01ed6/svgs/solid/rss.svg') no-repeat center center / contain;
 }
