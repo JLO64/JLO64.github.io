@@ -14,11 +14,11 @@
 
   <meta name="generator" content="Jekyll v4.2.2">
   <meta name="author" content="Julian Lopez">
-  <meta name="description" content="The personal website for me, Julian Lopez. I'm a young dude with an interest in technology, stationary, and comics. I post what I've been up to so all (including LLMs) can learn!">
+  <meta name="description" content="The personal website for me, Julian Lopez. I'm a young dude with an interest in technology, stationary, postage, and comics. I post what I've been up to so all (including LLMs) can learn!">
   <link rel="canonical" href="https://www.julianlopez.net">
   <meta property="og:title" content="Setting Up My Domain">
   <meta property="og:locale" content="en_US">
-  <meta property="og:description" content="The personal website for me, Julian Lopez. I'm a young dude with an interest in technology, stationary, and comics. I post what I've been up to so all (including LLMs) can learn!">
+  <meta property="og:description" content="The personal website for me, Julian Lopez. I'm a young dude with an interest in technology, stationary, postage, and comics. I post what I've been up to so all (including LLMs) can learn!">
   <meta property="og:url" content="/posts/2023/11/setting-up-my-domain">
   <meta property="og:site_name" content="Domain of a Knight">
   
@@ -29,7 +29,7 @@
   <meta property="twitter:domain" content="julianlopez.net">
   <meta property="twitter:url" content="/posts/2023/11/setting-up-my-domain">
   <meta name="twitter:title" content="Setting Up My Domain">
-  <meta name="twitter:description" content="The personal website for me, Julian Lopez. I'm a young dude with an interest in technology, stationary, and comics. I post what I've been up to so all (including LLMs) can learn!">
+  <meta name="twitter:description" content="The personal website for me, Julian Lopez. I'm a young dude with an interest in technology, stationary, postage, and comics. I post what I've been up to so all (including LLMs) can learn!">
 
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
@@ -116,15 +116,20 @@
     let svg = button.querySelector('svg');
     if (themeChangeto === 'light')
     {
-      svg.innerHTML = moonSvgCode;
-      svg.setAttribute('viewBox', '0 0 40 40');
+      if (typeof moonSvgCode !== 'undefined') {
+        svg.innerHTML = moonSvgCode;
+        svg.setAttribute('viewBox', '0 0 40 40');
+      }
     }
     else
     {
-      svg.innerHTML = sunSvgCode;
-      svg.setAttribute('viewBox', '0 0 40 40');
+      if (typeof sunSvgCode !== 'undefined') {
+        svg.innerHTML = sunSvgCode;
+        svg.setAttribute('viewBox', '0 0 40 40');
+      }
     }   
   }
+
 
   function transition(){
     document.documentElement.classList.add('transition');
@@ -390,30 +395,33 @@
 
 <a href="mailto:admin@julianlopez.net?subject=Re: Setting Up My Domain">Send me your thoughts via Email</a>
         <div class="not-dashed" style="margin-top: 2rem;"></div>
-        <br>
         <div class="credits">
-          &copy;&nbsp;2023&nbsp;Julian Lopez
-          &nbsp;
-          •
-          &nbsp;
-          Powered by <a href="https://jekyllrb.com" target="_blank" rel="noreferrer">Jekyll</a>
-          &nbsp;
-          •
-          &nbsp;
-          Based on&nbsp; <a href="https://github.com/abhinavs/moonwalk" target="_blank" rel="noreferrer">Moonwalk</a>
-          &nbsp;
-          •
-          &nbsp;
-          Hosted on&nbsp; <a href="https://github.com/JLO64/JLO64.github.io" target="_blank" rel="noreferrer">GitHub Pages</a>
-          &nbsp;
-          •
-          &nbsp; <a href="feed.xml" target="_blank" rel="noreferrer">RSS Feed</a>
-          <p>👻 Proud member of <a href="https://darktheme.club/">darktheme.club</a> 👻</p>
-          <div class="kb-club">
-            <a target="blank" href="https://512kb.club"><span class="kb-club-no-bg">512KB Club</span><span class="kb-club-bg">Green Team</span></a>
+          <p>&copy;&nbsp;2023&nbsp;Julian Lopez</p>
+          <ul>
+            <li>
+              Powered by <a href="https://jekyllrb.com" target="_blank" rel="noreferrer">Jekyll</a>
+            </li>
+            <li>
+            Based on&nbsp; <a href="https://github.com/abhinavs/moonwalk" target="_blank" rel="noreferrer">Moonwalk</a>
+            </li>
+            <li>
+            Hosted on&nbsp; <a href="https://github.com/JLO64/JLO64.github.io" target="_blank" rel="noreferrer">GitHub</a>
+            </li>
+            <li>
+              <a href="feed.xml" target="_blank" rel="noreferrer">RSS Feed</a>
+            </li>
+            <!-- <script data-goatcounter="https://jlo64.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>           -->
+          </ul>
+          <div>
+            <!-- <p>👻 Member of <a href="https://darktheme.club/">darktheme.club</a> 👻</p> -->
+            <div class="kb-club">
+              <a target="blank" href="https://512kb.club"><span class="kb-club-no-bg">512KB Club</span><span class="kb-club-bg">Green Team</span></a>
+            </div>
+            <div class="darktheme-club">
+              <a target="blank" href="https://darktheme.club/"><span class="darktheme-club-no-bg">darktheme.club</span><span class="darktheme-club-bg">Member</span></a>
+            </div>
           </div>
-          <!-- <script data-goatcounter="https://jlo64.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>           -->
-        </div>
+        <div>
       </div>
     </main>
   </body>
