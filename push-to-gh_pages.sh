@@ -5,6 +5,7 @@ cd "$(dirname "$0")"
 
 # Run the imagekit.py script
 # python3 imagekit.py
+python3 gpt-summarize.py
 
 # Build the Jekyll site
 echo -e "destination: docs" >> _config.yml
