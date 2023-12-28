@@ -7,6 +7,7 @@ tags:
   - python
   - openai
   - aws
+description: I used to have a dumb problem involving the McDonald's app, so I made a way to fake screenshots of it. I describe how I did this with AWS Lambda, OpenAI APIs, and PIL.
 ---
 
 <picture>

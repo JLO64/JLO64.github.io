@@ -5,6 +5,7 @@ permalink: /posts/:year/:month/:slug
 tags:
   - webdev
   - nginx
+description: I recently bought a domain and set it up for my blog and other stuff I use. I did so by setting up subdomains with AWS Route 53 and Nginx.
 ---
 
 ## Why did I buy a domain?

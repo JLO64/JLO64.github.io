@@ -7,6 +7,7 @@ tags:
   - jekyll
   - blogging
   - aws
+description: For a Japanese class I took, I had to make a blog for a project. I recently revamped it by switching its hosting to GitHub Pages.
 ---
 
 ## My Assignment

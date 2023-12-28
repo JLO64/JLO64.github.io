@@ -3,7 +3,8 @@ layout: post
 title: Cleaning My 3DS
 permalink: /posts/:year/:month/:slug
 tags:
- - 3ds
+  - 3ds
+description: I bought a used 3DS that had some issues which caused it to crash while playing games. Turns out it just needed to be cleaned and have its old SD card replaced!
 ---
 
 ## Table of contents

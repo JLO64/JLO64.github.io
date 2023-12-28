@@ -3,9 +3,10 @@ layout: post
 title: What I Carry In My Pockets
 permalink: /posts/:year/:month/:slug
 tags:
-    - notebooks
-    - fountain-pens
-    - writing
+  - notebooks
+  - fountain-pens
+  - writing
+description: I break down everything that I currently carry in my pockets on a daily basis. It includes my phone, earbuds, a pen, and a notebook.
 ---
 
 ## Phone Stuff
