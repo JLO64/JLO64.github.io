@@ -54,9 +54,10 @@
     box-shadow: 0 0 0 0.6rem var(--card-color);
   }
   .h1-website-title:hover {
-    font-size: 4rem;
-    text-shadow: 0 0 2rem var(--link-underline);
-    color: var(--link-underline);
+    font-size: 3.5rem;
+    // text-shadow: 0 0 2rem var(--link-underline);
+    // color: var(--link-underline);
+    border: solid var(--link-underline) 0.5rem;
   }
   h1:hover  {font-size: 2.5rem;}  
   h2:hover  {font-size: 2rem;}

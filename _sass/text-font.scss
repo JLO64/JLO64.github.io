@@ -5,6 +5,13 @@
   src: url(/assets/fonts/RedHatDisplay-VariableFont_wght.ttf) format("truetype-variations");
 }
 @font-face {
+  font-family: 'Red Hat Display';
+  font-style: italic;
+  font-weight: 1 999;
+  // font-display: block;
+  src: url(/assets/fonts/RedHatDisplay-Italic-VariableFont_wght.ttf) format("truetype-variations");
+}
+@font-face {
   font-family: 'Ubuntu';
   font-style: italic;
   font-weight: 700;
@@ -15,12 +22,16 @@
 
 
 .h1-website-title {
-  font-family: Ubuntu;
+  // font-family: Ubuntu;
+  font-family: 'Red Hat Display';
   font-weight: 700;
   font-style: italic;
   font-size: 3.5rem;
   text-align: center;
   color: var(--link-text);
+  border-radius: 2rem;
+  padding: 1rem;
+  border: solid var(--link-underline) 0.25rem;
 }
 
 pre, code {
@@ -76,4 +87,14 @@ h1, h2, h3, h4, h5, h6 {
   width: fit-content;
   transition: 0.2s ease-out;
   margin-top: 1.5rem;
+}
+
+.inpost_description {
+  font-style: italic;
+  max-width: 40rem;
+  margin: 2rem auto;
+  text-align: center;
+  border-radius: 1rem;
+  border: solid var(--link-underline) 0.2rem;
+  padding: 1rem;
 }

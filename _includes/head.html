@@ -15,11 +15,18 @@
 
   <meta name="generator" content="Jekyll v4.2.2">
   <meta name="author" content="{{ site.author }}">
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta name="twitter:description" content="{{ page.description }}">
+  {% else %}
   <meta name="description" content="{{ site.description }}">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta name="twitter:description" content="{{ site.description }}">
+  {% endif %}
   <link rel="canonical" href="{{ site.url }}">
   <meta property="og:title" content="{{ page.title }}">
   <meta property="og:locale" content="en_US">
-  <meta property="og:description" content="{{ site.description }}">
   <meta property="og:url" content="{{ page.url }}">
   <meta property="og:site_name" content="{{ site.title }}">
   {% if page.layout == 'post' %}
@@ -30,10 +37,9 @@
   <meta name="twitter:image" content="https://ik.imagekit.io/jlo64/www_julianlopez_net/opengraph-images/default.png">
   {% endif %}
   <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:domain" content="{{ site.domain}}">
+  <!-- <meta property="twitter:domain" content="{{ site.domain}}"> -->
   <meta property="twitter:url" content="{{ page.url }}">
   <meta name="twitter:title" content="{{ page.title }}">
-  <meta name="twitter:description" content="{{ site.description }}">
 
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
