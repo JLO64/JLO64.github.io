@@ -1,0 +1,76 @@
+<dialog id="menu-dialog">
+    <div id="navbar-dialog-content">
+      <!-- <a menu-close class="hamburger-menu-close-link">
+        <span class="closebar1"></span>
+        <span class="closebar2"></span>
+      </a> -->
+      <button menu-close class="closedialogbutton" autofocus="true">
+        <span class="closebar1"></span>
+        <span class="closebar2"></span>
+      </button>
+        <div style="position: fixed; top: 1.5rem; right: 1.5rem;">
+          <!-- <div class="toggleSwitch">
+            <input type="radio" id="Light-Mobile" name="darkSwitchmobile" value="Light">
+            <label for="Light-Mobile">Light</label>
+            <input type="radio" id="Dark-Mobile" name="darkSwitchmobile" value="Dark">
+            <label for="Dark-Mobile">Dark</label>
+          </div> -->
+      </div>
+      <ul class="navbar-list-mobile">
+        {% for item in site.data.home.navbar_entries %}
+          <li>
+            <a href="{{ item.url }}">
+              {{ item.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </dialog>
+
+<script>
+    window.addEventListener('load', menuDialogInitializer);
+  
+    function menuDialogInitializer() {
+      const openDialogButtons = document.querySelectorAll('[menu-open]')
+      const closeDialogButton = document.querySelector('[menu-close]')
+      const glossaryLinkButton = document.querySelector('[glossary-link]')
+      const menuDialog = document.getElementById('menu-dialog');
+      const body = document.querySelector('body');
+      const navbarlistmobile = document.querySelector('.navbar-list-mobile');
+      const darkSwitchmobile = document.querySelector('.darkSwitchmobile');
+  
+      openDialogButtons.forEach(openDialogButton => {
+          openDialogButton.addEventListener('click', () => {
+              menuDialog.showModal();
+              //set the overflow to hidden to prevent scrolling of the background
+              body.style.overflow = 'hidden';
+          })
+      })
+  
+      closeDialogButton.addEventListener('click', () => {
+        menuDialog.close();
+        body.style.overflow = '';
+      })
+  
+      menuDialog.addEventListener('click', (event) => {
+          const navbarListDimentions = navbarlistmobile.getBoundingClientRect();
+          //const darkSwitchDimensions = darkSwitchmobile.getBoundingClientRect();
+  
+          if (
+              event.clientX < navbarListDimentions.left ||
+              event.clientX > navbarListDimentions.right ||
+              event.clientY < navbarListDimentions.top ||
+              event.clientY > navbarListDimentions.bottom
+          )
+          {
+            // Check if the target element is the dark switch
+            if (!darkSwitchmobile.contains(event.target))
+            {
+              menuDialog.close();
+              body.style.overflow = '';
+            }
+          }
+      })
+    }
+  </script>
