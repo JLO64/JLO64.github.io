@@ -1,12 +1,12 @@
 #img-dialog {
-    z-index: 10;
-    margin: auto;
-    background: none;
-    border: none;
-    border-radius: none;
-    min-height: 9rem;
-    animation: popin 0.3s;
-  }
+  z-index: 10;
+  margin: auto;
+  background: none;
+  border: none;
+  border-radius: none;
+  min-height: 9rem;
+  animation: popin 0.3s;
+}
 #img-dialog::backdrop {
   background: rgba(0, 0, 0, 0.8);
   animation: fadein_onlyopacity 0.2s ease-out;
@@ -127,14 +127,17 @@
   animation: slideinfromtop 0.3s;
   background: none;
 }
+
 #menu-dialog::backdrop {
-  // background-color: var(--mobile-nav-background);
-  background: rgb(116, 192, 252);
+  background-color: var(--mobile-nav-background);
+  // background: rgb(116, 192, 252);
 }
 
 .navbar-list-mobile {
   margin: 0;
-  padding: 0;
+  padding: 2rem;
+  border-radius: 4rem;
+  border: solid 1rem var(--link-underline);
   //padding: 1rem 0;
   float: left;
   //width: 100%;
@@ -143,6 +146,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: var(--bg);
 }
 
 ul.navbar-list-mobile {

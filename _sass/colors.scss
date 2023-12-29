@@ -13,7 +13,7 @@ html {
     --scrollbar-foreground: #74c0fc;
     --scrollbar-background: #c0c0c0;
     --card-color: #cfd2e2;
-    --mobile-nav-background: rgba(116, 192, 252, 0.7);
+    --mobile-nav-background: #74c0fc;
 
     // link colors
     --link-text: black;
@@ -28,6 +28,10 @@ html {
     --jetpens: #9FB22C;
     --jekyll: #BA1C21;
     --julian: #4B5162;
+}
+::backdrop {
+  // --mobile-nav-background: #74c0fc;
+  --mobile-nav-background: rgba(255, 255, 255, 0.8);
 }
 // -------------- THEME SWITCHER -------------- //
 @mixin dark-appearance {
@@ -62,5 +66,9 @@ html {
       --jekyll: #BA1C21;
       --julian: #4B5162;
   };
+  ::backdrop {
+    --mobile-nav-background: #74c0fc;
+    --mobile-nav-background: rgba(0, 0, 0, 0.8);
+  }
 }
 html[data-theme="dark"] { @include dark-appearance; }
