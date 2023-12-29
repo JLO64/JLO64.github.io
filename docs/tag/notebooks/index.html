@@ -162,6 +162,11 @@
   <link rel="alternate" type="application/rss+xml" title="Domain of a Knight Feed" href="/feed.xml"/>
 
 </head><body>
+    <a menu-open class="hamburger-menu-link">
+      <span class="bar1"></span>
+      <span class="bar2"></span>
+      <span class="bar3"></span>
+    </a>
     <svg class="background-svg" width="100%" height="100%">
     <filter id='grainy'>
         <feTurbulence type='turbulence' baseFrequency='0.5' />
@@ -239,6 +244,100 @@
     
     
     <main class="page-content" aria-label="Content">
+      <dialog id="menu-dialog">
+    <div id="navbar-dialog-content">
+      <!-- <a menu-close class="hamburger-menu-close-link">
+        <span class="closebar1"></span>
+        <span class="closebar2"></span>
+      </a> -->
+      <button menu-close class="closedialogbutton" autofocus="true">
+        <span class="closebar1"></span>
+        <span class="closebar2"></span>
+      </button>
+        <div style="position: fixed; top: 1.5rem; right: 1.5rem;">
+          <!-- <div class="toggleSwitch">
+            <input type="radio" id="Light-Mobile" name="darkSwitchmobile" value="Light">
+            <label for="Light-Mobile">Light</label>
+            <input type="radio" id="Dark-Mobile" name="darkSwitchmobile" value="Dark">
+            <label for="Dark-Mobile">Dark</label>
+          </div> -->
+      </div>
+      <ul class="navbar-list-mobile">
+        
+          <li>
+            <a href="/">
+              Home
+            </a>
+          </li>
+        
+          <li>
+            <a href="/posts">
+              Posts
+            </a>
+          </li>
+        
+          <li>
+            <a href="/subscribe">
+              Subscribe
+            </a>
+          </li>
+        
+          <li>
+            <a href="/about">
+              About
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </dialog>
+
+<script>
+    window.addEventListener('load', menuDialogInitializer);
+  
+    function menuDialogInitializer() {
+      const openDialogButtons = document.querySelectorAll('[menu-open]')
+      const closeDialogButton = document.querySelector('[menu-close]')
+      const glossaryLinkButton = document.querySelector('[glossary-link]')
+      const menuDialog = document.getElementById('menu-dialog');
+      const body = document.querySelector('body');
+      const navbarlistmobile = document.querySelector('.navbar-list-mobile');
+      const darkSwitchmobile = document.querySelector('.darkSwitchmobile');
+  
+      openDialogButtons.forEach(openDialogButton => {
+          openDialogButton.addEventListener('click', () => {
+              menuDialog.showModal();
+              //set the overflow to hidden to prevent scrolling of the background
+              body.style.overflow = 'hidden';
+          })
+      })
+  
+      closeDialogButton.addEventListener('click', () => {
+        menuDialog.close();
+        body.style.overflow = '';
+      })
+  
+      menuDialog.addEventListener('click', (event) => {
+          const navbarListDimentions = navbarlistmobile.getBoundingClientRect();
+          //const darkSwitchDimensions = darkSwitchmobile.getBoundingClientRect();
+  
+          if (
+              event.clientX < navbarListDimentions.left ||
+              event.clientX > navbarListDimentions.right ||
+              event.clientY < navbarListDimentions.top ||
+              event.clientY > navbarListDimentions.bottom
+          )
+          {
+            // Check if the target element is the dark switch
+            if (!darkSwitchmobile.contains(event.target))
+            {
+              menuDialog.close();
+              body.style.overflow = '';
+            }
+          }
+      })
+    }
+  </script>
       <div class="w">
         <header>
   
@@ -264,16 +363,6 @@
       &nbsp;&nbsp;
     </li>
   
-    <li>
-      <a href="https://github.com/JLO64">GitHub</a>
-      &nbsp;&nbsp;
-    </li>
-  
-    <li>
-      <a href="https://fosstodon.org/@JLO64">Mastodon</a>
-      &nbsp;&nbsp;
-    </li>
-  
 </ul>
 
     <div class=not-dashed></div>
@@ -284,21 +373,23 @@
 
 
 
-<ul>
+<ul class="post-list-container">
   
     
     
     <li class="post-list-item">
       <a href="/posts/2023/11/what-i-carry-in-my-pockets">What I Carry In My Pockets</a><br>
-      November 28 2023<br>
-      
-      
-        <span class="tag"><a href="/tag/fountain-pens">fountain pens</a></span>
-      
-        <span class="tag"><a href="/tag/notebooks">notebooks</a></span>
-      
-        <span class="tag"><a href="/tag/writing">writing</a></span>
-      
+      November 28 2023
+      <ul class="tag-ul">
+        
+        
+          <li class="tag"><a href="/tag/fountain-pens">fountain pens</a></li>
+        
+          <li class="tag"><a href="/tag/notebooks">notebooks</a></li>
+        
+          <li class="tag"><a href="/tag/writing">writing</a></li>
+        
+      </ul>
       <p style="font-style: italic;"> I break down everything that I currently carry in my pockets on a daily basis. It includes my phone, earbuds, a pen, and a notebook. </p>
     </li>
   

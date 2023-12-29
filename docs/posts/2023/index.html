@@ -162,6 +162,11 @@
   <link rel="alternate" type="application/rss+xml" title="Domain of a Knight Feed" href="/feed.xml"/>
 
 </head><body>
+    <a menu-open class="hamburger-menu-link">
+      <span class="bar1"></span>
+      <span class="bar2"></span>
+      <span class="bar3"></span>
+    </a>
     <svg class="background-svg" width="100%" height="100%">
     <filter id='grainy'>
         <feTurbulence type='turbulence' baseFrequency='0.5' />
@@ -239,6 +244,100 @@
     
     
     <main class="page-content" aria-label="Content">
+      <dialog id="menu-dialog">
+    <div id="navbar-dialog-content">
+      <!-- <a menu-close class="hamburger-menu-close-link">
+        <span class="closebar1"></span>
+        <span class="closebar2"></span>
+      </a> -->
+      <button menu-close class="closedialogbutton" autofocus="true">
+        <span class="closebar1"></span>
+        <span class="closebar2"></span>
+      </button>
+        <div style="position: fixed; top: 1.5rem; right: 1.5rem;">
+          <!-- <div class="toggleSwitch">
+            <input type="radio" id="Light-Mobile" name="darkSwitchmobile" value="Light">
+            <label for="Light-Mobile">Light</label>
+            <input type="radio" id="Dark-Mobile" name="darkSwitchmobile" value="Dark">
+            <label for="Dark-Mobile">Dark</label>
+          </div> -->
+      </div>
+      <ul class="navbar-list-mobile">
+        
+          <li>
+            <a href="/">
+              Home
+            </a>
+          </li>
+        
+          <li>
+            <a href="/posts">
+              Posts
+            </a>
+          </li>
+        
+          <li>
+            <a href="/subscribe">
+              Subscribe
+            </a>
+          </li>
+        
+          <li>
+            <a href="/about">
+              About
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </dialog>
+
+<script>
+    window.addEventListener('load', menuDialogInitializer);
+  
+    function menuDialogInitializer() {
+      const openDialogButtons = document.querySelectorAll('[menu-open]')
+      const closeDialogButton = document.querySelector('[menu-close]')
+      const glossaryLinkButton = document.querySelector('[glossary-link]')
+      const menuDialog = document.getElementById('menu-dialog');
+      const body = document.querySelector('body');
+      const navbarlistmobile = document.querySelector('.navbar-list-mobile');
+      const darkSwitchmobile = document.querySelector('.darkSwitchmobile');
+  
+      openDialogButtons.forEach(openDialogButton => {
+          openDialogButton.addEventListener('click', () => {
+              menuDialog.showModal();
+              //set the overflow to hidden to prevent scrolling of the background
+              body.style.overflow = 'hidden';
+          })
+      })
+  
+      closeDialogButton.addEventListener('click', () => {
+        menuDialog.close();
+        body.style.overflow = '';
+      })
+  
+      menuDialog.addEventListener('click', (event) => {
+          const navbarListDimentions = navbarlistmobile.getBoundingClientRect();
+          //const darkSwitchDimensions = darkSwitchmobile.getBoundingClientRect();
+  
+          if (
+              event.clientX < navbarListDimentions.left ||
+              event.clientX > navbarListDimentions.right ||
+              event.clientY < navbarListDimentions.top ||
+              event.clientY > navbarListDimentions.bottom
+          )
+          {
+            // Check if the target element is the dark switch
+            if (!darkSwitchmobile.contains(event.target))
+            {
+              menuDialog.close();
+              body.style.overflow = '';
+            }
+          }
+      })
+    }
+  </script>
       <div class="w">
         <header>
   
@@ -264,16 +363,6 @@
       &nbsp;&nbsp;
     </li>
   
-    <li>
-      <a href="https://github.com/JLO64">GitHub</a>
-      &nbsp;&nbsp;
-    </li>
-  
-    <li>
-      <a href="https://fosstodon.org/@JLO64">Mastodon</a>
-      &nbsp;&nbsp;
-    </li>
-  
 </ul>
 
     <div class=not-dashed></div>
@@ -282,9 +371,7 @@
 
 
 
-<header>
-    <h1>Posts Published In 2023</h1>
-</header>
+<h1>Posts Published In 2023</h1>
 
 
 
@@ -300,166 +387,190 @@
     
     <li class="post-list-item">
       <a class="post_link" href="/posts/2023/12/stealing-from-websites">Stealing From Websites</a><br>
-      December 19 2023<br>
-      
-      
-        <span class="tag"><a href="/tag/css">css</a></span>
-      
-        <span class="tag"><a href="/tag/html">html</a></span>
-      
-        <span class="tag"><a href="/tag/webdev">webdev</a></span>
-      
-      <p style="font-style: italic;"> I have "stolen" code from other's websites to use for my own site. I show off what I took and how I used it with CodePen samples. </p>
+      December 19 2023
+      <ul class="tag-ul">
+        
+        
+          <li class="tag"><a href="/tag/css">css</a></li>
+        
+          <li class="tag"><a href="/tag/html">html</a></li>
+        
+          <li class="tag"><a href="/tag/webdev">webdev</a></li>
+        
+      </ul>
+      <p> I have stolen code from other's websites to use for my own site. I show off what I took and how I used it with CodePen samples. </p>
     </li>
   
     
     
     <li class="post-list-item">
       <a class="post_link" href="/posts/2023/12/running-a-jekyll-dev-server">Running a Jekyll Dev Server</a><br>
-      December 12 2023<br>
-      
-      
-        <span class="tag"><a href="/tag/jekyll">jekyll</a></span>
-      
-        <span class="tag"><a href="/tag/nginx">nginx</a></span>
-      
-        <span class="tag"><a href="/tag/webdev">webdev</a></span>
-      
-      <p style="font-style: italic;"> I've been having issues with a VS Code plugin I use to preview my Jekyll blog. Thus, I've decided to stop using it and use a different method instead. </p>
+      December 12 2023
+      <ul class="tag-ul">
+        
+        
+          <li class="tag"><a href="/tag/jekyll">jekyll</a></li>
+        
+          <li class="tag"><a href="/tag/nginx">nginx</a></li>
+        
+          <li class="tag"><a href="/tag/webdev">webdev</a></li>
+        
+      </ul>
+      <p> I've been having issues with a VS Code plugin I use to preview my Jekyll blog. Thus, I've decided to stop using it and use a different method instead. </p>
     </li>
   
     
     
     <li class="post-list-item">
       <a class="post_link" href="/posts/2023/12/bringing-my-old-website-back-from-the-dead">Bringing My Old Website Back From The Dead</a><br>
-      December 09 2023<br>
-      
-      
-        <span class="tag"><a href="/tag/aws">aws</a></span>
-      
-        <span class="tag"><a href="/tag/blogging">blogging</a></span>
-      
-        <span class="tag"><a href="/tag/jekyll">jekyll</a></span>
-      
-        <span class="tag"><a href="/tag/webdev">webdev</a></span>
-      
-      <p style="font-style: italic;"> For a Japanese class I took, I had to make a blog for a project. I recently revamped it by switching its hosting to GitHub Pages. </p>
+      December 09 2023
+      <ul class="tag-ul">
+        
+        
+          <li class="tag"><a href="/tag/aws">aws</a></li>
+        
+          <li class="tag"><a href="/tag/blogging">blogging</a></li>
+        
+          <li class="tag"><a href="/tag/jekyll">jekyll</a></li>
+        
+          <li class="tag"><a href="/tag/webdev">webdev</a></li>
+        
+      </ul>
+      <p> For a Japanese class I took, I had to make a blog for a project. I recently revamped it by switching its hosting to GitHub Pages. </p>
     </li>
   
     
     
     <li class="post-list-item">
       <a class="post_link" href="/posts/2023/11/what-i-carry-in-my-pockets">What I Carry In My Pockets</a><br>
-      November 28 2023<br>
-      
-      
-        <span class="tag"><a href="/tag/fountain-pens">fountain pens</a></span>
-      
-        <span class="tag"><a href="/tag/notebooks">notebooks</a></span>
-      
-        <span class="tag"><a href="/tag/writing">writing</a></span>
-      
-      <p style="font-style: italic;"> I break down everything that I currently carry in my pockets on a daily basis. It includes my phone, earbuds, a pen, and a notebook. </p>
+      November 28 2023
+      <ul class="tag-ul">
+        
+        
+          <li class="tag"><a href="/tag/fountain-pens">fountain pens</a></li>
+        
+          <li class="tag"><a href="/tag/notebooks">notebooks</a></li>
+        
+          <li class="tag"><a href="/tag/writing">writing</a></li>
+        
+      </ul>
+      <p> I break down everything that I currently carry in my pockets on a daily basis. It includes my phone, earbuds, a pen, and a notebook. </p>
     </li>
   
     
     
     <li class="post-list-item">
       <a class="post_link" href="/posts/2023/11/setting-up-my-domain">Setting Up My Domain</a><br>
-      November 20 2023<br>
-      
-      
-        <span class="tag"><a href="/tag/nginx">nginx</a></span>
-      
-        <span class="tag"><a href="/tag/webdev">webdev</a></span>
-      
-      <p style="font-style: italic;"> I recently bought a domain and set it up for my blog and other stuff I use. I did so by setting up subdomains with AWS Route 53 and Nginx. </p>
+      November 20 2023
+      <ul class="tag-ul">
+        
+        
+          <li class="tag"><a href="/tag/nginx">nginx</a></li>
+        
+          <li class="tag"><a href="/tag/webdev">webdev</a></li>
+        
+      </ul>
+      <p> I recently bought a domain and set it up for my blog and other stuff I use. I did so by setting up subdomains with AWS Route 53 and Nginx. </p>
     </li>
   
     
     
     <li class="post-list-item">
       <a class="post_link" href="/posts/2023/11/am-i-worth-my-tools">Am I Worth My Tools?</a><br>
-      November 10 2023<br>
-      
-      
-        <span class="tag"><a href="/tag/fountain-pens">fountain pens</a></span>
-      
-        <span class="tag"><a href="/tag/thoughts">thoughts</a></span>
-      
-      <p style="font-style: italic;"> I lack access to the best tools, which I have learned to accept and adapt to. I have a certain friend who does the opposite, and simply buys the best tools for his needs. </p>
+      November 10 2023
+      <ul class="tag-ul">
+        
+        
+          <li class="tag"><a href="/tag/fountain-pens">fountain pens</a></li>
+        
+          <li class="tag"><a href="/tag/thoughts">thoughts</a></li>
+        
+      </ul>
+      <p> I lack access to the best tools, which I have learned to accept and adapt to. I have a certain friend who does the opposite, and simply buys the best tools for his needs. </p>
     </li>
   
     
     
     <li class="post-list-item">
       <a class="post_link" href="/posts/2023/10/how-i-listen-to-music">How I Listen To Music</a><br>
-      October 26 2023<br>
-      
-      
-      <p style="font-style: italic;"> When I was a Kid, I used to listen to music by downloading MP3 files of YouTube videos to my iPod. Over a decade later and not much has changed. </p>
+      October 26 2023
+      <ul class="tag-ul">
+        
+        
+      </ul>
+      <p> When I was a Kid, I used to listen to music by downloading MP3 files of YouTube videos to my iPod. Over a decade later and not much has changed. </p>
     </li>
   
     
     
     <li class="post-list-item">
       <a class="post_link" href="/posts/2023/08/good-customer-support">Good Customer Support</a><br>
-      August 31 2023<br>
-      
-      
-        <span class="tag"><a href="/tag/thoughts">thoughts</a></span>
-      
-      <p style="font-style: italic;"> Making phone calls to a customer support line always sucks, unless it's to these three companies. </p>
+      August 31 2023
+      <ul class="tag-ul">
+        
+        
+          <li class="tag"><a href="/tag/thoughts">thoughts</a></li>
+        
+      </ul>
+      <p> Making phone calls to a customer support line always sucks, unless it's to these three companies. </p>
     </li>
   
     
     
     <li class="post-list-item">
       <a class="post_link" href="/posts/2023/07/finding-flags-on-a-website">Finding Flags on a Website</a><br>
-      July 30 2023<br>
-      
-      
-      <p style="font-style: italic;"> Recently, I came across a website that had hidden strings strewn about it. Because of a blog post I read, I managed to find one! </p>
+      July 30 2023
+      <ul class="tag-ul">
+        
+        
+      </ul>
+      <p> Recently, I came across a website that had hidden strings strewn about it. Because of a blog post I read, I managed to find one! </p>
     </li>
   
     
     
     <li class="post-list-item">
       <a class="post_link" href="/posts/2023/05/cleaning-my-3ds">Cleaning My 3DS</a><br>
-      May 16 2023<br>
-      
-      
-        <span class="tag"><a href="/tag/3ds">3ds</a></span>
-      
-      <p style="font-style: italic;"> I bought a used 3DS that had some issues which caused it to crash while playing games. Turns out it just needed to be cleaned and have its old SD card replaced! </p>
+      May 16 2023
+      <ul class="tag-ul">
+        
+        
+          <li class="tag"><a href="/tag/3ds">3ds</a></li>
+        
+      </ul>
+      <p> I bought a used 3DS that had some issues which caused it to crash while playing games. Turns out it just needed to be cleaned and have its old SD card replaced! </p>
     </li>
   
     
     
     <li class="post-list-item">
       <a class="post_link" href="/posts/2023/05/fake-mcdonalds-screenshots">Generating Fake McDonald's Screenshots With AWS and OpenAI</a><br>
-      May 01 2023<br>
-      
-      
-        <span class="tag"><a href="/tag/aws">aws</a></span>
-      
-        <span class="tag"><a href="/tag/openai">openai</a></span>
-      
-        <span class="tag"><a href="/tag/python">python</a></span>
-      
-      <p style="font-style: italic;"> I used to have a dumb problem involving the McDonald's app, so I made a way to fake screenshots of it. I describe how I did this with AWS Lambda, OpenAI APIs, and PIL. </p>
+      May 01 2023
+      <ul class="tag-ul">
+        
+        
+          <li class="tag"><a href="/tag/aws">aws</a></li>
+        
+          <li class="tag"><a href="/tag/openai">openai</a></li>
+        
+          <li class="tag"><a href="/tag/python">python</a></li>
+        
+      </ul>
+      <p> I used to have a dumb problem involving the McDonald's app, so I made a way to fake screenshots of it. I describe how I did this with AWS Lambda, OpenAI APIs, and PIL. </p>
     </li>
   
     
     
     <li class="post-list-item">
       <a class="post_link" href="/posts/2023/04/hacking-game-consoles-part-i">Hacking My Nintendo 3DS</a><br>
-      April 11 2023<br>
-      
-      
-        <span class="tag"><a href="/tag/3ds">3ds</a></span>
-      
-      <p style="font-style: italic;"> I discuss my history with the Nintendo 3DS and how I have hacked it to run all sorts of homebrew software. Whether its emulating old games or installing custom themes, there a wide variety of options to choose from! </p>
+      April 11 2023
+      <ul class="tag-ul">
+        
+        
+          <li class="tag"><a href="/tag/3ds">3ds</a></li>
+        
+      </ul>
+      <p> I discuss my history with the Nintendo 3DS and how I have hacked it to run all sorts of homebrew software. Whether its emulating old games or installing custom themes, there a wide variety of options to choose from! </p>
     </li>
   
   </ul>
