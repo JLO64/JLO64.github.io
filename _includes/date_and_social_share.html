@@ -12,12 +12,15 @@
 </p>
 
 {% if page.tags.size > 0 %}
-  <div class="">
-    <span style="font-weight: bold;">Tags: </span>
-    {% assign sorted_page_tags = page.tags | sort %}
-    {% for tag in sorted_page_tags %}
-      <span class="tag"><a href="/tag/{{ tag }}">{{ tag | replace: "-", " " }}</a></span>
-    {% endfor %}
+  <div style="display: inline-flex; flex-wrap: wrap;">
+    <span style="font-weight: bold;">Tags:  </span>
+    <!-- <ul class="tag-ul" style="margin: 0.2rem;"> -->
+    <ul class="tag-ul" style="margin: 0.2rem;"></ul>
+      {% assign sorted_page_tags = page.tags | sort %}
+      {% for tag in sorted_page_tags %}
+      <li class="tag" style="margin: 0.2rem;"><a href="/tag/{{ tag }}">{{ tag | replace: "-", " " }}</a></li>
+      {% endfor %}
+    </ul>
   </div>
 {% endif %}
 

@@ -51,13 +51,19 @@
     animation: a_breathe 0.7s infinite alternate ease-in-out;
   }
   .tag:hover {
-    box-shadow: 0 0 0 0.6rem var(--card-color);
+    box-shadow: 0 0 0 0.2rem var(--card-color);
+    font-weight: 999;
+    font-size: 1.3rem;
+    // a{
+    //   animation: none;
+    // }
   }
   .h1-website-title:hover {
     font-size: 3.5rem;
     // text-shadow: 0 0 2rem var(--link-underline);
     // color: var(--link-underline);
-    border: solid var(--link-underline) 0.5rem;
+    font-weight: 999;
+    border: solid var(--link-underline) 0.8rem;
   }
   h1:hover  {font-size: 2.5rem;}  
   h2:hover  {font-size: 2rem;}
@@ -69,6 +75,9 @@
       font-size: 100%;
       font-weight: normal;
     }
+  }
+  .blog_image {
+    height: 40vh;
   }
   .blog_image:hover {
     border-radius: 0.5rem;
@@ -89,5 +98,11 @@
     ul {
       justify-content: space-evenly;
     }
+  }
+  .hamburger-menu-link {
+    display: none;
+  }
+  header {
+    display: block;
   }
 }

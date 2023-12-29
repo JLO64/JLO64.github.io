@@ -10,9 +10,7 @@ layout: default
 
 {% assign year = page.date | date: "%Y" %}
 
-<header>
-    <h1>Posts Published In {{ year }}</h1>
-</header>
+<h1>Posts Published In {{ year }}</h1>
 
 {% include post_list.html year=year %}
 
