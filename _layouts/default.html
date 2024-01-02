@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: "en" }}" class="html" data-theme="{{ site.theme_config.appearance | default: "auto" }}">
   {%- include head.html -%}
-  <script data-goatcounter="https://goatcounter.julianlopez.net/count" async src="//gc.zgo.at/count.js"></script>
+  <script>
+    var t = setInterval(function() {
+        if (window.goatcounter && window.goatcounter.visit_count) {
+            clearInterval(t)
+            window.goatcounter.visit_count({append: 'li.goatcounter'})
+        }
+    }, 100)
+  </script>
+  <script data-goatcounter="https://jlo64.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
   <body>
     <a menu-open class="hamburger-menu-link">
       <span class="bar1"></span>
@@ -35,17 +44,18 @@
             <li>
               <a href="/feed.xml" target="_blank" rel="noreferrer">RSS Feed</a>
             </li>
-            <!-- <script data-goatcounter="https://jlo64.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>           -->
           </ul>
-          <div>
-            <!-- <p>👻 Member of <a href="https://darktheme.club/">darktheme.club</a> 👻</p> -->
-            <div class="kb-club">
-              <a target="blank" href="https://512kb.club"><span class="kb-club-no-bg">512KB Club</span><span class="kb-club-bg">Green Team</span></a>
-            </div>
-            <div class="darktheme-club">
-              <a target="blank" href="https://darktheme.club/"><span class="darktheme-club-no-bg">darktheme.club</span><span class="darktheme-club-bg">Member</span></a>
-            </div>
-          </div>
+          <ul>
+            <li style="width: fit-content;">
+              <div class="kb-club">
+                <a target="blank" href="https://512kb.club"><span class="kb-club-no-bg">512KB Club</span><span class="kb-club-bg">Green Team</span></a>
+              </div>
+              <div class="darktheme-club">
+                <a target="blank" href="https://darktheme.club/"><span class="darktheme-club-no-bg">darktheme.club</span><span class="darktheme-club-bg">Member</span></a>
+              </div>
+            </li>
+            <li class="goatcounter"></li>
+          </ul>
         <div>
       </div>
     </main>
