@@ -27,7 +27,7 @@ sass:
   style: :compressed
 
 plugins:
-  - jekyll-feed
+  # - jekyll-feed
   #- jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-last-modified-at
