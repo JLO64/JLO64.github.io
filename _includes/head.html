@@ -11,7 +11,7 @@
     {% endif %}
   </title>
 
-  {% feed_meta %}
+  <link rel="alternate" type="application/atom+xml" title="Domain of a Knight" href="https://www.julianlopez.net/feed.xml" />
 
   <meta name="generator" content="Jekyll v4.2.2">
   <meta name="author" content="{{ site.author }}">
@@ -61,9 +61,14 @@
   {% include toggle_theme_js.html %}
   {% endif %}
 
-  {% if page.mermaid %}
-  {% include mermaid.html %}
-  {% endif %}
+{% if page.mermaid %}
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+        startOnLoad: true
+    });
+  </script>
+{% endif %}
 
   <!-- RSS Feed -->
   <link rel="alternate" type="application/rss+xml" title="Domain of a Knight Feed" href="/feed.xml"/>
