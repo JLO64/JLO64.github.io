@@ -10,7 +10,7 @@ def import_markdown(file_path):
     # print(file_path + " has been imported")
     return markdown_text
 
-def remove_pictures(markdown):
+def remove_html(markdown):
     soup = BeautifulSoup(markdown, 'html.parser')
 
     tags_to_remove = ['figure', 'picture', 'p', 'script']
@@ -22,7 +22,7 @@ def remove_pictures(markdown):
     return str(soup)
 
 def convert_md_to_gpt(markdown_text):
-    no_tags_markdown_text = remove_pictures(markdown_text).replace("\n\n\n", "")
+    no_tags_markdown_text = remove_html(markdown_text).replace("\n\n\n", "")
     no_yaml_markdown_text = re.sub(r'---.*?---\s*', '', no_tags_markdown_text, flags=re.DOTALL)
     return no_yaml_markdown_text
 

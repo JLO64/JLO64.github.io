@@ -13,9 +13,11 @@ layout: default
   {% include date_and_social_share.html %}
 {% endif %}
 
-<div class="inpost_description">
-{{ page.description }}
-</div>
+{% if page.description %}
+  <div class="inpost_description">
+  {{ page.description }}
+  </div>
+{% endif %}
 
 {{ content }}
 
