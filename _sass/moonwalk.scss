@@ -125,14 +125,18 @@ p code, li code {
 .credits {
   // bottom: 0;
   color: var(--text);
+  row-gap: 0.9rem;
+  display: grid;
   margin: 0 auto;
   text-align: center;
+  overflow: auto;
   ul{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding-inline-start: 0rem;
-    margin: 0.4rem auto 1.2rem auto;
+    // margin: 0.4rem auto 1.2rem auto;
+    margin: 0rem;
     li{
       display: block;
       min-width: fit-content;
