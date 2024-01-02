@@ -22,26 +22,22 @@ https://nicolas-hoizey.com/feeds/all.xml
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <title><xsl:value-of select="atom:feed/atom:title"/></title>
-        <style type="text/css">*{box-sizing:border-box}body{background-color:#74c0fc;color:#24292e;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";line-height:1.5}a{color:#0366d6;text-decoration:none}a:hover{text-decoration:underline}.container{max-width:40rem;margin:1rem auto;padding:1rem}nav{margin-top:2rem;margin-bottom:2rem}p{margin-top:0;margin-bottom:1rem}h1,h2,h3{margin-top:0;margin-bottom:1rem;font-weight:600;line-height:1.25}h1{padding-bottom:.3em;font-size:2em}h1 svg{padding-right:.25rem;vertical-align:text-bottom;width:1.2em;height:1.2em}h2{margin-top:1.5rem;padding-bottom:.3em;font-size:1.5em;border-bottom:1px solid #757677}h3{font-size:1.25em;margin-bottom:0}.about{border-radius: 0.75rem;background-color:white;margin:1rem -.25rem;padding:0.75rem}header{padding-top:2rem;padding-bottom:2rem}.item{padding-bottom:2rem}.gray{color:#586069}</style>
+        <style type="text/css">*{box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";line-height:1.5}a{color:black;text-decoration:underline;text-decoration-color:#74c0fc; text-decoration-thickness: 0.1rem; text-underline-offset: 0.3rem;}a:hover{color:#74c0fc; text-decoration-thickness: 0.2rem; text-underline-offset: 0.4rem;}p{margin-top:0;margin-bottom:1rem}h1,h2,h3{margin-top:0;margin-bottom:1rem;font-weight:600;line-height:1.25}h2{margin-top:1.5rem;padding-bottom:.3em;font-size:1.5em;border-bottom:1px solid #757677}h3{font-size:1.25em;margin-bottom:0}header{padding-top:2rem;padding-bottom:2rem}</style>
       </head>
       <body>
-        <nav class="container">
-          <p class="about">
+        <nav style="max-width:40rem;margin:0rem auto;">
+          <p class="about" style="border-radius: 0.75rem;background-color:#cfd2e2;margin:1rem -.25rem;padding:0.75rem">
             <strong>This is a web feed,</strong> also known as an RSS or Atom feed.<br /><strong>Subscribe</strong> by copying the URL from the address bar into your newsreader.
           </p>
-          <p class="gray">
+          <p >
             Visit <a href="https://aboutfeeds.com">About Feeds</a> to get started with newsreaders and subscribing. It's free.
             If you have an Apple device, I highly recommend <a href="https://netnewswire.com/">NetNewsWire</a>.
           </p>
         </nav>
-        <figure style='max-width: 40rem; text-align: center; margin: 0 auto;'>
-          <img src='/assets/images/profile_photo.jpg' alt='Akane-Banashi Banner' style='display: block; margin: 0 auto; max-width: 100%; border: 0.5rem solid black; border-radius: 2rem;'></img>
-          <figcaption>Don't ask how much cash I stole.</figcaption>
-        </figure>
-        <div class="container">
+        <div style="max-width:40rem;margin:0rem auto;padding:0rem">
           <header>
-            <h1>
-              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 256 256">
+            <h1 style="font-size:3.5rem;margin:0 auto;text-align:center;margin-bottom:1rem; font-style:italic; border-radius:2rem; border: #74c0fc solid 0.5rem; width:fit-content; padding: 0 0.5rem">
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 256 256" style="padding-right:.25rem;vertical-align:text-bottom;width:1.2em;height:1.2em">
                 <defs>
                   <linearGradient x1="0.085" y1="0.085" x2="0.915" y2="0.915" id="RSSg">
                     <stop offset="0.0" stop-color="#E3702D"/><stop offset="0.1071" stop-color="#EA7D31"/>
@@ -56,9 +52,13 @@ https://nicolas-hoizey.com/feeds/all.xml
                 <circle cx="68" cy="189" r="24" fill="#FFF"/>
                 <path d="M160 213h-34a82 82 0 0 0 -82 -82v-34a116 116 0 0 1 116 116z" fill="#FFF"/>
                 <path d="M184 213A140 140 0 0 0 44 73 V 38a175 175 0 0 1 175 175z" fill="#FFF"/>
-              </svg>
+              </svg> -->
                <xsl:value-of select="atom:feed/atom:title"/>
             </h1>
+            <figure style='max-width: 40rem; text-align: center; margin: 0 auto;'>
+              <img src='/assets/images/profile_photo.jpg' alt='Me with a ton of cash' style='display: block; margin: 2rem auto; max-width: 100%; border-radius: 2rem;'></img>
+              <!-- <figcaption>Don't ask how much cash I stole.</figcaption> -->
+            </figure>
             <p>A kickass blog about the history behind many of the greatest and most notable Rakugo performers in History.</p>
             <a href="/">Visit Website</a>
           </header>
@@ -69,18 +69,18 @@ https://nicolas-hoizey.com/feeds/all.xml
     </html>
   </xsl:template>
   <xsl:template match="atom:feed/atom:entry">
-    <div class="item">
+    <div class="item" style="padding-bottom:1.5rem">
       <h3>
-        <a style='color:black;'>
+        <a>
           <xsl:attribute name="href">
             <xsl:value-of select="atom:link/@href"/>
           </xsl:attribute>
           <xsl:value-of select="atom:title"/>
         </a>
       </h3>
-      <small class="gray">
+      <p style="margin-top:0.5rem;">
         Published: <xsl:value-of select="atom:published"/>
-      </small>
+      </p>
     </div>
   </xsl:template>
 </xsl:stylesheet>
