@@ -161,7 +161,15 @@
   <!-- RSS Feed -->
   <link rel="alternate" type="application/rss+xml" title="Domain of a Knight Feed" href="/feed.xml"/>
 
-</head><script data-goatcounter="https://jlo64.goatcounter.com/count"
+</head><script>
+    var t = setInterval(function() {
+        if (window.goatcounter && window.goatcounter.visit_count) {
+            clearInterval(t)
+            window.goatcounter.visit_count({append: 'w'})
+        }
+    }, 100)
+  </script>
+  <script data-goatcounter="https://jlo64.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
   <body>
     <a menu-open class="hamburger-menu-link">
