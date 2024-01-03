@@ -165,7 +165,9 @@
     var t = setInterval(function() {
         if (window.goatcounter && window.goatcounter.visit_count) {
             clearInterval(t)
-            window.goatcounter.visit_count({append: '.goatcounter'})
+            window.goatcounter.visit_count({append: '.goatcounter', style: `
+              div { width: 140px; border-radius: 0rem; border: 2px solid #9a15a4; line-height:1; height: 60px;}
+            `})
         }
     }, 100)
   </script>
@@ -439,7 +441,7 @@
             </li>
           </ul>
           <ul style="justify-content: space-around; row-gap: 0.9rem;">
-            <li style="width: fit-content; height: fit-content;">
+            <li style="width: fit-content; height: fit-content; margin: auto 0">
               <div class="kb-club">
                 <a target="blank" href="https://512kb.club"><span class="kb-club-no-bg">512KB Club</span><span class="kb-club-bg">Green Team</span></a>
               </div>
@@ -447,7 +449,7 @@
                 <a target="blank" href="https://darktheme.club/"><span class="darktheme-club-no-bg">darktheme.club</span><span class="darktheme-club-bg">Member</span></a>
               </div>
             </li>
-            <li class="goatcounter" style="width: fit-content; height: 80px;"></li>
+            <li class="goatcounter" style="width: fit-content; margin: auto 0;"></li>
           </ul>
         <div>
       </div>
