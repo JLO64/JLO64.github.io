@@ -1,24 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: "en" }}" class="html" data-theme="{{ site.theme_config.appearance | default: "auto" }}">
   {%- include head.html -%}
-  <script>
-    var t = setInterval(function() {
-        if (window.goatcounter && window.goatcounter.visit_count) {
-            clearInterval(t)
-            window.goatcounter.visit_count({append: '.goatcounter', style: `
-              div { width: 140px; border-radius: 0rem; border: 2px solid #9a15a4; line-height:1; height: 60px;}
-            `})
-        }
-    }, 100)
-  </script>
-  <script data-goatcounter="https://jlo64.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
   <body>
-    <a menu-open class="hamburger-menu-link">
-      <span class="bar1"></span>
-      <span class="bar2"></span>
-      <span class="bar3"></span>
-    </a>
     {% include space-rings.html %}
     {% if site.theme_config.appearance_toggle %}
       {% include toggle_theme_button.html %}
@@ -62,4 +45,16 @@
       </div>
     </main>
   </body>
+  <script>
+    var t = setInterval(function() {
+        if (window.goatcounter && window.goatcounter.visit_count) {
+            clearInterval(t)
+            window.goatcounter.visit_count({append: '.goatcounter', style: `
+              div { width: 140px; border-radius: 0rem; border: 2px solid #9a15a4; line-height:1; height: 60px;}
+            `})
+        }
+    }, 100)
+  </script>
+  <script data-goatcounter="https://jlo64.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 </html>
