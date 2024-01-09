@@ -49,8 +49,96 @@
   <meta name="google-site-verification" content="VsNyvMxYvOQFM1OyN-DUCMvUDGYbj3xb6ZmPBbkNLYo" />
 
   <link rel="stylesheet" href="/assets/css/main.css" />
-  
-  <script type="text/javascript">
+
+
+
+  <!-- RSS Feed -->
+  <link rel="alternate" type="application/rss+xml" title="Domain of a Knight Feed" href="/feed.xml"/>
+
+</head><body>
+    <svg class="background-svg" width="100%" height="100%">
+    <filter id='grainy'>
+        <feTurbulence type='turbulence' baseFrequency='0.5' />
+    </filter>
+    <rect fill='rgba(0, 0, 0, 0)' width='100%' height='100%' filter='url(#grainy)'/>
+    <svg class="progress-ring background-svg">
+        <circle class="progress-ring__circle progress-ring__circle--thin" fill="transparent" cx="100%" cy="100%" r="160"/>
+        <circle class="progress-ring__circle progress-ring__circle--regular" fill="transparent" cx="100%" cy="100%" r="1000"/>
+        <circle class="progress-ring__circle progress-ring__circle--thick" fill="transparent" cx="100%" cy="100%" r="1500"/>
+        <circle class="progress-ring__circle progress-ring__circle--thick" fill="transparent" cx="100%" cy="100%" r="760"/>
+        <circle class="progress-ring__circle progress-ring__circle--regular" fill="transparent" cx="100%" cy="100%" r="300"/>
+        <circle class="progress-ring__circle progress-ring__circle--thin" fill="transparent" cx="100%" cy="100%" r="450"/>
+        <circle class="progress-ring__circle progress-ring__circle--thin" fill="transparent" cx="100%" cy="100%" r="1200"/>
+        <circle class="progress-ring__circle progress-ring__circle--regular" fill="transparent" cx="100%" cy="100%" r="1800"/>
+    </svg> 
+</svg>
+
+    <script>
+    window.addEventListener('load', dialogButtonInitializer);
+    
+    function dialogButtonInitializer() {
+        const all_pictures = document.querySelectorAll('picture');
+        const closeDialogButton = document.getElementById('data-close')
+        const dialog = document.querySelector('dialog')
+        const dialogContent = document.getElementById('img-dialog-content');
+        const body = document.querySelector('body');
+    
+        all_pictures.forEach(openDialogButton => {
+            openDialogButton.addEventListener('click', (event) => {
+                // Copy the contents of the clicked picture into the dialog content
+                let htmlContent = event.target.outerHTML;
+                htmlContent = htmlContent.replace(/\?tr=w-480/g, '').replace(/max-height: 60vh/g, '').replace(/border-radius: 1rem;/g, '');
+                dialogContent.innerHTML = htmlContent;
+
+                dialog.showModal()
+                body.style.overflow = 'hidden';
+          })
+      })
+    
+      closeDialogButton.addEventListener('click', () => {
+          dialog.close();
+          body.style.overflow = '';
+      })
+    
+      dialog.addEventListener('click', (event) => {
+          const dialogDimentions = dialog.getBoundingClientRect()
+          if (
+              event.clientX < dialogDimentions.left ||
+              event.clientX > dialogDimentions.right ||
+              event.clientY < dialogDimentions.top ||
+              event.clientY > dialogDimentions.bottom
+          ) {
+              dialog.close()
+              body.style.overflow = '';
+          }
+      })
+    }
+    </script>
+    
+    <dialog id="img-dialog">
+        <button id="data-close" class="closedialogbutton" autofocus="true">
+            <span class="closebar1"></span>
+            <span class="closebar2"></span>
+        </button>
+        <div id="img-dialog-content"></div>
+    </dialog>
+    
+    <div class="topbar-container">
+      <div class="topbar">
+        <button id="topbar-lightbulb" class="topbar-button">
+          <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/a1232e34553634c5363aa62c8d1b02161a4438e1/svgs/solid/lightbulb.svg">
+        </button>
+        <a class="topbar-links" href="/posts">Posts</a>
+        <a class="topbar-links" href="/projects">Projects</a>
+        <a class="a-website-title" href="/">Domain of a Knight</a>
+        <a class="topbar-links" href="/subscribe">Subscribe</a>
+        <a class="topbar-links" href="/about">About</a>
+        <button menu-open id="topbar-menu" class="topbar-button">
+          <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/a1232e34553634c5363aa62c8d1b02161a4438e1/svgs/solid/bars.svg">
+        </button>
+      </div>
+    </div>
+    <script type="text/javascript">
   window.addEventListener('load', themeChange);
   window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", event => {
     const newColorScheme = event.matches ? "dark" : "light";
@@ -141,7 +229,7 @@
   }
 
   function themeChange() {
-    let button = document.querySelector('.theme-toggle');
+    let button = document.querySelector('#topbar-lightbulb');
 
     button.addEventListener('click', function (e) {
       let currentTheme = document.documentElement.getAttribute('data-theme');
@@ -154,97 +242,7 @@
 </script>
 
 
-  
-
-
-
-  <!-- RSS Feed -->
-  <link rel="alternate" type="application/rss+xml" title="Domain of a Knight Feed" href="/feed.xml"/>
-
-</head><body>
-    <a menu-open class="hamburger-menu-link">
-      <span class="bar1"></span>
-      <span class="bar2"></span>
-      <span class="bar3"></span>
-    </a>
-    <svg class="background-svg" width="100%" height="100%">
-    <filter id='grainy'>
-        <feTurbulence type='turbulence' baseFrequency='0.5' />
-    </filter>
-    <rect fill='rgba(0, 0, 0, 0)' width='100%' height='100%' filter='url(#grainy)'/>
-    <svg class="progress-ring background-svg">
-        <circle class="progress-ring__circle progress-ring__circle--thin" fill="transparent" cx="100%" cy="100%" r="160"/>
-        <circle class="progress-ring__circle progress-ring__circle--regular" fill="transparent" cx="100%" cy="100%" r="1000"/>
-        <circle class="progress-ring__circle progress-ring__circle--thick" fill="transparent" cx="100%" cy="100%" r="1500"/>
-        <circle class="progress-ring__circle progress-ring__circle--thick" fill="transparent" cx="100%" cy="100%" r="760"/>
-        <circle class="progress-ring__circle progress-ring__circle--regular" fill="transparent" cx="100%" cy="100%" r="300"/>
-        <circle class="progress-ring__circle progress-ring__circle--thin" fill="transparent" cx="100%" cy="100%" r="450"/>
-        <circle class="progress-ring__circle progress-ring__circle--thin" fill="transparent" cx="100%" cy="100%" r="1200"/>
-        <circle class="progress-ring__circle progress-ring__circle--regular" fill="transparent" cx="100%" cy="100%" r="1800"/>
-    </svg> 
-</svg>
-    
-      <button title="Toggle Theme" class="theme-toggle" id="darkModeButton">
-  <svg viewBox="0 0 100 100" width="40" height="40" fill="currentcolor" >
-    <circle cx="50" cy="50" r="20" fill="none" stroke="yellow" stroke-width="0"></circle>
-  </svg>  
-</button>
-
-    
-
-    <script>
-    window.addEventListener('load', dialogButtonInitializer);
-    
-    function dialogButtonInitializer() {
-        const all_pictures = document.querySelectorAll('picture');
-        const closeDialogButton = document.getElementById('data-close')
-        const dialog = document.querySelector('dialog')
-        const dialogContent = document.getElementById('img-dialog-content');
-        const body = document.querySelector('body');
-    
-        all_pictures.forEach(openDialogButton => {
-            openDialogButton.addEventListener('click', (event) => {
-                // Copy the contents of the clicked picture into the dialog content
-                let htmlContent = event.target.outerHTML;
-                htmlContent = htmlContent.replace(/\?tr=w-480/g, '').replace(/max-height: 60vh/g, '').replace(/border-radius: 1rem;/g, '');
-                dialogContent.innerHTML = htmlContent;
-
-                dialog.showModal()
-                body.style.overflow = 'hidden';
-          })
-      })
-    
-      closeDialogButton.addEventListener('click', () => {
-          dialog.close();
-          body.style.overflow = '';
-      })
-    
-      dialog.addEventListener('click', (event) => {
-          const dialogDimentions = dialog.getBoundingClientRect()
-          if (
-              event.clientX < dialogDimentions.left ||
-              event.clientX > dialogDimentions.right ||
-              event.clientY < dialogDimentions.top ||
-              event.clientY > dialogDimentions.bottom
-          ) {
-              dialog.close()
-              body.style.overflow = '';
-          }
-      })
-    }
-    </script>
-    
-    <dialog id="img-dialog">
-        <button id="data-close" class="closedialogbutton" autofocus="true">
-            <span class="closebar1"></span>
-            <span class="closebar2"></span>
-        </button>
-        <div id="img-dialog-content"></div>
-    </dialog>
-    
-    
-    <main class="page-content" aria-label="Content">
-      <dialog id="menu-dialog">
+    <dialog id="menu-dialog">
     <div id="navbar-dialog-content">
       <!-- <a menu-close class="hamburger-menu-close-link">
         <span class="closebar1"></span>
@@ -339,37 +337,10 @@
       })
     }
   </script>
+    
+    <main class="page-content" aria-label="Content">
       <div class="w">
-        <header>
-    
-      <ul class="horizontal-list">
-  
-    <li>
-      <a href="/">Home</a>
-      &nbsp;&nbsp;
-    </li>
-  
-    <li>
-      <a href="/posts">Posts</a>
-      &nbsp;&nbsp;
-    </li>
-  
-    <li>
-      <a href="/subscribe">Subscribe</a>
-      &nbsp;&nbsp;
-    </li>
-  
-    <li>
-      <a href="/about">About</a>
-      &nbsp;&nbsp;
-    </li>
-  
-</ul>
-
-      <div class=not-dashed></div>
-    
-</header>
-
+        
   <h1 class="post-title">Finding Flags on a Website</h1>
   <p style="font-weight: bold; margin-top: 2.5rem; margin-bottom: 0rem;">
   
@@ -449,6 +420,9 @@
         }
     }, 100)
   </script>
-  <script data-goatcounter="https://jlo64.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+  <script>
+    if (window.location.href.includes('jekyll.julianlopez.net'))
+        window.goatcounter = {no_onload: true}
+  </script>
+  <script data-goatcounter="https://jlo64.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </html>
