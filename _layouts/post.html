@@ -2,12 +2,6 @@
 layout: default
 ---
 
-<header>
-    {% if site.theme_config.show_navbar == true %}
-      {% include horizontal_list.html collection=site.data.home.navbar_entries %}
-      <div class=not-dashed></div>
-    {% endif %}
-</header>
 {% if page.title %}
   <h1 class="post-title">{{ page.title }}</h1>
   {% include date_and_social_share.html %}

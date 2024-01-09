@@ -6,3 +6,4 @@ _site
 .env
 __pycache__/
 images/pictures-html.md
+_posts/test.txt

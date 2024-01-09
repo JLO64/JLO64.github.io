@@ -3,14 +3,27 @@
   {%- include head.html -%}
   <body>
     {% include space-rings.html %}
-    {% if site.theme_config.appearance_toggle %}
-      {% include toggle_theme_button.html %}
-    {% endif %}
 
     {% include image_dialog.html %}
+    <div class="topbar-container">
+      <div class="topbar">
+        <button id="topbar-lightbulb" class="topbar-button">
+          <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/a1232e34553634c5363aa62c8d1b02161a4438e1/svgs/solid/lightbulb.svg">
+        </button>
+        <a class="topbar-links" href="/posts">Posts</a>
+        <a class="topbar-links" href="/projects">Projects</a>
+        <a class="a-website-title" href="/">{{ site.title }}</a>
+        <a class="topbar-links" href="/subscribe">Subscribe</a>
+        <a class="topbar-links" href="/about">About</a>
+        <button menu-open id="topbar-menu" class="topbar-button">
+          <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/a1232e34553634c5363aa62c8d1b02161a4438e1/svgs/solid/bars.svg">
+        </button>
+      </div>
+    </div>
+    {% include toggle_theme_js.html %}
+    {% include menu_dialog.html %}
     
     <main class="page-content" aria-label="Content">
-      {% include menu_dialog.html %}
       <div class="w">
         {{ content }}
         <div class="not-dashed" style="margin-top: 2rem;"></div>
@@ -55,6 +68,9 @@
         }
     }, 100)
   </script>
-  <script data-goatcounter="https://jlo64.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+  <script>
+    if (window.location.href.includes('jekyll.julianlopez.net'))
+        window.goatcounter = {no_onload: true}
+  </script>
+  <script data-goatcounter="https://jlo64.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </html>

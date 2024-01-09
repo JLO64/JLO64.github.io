@@ -1,12 +1,6 @@
 ---
 layout: default
 ---
-<header>
-  {% if site.theme_config.show_navbar == true %}
-    {% include horizontal_list.html collection=site.data.home.navbar_entries %}
-    <div class=not-dashed></div>
-  {% endif %}
-</header>
 
 <h1>Posts With Tag '{{ page.title | replace: "-", " " }}'</h1>
 

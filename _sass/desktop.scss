@@ -1,4 +1,5 @@
-@media (min-width: 800px) and (orientation: landscape) and (hover: hover) and (pointer: fine) {
+// @media (min-width: 800px) and (orientation: landscape) and (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) {
   .theme-toggle {
     display: block;
   }
@@ -17,10 +18,11 @@
     border-radius: 4rem;
     // border: 0.5rem solid var(--link-underline);
     animation: w_breathe 1s infinite alternate linear;
+    padding: 1.5rem;
   }
   .page-content{
     padding-bottom: 2rem;
-    padding-top: 2rem;
+    padding-top: 7rem;
   }
   .homepage_flex_divs_posts {
     // max-width: 25vw;
@@ -107,5 +109,37 @@
   }
   header {
     display: block;
+  }
+  .topbar-links {
+    display: block;
+  }
+  .topbar-links:hover {
+    text-underline-offset: 0.7rem;
+    text-decoration-thickness: 0.3rem;
+  }
+  .a-website-title{
+    margin: auto 1rem;
+  }
+  .a-website-title:hover {
+    font-weight: 800;
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+    padding: 0.15rem 0.4rem;
+    border: solid var(--link-underline) 0.4rem;
+    border-radius: 1.5rem;
+    text-decoration: none;
+    height: fit-content;
+    color: white;
+    animation: none;
+  }
+
+  .topbar-button:hover {  
+    img {
+      filter: invert(57%) sepia(86%) saturate(417%) hue-rotate(182deg) brightness(109%) contrast(98%);
+      height: 2.6rem;
+    }
+  }
+  #topbar-menu {
+    display: none;
   }
 }
