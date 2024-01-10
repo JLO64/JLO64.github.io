@@ -3,7 +3,6 @@
     
     function dialogButtonInitializer() {
         const all_pictures = document.querySelectorAll('picture');
-        const closeDialogButton = document.getElementById('data-close')
         const dialog = document.querySelector('dialog')
         const dialogContent = document.getElementById('img-dialog-content');
         const body = document.querySelector('body');
@@ -18,11 +17,6 @@
                 dialog.showModal()
                 body.style.overflow = 'hidden';
           })
-      })
-    
-      closeDialogButton.addEventListener('click', () => {
-          dialog.close();
-          body.style.overflow = '';
       })
     
       dialog.addEventListener('click', (event) => {
@@ -41,10 +35,6 @@
     </script>
     
     <dialog id="img-dialog">
-        <button id="data-close" class="closedialogbutton" autofocus="true">
-            <span class="closebar1"></span>
-            <span class="closebar2"></span>
-        </button>
         <div id="img-dialog-content"></div>
     </dialog>
     

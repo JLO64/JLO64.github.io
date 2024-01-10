@@ -24,19 +24,6 @@
     padding-bottom: 2rem;
     padding-top: 7rem;
   }
-  .homepage_flex_divs_posts {
-    // max-width: 25vw;
-  }
-  .homepage_flex_divs_projects {
-    // max-width: 33vw;
-  }
-  ul.horizontal-list {
-    // max-width: 40vw;
-    li a:hover {
-      font-weight: 999;
-      font-size: 1.8rem;
-    }
-  }
   .project-card {
     overflow: auto;
     max-height: 36rem;
@@ -45,7 +32,7 @@
   a:hover {
     text-decoration-color: var(--link-underline);
     color: var(--link-underline);
-    font-weight: 800;
+    // font-weight: 800;
     // font-size: 110%;
     text-decoration-thickness: 0.2rem;
     text-underline-offset: 0.4rem;
