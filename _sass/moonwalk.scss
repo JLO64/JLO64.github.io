@@ -315,18 +315,32 @@ li.goatcounter {
 
 .topbar {
   margin: 1rem auto 0;
-  // background-color: var(--bg);
   background-color: black;
-  // max-width: 80vw;
-  border-radius: 2rem;
-  // padding: 0 1.5rem;
+  border-radius: 2rem;  
   padding: 0 0.5rem;
-  // border: solid var(--link-underline) 0.25rem;
+  width: fit-content;
+  border: 2px solid var(--topbar-border);
+}
+.topbar-top-row {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: fit-content;
-  border: 2px solid var(--topbar-border);
+}
+.topbar-bottom-row {
+  display: none;
+  // display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.topbar-mobile-links {
+  font-weight: 500;
+  text-underline-offset: 0.5rem;
+  text-decoration-thickness: 0.2rem;
+  margin: 1.1rem 0rem 1.4rem;
+  color: white;
+  font-size: 1.3rem;
+  line-height: 1.0rem;
 }
 
 .topbar-links {
