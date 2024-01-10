@@ -5,27 +5,14 @@
     switchToColorTheme(newColorScheme);
 });
   isDarkMode = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-  
-  const isDesktop = window.matchMedia('(min-width: 800px) and (orientation: landscape) and (hover: hover) and (pointer: fine)');
-  if (isDesktop.matches)
+  localStorageTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+  if (localStorageTheme)
   {
-    localStorageTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-    moonSvgCode = '';
-    sunSvgCode = '';
-    fetch('../assets/svg/toggle_moon.html')
-    .then(response => response.text())
-    .then(data => {moonSvgCode = data;})
-    fetch('../assets/svg/toggle_sun.html')
-    .then(response => response.text())
-    .then(data => {sunSvgCode = data;})
-    
-    if (localStorageTheme)
-    {
-      if (localStorageTheme === 'dark')
-        switchToColorTheme('dark', true);
-      else
-        switchToColorTheme('light', true);
-    }
+    if (localStorageTheme === 'dark')
+      switchToColorTheme('dark', true);
+    else
+      switchToColorTheme('light', true);
   }
   else
   {
@@ -51,32 +38,19 @@
       document.documentElement.setAttribute('data-theme', 'dark');
       localStorage.setItem('theme', 'dark');
     }
-    if (!document.getElementById('darkModeButton'))
-    {
-      setTimeout(function() {
-        changeButtonSVG(themeChangeto);
-       }, 300);
-    }
-    else
-      changeButtonSVG(themeChangeto);
+    changeButtonSVG(themeChangeto);
   }
   
   function changeButtonSVG(themeChangeto) {
-    let button = document.getElementById('darkModeButton');
-    let svg = button.querySelector('svg');
+    let button = document.querySelector('#topbar-lightbulb');
+    let button_img = button.querySelector('img');
     if (themeChangeto === 'light')
     {
-      if (typeof moonSvgCode !== 'undefined') {
-        svg.innerHTML = moonSvgCode;
-        svg.setAttribute('viewBox', '0 0 40 40');
-      }
+      button_img.src = "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/a1232e34553634c5363aa62c8d1b02161a4438e1/svgs/solid/lightbulb.svg";
     }
     else
     {
-      if (typeof sunSvgCode !== 'undefined') {
-        svg.innerHTML = sunSvgCode;
-        svg.setAttribute('viewBox', '0 0 40 40');
-      }
+      button_img.src = "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/a1232e34553634c5363aa62c8d1b02161a4438e1/svgs/regular/lightbulb.svg";
     }   
   }
 

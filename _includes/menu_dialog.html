@@ -1,21 +1,10 @@
 <dialog id="menu-dialog">
     <div id="navbar-dialog-content">
-      <!-- <a menu-close class="hamburger-menu-close-link">
-        <span class="closebar1"></span>
-        <span class="closebar2"></span>
-      </a> -->
-      <!-- <button menu-close class="closedialogbutton" autofocus="true"> -->
       <button menu-close class="closedialogbutton">
         <span class="closebar1"></span>
         <span class="closebar2"></span>
       </button>
         <div style="position: fixed; top: 1.5rem; right: 1.5rem;">
-          <!-- <div class="toggleSwitch">
-            <input type="radio" id="Light-Mobile" name="darkSwitchmobile" value="Light">
-            <label for="Light-Mobile">Light</label>
-            <input type="radio" id="Dark-Mobile" name="darkSwitchmobile" value="Dark">
-            <label for="Dark-Mobile">Dark</label>
-          </div> -->
       </div>
       <ul class="navbar-list-mobile">
         {% for item in site.data.home.navbar_entries %}
@@ -32,8 +21,11 @@
 <script>
     window.addEventListener('load', menuDialogInitializer);
   
+    let menubutton = document.querySelector('#topbar-menu');
+    let menubutton_img = menubutton.querySelector('img');
+
     function menuDialogInitializer() {
-      const openDialogButtons = document.querySelectorAll('[menu-open]')
+      const openMenuDialogButton = document.querySelector('[menu-open]')
       const closeDialogButton = document.querySelector('[menu-close]')
       const glossaryLinkButton = document.querySelector('[glossary-link]')
       const menuDialog = document.getElementById('menu-dialog');
@@ -41,15 +33,15 @@
       const navbarlistmobile = document.querySelector('.navbar-list-mobile');
       const darkSwitchmobile = document.querySelector('.darkSwitchmobile');
   
-      openDialogButtons.forEach(openDialogButton => {
-          openDialogButton.addEventListener('click', () => {
-              menuDialog.showModal();
-              //set the overflow to hidden to prevent scrolling of the background
-              body.style.overflow = 'hidden';
-          })
+      openMenuDialogButton.addEventListener('click', () => {
+        menubutton_img.src = "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/a1232e34553634c5363aa62c8d1b02161a4438e1/svgs/solid/xmark.svg"
+        menuDialog.showModal();
+        //set the overflow to hidden to prevent scrolling of the background
+        body.style.overflow = 'hidden';
       })
   
       closeDialogButton.addEventListener('click', () => {
+        menubutton_img.src = "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/a1232e34553634c5363aa62c8d1b02161a4438e1/svgs/solid/bars.svg"
         menuDialog.close();
         body.style.overflow = '';
       })
@@ -65,12 +57,9 @@
               event.clientY > navbarListDimentions.bottom
           )
           {
-            // Check if the target element is the dark switch
-            if (!darkSwitchmobile.contains(event.target))
-            {
-              menuDialog.close();
+            menubutton_img.src = "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/a1232e34553634c5363aa62c8d1b02161a4438e1/svgs/solid/bars.svg"
+            menuDialog.close();
               body.style.overflow = '';
-            }
           }
       })
     }
