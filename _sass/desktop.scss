@@ -1,5 +1,5 @@
-// @media (min-width: 800px) and (orientation: landscape) and (hover: hover) and (pointer: fine) {
-@media (hover: hover) and (pointer: fine) {
+@media (min-width: 800px) and (orientation: landscape) and (hover: hover) and (pointer: fine) {
+// @media (hover: hover) and (pointer: fine) {
   .theme-toggle {
     display: block;
   }
@@ -114,8 +114,11 @@
     display: block;
   }
   .topbar-links:hover {
+    font-size: 2.2rem;
     text-underline-offset: 0.7rem;
     text-decoration-thickness: 0.3rem;
+    // margin: 0rem;
+    line-height: 1rem;
   }
   .a-website-title{
     margin: auto 1rem;
@@ -141,5 +144,8 @@
   }
   #topbar-menu {
     display: none;
+  }
+  #topbar-radio {
+    display: block;
   }
 }
