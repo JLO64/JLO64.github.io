@@ -244,22 +244,25 @@
   let playing_radio = false;
   const radio_button = document.querySelector('#topbar-radio');
   const radio_button_img = radio_button.querySelector('img');
-  var KUSC_Arcade_Stream = new Audio('http://128.mp3.kusc.live/');
+  var KUSC_Stream;
+
   function radioInitializer () {
     radio_button.addEventListener('click', () => {
       if (playing_radio) {
         playing_radio = false;
         radio_button_img.src = "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/a1232e34553634c5363aa62c8d1b02161a4438e1/svgs/solid/circle-play.svg";
-        KUSC_Arcade_Stream.pause();
+        KUSC_Stream.pause();
       }
       else
       {
         playing_radio = true;
         radio_button_img.src = "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/a1232e34553634c5363aa62c8d1b02161a4438e1/svgs/solid/circle-stop.svg";
-        KUSC_Arcade_Stream.play();
+        KUSC_Stream = new Audio('http://128.mp3.kusc.live/');
+        KUSC_Stream.play();
       }
     })
   }
+
 
   </script>
     
