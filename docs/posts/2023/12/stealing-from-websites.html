@@ -392,7 +392,7 @@
         <div class="not-dashed" style="margin-top: 2rem;"></div>
         <div class="credits">
           <p>&copy;&nbsp;2024&nbsp;Julian Lopez</p>
-          <ul style=>
+          <ul class="credit-links">
             <li>
               Powered by <a href="https://jekyllrb.com" target="_blank" rel="noreferrer">Jekyll</a>
             </li>
@@ -415,21 +415,19 @@
                 <a target="blank" href="https://darktheme.club/"><span class="darktheme-club-no-bg">darktheme.club</span><span class="darktheme-club-bg">Member</span></a>
               </div>
             </li>
-            <li class="goatcounter" style="width: fit-content; margin: auto 0;"></li>
+            <li class="goatcounter">Views for this page:<div id="stats"></div>stats by GoatCounter</li>
           </ul>
         <div>
       </div>
     </main>
   </body>
   <script>
-    var t = setInterval(function() {
-        if (window.goatcounter && window.goatcounter.visit_count) {
-            clearInterval(t)
-            window.goatcounter.visit_count({append: '.goatcounter', style: `
-              div { width: 140px; border-radius: 0rem; border: 2px solid #9a15a4; line-height:1; height: 60px;}
-            `})
-        }
-    }, 100)
+    var r = new XMLHttpRequest();
+    r.addEventListener('load', function() {
+        document.querySelector('#stats').innerText = JSON.parse(this.responseText).count
+    })
+    r.open('GET', 'https://jlo64.goatcounter.com/counter/' + encodeURIComponent(location.pathname) + '.json')
+    r.send()
   </script>
   <script>
     if (window.location.href.includes('jekyll.julianlopez.net'))
