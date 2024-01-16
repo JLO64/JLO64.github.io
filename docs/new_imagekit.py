@@ -18,7 +18,7 @@ def write_url_to_file(image_url):
         file.write('    <source srcset="' + image_url + '?tr=w-720,f-webp," type="image/webp">\n')
         file.write('    <img src="' + image_url + '?tr=w-480" alt="ALT TEXT HERE" class="blog_image" title="ALT TEXT HERE">\n')
         file.write('    <figcaption style="text-align:center"> CAPTION TEXT HERE </figcaption>\n')
-        file.write('<picture>\n')
+        file.write('</picture>\n')
 
 
 def upload_image(filename, imagekit_foldername):
