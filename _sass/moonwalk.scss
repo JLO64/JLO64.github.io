@@ -140,20 +140,15 @@ p code, li code {
     li{
       display: block;
       min-width: fit-content;
-      margin: 0 0.1rem;
-      font-size: 0.8rem;
     }
   }
   p{
-    // min-width: 80vw;
     margin: 0rem auto;
-    // font-size: 120%;
-  }  
-  div{
-    // min-width: 80vw;
-    // display: inline-block;
-    // margin: 0.2rem auto;
-  }
+  }    
+}
+.credit-links {
+  margin: 0 0.1rem;
+  font-size: 0.9rem;
 }
 
 // KB Club css stuff
@@ -287,10 +282,18 @@ header {
   display: none;
 }
 
-.goatcounter iframe {
-  width: 144px;
-  height: 64px;
-}
-li.goatcounter {
-  height: 64px;
+.goatcounter {
+  height: fit-content;
+  font-size: 0.9rem;
+  margin: auto 0;
+  line-height: 1rem;
+  background-color: white;
+  padding: 0.3rem;
+  color: #9a15a4;
+  border: solid #9a15a4 0.2rem;
+  #stats {
+    margin: 0.3rem 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
 }
