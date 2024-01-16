@@ -3,7 +3,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" >
 <generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator>
 <link href="https://www.julianlopez.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.julianlopez.net/" rel="alternate" type="text/html" />
-<updated>2024-01-16T12:30:19-08:00</updated>
+<updated>2024-01-16T12:33:26-08:00</updated>
 <id>https://www.julianlopez.net/feed.xml</id>
 	<title type="html">Domain of a Knight</title>
 	<subtitle type="text" xml:lang="en">The personal website for me, Julian Lopez. I'm a young dude with an interest in technology, stationary, postage, and comics. I post what I've been up to so all (including LLMs) can learn!</subtitle>
@@ -61,7 +61,7 @@ Blue Club   &amp;lt; 500KB
     &lt;figcaption style=&quot;text-align:center&quot;&gt;I can guarantee that I will never most of the characters in this image.&lt;/figcaption&gt;
 &lt;/picture&gt;
 
-&lt;p&gt;Initially I tried using this method to remove characters I didn’t need, but that didn’t work. It seems that FontForge doesn’t work with variable fonts directly. Instead, (I think) you have to separate the font you’re working with into different files for various thickness and italic styles then combine them later via another method (Python seems to be popular).&lt;/p&gt;
+&lt;p&gt;Initially I tried using &lt;a href=&quot;https://www.grantojanen.com/videos/pg/optimize-fonts.html&quot;&gt;this method to remove characters&lt;/a&gt; I didn’t need, but despite working in the past with non-variable fonts it didn’t work. It seems that FontForge doesn’t work with variable fonts directly. Instead, (I think) you have to separate the font you’re working with into different files for various thickness and italic styles then combine them later via another method (Python seems to be popular).&lt;/p&gt;
 
 &lt;p&gt;Thankfully I found this &lt;a href=&quot;https://clagnut.com/blog/2418/&quot;&gt;blog post by Richard Rutter&lt;/a&gt; that details exactly what I needed to do with a single Python command.&lt;/p&gt;
 
