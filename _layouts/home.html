@@ -9,7 +9,24 @@ layout: default
 <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
   <div class="homepage_flex_divs_posts limit-homepage-posts">
     <h2>Latest Blog Posts</h2>
-    {% include post_list.html limit=6 %}
+    {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+    {% if sorted_posts.size > 0 %}
+      <ul class="post-list-container">
+      {% for post in sorted_posts limit:6 %}
+        <li class="post-list-item">
+          <a class="post_link" href="{{ post.url | relative_url }}">{{ post.title }}</a><br>
+          {{ post.date | date: site.theme_config.date_format }}
+          <ul class="tag-ul">
+            {% assign sorted_tags = post.tags | sort %}
+            {% for tag in sorted_tags %}
+              <li class="tag"><a href="/tag/{{ tag }}">{{ tag | replace: "-", " " }}</a></li>
+            {% endfor %}
+          </ul>
+          <p> {{ post.description }} </p>
+        </li>
+      {% endfor %}
+      </ul>
+    {% endif %}
     <!-- <a href="/posts">More Posts</a> -->
   </div>
   <div class="homepage_flex_divs_projects">
