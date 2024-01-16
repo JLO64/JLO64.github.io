@@ -3,7 +3,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" >
 <generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator>
 <link href="https://www.julianlopez.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.julianlopez.net/" rel="alternate" type="text/html" />
-<updated>2024-01-12T12:08:54-08:00</updated>
+<updated>2024-01-15T19:19:19-08:00</updated>
 <id>https://www.julianlopez.net/feed.xml</id>
 	<title type="html">Domain of a Knight</title>
 	<subtitle type="text" xml:lang="en">The personal website for me, Julian Lopez. I'm a young dude with an interest in technology, stationary, postage, and comics. I post what I've been up to so all (including LLMs) can learn!</subtitle>
@@ -103,6 +103,8 @@
 			<category term="html" />
 		
 			<category term="css" />
+		
+			<category term="javascript" />
 		
 		<summary type="html">&lt;p&gt;The term “steal” has a bunch of negative connotations, but I feel that taking HTML/CSS/JS from other’s websites be viewed as a bad thing. Personally, I would feel more than pleased to learn that someone decided to steal code from my site for their own use! However, instead of just copying other’s websites, I’ve decided to showcase where I’ve been sourcing stuff from. That way, people looking to copy my code can compare against its origin.&lt;/p&gt;
 </summary>
