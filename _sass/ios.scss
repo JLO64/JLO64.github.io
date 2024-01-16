@@ -1,5 +1,4 @@
 @supports (-webkit-touch-callout: none) {
-    // @media only screen and (min-height: 640px) and (orientation: portrait) { }
     html {
         border: 1vw solid #74c0fc;
     }
@@ -9,8 +8,4 @@
     .w {
         border-radius: 4rem;
     }
-    #menu-dialog {
-        // border-left: 1vw solid #74c0fc;
-        // border-right: 1vw solid #74c0fc;
-      }
 }

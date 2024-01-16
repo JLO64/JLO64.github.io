@@ -2,14 +2,7 @@
   font-family: 'Red Hat Display';
   font-weight: 1 999;
   // font-display: block;
-  src: url(/assets/fonts/RedHatDisplay-VariableFont_wght.ttf) format("truetype-variations");
-}
-@font-face {
-  font-family: 'Red Hat Display';
-  font-style: italic;
-  font-weight: 1 999;
-  // font-display: block;
-  src: url(/assets/fonts/RedHatDisplay-Italic-VariableFont_wght.ttf) format("truetype-variations");
+  src: url(/assets/fonts/RedHatDisplay-VariableFont.woff2) format("woff2");
 }
 
 .h1-website-title {

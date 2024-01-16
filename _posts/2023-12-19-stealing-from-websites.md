@@ -6,6 +6,7 @@ tags:
   - webdev
   - html
   - css
+  - javascript
 description: I have stolen code from other's websites to use for my own site. I show off what I took and how I used it with CodePen samples.
 ---
 

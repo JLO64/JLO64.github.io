@@ -4,7 +4,6 @@ html {
     --bg-secondary-opaque: rgba(243, 244, 246, 0.95);
     --headings: #1e293b;
     --text: #374151;
-    --text-secondary: #6b7280;
     --highlight: #dedede;
     --code-text: black;
     --code-block: rgb(112, 255, 112);
@@ -13,7 +12,6 @@ html {
     --scrollbar-foreground: #74c0fc;
     --scrollbar-background: #c0c0c0;
     --card-color: #cfd2e2;
-    --mobile-nav-background: #74c0fc;
     --topbar-border: black;
 
     // link colors
@@ -30,10 +28,6 @@ html {
     --jekyll: #BA1C21;
     --julian: #4B5162;
 }
-::backdrop {
-  // --mobile-nav-background: #74c0fc;
-  --mobile-nav-background: rgba(255, 255, 255, 0.8);
-}
 // -------------- THEME SWITCHER -------------- //
 @mixin dark-appearance {
   html, body  {
@@ -43,7 +37,6 @@ html {
       --bg-secondary: #323945;
       --bg-secondary-opaque: rgba(0, 0, 0, 1);
       --text: #adb5bd;
-      --text-secondary: #9CA3AF;
       --code-text: white;
       --code-block: rgb(46, 255, 46);
       --tag: #323945;
@@ -51,26 +44,12 @@ html {
       --scrollbar-foreground: #74c0fc;
       --scrollbar-background: #c0c0c0;
       --card-color: rgb(26, 31, 53);
-      --mobile-nav-background: rgba(116, 192, 252, 0.7);
       --topbar-border: #727272;
 
       // link colors
       --link-text: #FFF;
       --link-underline: #74c0fc;
       --link-underline-hover: white;
-      --github: #4B5162;
-      --vscode: #23A9F2;
-      --obsidian: #633AB7;
-      --aws: #FF9900;
-      --apple: #666666;
-      --youtube: #FA0000;
-      --jetpens: #9FB22C;
-      --jekyll: #BA1C21;
-      --julian: #4B5162;
   };
-  ::backdrop {
-    --mobile-nav-background: #74c0fc;
-    --mobile-nav-background: rgba(0, 0, 0, 0.8);
-  }
 }
 html[data-theme="dark"] { @include dark-appearance; }
