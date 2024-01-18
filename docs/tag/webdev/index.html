@@ -407,10 +407,12 @@
 
     if (window.location.hostname.includes('jekyll.julianlopez.net')) {
       window.goatcounter = {no_onload: true}
+      console.log("goatcounter not loaded")
     }
     else{
       // window.goatcounter = {path: function(p) { return location.host + p }}
       window.goatcounter = {path: function(p) { return '/' + location.host + loc_pathname }}
+      console.log("goatcounter loaded")
     }
   </script>
   <script data-goatcounter="https://jlo64.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
