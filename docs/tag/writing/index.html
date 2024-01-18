@@ -334,13 +334,13 @@
     if (loc_pathname.endsWith('/')) {loc_pathname = loc_pathname.slice(0, -1);}
     r.open('GET', 'https://jlo64.goatcounter.com/counter//' + location.host + loc_pathname + '.json')
     r.send()
-  </script>
-  <script>
+
     if (window.location.hostname.includes('jekyll.julianlopez.net')) {
       window.goatcounter = {no_onload: true}
     }
     else{
-      window.goatcounter = {path: function(p) { return location.host + p }}
+      // window.goatcounter = {path: function(p) { return location.host + p }}
+      window.goatcounter = {path: function(p) { return '/' + location.host + loc_pathname }}
     }
   </script>
   <script data-goatcounter="https://jlo64.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
