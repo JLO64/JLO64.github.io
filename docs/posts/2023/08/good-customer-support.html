@@ -362,8 +362,9 @@
     r.addEventListener('load', function() {
         document.querySelector('#stats').innerText = JSON.parse(this.responseText).count
     })
-    r.open('GET', 'https://jlo64.goatcounter.com/counter//' + location.host + location.pathname.slice(0, -1) + '.json')
-    console.log('https://jlo64.goatcounter.com/counter//' + location.host + location.pathname.slice(0, -1) + '.json')
+    var loc_pathname = location.pathname;
+    if (loc_pathname.endsWith('/')) {loc_pathname = loc_pathname.slice(0, -1);}
+    r.open('GET', 'https://jlo64.goatcounter.com/counter//' + location.host + loc_pathname + '.json')
     r.send()
   </script>
   <script>
