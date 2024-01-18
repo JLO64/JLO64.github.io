@@ -63,7 +63,7 @@
                 <a target="blank" href="https://darktheme.club/"><span class="darktheme-club-no-bg">darktheme.club</span><span class="darktheme-club-bg">Member</span></a>
               </div>
             </li>
-            <li class="goatcounter">Views for this page:<div id="stats"></div>stats by GoatCounter</li>
+            <li class="goatcounter">Views for this page:<div id="stats">?</div>stats by GoatCounter</li>
           </ul>
         <div>
       </div>
@@ -74,12 +74,18 @@
     r.addEventListener('load', function() {
         document.querySelector('#stats').innerText = JSON.parse(this.responseText).count
     })
-    r.open('GET', 'https://jlo64.goatcounter.com/counter/' + encodeURIComponent(location.pathname) + '.json')
+    var loc_pathname = location.pathname;
+    if (loc_pathname.endsWith('/')) {loc_pathname = loc_pathname.slice(0, -1);}
+    r.open('GET', 'https://jlo64.goatcounter.com/counter//' + location.host + loc_pathname + '.json')
     r.send()
-  </script>
-  <script>
-    if (window.location.href.includes('jekyll.julianlopez.net'))
-        window.goatcounter = {no_onload: true}
+
+    if (window.location.hostname.includes('jekyll.julianlopez.net')) {
+      window.goatcounter = {no_onload: true}
+    }
+    else{
+      // window.goatcounter = {path: function(p) { return location.host + p }}
+      window.goatcounter = {path: function(p) { return '/' + location.host + loc_pathname }}
+    }
   </script>
   <script data-goatcounter="https://jlo64.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </html>
