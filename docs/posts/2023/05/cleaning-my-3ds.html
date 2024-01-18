@@ -437,8 +437,8 @@ After that it worked perfectly and I haven’t had any crashes since!</p>
     r.addEventListener('load', function() {
         document.querySelector('#stats').innerText = JSON.parse(this.responseText).count
     })
-    r.open('GET', 'https://jlo64.goatcounter.com/counter//' + location.host + location.pathname + '.json')
-    console.log('https://jlo64.goatcounter.com/counter//' + location.host + location.pathname + '.json')
+    r.open('GET', 'https://jlo64.goatcounter.com/counter//' + location.host + location.pathname.slice(0, -1) + '.json')
+    console.log('https://jlo64.goatcounter.com/counter//' + location.host + location.pathname.slice(0, -1) + '.json')
     r.send()
   </script>
   <script>
