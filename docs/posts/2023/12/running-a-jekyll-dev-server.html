@@ -393,6 +393,7 @@
         document.querySelector('#stats').innerText = JSON.parse(this.responseText).count
     })
     r.open('GET', 'https://jlo64.goatcounter.com/counter//' + location.host + location.pathname + '.json')
+    console.log('https://jlo64.goatcounter.com/counter//' + location.host + location.pathname + '.json')
     r.send()
   </script>
   <script>
