@@ -504,7 +504,7 @@ Personally, I am content with my original 3DS, but that’s mainly because of th
     r.addEventListener('load', function() {
         document.querySelector('#stats').innerText = JSON.parse(this.responseText).count
     })
-    r.open('GET', 'https://jlo64.goatcounter.com/counter/' + encodeURIComponent(location.pathname) + '.json')
+    r.open('GET', 'https://jlo64.goatcounter.com/counter/' + encodeURIComponent(location.host) + encodeURIComponent(location.pathname) + '.json')
     r.send()
   </script>
   <script>
