@@ -574,8 +574,12 @@ However, in hindsight there was a simple answer to this question.</p>
     r.send()
   </script>
   <script>
-    if (window.location.href.includes('jekyll.julianlopez.net'))
-        window.goatcounter = {no_onload: true}
+    if (window.location.href.includes('jekyll.julianlopez.net')) {
+      window.goatcounter = {no_onload: true}
+    }
+    else{
+      window.goatcounter = {path: function(p) { return location.host + p }}
+    }
   </script>
   <script data-goatcounter="https://jlo64.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </html>
