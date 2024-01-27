@@ -307,7 +307,6 @@
 </ul>
         <div class="not-dashed" style="margin-top: 2rem;"></div>
         <div class="credits">
-          <p>&copy;&nbsp;2024&nbsp;Julian Lopez</p>
           <ul class="credit-links">
             <li>
               Powered by <a href="https://jekyllrb.com" target="_blank" rel="noreferrer">Jekyll</a>
@@ -331,6 +330,9 @@
                 <a target="blank" href="https://darktheme.club/"><span class="darktheme-club-no-bg">darktheme.club</span><span class="darktheme-club-bg">Member</span></a>
               </div>
             </li>
+            <li style="height: fit-content; margin: auto 0rem;">
+              <p>&copy;&nbsp;2024&nbsp;Julian Lopez</p>
+            </li>
             <li class="goatcounter">Views for this page:<div id="stats">?</div>stats by GoatCounter</li>
           </ul>
         <div>
@@ -349,12 +351,10 @@
 
     if (window.location.hostname.includes('jekyll.julianlopez.net')) {
       window.goatcounter = {no_onload: true}
-      console.log("goatcounter not loaded")
     }
     else{
       // window.goatcounter = {path: function(p) { return location.host + p }}
       window.goatcounter = {path: function(p) { return '/' + location.host + loc_pathname }}
-      console.log("goatcounter loaded")
     }
   </script>
   <script data-goatcounter="https://jlo64.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>

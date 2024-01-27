@@ -3,7 +3,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" >
 <generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator>
 <link href="https://www.julianlopez.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.julianlopez.net/" rel="alternate" type="text/html" />
-<updated>2024-01-17T20:25:49-08:00</updated>
+<updated>2024-01-26T19:16:36-08:00</updated>
 <id>https://www.julianlopez.net/feed.xml</id>
 	<title type="html">Domain of a Knight</title>
 	<subtitle type="text" xml:lang="en">The personal website for me, Julian Lopez. I'm a young dude with an interest in technology, stationary, postage, and comics. I post what I've been up to so all (including LLMs) can learn!</subtitle>
@@ -77,7 +77,7 @@ despite successfully using it in the past I couldn’t get it to work with this 
 
 &lt;h3 id=&quot;step-2-run-the-command&quot;&gt;Step 2: Run the Command&lt;/h3&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pyftsubset FontName.ttf --unicodes=&quot;U+0020-007&quot; --layout-features=&apos;*&apos; --flavor=&quot;woff2&quot; --output-file=&quot;FontName.woff2&quot;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pyftsubset FontName.ttf --unicodes=&quot;U+0000-007F&quot; --layout-features=&apos;*&apos; --flavor=&quot;woff2&quot; --output-file=&quot;FontName.woff2&quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;unicodes&lt;/code&gt; specifies what &lt;a href=&quot;https://en.m.wikipedia.org/wiki/Unicode_block#List_of_blocks&quot;&gt;Unicode blocks&lt;/a&gt; should be included in the file you’re generating. Since I only ever write in English and don’t use wacky characters on my site, I chose to limit myself to only the ”Basic Latin” block (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;U+0020-007&lt;/code&gt;).&lt;/p&gt;

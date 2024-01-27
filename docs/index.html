@@ -379,59 +379,36 @@
   </div>
   <div class="homepage_flex_divs_projects">
     <h2>Projects</h2>
-    <ul class="project-card">
-  
-    <li class="card">
-      <a href="https://kofc.julianlopez.net/">
-        <span class="header">
-          <h3>Knights of Columbus Council #2431 </h3>
-        </span>
-          
-            <p class="body">The website for my council.</p>
-          
-        </a>
-    </li>
-  
-    <li class="card">
-      <a href="https://github.com/JLO64/Generate-McDonalds-Mobile-Screenshot">
-        <span class="header">
-          <h3>McDonald's Screenshot Generator </h3>
-        </span>
-          
-            <p class="body">Generates fake McDonald's app screenshots on AWS Lambda</p>
-          
-        </a>
-    </li>
-  
-    <li class="card">
-      <a href="https://jpn-blog.julianlopez.net/">
-        <span class="header">
-          <h3>ジュリアンの日本語3ブログ </h3>
-        </span>
-          
-            <p class="body">A blog I had to make for a Japanese course at USC.</p>
-          
-        </a>
-    </li>
-  
-    <li class="card">
-      <a href="https://github.com/usc-bus/usc-bus.github.io">
-        <span class="header">
-          <h3>USC Bus Website </h3>
-        </span>
-          
-            <p class="body">A website to check on USC bus maps/times</p>
-          
-        </a>
-    </li>
-  
-</ul>
-
+    <ul class="project-box-container">
+      
+        <li class="project-box">
+          <img src="/assets/images/projects/koc_crest.webp" class="project-box-image"></img>
+          <div class="project-box-contents">
+            <a href="https://kofc.julianlopez.net/"><h3>Knights of Columbus: Council #2431</h3></a>
+            <h4>2024: WIP</h4>
+            <ul class="tag-ul">
+              
+            </ul>
+            <p>The website for my council.</p>
+          </div>
+        </li>
+      
+        <li class="project-box">
+          <img src="/assets/images/projects/McDonald_project.svg" class="project-box-image"></img>
+          <div class="project-box-contents">
+            <a href="https://github.com/JLO64/Generate-McDonalds-Mobile-Screenshot"><h3>McDonald's Screenshot Generator</h3></a>
+            <h4>2023: Archived</h4>
+            <ul class="tag-ul">
+              
+            </ul>
+            <p>Generates fake McDonald's app screenshots on AWS Lambda</p>
+          </div>
+        </li>
+      
   </div>
 </div>
         <div class="not-dashed" style="margin-top: 2rem;"></div>
         <div class="credits">
-          <p>&copy;&nbsp;2024&nbsp;Julian Lopez</p>
           <ul class="credit-links">
             <li>
               Powered by <a href="https://jekyllrb.com" target="_blank" rel="noreferrer">Jekyll</a>
@@ -455,6 +432,9 @@
                 <a target="blank" href="https://darktheme.club/"><span class="darktheme-club-no-bg">darktheme.club</span><span class="darktheme-club-bg">Member</span></a>
               </div>
             </li>
+            <li style="height: fit-content; margin: auto 0rem;">
+              <p>&copy;&nbsp;2024&nbsp;Julian Lopez</p>
+            </li>
             <li class="goatcounter">Views for this page:<div id="stats">?</div>stats by GoatCounter</li>
           </ul>
         <div>
@@ -473,12 +453,10 @@
 
     if (window.location.hostname.includes('jekyll.julianlopez.net')) {
       window.goatcounter = {no_onload: true}
-      console.log("goatcounter not loaded")
     }
     else{
       // window.goatcounter = {path: function(p) { return location.host + p }}
       window.goatcounter = {path: function(p) { return '/' + location.host + loc_pathname }}
-      console.log("goatcounter loaded")
     }
   </script>
   <script data-goatcounter="https://jlo64.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
