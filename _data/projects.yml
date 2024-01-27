@@ -1,0 +1,50 @@
+websites:
+  - title: "Knights of Columbus: Council #2431"
+    url: https://kofc.julianlopez.net/
+    description: The website for my council.
+    status: WIP
+    image: "/assets/images/projects/koc_crest.webp"
+    year: "2024"
+
+  - title: ジュリアンの日本語3ブログ
+    url: https://jpn-blog.julianlopez.net/
+    description: A blog I had to make for a Japanese class.
+    status: Archived
+    year: "2023"
+    image: "/assets/images/projects/japan_flag.svg"
+    tags:
+    - school
+    - blog
+    - jekyll
+
+  - title: USC Bus Website
+    url: https://github.com/usc-bus/usc-bus.github.io
+    description: A website to check on USC bus maps/times
+    image: "/assets/images/projects/USC_Trojans_logo.svg"
+    year: "2023"
+    status: DNF
+
+misc:
+  - title: McDonald's Screenshot Generator
+    url: https://github.com/JLO64/Generate-McDonalds-Mobile-Screenshot
+    description: Generates fake McDonald's app screenshots on AWS Lambda
+    status: Archived
+    year: "2023"
+    image: "/assets/images/projects/McDonald_project.svg"
+
+
+home:
+  - title: "Knights of Columbus: Council #2431"
+    url: https://kofc.julianlopez.net/
+    description: The website for my council.
+    status: WIP
+    image: "/assets/images/projects/koc_crest.webp"
+    year: "2024"
+
+  - title: McDonald's Screenshot Generator
+    url: https://github.com/JLO64/Generate-McDonalds-Mobile-Screenshot
+    description: Generates fake McDonald's app screenshots on AWS Lambda
+    status: Archived
+    year: "2023"
+    image: "/assets/images/projects/McDonald_project.svg"
+    

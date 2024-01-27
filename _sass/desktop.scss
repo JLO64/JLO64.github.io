@@ -135,4 +135,32 @@
   #topbar-radio {
     display: block;
   }
+  .project-box {
+    h3:hover{
+      color: var(--link-underline)
+    }
+    ul {
+      li:hover {
+        font-size: 1rem;
+        font-weight: 500;
+        box-shadow: none;
+      }
+    }
+    .project-box-image {
+      filter: grayscale(100%) sepia(0.2) opacity(0.75);
+    }
+  }
+  .project-box:hover {
+    // border: solid 0.3rem var(--link-underline);
+    animation: card_breathe 1s infinite alternate linear;
+    // box-shadow: 0 0.2rem gray;
+    // padding: 1rem 1rem 0.7rem 1rem;
+    // border: solid 0.3rem rgba(255, 255, 255, 0);
+    .project-box-image{
+      filter: none;
+    }
+  }
+  .post-list-item:hover {
+    animation: card_breathe 1s infinite alternate linear;
+  }
 }

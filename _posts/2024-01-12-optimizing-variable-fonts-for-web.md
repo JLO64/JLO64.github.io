@@ -63,7 +63,7 @@ Brotli is a lot more interesting to me. It's a general purpose lossless compress
 ### Step 2: Run the Command
 
 ```
-pyftsubset FontName.ttf --unicodes="U+0020-007" --layout-features='*' --flavor="woff2" --output-file="FontName.woff2"
+pyftsubset FontName.ttf --unicodes="U+0000-007F" --layout-features='*' --flavor="woff2" --output-file="FontName.woff2"
 ```
 
 `unicodes` specifies what [Unicode blocks](https://en.m.wikipedia.org/wiki/Unicode_block#List_of_blocks) should be included in the file you’re generating. Since I only ever write in English and don’t use wacky characters on my site, I chose to limit myself to only the ”Basic Latin” block (`U+0020-007`). 

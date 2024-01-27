@@ -31,6 +31,21 @@ layout: default
   </div>
   <div class="homepage_flex_divs_projects">
     <h2>Projects</h2>
-    {% include card_list.html collection=site.data.home.project_entries %}
+    <ul class="project-box-container">
+      {% for project_entry in site.data.projects.home %}
+        <li class="project-box">
+          <img src="{{project_entry.image}}" class="project-box-image"></img>
+          <div class="project-box-contents">
+            <a href="{{ project_entry.url }}"><h3>{{project_entry.title}}</h3></a>
+            <h4>{{project_entry.year}}: {{project_entry.status}}</h4>
+            <ul class="tag-ul">
+              {% for tag in project_entry.tags %}
+                <li class="tag">{{ tag }}</li>
+              {% endfor %}
+            </ul>
+            <p>{{ project_entry.description }}</p>
+          </div>
+        </li>
+      {% endfor %}
   </div>
 </div>

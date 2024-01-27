@@ -39,7 +39,6 @@
         {{ content }}
         <div class="not-dashed" style="margin-top: 2rem;"></div>
         <div class="credits">
-          <p>&copy;&nbsp;{{ "now" | date: "%Y" }}&nbsp;{{site.author}}</p>
           <ul class="credit-links">
             <li>
               Powered by <a href="https://jekyllrb.com" target="_blank" rel="noreferrer">Jekyll</a>
@@ -62,6 +61,9 @@
               <div class="darktheme-club">
                 <a target="blank" href="https://darktheme.club/"><span class="darktheme-club-no-bg">darktheme.club</span><span class="darktheme-club-bg">Member</span></a>
               </div>
+            </li>
+            <li style="height: fit-content; margin: auto 0rem;">
+              <p>&copy;&nbsp;{{ "now" | date: "%Y" }}&nbsp;{{site.author}}</p>
             </li>
             <li class="goatcounter">Views for this page:<div id="stats">?</div>stats by GoatCounter</li>
           </ul>
