@@ -1,4 +1,11 @@
 websites:
+  - title: "Trojan Tutoring"
+    url: https://www.trojantutoring.org/
+    description: A club that tutors low income students.
+    status: Active
+    image: "/assets/images/projects/TT_project_export.webp"
+    year: "2024"
+
   - title: "Knights of Columbus: Council #2431"
     url: https://kofc.julianlopez.net/
     description: The website for my council.
