@@ -5,18 +5,19 @@
   let menubutton = document.querySelector('#topbar-menu');
   let menubutton_img = menubutton.querySelector('img');
   let topbar_bottom_row = document.querySelector('.topbar-bottom-row');
+  let topbar = document.querySelector('.topbar');
   let showing_topbar_bottom_row = false;
   function mobileMenuInitializer () {
     menubutton.addEventListener('click', () => {
     if (showing_topbar_bottom_row) {
       showing_topbar_bottom_row = false;
-      topbar_bottom_row.style.display = "none";
+      topbar.classList.remove("topbar-expand");
       menubutton_img.src = "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/a1232e34553634c5363aa62c8d1b02161a4438e1/svgs/solid/bars.svg"
     }
     else
     {
+      topbar.classList.add("topbar-expand");
       showing_topbar_bottom_row = true;
-      topbar_bottom_row.style.display = "flex";
       menubutton_img.src = "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/a1232e34553634c5363aa62c8d1b02161a4438e1/svgs/solid/xmark.svg"
     }
     })

@@ -1,19 +1,24 @@
 .topbar {
     margin: 1rem auto 0;
     background-color: black;
-    border-radius: 2rem;  
+    border-radius: 1.8rem;  
     padding: 0 0.5rem;
     width: fit-content;
     border: 2px solid var(--topbar-border);
+    max-height: 3.5rem;
+    overflow-y: hidden;
+    transition: max-height 0.25s ease-out;
   }
+.topbar-expand {
+  max-height: 8rem;
+}
   .topbar-top-row {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
   }
   .topbar-bottom-row {
-    display: none;
-    // display: flex;
+    display: flex;
     justify-content: space-evenly;
     align-items: center;
   }
@@ -67,6 +72,7 @@
     border: none;
     cursor: pointer;
     margin: 0.7rem 0rem;
+    width: 3rem;
   
     img {
       filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(80deg) brightness(100%) contrast(109%);

@@ -163,4 +163,10 @@
   .post-list-item:hover {
     animation: card_breathe 1s infinite alternate linear;
   }
+  .topbar {
+    max-height: fit-content;
+  }
+  .topbar-bottom-row {
+    display: none;
+  }
 }
