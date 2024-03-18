@@ -283,11 +283,11 @@
       <ul class="tag-ul">
         
         
-          <li class="tag"><a href="/tag/fountain-pens">fountain pens</a></li>
+          <a href="/tag/fountain-pens"><li class="tag">fountain pens</li></a>
         
-          <li class="tag"><a href="/tag/notebooks">notebooks</a></li>
+          <a href="/tag/notebooks"><li class="tag">notebooks</li></a>
         
-          <li class="tag"><a href="/tag/writing">writing</a></li>
+          <a href="/tag/writing"><li class="tag">writing</li></a>
         
       </ul>
       <p style="font-style: italic;"> I break down everything that I currently carry in my pockets on a daily basis. It includes my phone, earbuds, a pen, and a notebook. </p>
@@ -347,4 +347,22 @@
     }
   </script>
   <script data-goatcounter="https://jlo64.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+  <script>
+    function addAnimation(elements, animation) {
+    elements.forEach(item => {
+      item.addEventListener('animationend', () => {
+        item.style.animation = animation;
+      });
+      item.addEventListener('mouseleave', () => {
+        item.style.animation = '';
+      });
+    });
+  }
+  
+  addAnimation(document.querySelectorAll('.post-list-item'), 'card_breathe 0.5s infinite alternate linear');
+  addAnimation(document.querySelectorAll('.project-box'), 'card_breathe 0.5s infinite alternate linear');
+  
+  </script>
+
 </html>

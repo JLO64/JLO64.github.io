@@ -291,11 +291,11 @@
     <ul class="tag-ul" style="margin: 0.2rem;"></ul>
       
       
-      <li class="tag" style="margin: 0.2rem;"><a href="/tag/fountain-pens">fountain pens</a></li>
+      <a href="/tag/fountain-pens"><li class="tag" style="margin: 0.2rem;">fountain pens</li></a>
       
-      <li class="tag" style="margin: 0.2rem;"><a href="/tag/notebooks">notebooks</a></li>
+      <a href="/tag/notebooks"><li class="tag" style="margin: 0.2rem;">notebooks</li></a>
       
-      <li class="tag" style="margin: 0.2rem;"><a href="/tag/writing">writing</a></li>
+      <a href="/tag/writing"><li class="tag" style="margin: 0.2rem;">writing</li></a>
       
     </ul>
   </div>
@@ -435,4 +435,22 @@
     }
   </script>
   <script data-goatcounter="https://jlo64.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+  <script>
+    function addAnimation(elements, animation) {
+    elements.forEach(item => {
+      item.addEventListener('animationend', () => {
+        item.style.animation = animation;
+      });
+      item.addEventListener('mouseleave', () => {
+        item.style.animation = '';
+      });
+    });
+  }
+  
+  addAnimation(document.querySelectorAll('.post-list-item'), 'card_breathe 0.5s infinite alternate linear');
+  addAnimation(document.querySelectorAll('.project-box'), 'card_breathe 0.5s infinite alternate linear');
+  
+  </script>
+
 </html>

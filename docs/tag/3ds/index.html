@@ -283,7 +283,7 @@
       <ul class="tag-ul">
         
         
-          <li class="tag"><a href="/tag/3ds">3ds</a></li>
+          <a href="/tag/3ds"><li class="tag">3ds</li></a>
         
       </ul>
       <p style="font-style: italic;"> I bought a used 3DS that had some issues which caused it to crash while playing games. Turns out it just needed to be cleaned and have its old SD card replaced! </p>
@@ -297,7 +297,7 @@
       <ul class="tag-ul">
         
         
-          <li class="tag"><a href="/tag/3ds">3ds</a></li>
+          <a href="/tag/3ds"><li class="tag">3ds</li></a>
         
       </ul>
       <p style="font-style: italic;"> I discuss my history with the Nintendo 3DS and how I have hacked it to run all sorts of homebrew software. Whether its emulating old games or installing custom themes, there a wide variety of options to choose from! </p>
@@ -357,4 +357,22 @@
     }
   </script>
   <script data-goatcounter="https://jlo64.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+  <script>
+    function addAnimation(elements, animation) {
+    elements.forEach(item => {
+      item.addEventListener('animationend', () => {
+        item.style.animation = animation;
+      });
+      item.addEventListener('mouseleave', () => {
+        item.style.animation = '';
+      });
+    });
+  }
+  
+  addAnimation(document.querySelectorAll('.post-list-item'), 'card_breathe 0.5s infinite alternate linear');
+  addAnimation(document.querySelectorAll('.project-box'), 'card_breathe 0.5s infinite alternate linear');
+  
+  </script>
+
 </html>

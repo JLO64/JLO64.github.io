@@ -291,7 +291,7 @@
       <ul class="tag-ul">
         
         
-          <li class="tag"><a href="/tag/webdev">webdev</a></li>
+          <a href="/tag/webdev"><li class="tag">webdev</li></a>
         
       </ul>
       <p> I used to take pride that my blog was beneath a certain size, but that changed when I used a variable font. However, I managed to optimize it to be even smaller than before! </p>
@@ -355,4 +355,22 @@
     }
   </script>
   <script data-goatcounter="https://jlo64.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+  <script>
+    function addAnimation(elements, animation) {
+    elements.forEach(item => {
+      item.addEventListener('animationend', () => {
+        item.style.animation = animation;
+      });
+      item.addEventListener('mouseleave', () => {
+        item.style.animation = '';
+      });
+    });
+  }
+  
+  addAnimation(document.querySelectorAll('.post-list-item'), 'card_breathe 0.5s infinite alternate linear');
+  addAnimation(document.querySelectorAll('.project-box'), 'card_breathe 0.5s infinite alternate linear');
+  
+  </script>
+
 </html>

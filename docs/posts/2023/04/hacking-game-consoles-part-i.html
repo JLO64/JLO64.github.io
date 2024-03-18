@@ -291,7 +291,7 @@
     <ul class="tag-ul" style="margin: 0.2rem;"></ul>
       
       
-      <li class="tag" style="margin: 0.2rem;"><a href="/tag/3ds">3ds</a></li>
+      <a href="/tag/3ds"><li class="tag" style="margin: 0.2rem;">3ds</li></a>
       
     </ul>
   </div>
@@ -521,4 +521,22 @@ Personally, I am content with my original 3DS, but that’s mainly because of th
     }
   </script>
   <script data-goatcounter="https://jlo64.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+  <script>
+    function addAnimation(elements, animation) {
+    elements.forEach(item => {
+      item.addEventListener('animationend', () => {
+        item.style.animation = animation;
+      });
+      item.addEventListener('mouseleave', () => {
+        item.style.animation = '';
+      });
+    });
+  }
+  
+  addAnimation(document.querySelectorAll('.post-list-item'), 'card_breathe 0.5s infinite alternate linear');
+  addAnimation(document.querySelectorAll('.project-box'), 'card_breathe 0.5s infinite alternate linear');
+  
+  </script>
+
 </html>

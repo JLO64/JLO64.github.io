@@ -291,7 +291,7 @@
     <ul class="tag-ul" style="margin: 0.2rem;"></ul>
       
       
-      <li class="tag" style="margin: 0.2rem;"><a href="/tag/webdev">webdev</a></li>
+      <a href="/tag/webdev"><li class="tag" style="margin: 0.2rem;">webdev</li></a>
       
     </ul>
   </div>
@@ -440,4 +440,22 @@ despite successfully using it in the past I couldn’t get it to work with this 
     }
   </script>
   <script data-goatcounter="https://jlo64.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+  <script>
+    function addAnimation(elements, animation) {
+    elements.forEach(item => {
+      item.addEventListener('animationend', () => {
+        item.style.animation = animation;
+      });
+      item.addEventListener('mouseleave', () => {
+        item.style.animation = '';
+      });
+    });
+  }
+  
+  addAnimation(document.querySelectorAll('.post-list-item'), 'card_breathe 0.5s infinite alternate linear');
+  addAnimation(document.querySelectorAll('.project-box'), 'card_breathe 0.5s infinite alternate linear');
+  
+  </script>
+
 </html>

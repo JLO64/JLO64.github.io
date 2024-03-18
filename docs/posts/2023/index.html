@@ -291,13 +291,13 @@
       <ul class="tag-ul">
         
         
-          <li class="tag"><a href="/tag/css">css</a></li>
+          <a href="/tag/css"><li class="tag">css</li></a>
         
-          <li class="tag"><a href="/tag/html">html</a></li>
+          <a href="/tag/html"><li class="tag">html</li></a>
         
-          <li class="tag"><a href="/tag/javascript">javascript</a></li>
+          <a href="/tag/javascript"><li class="tag">javascript</li></a>
         
-          <li class="tag"><a href="/tag/webdev">webdev</a></li>
+          <a href="/tag/webdev"><li class="tag">webdev</li></a>
         
       </ul>
       <p> I have stolen code from other's websites to use for my own site. I show off what I took and how I used it with CodePen samples. </p>
@@ -311,11 +311,11 @@
       <ul class="tag-ul">
         
         
-          <li class="tag"><a href="/tag/jekyll">jekyll</a></li>
+          <a href="/tag/jekyll"><li class="tag">jekyll</li></a>
         
-          <li class="tag"><a href="/tag/nginx">nginx</a></li>
+          <a href="/tag/nginx"><li class="tag">nginx</li></a>
         
-          <li class="tag"><a href="/tag/webdev">webdev</a></li>
+          <a href="/tag/webdev"><li class="tag">webdev</li></a>
         
       </ul>
       <p> I've been having issues with a VS Code plugin I use to preview my Jekyll blog. Thus, I've decided to stop using it and use a different method instead. </p>
@@ -329,13 +329,13 @@
       <ul class="tag-ul">
         
         
-          <li class="tag"><a href="/tag/aws">aws</a></li>
+          <a href="/tag/aws"><li class="tag">aws</li></a>
         
-          <li class="tag"><a href="/tag/blogging">blogging</a></li>
+          <a href="/tag/blogging"><li class="tag">blogging</li></a>
         
-          <li class="tag"><a href="/tag/jekyll">jekyll</a></li>
+          <a href="/tag/jekyll"><li class="tag">jekyll</li></a>
         
-          <li class="tag"><a href="/tag/webdev">webdev</a></li>
+          <a href="/tag/webdev"><li class="tag">webdev</li></a>
         
       </ul>
       <p> For a Japanese class I took, I had to make a blog for a project. I recently revamped it by switching its hosting to GitHub Pages. </p>
@@ -349,11 +349,11 @@
       <ul class="tag-ul">
         
         
-          <li class="tag"><a href="/tag/fountain-pens">fountain pens</a></li>
+          <a href="/tag/fountain-pens"><li class="tag">fountain pens</li></a>
         
-          <li class="tag"><a href="/tag/notebooks">notebooks</a></li>
+          <a href="/tag/notebooks"><li class="tag">notebooks</li></a>
         
-          <li class="tag"><a href="/tag/writing">writing</a></li>
+          <a href="/tag/writing"><li class="tag">writing</li></a>
         
       </ul>
       <p> I break down everything that I currently carry in my pockets on a daily basis. It includes my phone, earbuds, a pen, and a notebook. </p>
@@ -367,9 +367,9 @@
       <ul class="tag-ul">
         
         
-          <li class="tag"><a href="/tag/nginx">nginx</a></li>
+          <a href="/tag/nginx"><li class="tag">nginx</li></a>
         
-          <li class="tag"><a href="/tag/webdev">webdev</a></li>
+          <a href="/tag/webdev"><li class="tag">webdev</li></a>
         
       </ul>
       <p> I recently bought a domain and set it up for my blog and other stuff I use. I did so by setting up subdomains with AWS Route 53 and Nginx. </p>
@@ -383,9 +383,9 @@
       <ul class="tag-ul">
         
         
-          <li class="tag"><a href="/tag/fountain-pens">fountain pens</a></li>
+          <a href="/tag/fountain-pens"><li class="tag">fountain pens</li></a>
         
-          <li class="tag"><a href="/tag/thoughts">thoughts</a></li>
+          <a href="/tag/thoughts"><li class="tag">thoughts</li></a>
         
       </ul>
       <p> I lack access to the best tools, which I have learned to accept and adapt to. I have a certain friend who does the opposite, and simply buys the best tools for his needs. </p>
@@ -411,7 +411,7 @@
       <ul class="tag-ul">
         
         
-          <li class="tag"><a href="/tag/thoughts">thoughts</a></li>
+          <a href="/tag/thoughts"><li class="tag">thoughts</li></a>
         
       </ul>
       <p> Making phone calls to a customer support line always sucks, unless it's to these three companies. </p>
@@ -437,7 +437,7 @@
       <ul class="tag-ul">
         
         
-          <li class="tag"><a href="/tag/3ds">3ds</a></li>
+          <a href="/tag/3ds"><li class="tag">3ds</li></a>
         
       </ul>
       <p> I bought a used 3DS that had some issues which caused it to crash while playing games. Turns out it just needed to be cleaned and have its old SD card replaced! </p>
@@ -451,11 +451,11 @@
       <ul class="tag-ul">
         
         
-          <li class="tag"><a href="/tag/aws">aws</a></li>
+          <a href="/tag/aws"><li class="tag">aws</li></a>
         
-          <li class="tag"><a href="/tag/openai">openai</a></li>
+          <a href="/tag/openai"><li class="tag">openai</li></a>
         
-          <li class="tag"><a href="/tag/python">python</a></li>
+          <a href="/tag/python"><li class="tag">python</li></a>
         
       </ul>
       <p> I used to have a dumb problem involving the McDonald's app, so I made a way to fake screenshots of it. I describe how I did this with AWS Lambda, OpenAI APIs, and PIL. </p>
@@ -469,7 +469,7 @@
       <ul class="tag-ul">
         
         
-          <li class="tag"><a href="/tag/3ds">3ds</a></li>
+          <a href="/tag/3ds"><li class="tag">3ds</li></a>
         
       </ul>
       <p> I discuss my history with the Nintendo 3DS and how I have hacked it to run all sorts of homebrew software. Whether its emulating old games or installing custom themes, there a wide variety of options to choose from! </p>
@@ -533,4 +533,22 @@
     }
   </script>
   <script data-goatcounter="https://jlo64.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+  <script>
+    function addAnimation(elements, animation) {
+    elements.forEach(item => {
+      item.addEventListener('animationend', () => {
+        item.style.animation = animation;
+      });
+      item.addEventListener('mouseleave', () => {
+        item.style.animation = '';
+      });
+    });
+  }
+  
+  addAnimation(document.querySelectorAll('.post-list-item'), 'card_breathe 0.5s infinite alternate linear');
+  addAnimation(document.querySelectorAll('.project-box'), 'card_breathe 0.5s infinite alternate linear');
+  
+  </script>
+
 </html>

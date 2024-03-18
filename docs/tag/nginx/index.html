@@ -283,11 +283,11 @@
       <ul class="tag-ul">
         
         
-          <li class="tag"><a href="/tag/jekyll">jekyll</a></li>
+          <a href="/tag/jekyll"><li class="tag">jekyll</li></a>
         
-          <li class="tag"><a href="/tag/nginx">nginx</a></li>
+          <a href="/tag/nginx"><li class="tag">nginx</li></a>
         
-          <li class="tag"><a href="/tag/webdev">webdev</a></li>
+          <a href="/tag/webdev"><li class="tag">webdev</li></a>
         
       </ul>
       <p style="font-style: italic;"> I've been having issues with a VS Code plugin I use to preview my Jekyll blog. Thus, I've decided to stop using it and use a different method instead. </p>
@@ -301,9 +301,9 @@
       <ul class="tag-ul">
         
         
-          <li class="tag"><a href="/tag/nginx">nginx</a></li>
+          <a href="/tag/nginx"><li class="tag">nginx</li></a>
         
-          <li class="tag"><a href="/tag/webdev">webdev</a></li>
+          <a href="/tag/webdev"><li class="tag">webdev</li></a>
         
       </ul>
       <p style="font-style: italic;"> I recently bought a domain and set it up for my blog and other stuff I use. I did so by setting up subdomains with AWS Route 53 and Nginx. </p>
@@ -363,4 +363,22 @@
     }
   </script>
   <script data-goatcounter="https://jlo64.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+  <script>
+    function addAnimation(elements, animation) {
+    elements.forEach(item => {
+      item.addEventListener('animationend', () => {
+        item.style.animation = animation;
+      });
+      item.addEventListener('mouseleave', () => {
+        item.style.animation = '';
+      });
+    });
+  }
+  
+  addAnimation(document.querySelectorAll('.post-list-item'), 'card_breathe 0.5s infinite alternate linear');
+  addAnimation(document.querySelectorAll('.project-box'), 'card_breathe 0.5s infinite alternate linear');
+  
+  </script>
+
 </html>

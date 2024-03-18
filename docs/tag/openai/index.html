@@ -283,11 +283,11 @@
       <ul class="tag-ul">
         
         
-          <li class="tag"><a href="/tag/aws">aws</a></li>
+          <a href="/tag/aws"><li class="tag">aws</li></a>
         
-          <li class="tag"><a href="/tag/openai">openai</a></li>
+          <a href="/tag/openai"><li class="tag">openai</li></a>
         
-          <li class="tag"><a href="/tag/python">python</a></li>
+          <a href="/tag/python"><li class="tag">python</li></a>
         
       </ul>
       <p style="font-style: italic;"> I used to have a dumb problem involving the McDonald's app, so I made a way to fake screenshots of it. I describe how I did this with AWS Lambda, OpenAI APIs, and PIL. </p>
@@ -347,4 +347,22 @@
     }
   </script>
   <script data-goatcounter="https://jlo64.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+  <script>
+    function addAnimation(elements, animation) {
+    elements.forEach(item => {
+      item.addEventListener('animationend', () => {
+        item.style.animation = animation;
+      });
+      item.addEventListener('mouseleave', () => {
+        item.style.animation = '';
+      });
+    });
+  }
+  
+  addAnimation(document.querySelectorAll('.post-list-item'), 'card_breathe 0.5s infinite alternate linear');
+  addAnimation(document.querySelectorAll('.project-box'), 'card_breathe 0.5s infinite alternate linear');
+  
+  </script>
+
 </html>

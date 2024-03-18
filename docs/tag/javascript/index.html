@@ -283,13 +283,13 @@
       <ul class="tag-ul">
         
         
-          <li class="tag"><a href="/tag/css">css</a></li>
+          <a href="/tag/css"><li class="tag">css</li></a>
         
-          <li class="tag"><a href="/tag/html">html</a></li>
+          <a href="/tag/html"><li class="tag">html</li></a>
         
-          <li class="tag"><a href="/tag/javascript">javascript</a></li>
+          <a href="/tag/javascript"><li class="tag">javascript</li></a>
         
-          <li class="tag"><a href="/tag/webdev">webdev</a></li>
+          <a href="/tag/webdev"><li class="tag">webdev</li></a>
         
       </ul>
       <p style="font-style: italic;"> I have stolen code from other's websites to use for my own site. I show off what I took and how I used it with CodePen samples. </p>
@@ -349,4 +349,22 @@
     }
   </script>
   <script data-goatcounter="https://jlo64.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+  <script>
+    function addAnimation(elements, animation) {
+    elements.forEach(item => {
+      item.addEventListener('animationend', () => {
+        item.style.animation = animation;
+      });
+      item.addEventListener('mouseleave', () => {
+        item.style.animation = '';
+      });
+    });
+  }
+  
+  addAnimation(document.querySelectorAll('.post-list-item'), 'card_breathe 0.5s infinite alternate linear');
+  addAnimation(document.querySelectorAll('.project-box'), 'card_breathe 0.5s infinite alternate linear');
+  
+  </script>
+
 </html>

@@ -291,11 +291,11 @@
     <ul class="tag-ul" style="margin: 0.2rem;"></ul>
       
       
-      <li class="tag" style="margin: 0.2rem;"><a href="/tag/aws">aws</a></li>
+      <a href="/tag/aws"><li class="tag" style="margin: 0.2rem;">aws</li></a>
       
-      <li class="tag" style="margin: 0.2rem;"><a href="/tag/openai">openai</a></li>
+      <a href="/tag/openai"><li class="tag" style="margin: 0.2rem;">openai</li></a>
       
-      <li class="tag" style="margin: 0.2rem;"><a href="/tag/python">python</a></li>
+      <a href="/tag/python"><li class="tag" style="margin: 0.2rem;">python</li></a>
       
     </ul>
   </div>
@@ -587,4 +587,22 @@ However, in hindsight there was a simple answer to this question.</p>
     }
   </script>
   <script data-goatcounter="https://jlo64.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+  <script>
+    function addAnimation(elements, animation) {
+    elements.forEach(item => {
+      item.addEventListener('animationend', () => {
+        item.style.animation = animation;
+      });
+      item.addEventListener('mouseleave', () => {
+        item.style.animation = '';
+      });
+    });
+  }
+  
+  addAnimation(document.querySelectorAll('.post-list-item'), 'card_breathe 0.5s infinite alternate linear');
+  addAnimation(document.querySelectorAll('.project-box'), 'card_breathe 0.5s infinite alternate linear');
+  
+  </script>
+
 </html>

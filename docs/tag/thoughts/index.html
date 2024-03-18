@@ -283,9 +283,9 @@
       <ul class="tag-ul">
         
         
-          <li class="tag"><a href="/tag/fountain-pens">fountain pens</a></li>
+          <a href="/tag/fountain-pens"><li class="tag">fountain pens</li></a>
         
-          <li class="tag"><a href="/tag/thoughts">thoughts</a></li>
+          <a href="/tag/thoughts"><li class="tag">thoughts</li></a>
         
       </ul>
       <p style="font-style: italic;"> I lack access to the best tools, which I have learned to accept and adapt to. I have a certain friend who does the opposite, and simply buys the best tools for his needs. </p>
@@ -299,7 +299,7 @@
       <ul class="tag-ul">
         
         
-          <li class="tag"><a href="/tag/thoughts">thoughts</a></li>
+          <a href="/tag/thoughts"><li class="tag">thoughts</li></a>
         
       </ul>
       <p style="font-style: italic;"> Making phone calls to a customer support line always sucks, unless it's to these three companies. </p>
@@ -359,4 +359,22 @@
     }
   </script>
   <script data-goatcounter="https://jlo64.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+  <script>
+    function addAnimation(elements, animation) {
+    elements.forEach(item => {
+      item.addEventListener('animationend', () => {
+        item.style.animation = animation;
+      });
+      item.addEventListener('mouseleave', () => {
+        item.style.animation = '';
+      });
+    });
+  }
+  
+  addAnimation(document.querySelectorAll('.post-list-item'), 'card_breathe 0.5s infinite alternate linear');
+  addAnimation(document.querySelectorAll('.project-box'), 'card_breathe 0.5s infinite alternate linear');
+  
+  </script>
+
 </html>
