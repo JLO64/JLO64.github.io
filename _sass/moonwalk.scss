@@ -230,6 +230,9 @@ ul {
   display: block;
   height: fit-content;
 }
+a[href*="/tag/"] {
+  text-decoration: none;
+}
 
 .blog_image {
   border-radius: 1.5rem;

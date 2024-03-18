@@ -18,7 +18,7 @@
     <ul class="tag-ul" style="margin: 0.2rem;"></ul>
       {% assign sorted_page_tags = page.tags | sort %}
       {% for tag in sorted_page_tags %}
-      <li class="tag" style="margin: 0.2rem;"><a href="/tag/{{ tag }}">{{ tag | replace: "-", " " }}</a></li>
+      <a href="/tag/{{ tag }}"><li class="tag" style="margin: 0.2rem;">{{ tag | replace: "-", " " }}</li></a>
       {% endfor %}
     </ul>
   </div>

@@ -9,7 +9,7 @@ layout: default
     {% assign sorted_site_tags = site.tags | sort %}
     {% for tags in sorted_site_tags %}
       {% assign tag = tags[0] %}
-      <li class="tag"><a href="/tag/{{ tag }}">{{ tag | replace: "-", " " }}</a></li>
+      <a href="/tag/{{ tag }}"><li class="tag">{{ tag | replace: "-", " " }}</li></a>
     {% endfor %}
   </ul>
   

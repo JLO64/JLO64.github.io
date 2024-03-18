@@ -19,7 +19,7 @@ layout: default
       <ul class="tag-ul">
         {% assign sorted_tags = post.tags | sort %}
         {% for tag in sorted_tags %}
-          <li class="tag"><a href="/tag/{{ tag }}">{{ tag | replace: "-", " " }}</a></li>
+          <a href="/tag/{{ tag }}"><li class="tag">{{ tag | replace: "-", " " }}</li></a>
         {% endfor %}
       </ul>
       <p style="font-style: italic;"> {{ post.description }} </p>
