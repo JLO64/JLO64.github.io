@@ -7,6 +7,14 @@
     box-shadow: 0 0 4rem var(--link-underline);
   }
 }
+@keyframes initial_card_breathe {
+  from {
+    box-shadow: 0 0 0 var(--link-underline);
+  }
+  to {
+    box-shadow: 0 0 1.2rem var(--link-underline);
+  }
+}
 @keyframes card_breathe {
   0%, 20% {
     box-shadow: 0 0 1.2rem var(--link-underline);

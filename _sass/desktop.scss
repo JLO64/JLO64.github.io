@@ -56,15 +56,6 @@
   }
   h1:hover  {font-size: 2.5rem;}  
   h2:hover  {font-size: 2rem;}
-  .card:hover {
-    animation: card_breathe 0.7s infinite alternate ease-in-out;
-    padding: 1rem;
-    a {
-      text-shadow: none;
-      font-size: 100%;
-      font-weight: normal;
-    }
-  }
   .blog_image {
     height: 40vh;
   }
@@ -151,17 +142,15 @@
     }
   }
   .project-box:hover {
-    // border: solid 0.3rem var(--link-underline);
-    animation: card_breathe 1s infinite alternate linear;
-    // box-shadow: 0 0.2rem gray;
-    // padding: 1rem 1rem 0.7rem 1rem;
-    // border: solid 0.3rem rgba(255, 255, 255, 0);
+    // animation: card_breathe 1s infinite alternate linear;
+    animation: initial_card_breathe 0.3s forwards;
     .project-box-image{
       filter: none;
+      border-radius: 1rem;
     }
   }
   .post-list-item:hover {
-    animation: card_breathe 1s infinite alternate linear;
+    animation: initial_card_breathe 0.3s forwards;
   }
   .topbar {
     max-height: fit-content;

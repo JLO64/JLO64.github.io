@@ -314,14 +314,14 @@ header {
     max-width: 80vw;
     width: 28rem;
     padding: 1rem;
-    transition: 0.2s ease-in;
     .project-box-image{
       height: 5rem;
       width: 5rem;
       margin: auto 1rem auto 0rem;
       background-color: red;
-      transition: 0.2s ease-in;
-      border-radius: 0.4rem;
+      transition: filter 0.2s ease-in;
+      transition: border-radius 0.2s ease-in;
+      border-radius: 1.8rem;
     }
     .project-box-contents{
       width: 22rem;
