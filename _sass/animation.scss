@@ -33,15 +33,6 @@
     box-shadow: 0 0 0 0.5rem var(--link-underline);
   }
 }
-@keyframes img_glow_breathe {
-  0%, 20% {
-    box-shadow: 0 0 6rem var(--link-underline);
-  }
-
-  80%, 100% {
-    box-shadow: 0 0 2rem var(--link-underline);
-  }
-}
 @keyframes a_breathe {
   0%, 20% {
     text-shadow: 0 0 1.1rem var(--link-underline);
