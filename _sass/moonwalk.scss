@@ -146,12 +146,37 @@ p code, li code {
     margin: 0rem auto;
   }    
 }
-.credit-links {
-  margin: 0 0.1rem;
-  font-size: 0.9rem;
-}
 
 a.credit-color-box {
+	text-decoration: none;
+  font-weight: 600;
+  transition: 0.1s;
+  display: flex;
+  width: 9.6rem;
+  p{
+    margin: 0;
+    color: #212121;
+    height: 2rem;
+    line-height: 2rem;
+    padding: 0rem;
+    font-size: 0.9rem;
+    animation: none !important;
+  }
+  .left{
+    border-radius: 1rem 0 0 1rem;
+    padding: 0rem 0.3rem 0rem 0.5rem;
+    // padding-left: 0.4rem;
+    text-align: center;
+    min-width: fit-content;
+  }
+  .right {
+    border-radius: 0 1rem 1rem 0;
+    text-align: center;
+    width: -webkit-fill-available;
+  }
+}
+
+a.club-color-box {
 	text-decoration: none;
   font-weight: 600;
   transition: 0.1s;
@@ -165,12 +190,6 @@ a.credit-color-box {
     line-height: 2rem;
     padding: 0 0.8rem;
     animation: none !important;
-  }
-  .left{
-    border-radius: 1rem 0 0 1rem;
-  }
-  .right {
-    border-radius: 0 1rem 1rem 0;
   }
 }
 
@@ -239,7 +258,8 @@ a.credit-color-box {
     background: #EA7717;
     color: white !important;
     border-radius: 1rem;
-    padding: 0rem 2.4rem !important;
+    width: -webkit-fill-available;
+    // padding: 0rem 2.4rem !important;
   }
 }
 
@@ -254,6 +274,7 @@ a.credit-color-box {
     font-size: 1.4rem;
     color: white !important;
     font-weight: 700;
+    line-height: 1.6rem;
   }
 }
 
@@ -378,7 +399,8 @@ header {
       background-color: red;
       transition: filter 0.2s ease-in;
       transition: border-radius 0.2s ease-in;
-      border-radius: 1.8rem;
+      // border-radius: 1.8rem;
+      border-radius: 1.4rem;
     }
     .project-box-contents{
       width: 22rem;
