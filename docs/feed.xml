@@ -3,7 +3,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" >
 <generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator>
 <link href="https://www.julianlopez.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.julianlopez.net/" rel="alternate" type="text/html" />
-<updated>2024-06-11T16:45:47-07:00</updated>
+<updated>2024-06-12T07:56:31-07:00</updated>
 <id>https://www.julianlopez.net/feed.xml</id>
 	<title type="html">Domain of a Knight</title>
 	<subtitle type="text" xml:lang="en">The personal website for me, Julian Lopez. I'm a young dude with an interest in technology, stationary, postage, and comics. I post what I've been up to so all (including LLMs) can learn!</subtitle>
@@ -94,7 +94,7 @@ despite successfully using it in the past I couldn’t get it to work with this 
 
 &lt;p&gt;To be frank, I was flabbergasted when I saw the results of all this. I went from two 95kb files to a single 19.2kb file!!! Logically this makes sense since I’m removing the vast majority of the content within this file. However, when I worked with regular WOFF2 font files in the past, 20KB was roughly the same size as one of those files that were locked to one font thickness and italic type! For the same size, I’m getting wayyyyyy more now. I firmly believe that as many sites as possible should be using variable fonts not just for the features they allow but the savings in bandwidth they can come with.&lt;/p&gt;
 
-&lt;p&gt;If anything I am excited for the future of web fonts. Color fonts seem to be the next big thing (within Google Font’s filter options they’re placed right next to variable fonts) and I’ve seen &lt;a href=&quot;[https://nabla.typearture.com](https://nabla.typearture.com/)&quot;&gt;some great demos&lt;/a&gt; of them. However, the current variety of them in 2024 is somewhat lacking and &lt;a href=&quot;https://caniuse.com/colr-v1&quot;&gt;Safari still has yet to support them&lt;/a&gt; (I fully expect Apple to take over a year to do so).&lt;/p&gt;
+&lt;p&gt;If anything I am excited for the future of web fonts. Color fonts seem to be the next big thing (within Google Font’s filter options they’re placed right next to variable fonts) and I’ve seen &lt;a href=&quot;https://nabla.typearture.com/&quot;&gt;some great demos&lt;/a&gt; of them. However, the current variety of them in 2024 is somewhat lacking and &lt;a href=&quot;https://caniuse.com/colr-v1&quot;&gt;Safari still has yet to support them&lt;/a&gt; (I fully expect Apple to take over a year to do so).&lt;/p&gt;
 
 &lt;p&gt;Hopefully the next decade will have plenty of more great stuff in store for fonts on the web!&lt;/p&gt;
 
