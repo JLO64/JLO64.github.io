@@ -80,6 +80,9 @@
   .credits {
     ul {
       justify-content: space-evenly;
+      li:hover{
+        box-shadow: 0 0 0 0.2rem var(--link-underline);
+      }
     }
   }
   .credit-links{

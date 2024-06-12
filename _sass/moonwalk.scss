@@ -140,7 +140,16 @@ p code, li code {
     li{
       display: block;
       min-width: fit-content;
+      box-shadow: 0 0.2rem 0.4rem 0.1rem grey;
+      transition: box-shadow 0.15s ease-in;
     }
+    li.club-credits {
+      border-radius: 1rem;
+      background-color: #C5D4C6;
+    }
+  }
+  ul.smol-credits li {
+    border-radius: 1rem;
   }
   p{
     margin: 0rem auto;
@@ -268,7 +277,7 @@ a.club-color-box {
   margin: auto 0rem;
   border: solid var(--link-underline) 0.5rem;
   padding: 0rem 0.8rem;
-  border-radius: 1.4rem;
+  border-radius: 1rem;
   background-color: var(--link-underline);
   p {
     font-size: 1.4rem;
