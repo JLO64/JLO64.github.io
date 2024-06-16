@@ -7,3 +7,4 @@ _site
 __pycache__/
 images/pictures-html.md
 _posts/test.txt
+.DS_Store
