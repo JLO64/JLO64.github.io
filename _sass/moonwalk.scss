@@ -139,7 +139,7 @@ p code, li code {
     margin: 0rem;
     li{
       display: block;
-      min-width: fit-content;
+      // min-width: fit-content;
       box-shadow: 0 0.2rem 0.4rem 0.1rem grey;
       transition: box-shadow 0.15s ease-in;
     }
@@ -148,9 +148,13 @@ p code, li code {
       background-color: #C5D4C6;
     }
   }
-  ul.smol-credits li {
-    border-radius: 1rem;
-    margin: 0.4rem 0.4rem;
+  ul.smol-credits {
+    justify-content: space-around;
+    li {
+      border-radius: 1rem;
+      margin: 0.4rem 0.4rem;
+      justify-content: space-around;
+    }
   }
   p{
     margin: 0rem auto;
@@ -162,14 +166,14 @@ a.credit-color-box {
   font-weight: 600;
   transition: 0.1s;
   display: flex;
-  width: 9.6rem;
+  width: 9.2rem;
   p{
     margin: 0;
     color: #212121;
     height: 2rem;
     line-height: 2rem;
     padding: 0rem;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     animation: none !important;
   }
   .left{
@@ -277,9 +281,10 @@ a.club-color-box {
   height: fit-content;
   margin: auto 0rem;
   border: solid var(--link-underline) 0.5rem;
-  padding: 0rem 0.8rem;
+  // padding: 0rem 0.8rem;
   border-radius: 1rem;
   background-color: var(--link-underline);
+  max-width: 90%;
   p {
     font-size: 1.4rem;
     color: white !important;
