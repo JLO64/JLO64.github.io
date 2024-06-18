@@ -1,13 +1,8 @@
 <p style="font-weight: bold; margin-top: 2.5rem; margin-bottom: 0rem;">
-  {% capture last_modified_date %}{% last_modified_at %}{% endcapture %}
   {% capture current_date %}{{ page.date | date: site.theme_config.date_format }}{% endcapture %}
   {% if page.date %}
     Posted On:
     <span>{{ current_date }}</span>
-    {% if last_modified_date != current_date %}
-      / Last Modified:
-      <span>{{ last_modified_date }}</span>
-    {% endif %}
   {% endif %}
 </p>
 
