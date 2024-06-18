@@ -49,3 +49,5 @@ jekyll-archives:
     tag: '/tag/:name/'
 
 # verbose: true
+
+timezone: America/Los_Angeles
