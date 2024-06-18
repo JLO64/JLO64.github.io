@@ -30,12 +30,12 @@ plugins:
   # - jekyll-feed
   #- jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-last-modified-at
+  # - jekyll-last-modified-at
   - jekyll-archives
   - python
 
-last-modified-at:
-    date-format: "%B %d %Y"
+# last-modified-at:
+    # date-format: "%B %d %Y"
 
 jekyll-archives:
   enabled:
