@@ -7,10 +7,10 @@ title: Subscribe
 
 Enter your email address below to be added to my mailing list. You will then (eventually) receive in your inbox my blog posts in email form.
 <form
-  action="https://buttondown.email/api/emails/embed-subscribe/JLO64"
+  action="https://buttondown.email/api/emails/embed-subscribe/julianlopez"
   method="post"
   target="popupwindow"
-  onsubmit="window.open('https://buttondown.email/JLO64', 'popupwindow')"
+  onsubmit="window.open('https://buttondown.email/julianlopez', 'popupwindow')"
   class="embeddable-buttondown-form"
 >
   <!-- <label for="bd-email">Enter your email</label> -->
@@ -18,7 +18,7 @@ Enter your email address below to be added to my mailing list. You will then (ev
   
   <input class="email_subscribe_button" type="submit" value="Subscribe" />
   <p>
-    <a href="https://buttondown.email/refer/JLO64" target="_blank">Powered by Buttondown.</a>
+    <a href="https://buttondown.email/refer/julianlopez" target="_blank">Powered by Buttondown.</a>
   </p>
 </form>
 
