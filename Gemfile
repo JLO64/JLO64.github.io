@@ -9,4 +9,5 @@ group :jekyll_plugins do
   gem "python"
 end
 
-  gem 'jekyll-archives'
+gem 'jekyll-archives'
+gem 'rss'

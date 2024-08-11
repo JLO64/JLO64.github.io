@@ -73,6 +73,8 @@ GEM
       ffi (~> 1.0)
     rexml (3.2.5)
     rouge (3.23.0)
+    rss (0.2.9)
+      rexml
     safe_yaml (1.0.5)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -90,6 +92,7 @@ DEPENDENCIES
   jekyll-sitemap
   moonwalk!
   python
+  rss
 
 BUNDLED WITH
    2.2.21
