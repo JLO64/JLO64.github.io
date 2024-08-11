@@ -48,23 +48,25 @@ layout: default
         </li>
       {% endfor %}
   </div>
-  <div class="homepage_pen_and_mastodon_div_container" style="display: flex; flex-direction: column; justify-content: space-around;">
-    <div class="mastodon_widget_container">
-      <h2>My Mastodon Feed</h2>
-      <iframe id="mastodon_widget" class="mastodon_widget" style="border: 0; width: 100%; max-width: 90vw; height: 400px; border-radius: 2rem 0.5rem 0.5rem 2rem;" allowfullscreen sandbox="allow-same-origin allow-top-navigation allow-scripts allow-popups allow-popups-to-escape-sandbox" src="https://mastofeed.com/apiv2/feed?userurl=https%3A%2F%2Ffosstodon.org%2Fusers%2FJLO64&theme=auto&size=100&header=true&replies=false&boosts=false"></iframe>
-    </div>
-  </div>  
+  
+  <div class="homepage-mastodon-post-container">
+    <h2>Latest Mastodon Post</h2>
+      <div class="homepage-mastodon-post">
+        <div class="homepage-mastodon-post-info">
+          <img src="/assets/images/mastodon_profile_image.jpeg" class="mastodon_image"></img>
+          <div class="mastodon_info_text">
+            <div>
+              <a href="https://fosstodon.org/@JLO64" class="mastodon_profile_link">Julian Lopez</a>
+              <p>@JLO64@fosstodon.org</p>
+            </div>
+            <p class="mastodon-post-date">Posted on: {{ site.data.most_recent_mastodon_post.pubDate | date: "%B %d, %Y" }}</p>
+          </div>
+        </div>
+        <div class="homepage-mastodon-post-description">
+          <p>{{ site.data.most_recent_mastodon_post.description }}</p>
+        </div>
+        <a href="{{ site.data.most_recent_mastodon_post.link }}">View Post on Mastodon</a>
+      </div>
+  </div>
+
 </div>
-
-
-<script>
-// change the color of all links inside the mastodon iframe
-document.getElementById('mastodon_widget').onload = function() {
-  var iframe = document.getElementById('mastodon_widget');
-  var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-  var links = iframeDoc.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    console.log(links[i]);
-  }
-};
-</script>

@@ -145,7 +145,20 @@
       filter: grayscale(100%) sepia(0.2) opacity(0.75);
     }
   }
-  .project-box:hover, .mastodon_widget:hover {
+  .homepage-mastodon-post {
+    .mastodon_image {
+      filter: grayscale(100%) sepia(0.2) opacity(0.75);
+    }
+  }
+  .homepage-mastodon-post:hover {
+    // animation: card_breathe 1s infinite alternate linear;
+    animation: initial_card_breathe 0.3s forwards;
+    .mastodon_image{
+      border-radius: 1rem !important;
+      filter: none;
+    }
+  }
+  .project-box:hover {
     // animation: card_breathe 1s infinite alternate linear;
     animation: initial_card_breathe 0.3s forwards;
     .project-box-image{
@@ -169,4 +182,5 @@
   .h1-website-title {
     font-size: 3.5rem;
   }
+  .mastodon-post-date{display: block !important;}
 }

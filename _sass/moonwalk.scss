@@ -552,3 +552,64 @@ input.email_subscribe_button:hover {
   // make the pointer a hand
   cursor: pointer;
 }
+
+.homepage-mastodon-post-container {
+  width: 100%;
+
+  .homepage-mastodon-post {
+    background: var(--project-box);
+    animation: none;
+    border-radius: 1.4rem;
+    margin: auto;
+    // display: flex;
+    max-width: 80vw;
+    width: 36rem;
+    padding: 1rem;
+
+    .homepage-mastodon-post-info {
+      margin-bottom: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+
+      .mastodon_image{
+        height: 5rem;
+        width: 5rem;
+        margin: auto 1rem auto 0rem;
+        background-color: red;
+        transition: filter 0.2s ease-in;
+        transition: border-radius 0.2s ease-in;
+        // border-radius: 1.8rem;
+        border-radius: 1.4rem;
+      }
+
+      .mastodon_info_text{
+        flex-grow: 1;
+        display: flex;
+      }
+
+      a.mastodon_profile_link{
+        font-size: 1.5rem;
+        line-height: 1.6rem;
+        text-underline-offset: 0.4rem;
+      }
+      p {
+        margin: 0rem;
+        width: fit-content;
+      }
+      .mastodon-post-date {
+        text-align: right;
+        // have this div take up the remaining space
+        flex-grow: 1;
+        margin-top: 1rem;
+        display: none;
+      }
+    }
+
+    .homepage-mastodon-post-description {
+      // adjust space between lines
+      line-height: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+  }
+}
