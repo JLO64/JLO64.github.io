@@ -57,8 +57,6 @@
     font-weight: 999;
     border: solid var(--link-underline) 0.8rem;
   }
-  h1:hover  {font-size: 2.5rem;}  
-  h2:hover  {font-size: 2rem;}
   .blog_image {
     height: 40vh;
   }
@@ -81,7 +79,7 @@
     ul {
       justify-content: space-evenly;
       li:hover{
-        box-shadow: 0 0 0 0.2rem var(--link-underline);
+        box-shadow: 0 0 0 0.2rem var(--button-hover-border);
       }
     }
   }
@@ -147,7 +145,7 @@
       filter: grayscale(100%) sepia(0.2) opacity(0.75);
     }
   }
-  .project-box:hover {
+  .project-box:hover, .mastodon_widget:hover {
     // animation: card_breathe 1s infinite alternate linear;
     animation: initial_card_breathe 0.3s forwards;
     .project-box-image{
