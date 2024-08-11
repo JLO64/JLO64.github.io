@@ -411,7 +411,7 @@ picture {
 
   .post-list-item {
     display: block;
-    width: 19rem;
+    width: 24rem;
     max-width: 80vw;
     margin: 0rem;
     padding: 1rem;
@@ -421,6 +421,9 @@ picture {
     p {
       font-style: italic;
       margin: 0.5rem 0rem 0rem;
+    }
+    a {
+      font-weight: bold;
     }
   }
 }
@@ -473,24 +476,23 @@ header {
     animation: none;
     border-radius: 1.4rem;
     margin: 0rem;
-    display: flex;
+    display: block;
     max-width: 80vw;
-    width: 28rem;
+    width: 24rem;
     padding: 1rem;
 
-    .project-box-image {
-      height: 5rem;
-      width: 5rem;
-      margin: auto 1rem auto 0rem;
-      background-color: red;
-      transition: filter 0.2s ease-in;
-      transition: border-radius 0.2s ease-in;
-      // border-radius: 1.8rem;
-      border-radius: 1.4rem;
-    }
+    .project-box-top{
+      display: flex;
 
-    .project-box-contents {
-      width: 22rem;
+      .project-box-image {
+        height: 3.6rem;
+        width: 3.6rem;
+        margin: auto 1rem auto 0rem;
+        background-color: red;
+        transition: filter 0.2s ease-in;
+        transition: border-radius 0.2s ease-in;
+        border-radius: 0.8rem;
+      }
     }
 
     h3 {
@@ -501,6 +503,7 @@ header {
     a {
       width: fit-content;
       display: block;
+      font-weight: bold;
     }
 
     h4 {
@@ -554,7 +557,7 @@ input.email_subscribe_button:hover {
 }
 
 .homepage-mastodon-post-container {
-  width: 100%;
+  width: 90vw;
 
   .homepage-mastodon-post {
     background: var(--project-box);

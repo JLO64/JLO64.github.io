@@ -163,7 +163,7 @@
     animation: initial_card_breathe 0.3s forwards;
     .project-box-image{
       filter: none;
-      border-radius: 1rem;
+      border-radius: 0.5rem !important;
     }
   }
   .post-list-item:hover {
