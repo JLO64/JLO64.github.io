@@ -560,7 +560,7 @@ input.email_subscribe_button:hover {
   width: 90vw;
 
   .homepage-mastodon-post {
-    background: var(--project-box);
+    background: var(--mastodon-box);
     animation: none;
     border-radius: 1.4rem;
     margin: auto;
@@ -568,6 +568,15 @@ input.email_subscribe_button:hover {
     max-width: 80vw;
     width: 36rem;
     padding: 1rem;
+
+    a {
+      text-decoration-color: var(--mastodon);
+    }
+    a:hover{
+      text-shadow: 0 0 1.1rem var(--mastodon);
+      color: var(--mastodon);
+      animation: none;
+  }
 
     .homepage-mastodon-post-info {
       margin-bottom: 1rem;
@@ -613,6 +622,5 @@ input.email_subscribe_button:hover {
       line-height: 2rem;
       margin-bottom: 1.5rem;
     }
-
   }
 }

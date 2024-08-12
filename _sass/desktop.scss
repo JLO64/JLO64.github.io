@@ -96,8 +96,8 @@
     display: block;
   }
   .topbar-links:hover {
-    font-size: 2.2rem;
-    text-underline-offset: 0.7rem;
+    font-size: 1.8rem;
+    text-underline-offset: 0.6rem;
     text-decoration-thickness: 0.3rem;
     // margin: 0rem;
     line-height: 1rem;
@@ -108,11 +108,11 @@
   }
   .a-website-title:hover {
     font-weight: 800;
-    font-size: 2.2rem;
-    line-height: 2.6rem;
+    font-size: 1.8rem;
+    line-height: 2rem;
     padding: 0.15rem 0.4rem;
     border: solid var(--link-underline) 0.4rem;
-    border-radius: 1.5rem;
+    border-radius: 1.2rem;
     text-decoration: none;
     height: fit-content;
     color: white;
@@ -152,7 +152,7 @@
   }
   .homepage-mastodon-post:hover {
     // animation: card_breathe 1s infinite alternate linear;
-    animation: initial_card_breathe 0.3s forwards;
+    animation: initial_mastodon_card_breathe 0.3s forwards;
     .mastodon_image{
       border-radius: 1rem !important;
       filter: none;
