@@ -13,6 +13,7 @@ html {
     --card-color: #cfd2e2;
     --topbar-border: black;
     --project-box: #f1faff;
+    --mastodon-box: #f3f3ff;
     --shadow: grey;
 
     // link colors
@@ -29,6 +30,7 @@ html {
     --jetpens: #9FB22C;
     --jekyll: #BA1C21;
     --julian: #4B5162;
+    --mastodon: #6364FF;
 }
 // -------------- THEME SWITCHER -------------- //
 @mixin dark-appearance {
@@ -47,6 +49,7 @@ html {
       --card-color: rgb(26, 31, 53);
       --topbar-border: #727272;
       --project-box: #161616;
+      --mastodon-box: #161616;
       --shadow: black;
 
       // link colors

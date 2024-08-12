@@ -3,40 +3,47 @@ layout: default
 ---
 
 <h1>Projects</h1>
-<h2>Websites</h2>
-<ul class="project-box-container">
-{% for project_entry in site.data.projects.websites %}
-  <li class="project-box">
-    <img src="{{project_entry.image}}" class="project-box-image"></img>
-    <div class="project-box-contents">
-      <a href="{{ project_entry.url }}"><h3>{{project_entry.title}}</h3></a>
-      <h4>{{project_entry.year}}: {{project_entry.status}}</h4>
-      <ul class="tag-ul">
-        {% for tag in project_entry.tags %}
-          <li class="tag">{{ tag }}</li>
-        {% endfor %}
-      </ul>
-      <p>{{ project_entry.description }}</p>
-    </div>
-  </li>
-{% endfor %}
-</ul>
-
-<h2>Miscellaneous</h2>
-<ul class="project-box-container">
-  {% for project_entry in site.data.projects.misc %}
-  <li class="project-box">
-    <img src="{{project_entry.image}}" class="project-box-image"></img>
-    <div class="project-box-contents">
-      <a href="{{ project_entry.url }}"><h3>{{project_entry.title}}</h3></a>
-      <h4>{{project_entry.year}}: {{project_entry.status}}</h4>
-      <ul class="tag-ul">
-        {% for tag in project_entry.tags %}
-          <li class="tag">{{ tag }}</li>
-        {% endfor %}
-      </ul>
-      <p>{{ project_entry.description }}</p>
-    </div>
-  </li>
-{% endfor %}
-</ul>
+<div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+  <div class="homepage_flex_divs_projects">
+    <h2>Websites</h2>
+    <ul class="project-box-container">
+      {% for project_entry in site.data.projects.websites %}
+      <li class="project-box">
+        <div class="project-box-top">
+          <img src="{{project_entry.image}}" class="project-box-image"></img>
+          <div class="project-box-top-text">
+            <a href="{{ project_entry.url }}">{{project_entry.title}}</a>
+            <p>{{project_entry.year}}: {{project_entry.status}}</p>
+            <ul class="tag-ul">
+              {% for tag in project_entry.tags %}
+              <li class="tag">{{ tag }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <p>{{ project_entry.description }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+    <h2>Miscellaneous</h2>
+    <ul class="project-box-container">
+      {% for project_entry in site.data.projects.misc %}
+      <li class="project-box">
+        <div class="project-box-top">
+          <img src="{{project_entry.image}}" class="project-box-image"></img>
+          <div class="project-box-top-text">
+            <a href="{{ project_entry.url }}">{{project_entry.title}}</a>
+            <p>{{project_entry.year}}: {{project_entry.status}}</p>
+            <ul class="tag-ul">
+              {% for tag in project_entry.tags %}
+              <li class="tag">{{ tag }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <p>{{ project_entry.description }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
