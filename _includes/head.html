@@ -31,11 +31,15 @@
   <meta property="og:url" content="{{ page.url }}">
   <meta property="og:site_name" content="{{ site.title }}">
   {% if page.layout == 'post' %}
-  <meta property="og:image" content="https://ik.imagekit.io/jlo64/www_julianlopez_net/opengraph-images/tr:l-text,i-{{ page.title | replace: ' ', '%20' % }},tg-b,co-74c0fc,fs-80,w-1200,pa-80_0_0_0,ff-Ubuntu,lfo-center,l-end/template.png">
-  <meta name="twitter:image" content="https://ik.imagekit.io/jlo64/www_julianlopez_net/opengraph-images/tr:l-text,i-{{ page.title | replace: ' ', '%20' % }},tg-b,co-74c0fc,fs-80,w-1200,pa-80_0_0_0,ff-Ubuntu,lfo-center,l-end/template.png">
+  <meta property="og:image" content="{{ site.url }}/assets/opengraph/default-opengraph.png">
+  <meta name="twitter:image" content="{{ site.url }}/assets/opengraph/default-opengraph.png">
+  <!-- <meta property="og:image" content="https://ik.imagekit.io/jlo64/www_julianlopez_net/opengraph-images/tr:l-text,i-{{ page.title | replace: ' ', '%20' % }},tg-b,co-74c0fc,fs-80,w-1200,pa-80_0_0_0,ff-Ubuntu,lfo-center,l-end/template.png"> -->
+  <!-- <meta name="twitter:image" content="https://ik.imagekit.io/jlo64/www_julianlopez_net/opengraph-images/tr:l-text,i-{{ page.title | replace: ' ', '%20' % }},tg-b,co-74c0fc,fs-80,w-1200,pa-80_0_0_0,ff-Ubuntu,lfo-center,l-end/template.png"> -->
   {% else %}
-  <meta property="og:image" content="https://ik.imagekit.io/jlo64/www_julianlopez_net/opengraph-images/default.png">
-  <meta name="twitter:image" content="https://ik.imagekit.io/jlo64/www_julianlopez_net/opengraph-images/default.png">
+  <meta property="og:image"  content="{{ site.url }}/assets/opengraph/default-opengraph.png">
+  <meta name="twitter:image" content="{{ site.url }}/assets/opengraph/default-opengraph.png">
+  <!-- <meta property="og:image" content="https://ik.imagekit.io/jlo64/www_julianlopez_net/opengraph-images/default.png"> -->
+  <!-- <meta name="twitter:image" content="https://ik.imagekit.io/jlo64/www_julianlopez_net/opengraph-images/default.png"> -->
   {% endif %}
   <meta name="twitter:card" content="summary_large_image">
   <!-- <meta property="twitter:domain" content="{{ site.domain}}"> -->

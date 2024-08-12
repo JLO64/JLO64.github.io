@@ -43,14 +43,14 @@ misc:
 home:
   - title: "Trojan Tutoring"
     url: https://www.trojantutoring.org/
-    description: A club that tutors low income students.
+    description: A USC club that tutors students at Foshay High School.
     status: Active
     image: "/assets/images/projects/TT_project_export.webp"
-    year: "2024"
+    year: "2023-2024"
 
   - title: McDonald's Screenshot Generator
     url: https://github.com/JLO64/Generate-McDonalds-Mobile-Screenshot
-    description: Generates fake McDonald's app screenshots on AWS Lambda
+    description: Generates fake McDonald's app order screenshots.
     status: Archived
     year: "2023"
     image: "/assets/images/projects/McDonald_project.svg"
