@@ -1,7 +1,7 @@
 html {
     --bg: #FFF;
     --bg-secondary: #f3f4f6;
-    --bg-secondary-opaque: white;
+    --bg-secondary-opaque: rgba(255, 255, 255, 0.8);
     --headings: #1e293b;
     --text: #374151;
     --highlight: #dedede;
@@ -39,7 +39,7 @@ html {
       --highlight: #a9a9a9;
       --bg: #000000;
       --bg-secondary: #323945;
-      --bg-secondary-opaque: rgba(0, 0, 0, 1);
+      --bg-secondary-opaque: rgba(0, 0, 0, 0.8);
       --text: #adb5bd;
       --code-text: white;
       --tag: #323945;

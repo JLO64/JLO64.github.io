@@ -8,3 +8,4 @@ __pycache__/
 images/pictures-html.md
 _posts/test.txt
 .DS_Store
+_data/most_recent_mastodon_post.yml

@@ -19,6 +19,8 @@
     // border: 0.5rem solid var(--link-underline);
     animation: w_breathe 1s infinite alternate linear;
     padding: 1.5rem;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
   }
   .page-content{
     padding-bottom: 2rem;
