@@ -14,7 +14,6 @@ module Jekyll
 
       first_item = rss.items.first
       mastodon_post = {
-        'title' => first_item.title,
         'link' => first_item.link,
         'description' => first_item.description,
         'pubDate' => first_item.pubDate
