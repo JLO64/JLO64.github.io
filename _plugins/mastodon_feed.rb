@@ -4,6 +4,7 @@ require 'open-uri'
 require 'yaml'
 require 'open-uri'
 require 'mini_magick'
+# require 'nokogiri'
 
 module Jekyll
   class MastodonFeedGenerator < Generator
@@ -31,6 +32,9 @@ module Jekyll
         'pubDate' => first_item.pubDate
       }
 
+      # for each <image> within first_item, download the image
+      # list_of_images = first_item.media
+      # print(list_of_images)
       File.open('_data/most_recent_mastodon_post.yml', 'w') do |file|
         file.write(mastodon_post.to_yaml)
       end
