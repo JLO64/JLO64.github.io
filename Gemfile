@@ -11,3 +11,5 @@ end
 
 gem 'jekyll-archives'
 gem 'rss'
+
+gem "mini_magick", "~> 5.0"
