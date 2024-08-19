@@ -65,7 +65,7 @@ module Jekyll
 
         
         # download all images from the list_of_images and append their paths to the mastodon_post
-        list_of_images.each_with_index do |image_url, index|
+        list_of_image_urls.each_with_index do |image_url, index|
           mastodon_image_path = "assets/images/mastodon_image_#{index}.jpeg"
           mastodon_image_webp_path = "assets/images/mastodon_image_#{index}.webp"
           File.open(mastodon_image_path, 'wb') do |file|
