@@ -10,3 +10,4 @@ _posts/test.txt
 .DS_Store
 _data/most_recent_mastodon_post.yml
 assets/images/mastodon_profile_image*
+assets/images/mastodon_image_*

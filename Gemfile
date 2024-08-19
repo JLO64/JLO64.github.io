@@ -13,3 +13,5 @@ gem 'jekyll-archives'
 gem 'rss'
 
 gem "mini_magick", "~> 5.0"
+
+gem "nokogiri", "~> 1.16"
