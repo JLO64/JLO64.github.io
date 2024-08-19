@@ -15,15 +15,9 @@ module Jekyll
       rss_content = URI.open(rss_url).read
       rss = RSS::Parser.parse(rss_content, false)
 
-      mastodon_profile_image = rss.channel.image.url
-      File.open('assets/images/mastodon_profile_image.jpeg', 'wb') do |file|
-        file.write(URI.open(mastodon_profile_image).read)
-      end
-      # convert this image to webp and resize it to 200x200
-      mastodon_profile_image_converted = MiniMagick::Image.open('assets/images/mastodon_profile_image.jpeg')
-      mastodon_profile_image_converted.format('webp')
-      mastodon_profile_image_converted.resize('120x120')
-      mastodon_profile_image_converted.write('assets/images/mastodon_profile_image.webp')
+      mastodon_profile_image_url = rss.channel.image.url
+      mastodon_profile_image_path = 'assets/images/mastodon_profile_image.jpeg'
+      mastodon_profile_image_webp_path = 'assets/images/mastodon_profile_image.webp'
 
       first_item = rss.items.first
       mastodon_post = {
@@ -38,6 +32,26 @@ module Jekyll
       File.open('_data/most_recent_mastodon_post.yml', 'w') do |file|
         file.write(mastodon_post.to_yaml)
       end
+
+
+      unless File.exist?(mastodon_profile_image_webp_path)
+        File.open(mastodon_profile_image_path, 'wb') do |file|
+          file.write(URI.open(mastodon_profile_image_url).read)
+        end
+
+        # Convert this image to webp and resize it to 120x120
+        mastodon_profile_image_converted = MiniMagick::Image.open(mastodon_profile_image_path)
+        mastodon_profile_image_converted.format('webp')
+        mastodon_profile_image_converted.resize('120x120')
+        mastodon_profile_image_converted.write(mastodon_profile_image_webp_path)
+
+        # Hook to regenerate the site after the generator runs
+        Jekyll::Hooks.register :site, :post_write do |site|
+          system("jekyll build")
+        end
+      end
+
     end
   end
+
 end
