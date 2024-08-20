@@ -73,7 +73,7 @@ module Jekyll
           end
           mastodon_image_converted = MiniMagick::Image.open(mastodon_image_path)
           mastodon_image_converted.format('webp')
-          mastodon_image_converted.resize('200x200')
+          mastodon_image_converted.resize('300x300')
           mastodon_image_converted.write(mastodon_image_webp_path)
         end
 

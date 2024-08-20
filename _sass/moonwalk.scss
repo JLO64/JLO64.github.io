@@ -578,6 +578,8 @@ input.email_subscribe_button:hover {
 
       .mastodon_post_image{
         border-radius: 1.4rem;
+        width: 16rem;
+        max-width: 70vw;
         transition: filter 0.2s ease-in;
         transition: border-radius 0.2s ease-in;
       }
