@@ -19,6 +19,8 @@
     // border: 0.5rem solid var(--link-underline);
     animation: w_breathe 1s infinite alternate linear;
     padding: 1.5rem;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
   }
   .page-content{
     padding-bottom: 2rem;
@@ -146,14 +148,14 @@
     }
   }
   .homepage-mastodon-post {
-    .mastodon_image {
+    .mastodon_image, .mastodon_post_image {
       filter: grayscale(100%) sepia(0.2) opacity(0.75);
     }
   }
   .homepage-mastodon-post:hover {
     // animation: card_breathe 1s infinite alternate linear;
     animation: initial_mastodon_card_breathe 0.3s forwards;
-    .mastodon_image{
+    .mastodon_image, .mastodon_post_image {
       border-radius: 1rem !important;
       filter: none;
     }

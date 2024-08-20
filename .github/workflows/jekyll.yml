@@ -10,6 +10,11 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["master"]
+  workflow_run:
+    workflows: ["Check Mastodon RSS For Updates"]
+    types:
+      - completed
+
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -29,6 +34,7 @@ concurrency:
 jobs:
   # Build job
   build:
+    if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' || (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success') }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -42,6 +48,8 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+      - name: Setup imagemagick
+        run: sudo apt-get install imagemagick
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"

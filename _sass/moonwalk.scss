@@ -1,6 +1,7 @@
 html {
   height: 100%;
   background-color: #74c0fc;
+  font: -apple-system-body;
 }
 
 body {
@@ -568,6 +569,19 @@ input.email_subscribe_button:hover {
     max-width: 80vw;
     width: 36rem;
     padding: 1rem;
+
+    div.mastodon_post_images{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      row-gap: 1rem;
+
+      .mastodon_post_image{
+        border-radius: 1.4rem;
+        transition: filter 0.2s ease-in;
+        transition: border-radius 0.2s ease-in;
+      }
+    }
 
     a {
       text-decoration-color: var(--mastodon);
