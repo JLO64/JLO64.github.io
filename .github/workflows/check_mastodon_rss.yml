@@ -2,7 +2,7 @@ name: Check Mastodon RSS For Updates
 
 on:
   schedule:
-    - cron: '0 6 */1 * *' # Run every day at 6:00 UTC, or 22:00 PST
+    - cron: '0 6 */1 * *' # Run every day at 6:00 UTC, or 11PM PST
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
