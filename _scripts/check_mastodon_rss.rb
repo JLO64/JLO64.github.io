@@ -14,7 +14,7 @@ stored_most_recent_mastodon_post_link = most_recent_mastodon_post['link']
 if most_recent_mastodon_post_link != stored_most_recent_mastodon_post_link
     puts "New post detected: #{most_recent_mastodon_post_link}"
     # have this script close with an error
-    exit 1
 else
     puts "No new post detected"
+    exit 1
 end
