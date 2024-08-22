@@ -28,4 +28,4 @@ jobs:
         id: check
         run: |
             output=$(bundle exec ruby _scripts/check_mastodon_rss.rb)
-            echo "new_post_detected=$output" >> $GITHUB_OUTPUT
+            echo "::set-output name=new_post_detected::$output"
