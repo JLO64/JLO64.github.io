@@ -12,3 +12,4 @@ _data/most_recent_mastodon_post.yml
 assets/images/mastodon_profile_image*
 assets/images/mastodon_image_*
 _data/most_recent_mastodon_post.yml
+_scripts/description-data.jsonl

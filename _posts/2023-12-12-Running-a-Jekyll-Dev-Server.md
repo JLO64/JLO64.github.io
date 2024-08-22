@@ -6,7 +6,7 @@ tags:
   - nginx
   - jekyll
   - webdev
-description: I've been having issues with a VS Code plugin I use to preview my Jekyll blog. Thus, I've decided to stop using it and use a different method instead.
+description: My usual VS Code plugin has been really pesky, so it's time to change the methods a bit.
 ---
 ## My Plugin Problem
 

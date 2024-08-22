@@ -4,7 +4,7 @@ title: Good Customer Support
 permalink: /posts/:year/:month/:slug
 tags:
   - thoughts
-description: Making phone calls to a customer support line always sucks, unless it's to these three companies.
+description: What if I told you companies with impeccable customer support lines are actually a thing?
 ---
 
 Having to make a phone call and talk to a companies customer support always sucks. Nowhere has this been more apparent to me than when I have been on hold for over an hour to talk to my university's financial aid department. However, there have been some rare instances where I found my experiences almost enjoyable.

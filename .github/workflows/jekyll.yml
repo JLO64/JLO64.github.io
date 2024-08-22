@@ -50,6 +50,11 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Setup imagemagick
         run: sudo apt-get install imagemagick
+      - name: Generate Empty Descriptions with OpenAI API
+        env:
+            OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+            FINE_TUNE_GPT_MODEL: ${{ secrets.FINE_TUNE_GPT_MODEL }}
+        run: python3 ./_scripts/gpt-summarize.py --generate-descriptions
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
