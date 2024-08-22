@@ -8,9 +8,8 @@ try:
     fine_tune_gpt_model = os.environ['FINE_TUNE_GPT_MODEL']
     openai_client = OpenAI(api_key = api_key)
     can_use_gpt = True
-except as e:
-    print("Error: " + str(e))
-    exit(1)
+except:
+    pass
 
 gpt_prompt = "You are a program designed to summarize blog posts in a certain fun tone and style of speech in under 200 characters. Do not use colons, semicolons, or new lines. Please summarize the following blog post:"
 
