@@ -28,9 +28,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print Mastodon updated
-        run: echo "Mastodon updated, ${{ toJson(steps.check_mastodon_rss.outputs) }}"
+        run: echo "Mastodon updated, ${{ github.event.workflow_run.outputs.mastodon_updated }}"
       - name: Print GitHub Workflow Run
-        run: echo "GitHub Workflow Run, ${{ toJson(github.event.workflow_run) }}"
+        run: echo "GitHub Workflow Run, ${{ github.event.workflow_run }}" 
 
   build:
     if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.outputs.mastodon_updated == 'true' }}
