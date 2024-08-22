@@ -6,7 +6,7 @@ tags:
   - notebooks
   - fountain-pens
   - writing
-description: I break down everything that I currently carry in my pockets on a daily basis. It includes my phone, earbuds, a pen, and a notebook.
+description: I have quite a lot of different things residing in my pockets. Here I take a look at all of them!
 ---
 
 ## Phone Stuff

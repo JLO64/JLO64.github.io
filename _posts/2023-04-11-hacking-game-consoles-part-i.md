@@ -4,7 +4,8 @@ title: Hacking My Nintendo 3DS
 permalink: /posts/:year/:month/:slug
 tags:
   - 3ds
-description: I discuss my history with the Nintendo 3DS and how I have hacked it to run all sorts of homebrew software. Whether its emulating old games or installing custom themes, there a wide variety of options to choose from!
+description: The 3DS is a very important piece of my childhood - as such, it makes perfect sense to hack it to make best use of its abilities!
+
 ---
 
 <picture>

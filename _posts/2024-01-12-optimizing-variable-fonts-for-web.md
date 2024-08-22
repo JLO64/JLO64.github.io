@@ -4,7 +4,7 @@ title: Optimizing Variable Fonts For Web
 permalink: /posts/:year/:month/:slug
 tags:
   - webdev
-description: I used to take pride that my blog was beneath a certain size, but that changed when I used a variable font. However, I managed to optimize it to be even smaller than before!
+description: If you want to compress your website as much as possible - variable fonts will be a surprising help.
 ---
 ## Why Worry About Website Size?
 

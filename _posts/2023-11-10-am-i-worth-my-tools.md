@@ -5,7 +5,7 @@ permalink: /posts/:year/:month/:slug
 tags:
   - fountain-pens
   - thoughts
-description: I lack access to the best tools, which I have learned to accept and adapt to. I have a certain friend who does the opposite, and simply buys the best tools for his needs.
+description: True, the tools I have as of writing this are not perfectly suited to my needs - but they do hone my adaptation skills pretty well!
 ---
 
 I'll be the first to admit, I don't exactly have access to the best tools for my projects. The laptop I used to use has a crappy Intel Pentium processor with 4 GB of RAM, but I often use an 8th gen iPad now for most of my Tech needs. That said, I view this as less of a detriment but more of an opportunity to learn how to maximize the tools at my disposal. If I had a full fat laptop with all the power/storage/memory I could ever want I wouldn't have learned certain skills that I've picked up. For instance, there are plenty of things that you simply cannot do on an iPad. In order to get around this, I've set up virtual machines (Windows 10 / Endeavor OS) on my home server that I can remote into with Anydesk. Now I can do anything that can be done on a desktop from a thin and mobile iPad! I turned this weakness into an opportunity to learn and grow my personal skill set, which can help me in my future career.
