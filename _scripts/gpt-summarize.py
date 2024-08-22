@@ -1,13 +1,11 @@
 import os, re, json, argparse
 from bs4 import BeautifulSoup
-from dotenv import load_dotenv
-load_dotenv()
 
 can_use_gpt = False
 try:
     from openai import OpenAI
-    api_key = os.getenv("OPENAI_API_KEY")
-    fine_tune_gpt_model = os.getenv("FINE_TUNE_GPT_MODEL")
+    api_key = os.environ['OPENAI_API_KEY']
+    fine_tune_gpt_model = os.environ['FINE_TUNE_GPT_MODEL']
     openai_client = OpenAI(api_key = api_key)
     can_use_gpt = True
 except:

@@ -1,0 +1,8 @@
+bs4
+python-dotenv
+beautifulsoup4
+# os
+regex
+# json
+argparse
+openai

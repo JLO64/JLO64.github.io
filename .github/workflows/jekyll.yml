@@ -50,7 +50,9 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Setup imagemagick
         run: sudo apt-get install imagemagick
-      - name: Generate Empty Descriptions with OpenAI API
+      - name: Setup Python
+        run: pip install -r _scripts/requirements.txt
+      - name: Generate Descriptions with OpenAI API
         env:
             OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
             FINE_TUNE_GPT_MODEL: ${{ secrets.FINE_TUNE_GPT_MODEL }}
