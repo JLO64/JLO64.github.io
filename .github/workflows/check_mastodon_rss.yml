@@ -15,6 +15,8 @@ jobs:
   # check mastodon rss job
   check_mastodon_rss:
     runs-on: ubuntu-latest
+    outputs:
+      mastodon_updated: ${{ steps.check_mastodon_rss.outputs.mastodon_updated }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -25,7 +27,7 @@ jobs:
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 0 # Increment this number if you need to re-download cached gems
       - name: Check Mastodon RSS
-        id: check
+        id: check_mastodon_rss
         run: |
-            output=$(bundle exec ruby _scripts/check_mastodon_rss.rb)
-            echo "::set-output name=new_post_detected::$output"
+          result=$(bundle exec ruby _scripts/check_mastodon_rss.rb)
+          echo "::set-output name=mastodon_updated::$result"
