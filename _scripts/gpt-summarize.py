@@ -1,6 +1,8 @@
 import os, re, json, argparse
 from bs4 import BeautifulSoup
 
+print(os.environ)
+
 can_use_gpt = False
 try:
     from openai import OpenAI
