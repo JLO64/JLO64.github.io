@@ -13,7 +13,7 @@ most_recent_mastodon_post_link = first_item.link
 homepage = URI.open('https://www.julianlopez.net/').read
 doc = Nokogiri::HTML(homepage)
 stored_most_recent_mastodon_post_link = doc.at_css('#mastodon-post-link')['href']
-puts stored_most_recent_mastodon_post_link
+# puts stored_most_recent_mastodon_post_link
 
 # most_recent_mastodon_post = YAML.load_file('_data/most_recent_mastodon_post.yml', permitted_classes: [Time])
 # stored_most_recent_mastodon_post_link = most_recent_mastodon_post['link']
