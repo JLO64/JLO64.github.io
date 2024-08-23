@@ -22,7 +22,7 @@ concurrency:
 
 jobs:
   check_mastodon_rss:
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event_name == 'schedule' }}
+    if: ${{ github.event_name == 'schedule' }}
     runs-on: ubuntu-latest
     outputs:
       result: ${{ steps.check_mastodon_rss.outputs.result }}

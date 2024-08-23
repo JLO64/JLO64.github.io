@@ -27,6 +27,8 @@ module Jekyll
       }
 
       # create an array of all the <media> within the first <item> inside rss_content
+      current_time = Time.now
+      current_time_string = current_time.strftime("%Y-%m-%d-%H-%M-%S")
       list_of_image_urls = []
       nokogiri_rss_xml = Nokogiri::XML(rss_content)
       nokogiri_rss_xml_first_item = nokogiri_rss_xml.xpath('//channel/item[1]')
@@ -36,7 +38,7 @@ module Jekyll
       mastodon_post['number_of_images'] = list_of_image_urls.length
       list_of_image_filenames = []
       for i in 0..list_of_image_urls.length-1
-        filename_string = "mastodon_image_#{i}.webp"
+        filename_string = "mastodon_image_#{i}-" + current_time_string + ".webp"
         list_of_image_filenames.push(filename_string)
       end
       mastodon_post['image_filenames'] = list_of_image_filenames
@@ -67,7 +69,7 @@ module Jekyll
         # download all images from the list_of_images and append their paths to the mastodon_post
         list_of_image_urls.each_with_index do |image_url, index|
           mastodon_image_path = "assets/images/mastodon_image_#{index}.jpeg"
-          mastodon_image_webp_path = "assets/images/mastodon_image_#{index}.webp"
+          mastodon_image_webp_path = "assets/images/mastodon_image_#{index}-" + current_time_string + ".webp"
           File.open(mastodon_image_path, 'wb') do |file|
             file.write(URI.open(image_url).read)
           end
