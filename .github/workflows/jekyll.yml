@@ -43,7 +43,7 @@ jobs:
           echo "::set-output name=result::$result"
 
   build:
-    if: ${{ needs.check_mastodon_rss.outputs.result != 'true' }}
+    if: ${{ needs.check_mastodon_rss.outputs.result != 'false' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
