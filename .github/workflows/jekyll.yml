@@ -44,6 +44,7 @@ jobs:
 
   build:
     if: ${{ needs.check_mastodon_rss.outputs.result != 'false' }}
+    needs: check_mastodon_rss
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
