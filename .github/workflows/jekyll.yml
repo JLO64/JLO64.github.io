@@ -78,6 +78,7 @@ jobs:
 
   # Deployment job
   deploy:
+    if: ${{ needs.check_mastodon_rss.outputs.result != 'false' && always()}}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
