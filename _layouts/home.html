@@ -24,12 +24,14 @@ layout: default
         <div class="homepage-mastodon-post-description">
           <p>{{ site.data.most_recent_mastodon_post.description }}</p>
         </div>
-        <div class="mastodon_post_images">
-          {% for mastodon_post_image in site.data.most_recent_mastodon_post.image_filenames %}
-          <img src="/assets/images/{{ mastodon_post_image }}" class="mastodon_post_image"></img>
-          {% endfor %}
+        <div>
+          <div class="mastodon_post_images">
+            {% for mastodon_post_image in site.data.most_recent_mastodon_post.image_filenames %}
+            <img src="/assets/images/{{ mastodon_post_image }}" class="mastodon_post_image"></img>
+            {% endfor %}
+          </div>
         </div>
-        <a href="{{ site.data.most_recent_mastodon_post.link }}">View Post on Mastodon</a>
+        <p><a href="{{ site.data.most_recent_mastodon_post.link }}">View Post on Mastodon</a></p>
       </div>
   </div>
   <div class="homepage_flex_divs_posts limit-homepage-posts">
