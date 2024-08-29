@@ -279,11 +279,11 @@ a.club-color-box {
   .right {
     background: #272727;
     color: #c2c2c2 !important;
-    border-radius: 0 0 1rem 0 !important
+    border-radius: 0 0 1rem 0 !important;
   }
 
   p {
-    border-radius: 0 !important
+    border-radius: 0 !important;
   }
 
   margin-top: 0.2rem;
@@ -567,8 +567,14 @@ input.email_subscribe_button:hover {
     margin: auto;
     // display: flex;
     max-width: 80vw;
-    width: 36rem;
+    width: 50rem;
     padding: 1rem;
+    display: grid;
+    row-gap: 0rem;
+
+    a#view_post_on_mastodon{
+      padding: 1em 0;
+    }
 
     div.mastodon_post_images{
       display: flex;
@@ -578,7 +584,7 @@ input.email_subscribe_button:hover {
 
       .mastodon_post_image{
         border-radius: 1.4rem;
-        width: 16rem;
+        height: 14rem;
         max-width: 70vw;
         transition: filter 0.2s ease-in;
         transition: border-radius 0.2s ease-in;
@@ -595,7 +601,7 @@ input.email_subscribe_button:hover {
   }
 
     .homepage-mastodon-post-info {
-      margin-bottom: 1rem;
+      margin-bottom: 0rem;
       display: flex;
       flex-wrap: wrap;
 
@@ -636,7 +642,7 @@ input.email_subscribe_button:hover {
     .homepage-mastodon-post-description {
       // adjust space between lines
       line-height: 2rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1em;
     }
   }
 }
