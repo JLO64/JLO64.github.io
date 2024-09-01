@@ -643,6 +643,11 @@ input.email_subscribe_button:hover {
       // adjust space between lines
       line-height: 2rem;
       margin-bottom: 1em;
+      overflow-x: auto;
+      p a {
+        word-wrap: break-word; /* For older browsers */
+        overflow-wrap: break-word; /* For modern browsers */
+      }
     }
   }
 }
