@@ -21,38 +21,13 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  check_mastodon_rss:
-    if: ${{ github.event_name == 'schedule' }}
+  build:
     runs-on: ubuntu-latest
-    outputs:
-      result: ${{ steps.check_mastodon_rss.outputs.result }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.1' # Not needed with a .ruby-version file
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
-      - name: Check Mastodon RSS
-        id: check_mastodon_rss
-        run: |
-          result=$(bundle exec ruby _scripts/check_mastodon_rss.rb)
-          echo $result
-          echo "::set-output name=result::$result"
-
-  build:
-    if: ${{ needs.check_mastodon_rss.outputs.result != 'false' && always()}}
-    needs: check_mastodon_rss
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Print Outputs
-        run: echo "The result is ${{ needs.check_mastodon_rss.outputs.result }}"
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@8575951200e472d5f2d95c625da0c7bec8217c42 # v1.161.0
         with:
           ruby-version: '3.1' # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
@@ -80,7 +55,6 @@ jobs:
 
   # Deployment job
   deploy:
-    if: ${{ needs.check_mastodon_rss.outputs.result != 'false' && always()}}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
