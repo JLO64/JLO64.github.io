@@ -8,15 +8,15 @@ layout: default
 </div>  
 <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
   <div class="homepage-mastodon-post-container">
-    <h2>Latest Mastodon Post</h2>
+    <h2>Latest Fediverse Post</h2>
       <div class="homepage-mastodon-post">
         <div class="homepage-mastodon-post-info">
           <img src="/assets/images/mastodon_profile_image.webp" class="mastodon_image"></img>
           <!-- <img src="{{ site.data.most_recent_mastodon_post.profile_image_url }}" class="mastodon_image"></img> -->
           <div class="mastodon_info_text">
             <div>
-              <a href="https://fosstodon.org/@JLO64" class="mastodon_profile_link">Julian Lopez</a>
-              <p>@JLO64@fosstodon.org</p>
+              <a href="https://gotosocial.julianlopez.net/@jlo64" class="mastodon_profile_link">Julian Lopez</a>
+              <p>@jlo64@julianlopez.net</p>
             </div>
             <p class="mastodon-post-date">Posted on: {{ site.data.most_recent_mastodon_post.pubDate | date: "%B %d, %Y" }}</p>
           </div>
@@ -31,7 +31,7 @@ layout: default
             {% endfor %}
           </div>
         </div>
-        <p><a id="mastodon-post-link" href="{{ site.data.most_recent_mastodon_post.link }}">View Post on Mastodon</a></p>
+        <p><a id="mastodon-post-link" href="{{ site.data.most_recent_mastodon_post.link }}">View Post on My GoToSocial Instance</a></p>
       </div>
   </div>
   <div class="homepage_flex_divs_posts limit-homepage-posts">
