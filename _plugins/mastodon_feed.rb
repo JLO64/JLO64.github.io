@@ -22,7 +22,8 @@ module Jekyll
       first_item = rss.items.first
       mastodon_post = {
         'link' => first_item.link,
-        'description' => first_item.description.gsub(/^@\w+@\S+ posted \[\d+\] attachments:\s+"([^"]+)"$/, '\1'),
+        # 'description' => first_item.description.gsub(/^.*?:\s+"(.*?)"\s*$/, '\1'),
+        # 'description' => first_item.content_encoded,
         'pubDate' => first_item.pubDate
       }
 
@@ -38,11 +39,14 @@ module Jekyll
       list_of_image_filenames = []
       for i in 0..list_of_image_urls.length-1
         filename_string = "mastodon_image_#{i}" + ".webp"
-
         list_of_image_filenames.push(filename_string)
       end
       mastodon_post['image_filenames'] = list_of_image_filenames
       
+      first_item_content = first_item.content_encoded
+      first_item_content_html = Nokogiri::HTML(first_item_content)
+      # save the content inside the <body> tag of the first_item
+      mastodon_post['description'] = first_item_content_html.xpath('//body').inner_html
 
 
 

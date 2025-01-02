@@ -370,11 +370,11 @@ ul {
 }
 
 .homepage_flex_divs_posts {
-  width: 90vw;
+  width: 100vw;
 }
 
 .homepage_flex_divs_projects {
-  width: 90vw;
+  width: 100vw;
 }
 
 .tag {
@@ -558,7 +558,7 @@ input.email_subscribe_button:hover {
 }
 
 .homepage-mastodon-post-container {
-  width: 90vw;
+  width: 100vw;
 
   .homepage-mastodon-post {
     background: var(--mastodon-box);
@@ -584,8 +584,9 @@ input.email_subscribe_button:hover {
 
       .mastodon_post_image{
         border-radius: 1.4rem;
-        height: 14rem;
+        // height: 14rem;
         max-width: 70vw;
+        max-height: 70vh;
         transition: filter 0.2s ease-in;
         transition: border-radius 0.2s ease-in;
       }
