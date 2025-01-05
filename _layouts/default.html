@@ -77,9 +77,9 @@
               </a>
             </li>
             <li class="credit-copyright">
-              <p>&copy;&nbsp;{{site.author}}</p>
+              <p>Site Last Updated:</p>
               <!-- Last updated June 10th, 2024 -->
-               <p>Last updated {{ page.last_modified_at | date: "%B %d, %Y" }}</p>
+               <p>{{ site.time | date: "%B %d, %Y" }}</p>
             </li>
             <li class="goatcounter">Views for this page:<div id="stats">?</div>stats by GoatCounter</li>
           </ul>

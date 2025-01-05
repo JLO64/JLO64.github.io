@@ -165,7 +165,7 @@ html.transition *:after {
       display: block;
       // min-width: fit-content;
       box-shadow: 0 0.2rem 0.4rem 0.1rem var(--shadow);
-      transition: box-shadow 0.15s ease-in;
+      transition: box-shadow 0.1s ease-in;
     }
 
     li.club-credits {
@@ -343,9 +343,10 @@ a.club-color-box {
   border-radius: 1rem;
   background-color: var(--link-underline);
   max-width: 90%;
+  padding: 0.1rem 0.8rem;
 
   p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: white !important;
     font-weight: 700;
     line-height: 1.6rem;
