@@ -1,3 +1,17 @@
+# parse arguments KEY=VALUE
+while [ $# -gt 0 ]; do
+  case "$1" in
+    *=*)
+      varname=$(echo "$1" | cut -d= -f1)
+      varvalue=$(echo "$1" | cut -d= -f2-)
+      eval "$varname=\"$varvalue\""
+      ;;
+  esac
+  shift
+done
+
+# NGINX_DIR="/var/www/www" JEKYLL_DIR="/home/julian/jekyll_sites/JLO64.github.io" JEKYLL_BUILDER_IMAGE="blog_jekyll_builder"
+
 # add a check that exits if the variables are not set and exit with an error message
 if [ -z "$JEKYLL_DIR" ]; then
   echo "JEKYLL_DIR is not set. Exiting."
