@@ -38,7 +38,13 @@ div.highlighter-rouge pre code,
 pre code.highlighter-rouge {
   display: block;
   overflow-x: auto;
-  padding: 1em;
+  padding: 2rem;
+  background-color: var(--project-box);
+  font-family: "Courier New", monospace;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: var(--link-text);
+  border-radius: 1rem;
 }
 
 blockquote {
@@ -98,12 +104,6 @@ figcaption {
   color: var(--text);
 }
 
-.highlight,
-pre code,
-blockquote {
-  border-radius: 0.5em;
-}
-
 blockquote {
   background-color: var(--bg-secondary);
   border: 1px var(--border) solid;
@@ -134,13 +134,6 @@ html.transition *:after {
 .not-dashed {
   border-top: 1px var(--text) solid;
   margin: 0.5em 0;
-}
-
-p code,
-li code {
-  padding: 0.2rem;
-  color: var(--code-text);
-  font-weight: bold;
 }
 
 .post-title {
@@ -520,41 +513,6 @@ header {
       margin: 0rem;
     }
   }
-}
-
-input.email_subscribe {
-  width: -webkit-fill-available;
-  padding: 0.5rem;
-  border-radius: 0.7rem;
-  border: 1px solid var(--text);
-  margin: auto;
-  // make the text inside bigger
-  font-size: 1.2rem;
-}
-
-input.email_subscribe_button {
-  // width: -webkit-fill-available;
-  padding: 0.2rem 1rem;
-  border-radius: 0.7rem;
-  // border: 1px solid var(--text);
-  border: none;
-  margin-top: 1rem;
-  // make the text inside bigger
-  font-size: 1.2rem;
-  background-color: var(--link-text);
-  color: var(--bg);
-  box-shadow: 0 0.2rem 0.4rem 0.1rem var(--shadow);
-  transition: box-shadow 0.15s ease-in;
-  transition: background-color 0.15s ease-in;
-  font: inherit;
-}
-
-input.email_subscribe_button:hover {
-  background-color: var(--link-underline);
-  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0);
-  color: white;
-  // make the pointer a hand
-  cursor: pointer;
 }
 
 .homepage-mastodon-post-container {

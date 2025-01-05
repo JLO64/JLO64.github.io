@@ -1,22 +1,3 @@
-navbar_entries:
-  - title: Home
-    url: /
-
-  - title: Posts
-    url: /posts
-  
-  - title: Subscribe
-    url: /subscribe
-
-  - title: About
-    url: /about
-
-  # - title: GitHub
-  #   url: https://github.com/JLO64
-
-  # - title: Mastodon
-  #   url: https://fosstodon.org/@JLO64
-
 project_entries:
   - title: "Knights of Columbus Council #2431"
     url: https://kofc.julianlopez.net/
