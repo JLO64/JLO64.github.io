@@ -4,7 +4,36 @@ layout: default
 
 {% if page.title %}
   <h1 class="post-title">{{ page.title }}</h1>
-  {% include date_and_social_share.html %}
+  <p style="font-weight: bold; margin-top: 2.5rem; margin-bottom: 0rem;">
+    {% capture current_date %}{{ page.date | date: site.theme_config.date_format }}{% endcapture %}
+    {% if page.date %}
+      Posted On:
+      <span>{{ current_date }}</span>
+    {% endif %}
+  </p>
+  
+  {% if page.tags.size > 0 %}
+    <div style="display: inline-flex; flex-wrap: wrap;">
+      <span style="font-weight: bold;">Tags:  </span>
+      <!-- <ul class="tag-ul" style="margin: 0.2rem;"> -->
+      <ul class="tag-ul" style="margin: 0.2rem;"></ul>
+        {% assign sorted_page_tags = page.tags | sort %}
+        {% for tag in sorted_page_tags %}
+        <a href="/tag/{{ tag }}"><li class="tag" style="margin: 0.2rem;">{{ tag | replace: "-", " " }}</li></a>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+  
+  
+  <p style="font-weight: bold; margin: 0rem;"><span>Written by {{ site.author }}</span></p>
+  
+  {% if page.github %}
+    <iframe
+    src="https://ghbtns.com/github-btn.html?user=JLO64&repo={{ page.github }}&type=watch&size=large"
+    frameborder="0" scrolling="0" width="170" height="30" title="GitHub" style="margin-top: 1em; margin-bottom: 1em;">
+  </iframe>
+  {% endif %}  
 {% endif %}
 
 {% if page.description %}
@@ -13,6 +42,15 @@ layout: default
   </div>
 {% endif %}
 
-{{ content }}
+{% assign has_h2_headers = false %}
+{% if page.content contains "h2" %}
+  {% assign has_h2_headers = true %}
+{% endif %}
+{% if has_h2_headers %}
+  <div class="table-of-contents">
+    <h2>Table of Contents</h2>
+    {% include toc.html html=content h_max=2 %}
+  </div>
+{% endif %}
 
-<a href="mailto:admin@julianlopez.net?subject=Re: {{ page.title }}">Send me your thoughts via Email</a>
+{% include anchor_headings.html html=content %}

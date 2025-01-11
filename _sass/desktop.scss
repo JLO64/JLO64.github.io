@@ -160,16 +160,13 @@
       filter: none;
     }
   }
-  .project-box:hover {
+  .project-box:hover, .post-list-item:hover, .table-of-contents:hover {
     // animation: card_breathe 1s infinite alternate linear;
     animation: initial_card_breathe 0.3s forwards;
     .project-box-image{
       filter: none;
       border-radius: 0.5rem !important;
     }
-  }
-  .post-list-item:hover {
-    animation: initial_card_breathe 0.3s forwards;
   }
   .topbar {
     max-height: fit-content;
