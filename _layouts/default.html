@@ -1,6 +1,86 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: "en" }}" class="html" data-theme="auto">
-  {%- include head.html -%}
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="me" href="https://fosstodon.org/@JLO64"></link>
+  
+    <title>
+      {% if page.title %}
+      {{ page.title }}
+      {% else %}
+      {{ site.title }}
+      {% endif %}
+    </title>
+  
+    <link rel="alternate" type="application/atom+xml" title="Domain of a Knight" href="https://www.julianlopez.net/feed.xml" />
+  
+    <meta name="generator" content="Jekyll v4.2.2">
+    <meta name="author" content="{{ site.author }}">
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+    <meta property="og:description" content="{{ page.description }}">
+    <meta name="twitter:description" content="{{ page.description }}">
+    {% else %}
+    <meta name="description" content="{{ site.description }}">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta name="twitter:description" content="{{ site.description }}">
+    {% endif %}
+    <link rel="canonical" href="{{ page.url }}">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="{{ page.url }}">
+    <meta property="og:site_name" content="{{ site.title }}">
+    {% if page.layout == 'post' %}
+    <meta property="og:image" content="{{ site.url }}/assets/opengraph/default-opengraph.png">
+    <meta name="twitter:image" content="{{ site.url }}/assets/opengraph/default-opengraph.png">
+    <!-- <meta property="og:image" content="https://ik.imagekit.io/jlo64/www_julianlopez_net/opengraph-images/tr:l-text,i-{{ page.title | replace: ' ', '%20' % }},tg-b,co-74c0fc,fs-80,w-1200,pa-80_0_0_0,ff-Ubuntu,lfo-center,l-end/template.png"> -->
+    <!-- <meta name="twitter:image" content="https://ik.imagekit.io/jlo64/www_julianlopez_net/opengraph-images/tr:l-text,i-{{ page.title | replace: ' ', '%20' % }},tg-b,co-74c0fc,fs-80,w-1200,pa-80_0_0_0,ff-Ubuntu,lfo-center,l-end/template.png"> -->
+    {% else %}
+    <meta property="og:image"  content="{{ site.url }}/assets/opengraph/default-opengraph.png">
+    <meta name="twitter:image" content="{{ site.url }}/assets/opengraph/default-opengraph.png">
+    <!-- <meta property="og:image" content="https://ik.imagekit.io/jlo64/www_julianlopez_net/opengraph-images/default.png"> -->
+    <!-- <meta name="twitter:image" content="https://ik.imagekit.io/jlo64/www_julianlopez_net/opengraph-images/default.png"> -->
+    {% endif %}
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- <meta property="twitter:domain" content="{{ site.domain}}"> -->
+    <meta property="twitter:url" content="{{ page.url }}">
+    <meta name="twitter:title" content="{{ page.title }}">
+  
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="/assets/images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#74c0fc">
+    <!-- Favicon -->
+  
+    <!-- Google site verification -->
+    <meta name="google-site-verification" content="VsNyvMxYvOQFM1OyN-DUCMvUDGYbj3xb6ZmPBbkNLYo" />
+  
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}" />
+    {% if page.layout == 'post' %}
+    <link rel="stylesheet" href="{{ "/assets/css/post.css" | relative_url }}" />
+    {% endif %}
+  
+    {% if page.mermaid %}
+      <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+            startOnLoad: true
+        });
+      </script>
+    {% endif %}
+    
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title="Domain of a Knight Feed" href="/feed.xml"/>
+  
+  </head>
   <body>
     {% include space-rings.html %}
 

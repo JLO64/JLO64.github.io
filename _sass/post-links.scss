@@ -1,0 +1,172 @@
+.w {
+    p {
+        a[href*="visualstudio.com"]:hover{
+            text-shadow: 0 0 1.1rem var(--vscode);
+            color: var(--vscode);
+            text-decoration-color: var(--vscode);
+            animation: none;
+        }
+        a[href*="visualstudio.com"]::before{
+            content: "";
+            display: inline-block;
+            height: 1rem; 
+            width: 1rem;
+            margin-right: 0.2rem;
+             
+            background: url('https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg') no-repeat center center / contain;
+            :hover{
+                height: 1.3rem; 
+                width: 1.3rem;   
+            }
+        }
+        a[href*="github.com"]:hover{
+            text-shadow: 0 0 1.1rem var(--github);
+            color: var(--github);
+            text-decoration-color: var(--github);
+            animation: none;
+        }
+        a[href*="github.com"]::before{
+            content: "";
+            display: inline-block;
+            height: 1rem; 
+            width: 1rem;
+             
+            margin-right: 0.2rem;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg') no-repeat center center / contain;
+            filter: invert(33%) sepia(9%) saturate(938%) hue-rotate(187deg) brightness(91%) contrast(93%);
+        }
+        [data-theme="dark"]{
+            a[href*="github.com"]:not([href*="https://github.com/JLO64"])::before{
+                content: "";
+                display: inline-block;
+                height: 1rem; 
+                width: 1rem;
+                 
+                margin-right: 0.2rem;
+                background: url('https://upload.wikimedia.org/wikipedia/commons/2/24/Github_logo_svg.svg') no-repeat center center / contain;
+            }
+        }
+
+        a[href*="obsidian.md"]:hover{
+            text-shadow: 0 0 1.1rem var(--obsidian);
+            color: var(--obsidian);
+            text-decoration-color: var(--obsidian);
+            animation: none;
+        }
+        a[href*="obsidian.md"]::before{
+            content: "";
+            display: inline-block;
+            height: 1rem; 
+            width: 1rem;
+            margin-right: 0.2rem;
+             
+            background: url('https://upload.wikimedia.org/wikipedia/commons/1/10/2023_Obsidian_logo.svg') no-repeat center center / contain;
+            :hover{
+                height: 1.3rem; 
+                width: 1.3rem;   
+            }
+        }
+
+        a[href*="aws.amazon.com"]:hover{
+            text-shadow: 0 0 1.1rem var(--aws);
+            color: var(--aws);
+            text-decoration-color: var(--aws);
+            animation: none;
+        }
+        a[href*="aws.amazon.com"]::before{
+            content: "";
+            display: inline-block;
+            height: 1rem; 
+            width: 1rem;
+            margin-right: 0.2rem;
+             
+            background: url('https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg') no-repeat center center / contain;
+            :hover{
+                height: 1.3rem; 
+                width: 1.3rem;   
+            }
+        }
+
+        a[href*="apple.com"]:hover{
+            text-shadow: 0 0 1.1rem var(--apple);
+            color: var(--apple);
+            text-decoration-color: var(--apple);
+            animation: none;
+        }
+        a[href*="apple.com"]::before{
+            content: "";
+            display: inline-block;
+            height: 1rem; 
+            width: 1rem;
+            margin-right: 0.2rem;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/7/74/Apple_logo_dark_grey.svg') no-repeat center center / contain;
+            :hover{
+                height: 1.3rem; 
+                width: 1.3rem;   
+            }
+        }
+
+        a[href*="youtube.com"]:hover, a[href*="youtu.be"]:hover {
+            text-shadow: 0 0 1.1rem var(--youtube);
+            color: var(--youtube);
+            text-decoration-color: var(--youtube);
+            animation: none;
+        }
+        a[href*="youtube.com"]::before, a[href*="youtu.be"]::before {
+            content: "";
+            display: inline-block;
+            height: 1rem; 
+            width: 1rem;
+            margin-right: 0.2rem;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg') no-repeat center center / contain;
+        }
+
+        a[href*="jetpens.com"]:hover {
+            text-shadow: 0 0 1.1rem var(--jetpens);
+            color: var(--jetpens);
+            text-decoration-color: var(--jetpens);
+            animation: none;
+        }
+        a[href*="jetpens.com"]::before {
+            content: "";
+            display: inline-block;
+            height: 1rem; 
+            width: 1rem;
+            margin-right: 0.2rem;
+             
+            background: url('/assets/images/link-images/jetpens.png') no-repeat center center / contain;
+        }
+
+        a[href*="jekyllrb.com"]:hover {
+            text-shadow: 0 0 1.1rem var(--jekyll);
+            color: var(--jekyll);
+            text-decoration-color: var(--jekyll);
+            animation: none;
+        }
+        a[href*="jekyllrb.com"]::before {
+            content: "";
+            display: inline-block;
+            height: 1rem; 
+            width: 1rem;
+            margin-right: 0.2rem;
+             
+            background: url('/assets/images/link-images/jekyll.png') no-repeat center center / contain;
+        }
+
+        a[href*="/posts/20"]:hover {
+            text-shadow: 0 0 1.1rem var(--julian);
+            color: var(--julian);
+            text-decoration-color: var(--julian);
+            animation: none;
+        }
+        a[href*="/posts/20"]::before {
+            content: "";
+            display: inline-block;
+            height: 1rem; 
+            width: 1rem;
+            margin-right: 0.2rem;
+             
+            background: url('/assets/images/favicon/apple-touch-icon.png') no-repeat center center / contain;
+        }
+    }
+}
