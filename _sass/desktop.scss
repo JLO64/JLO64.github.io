@@ -1,8 +1,4 @@
 @media (min-width: 800px) and (orientation: landscape) and (hover: hover) and (pointer: fine) {
-// @media (hover: hover) and (pointer: fine) {
-  .theme-toggle {
-    display: block;
-  }
   .background-svg {
     display: inline;
   }
@@ -16,7 +12,6 @@
     background: var(--bg-secondary-opaque);
     max-width: 60vw;
     border-radius: 4rem;
-    // border: 0.5rem solid var(--link-underline);
     animation: w_breathe 1s infinite alternate linear;
     padding: 1.5rem;
     backdrop-filter: blur(5px);
@@ -34,28 +29,19 @@
   a:hover {
     text-decoration-color: var(--link-underline);
     color: var(--link-underline);
-    // font-weight: 800;
-    // font-size: 110%;
     text-decoration-thickness: 0.2rem;
     text-underline-offset: 0.4rem;
-    // text-shadow: 0 0 1rem var(--link-underline);
     animation: a_breathe 0.7s infinite alternate ease-in-out;
   }
   .tag:hover {
     box-shadow: 0 0 0 0.2rem var(--card-color);
     font-weight: 999;
-    // font-size: 1.3rem;
-    // a{
-    //   animation: none;
-    // }
   }
   a li.tag:hover {
     text-shadow: none;
   }
   .h1-website-title:hover {
     font-size: 3.5rem;
-    // text-shadow: 0 0 2rem var(--link-underline);
-    // color: var(--link-underline);
     font-weight: 999;
     border: solid var(--link-underline) 0.8rem;
   }
@@ -101,7 +87,6 @@
     font-size: 1.8rem;
     text-underline-offset: 0.6rem;
     text-decoration-thickness: 0.3rem;
-    // margin: 0rem;
     line-height: 1rem;
     font-weight: 800;
   }
@@ -153,7 +138,6 @@
     }
   }
   .homepage-mastodon-post:hover {
-    // animation: card_breathe 1s infinite alternate linear;
     animation: initial_mastodon_card_breathe 0.3s forwards;
     .mastodon_image, .mastodon_post_image {
       border-radius: 1rem !important;
@@ -161,7 +145,6 @@
     }
   }
   .project-box:hover, .post-list-item:hover, .table-of-contents:hover {
-    // animation: card_breathe 1s infinite alternate linear;
     animation: initial_card_breathe 0.3s forwards;
     .project-box-image{
       filter: none;
