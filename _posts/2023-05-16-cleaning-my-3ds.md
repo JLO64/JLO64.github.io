@@ -4,7 +4,7 @@ title: Cleaning My 3DS
 permalink: /posts/:year/:month/:slug
 tags:
   - 3ds
-description: A while ago I got an awesome 3DS. It had some issues, but they were very easy to solve!
+# description: A while ago I got an awesome 3DS. It had some issues, but they were very easy to solve!
 ---
 
 ## Table of contents

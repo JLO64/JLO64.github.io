@@ -6,7 +6,7 @@ tags:
   - notebooks
   - fountain-pens
   - writing
-description: I have quite a lot of different things residing in my pockets. Here I take a look at all of them!
+# description: I have quite a lot of different things residing in my pockets. Here I take a look at all of them!
 ---
 
 ## Phone Stuff

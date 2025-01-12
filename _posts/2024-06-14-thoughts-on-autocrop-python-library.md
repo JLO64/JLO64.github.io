@@ -4,7 +4,7 @@ title: Thoughts On Autocrop Python Library
 permalink: /posts/:year/:month/:slug
 tags:
   - python
-description: While using Autocrop for my service does have some issues, it is the best option I currently have. 
+# description: While using Autocrop for my service does have some issues, it is the best option I currently have. 
 ---
 
 [Autocrop](https://github.com/leblancfg/autocrop) is a python library that automatically crops faces in images. this is exactly what I want for profile photos, since I want there to be consistency among all the photos uploaded and publicly displayed. Performing this locally in the container is more than doable, however I am slightly concerned about the performance impact this could have. On my MacBook it is nearly instantaneous, but I suspect on production hardware it will take more than five seconds. During these five seconds all other functions and customers using can experience extreme performance degradation.  When a new group of customers joins this service and uploads a bunch of photos all at once, this could cause serious issues. Thus, running it on separate hardware is best. 

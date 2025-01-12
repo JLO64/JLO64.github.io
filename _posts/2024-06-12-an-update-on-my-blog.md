@@ -4,7 +4,7 @@ title: An Update on My Blog
 permalink: /posts/:year/:month/:slug
 tags:
   - life-stuff
-description: TL;DR I HAVE A GIRLFRIEND YAAAAAAAAY! But I have much more up my sleeve.
+# description: TL;DR I HAVE A GIRLFRIEND YAAAAAAAAY! But I have much more up my sleeve.
 ---
 
 It's been a hot minute since I last posted here! In fact, as of me writing/uploading this, it has been exactly 5 months since my last blog post. On the personal side things have changed a bunch...

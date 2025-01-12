@@ -7,7 +7,7 @@ tags:
   - html
   - css
   - javascript
-description: True, I did yoink some lines of code for this. Worth it though!
+# description: True, I did yoink some lines of code for this. Worth it though!
 ---
 
 The term "steal" has a bunch of negative connotations, but I feel that taking HTML/CSS/JS from other's websites be viewed as a bad thing. Personally, I would feel more than pleased to learn that someone decided to steal code from my site for their own use! However, instead of just copying other's websites, I've decided to showcase where I've been sourcing stuff from. That way, people looking to copy my code can compare against its origin.

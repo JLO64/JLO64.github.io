@@ -7,7 +7,7 @@ tags:
   - python
   - openai
   - aws
-description: Here's how, with a bit of AWS Lambda and ChatGPT, I managed to solve a first world problem with McDonalds app. Yay, I guess?
+# description: Here's how, with a bit of AWS Lambda and ChatGPT, I managed to solve a first world problem with McDonalds app. Yay, I guess?
 ---
 
 <picture>

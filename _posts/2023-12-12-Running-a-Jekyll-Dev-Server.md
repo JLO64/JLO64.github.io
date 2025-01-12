@@ -6,7 +6,7 @@ tags:
   - nginx
   - jekyll
   - webdev
-description: My usual VS Code plugin has been really pesky, so it's time to change the methods a bit.
+# description: My usual VS Code plugin has been really pesky, so it's time to change the methods a bit.
 ---
 ## My Plugin Problem
 

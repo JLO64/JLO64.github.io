@@ -4,7 +4,7 @@ title: Hacking My Nintendo 3DS
 permalink: /posts/:year/:month/:slug
 tags:
   - 3ds
-description: The 3DS is a very important piece of my childhood - as such, it makes perfect sense to hack it to make best use of its abilities!
+# description: The 3DS is a very important piece of my childhood - as such, it makes perfect sense to hack it to make best use of its abilities!
 
 ---
 
