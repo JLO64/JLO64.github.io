@@ -1,13 +1,14 @@
 p {
-    padding-inline-start: 1rem;
+    // padding-inline-start: 1rem;
+    padding: 0 1rem;
 }
 
 div.posts-tags-div{
     display: inline-flex;
     flex-wrap: wrap;
-    padding-inline-start: 1rem;
+    margin: 0 1rem;
 }
 
 div.table-of-contents {
-    padding-inline-start: 1rem;
+    margin: 0 1rem;
 }
