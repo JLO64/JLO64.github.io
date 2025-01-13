@@ -14,15 +14,6 @@ tags:
     <figcaption style="text-align:center">My childhood in a nutshell.</figcaption>
  </picture>
 
-## Table of contents
-- [Introduction](#introduction)
-- [Hacking explained](#hacking-explained)
-- [Hacking a 3DS](#hacking-a-3ds)
-- [Homebrew 3DS Apps](#homebrew-3ds-apps)
-- [Emulating Old Games](#emulating-old-games)
-- [The Piracy Issue](#the-piracy-issue)
-- [Should you buy a 3DS in 2023](#should-you-buy-a-3ds-in-2023)
-
 ## Introduction
 
 As weird as it sounds to say this, if you have a Nintendo 3DS you should try hacking it!

@@ -1,5 +1,5 @@
 .w {
-    p {
+    p, h2, h3 {
         a[href*="visualstudio.com"]:hover{
             text-shadow: 0 0 1.1rem var(--vscode);
             color: var(--vscode);
