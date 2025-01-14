@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="me" href="https://fosstodon.org/@JLO64"></link>
   
     <title>
       {% if page.title %}
@@ -35,16 +34,11 @@
     {% if page.layout == 'post' %}
     <meta property="og:image" content="{{ site.url }}/assets/opengraph/default-opengraph.png">
     <meta name="twitter:image" content="{{ site.url }}/assets/opengraph/default-opengraph.png">
-    <!-- <meta property="og:image" content="https://ik.imagekit.io/jlo64/www_julianlopez_net/opengraph-images/tr:l-text,i-{{ page.title | replace: ' ', '%20' % }},tg-b,co-74c0fc,fs-80,w-1200,pa-80_0_0_0,ff-Ubuntu,lfo-center,l-end/template.png"> -->
-    <!-- <meta name="twitter:image" content="https://ik.imagekit.io/jlo64/www_julianlopez_net/opengraph-images/tr:l-text,i-{{ page.title | replace: ' ', '%20' % }},tg-b,co-74c0fc,fs-80,w-1200,pa-80_0_0_0,ff-Ubuntu,lfo-center,l-end/template.png"> -->
     {% else %}
     <meta property="og:image"  content="{{ site.url }}/assets/opengraph/default-opengraph.png">
     <meta name="twitter:image" content="{{ site.url }}/assets/opengraph/default-opengraph.png">
-    <!-- <meta property="og:image" content="https://ik.imagekit.io/jlo64/www_julianlopez_net/opengraph-images/default.png"> -->
-    <!-- <meta name="twitter:image" content="https://ik.imagekit.io/jlo64/www_julianlopez_net/opengraph-images/default.png"> -->
     {% endif %}
     <meta name="twitter:card" content="summary_large_image">
-    <!-- <meta property="twitter:domain" content="{{ site.domain}}"> -->
     <meta property="twitter:url" content="{{ page.url }}">
     <meta name="twitter:title" content="{{ page.title }}">
   
@@ -58,7 +52,6 @@
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="msapplication-config" content="/assets/images/favicon/browserconfig.xml">
     <meta name="theme-color" content="#74c0fc">
-    <!-- Favicon -->
   
     <!-- Google site verification -->
     <meta name="google-site-verification" content="VsNyvMxYvOQFM1OyN-DUCMvUDGYbj3xb6ZmPBbkNLYo" />
@@ -161,32 +154,11 @@
               <!-- Last updated June 10th, 2024 -->
                <p>{{ site.time | date: "%B %d, %Y" }}</p>
             </li>
-            <li class="goatcounter">Views for this page:<div id="stats">?</div>stats by GoatCounter</li>
           </ul>
         <div>
       </div>
     </main>
   </body>
-  <script>
-    var r = new XMLHttpRequest();
-    r.addEventListener('load', function() {
-        document.querySelector('#stats').innerText = JSON.parse(this.responseText).count
-    })
-    var loc_pathname = location.pathname;
-    if (loc_pathname.endsWith('/')) {loc_pathname = loc_pathname.slice(0, -1);}
-    r.open('GET', 'https://jlo64.goatcounter.com/counter//' + location.host + loc_pathname + '.json')
-    r.send()
-
-    if (window.location.hostname.includes('jekyll.julianlopez.net')) {
-      window.goatcounter = {no_onload: true}
-    }
-    else{
-      // window.goatcounter = {path: function(p) { return location.host + p }}
-      window.goatcounter = {path: function(p) { return '/' + location.host + loc_pathname }}
-    }
-  </script>
-  <script data-goatcounter="https://jlo64.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-
   <script>
     {% include card_hover.js %}
   </script>
