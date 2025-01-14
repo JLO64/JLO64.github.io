@@ -12,13 +12,13 @@
     if (showing_topbar_bottom_row) {
       showing_topbar_bottom_row = false;
       topbar.classList.remove("topbar-expand");
-      menubutton_img.src = "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/a1232e34553634c5363aa62c8d1b02161a4438e1/svgs/solid/bars.svg"
+      menubutton_img.src = "/assets/svg/bars.svg"
     }
     else
     {
       topbar.classList.add("topbar-expand");
       showing_topbar_bottom_row = true;
-      menubutton_img.src = "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/a1232e34553634c5363aa62c8d1b02161a4438e1/svgs/solid/xmark.svg"
+      menubutton_img.src = "/assets/svg/xmark.svg"
     }
     })
   }
@@ -32,13 +32,13 @@
     radio_button.addEventListener('click', () => {
       if (playing_radio) {
         playing_radio = false;
-        radio_button_img.src = "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/a1232e34553634c5363aa62c8d1b02161a4438e1/svgs/solid/circle-play.svg";
+        radio_button_img.src = "/assets/svg/circle-play.svg";
         KUSC_Stream.pause();
       }
       else
       {
         playing_radio = true;
-        radio_button_img.src = "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/a1232e34553634c5363aa62c8d1b02161a4438e1/svgs/solid/circle-stop.svg";
+        radio_button_img.src = "/assets/svg/circle-stop.svg";
         KUSC_Stream = new Audio('http://128.mp3.kusc.live/');
         KUSC_Stream.play();
       }
