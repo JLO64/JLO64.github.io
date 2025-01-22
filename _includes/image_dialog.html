@@ -12,6 +12,7 @@
                 // Copy the contents of the clicked picture into the dialog content
                 let htmlContent = event.currentTarget.outerHTML;
                 htmlContent = htmlContent.replace(/\?tr=w-480/g, '').replace(/max-height: 60vh/g, '').replace(/border-radius: 1rem;/g, '');
+                htmlContent = htmlContent.replace(/\.webp/g, '.jpeg');
                 dialogContent.innerHTML = htmlContent;
 
                 dialog.showModal()
