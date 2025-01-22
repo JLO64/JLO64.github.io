@@ -69,9 +69,7 @@
 
     <script>
       function onNavigateOrLoad() {
-        const url = window.location.href.replace("http://", "").replace("https://", "");
-        console.log(url);
-        const homepage_url = "{{ site.url }}/".replace("http://", "").replace("https://", "");
+        dialogButtonInitializer();
       }
 
       document.addEventListener("DOMContentLoaded", onNavigateOrLoad);
@@ -79,8 +77,6 @@
   </head>
   <body>
     {% include space-rings.html %}
-
-    {% include image_dialog.html %}
     <div class="topbar-container">
       <div class="topbar">
         <div class="topbar-top-row">
@@ -169,7 +165,7 @@
         document.documentElement.scrollTop = 0;
         document.body.querySelector('.w').innerHTML = data.body.querySelector('.w').innerHTML;
         document.title = data.title;
-        onNavigateOrLoad(); // Add this line to trigger the function after content updates
+        onNavigateOrLoad();
       }
 
       function handleLinkClick(event) {
@@ -228,9 +224,10 @@
       document.addEventListener('click', handleLinkClick);
     </script>
   </body>
-  <script>
+  <script type="text/javascript">
     {% include card_hover.js %}
   </script>
+  {% include image_dialog.html %}
 
   <script type="speculationrules">
     {

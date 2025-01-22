@@ -27,7 +27,10 @@ layout: default
         <div>
           <div class="mastodon_post_images">
             {% for mastodon_post_image in site.data.most_recent_mastodon_post.image_filenames %}
-            <img src="/assets/images/{{ mastodon_post_image }}" class="mastodon_post_image"></img>
+            <picture>
+              <img src="/assets/images/{{ mastodon_post_image }}" class="mastodon_post_image"></img>
+              <!-- <figcaption style="text-align:center">Don't ask what bank I robbed...</figcaption> -->
+            </picture>
             {% endfor %}
           </div>
         </div>

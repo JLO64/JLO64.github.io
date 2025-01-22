@@ -10,7 +10,7 @@
         all_pictures.forEach(openDialogButton => {
             openDialogButton.addEventListener('click', (event) => {
                 // Copy the contents of the clicked picture into the dialog content
-                let htmlContent = event.target.outerHTML;
+                let htmlContent = event.currentTarget.outerHTML;
                 htmlContent = htmlContent.replace(/\?tr=w-480/g, '').replace(/max-height: 60vh/g, '').replace(/border-radius: 1rem;/g, '');
                 dialogContent.innerHTML = htmlContent;
 
@@ -37,4 +37,3 @@
     <dialog id="img-dialog">
         <div id="img-dialog-content"></div>
     </dialog>
-    
