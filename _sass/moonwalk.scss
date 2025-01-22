@@ -116,12 +116,11 @@ a[href*="/tag/"] {
   text-decoration: none;
 }
 
-.blog_image {
-  border-radius: 1.5rem;
-  transition: 0.2s ease-in;
-}
-
 picture {
+  img {
+    border-radius: 1.5rem;
+    transition: 0.2s ease-in;
+  }
   figcaption {
     margin-top: 0.5rem;
   }

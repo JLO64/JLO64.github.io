@@ -45,15 +45,16 @@
     font-weight: 999;
     border: solid var(--link-underline) 0.8rem;
   }
-  .blog_image {
-    height: 40vh;
-  }
-  .blog_image:hover {
-    border-radius: 0.5rem;
-    // height: 60vh;
-    cursor: pointer;
-    border: none;
-    animation: img_border_breathe 0.7s infinite alternate ease-in-out;
+  picture {
+    img {
+      height: 30vh;
+    }
+    img:hover {
+      border-radius: 0.5rem;
+      cursor: pointer;
+      border: none;
+      animation: img_border_breathe 0.7s infinite alternate ease-in-out; 
+    }
   }
   .limit-homepage-posts
   {
@@ -140,7 +141,6 @@
   .homepage-mastodon-post:hover {
     animation: initial_mastodon_card_breathe 0.3s forwards;
     .mastodon_image, .mastodon_post_image {
-      border-radius: 1rem !important;
       filter: none;
     }
   }
