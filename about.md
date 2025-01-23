@@ -6,7 +6,7 @@ title: About
 <h1 class="post-title">{{ page.title }}</h1>
 <br>
 <picture>
-  <img src="/assets/images/profile_photo.jpg" alt="A picture of young me with a dumb look on my face and a bunch on cash on the floor" class="blog_image"/>
+  <img src="/assets/images/about/IMG_20190214_111823443.webp" alt="A picture of young me with a dumb look on my face and a bunch on cash on the floor" class="blog_image"/>
   <figcaption style="text-align:center">Don't ask what bank I robbed...</figcaption>
 </picture>
 
