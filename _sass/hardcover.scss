@@ -1,0 +1,39 @@
+// Styles for Currently Reading section
+.homepage-hardcover-container {
+  width: 90vw;
+
+  .homepage-hardcover-books {
+    background: var(--mastodon-box);
+    border-radius: 1.4rem;
+    margin: auto;
+    max-width: 80vw;
+    width: 50rem;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 2rem;
+
+    .homepage-hardcover-book {
+      display: block;
+      width: 10rem;
+      max-width: 80vw;
+      margin: 0;
+      padding: 0.5rem;
+      text-align: center;
+
+      .hardcover-book-image {
+        height: 14rem;
+        width: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 1.4rem;
+      }
+
+      .hardcover-book-title {
+        margin-top: 0.5rem;
+        font-weight: bold;
+      }
+    }
+  }
+}

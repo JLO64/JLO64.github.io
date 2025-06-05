@@ -7,6 +7,18 @@ layout: default
   <p style="text-align: center; max-width: 34rem; margin: 0 auto;">{{ site.description }}</p>
 </div>  
 <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+  <div class="homepage-hardcover-container">
+    <h2>Currently Reading</h2>
+    <div class="homepage-hardcover-books">
+      {% assign books = site.data.hardcover_currently_reading.data.list_books %}
+      {% for entry in books %}
+      <div class="homepage-hardcover-book">
+        <img src="/{{ entry.book.image.filepath }}" alt="{{ entry.book.title }}" class="hardcover-book-image" />
+        <p class="hardcover-book-title">{{ entry.book.title }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
   <div class="homepage-mastodon-post-container">
     <h2>Latest Fediverse Post</h2>
       <div class="homepage-mastodon-post">
