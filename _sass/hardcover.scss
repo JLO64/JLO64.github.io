@@ -1,39 +1,46 @@
 // Styles for Currently Reading section
 .homepage-hardcover-container {
   width: 90vw;
+}
 
-  .homepage-hardcover-books {
-    background: var(--mastodon-box);
-    border-radius: 1.4rem;
-    margin: auto;
-    max-width: 80vw;
-    width: 50rem;
-    padding: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    row-gap: 2rem;
+// Grid container for book cards
+.hardcover-book-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-inline-start: 0;
+  row-gap: 2rem;
+  margin: 0 auto;
+}
 
-    .homepage-hardcover-book {
-      display: block;
-      width: 16rem;
-      max-width: 80vw;
-      margin: 0;
-      padding: 0.5rem;
-      text-align: center;
+// Individual book card
+.hardcover-book-item {
+  display: block;
+  width: 13rem;
+  max-width: 80vw;
+  margin: 0;
+  padding: 1rem;
+  background: var(--project-box);
+  border-radius: 1.4rem;
+  text-align: center;
+}
 
-      .hardcover-book-image {
-        height: 14rem;
-        width: auto;
-        display: block;
-        margin: 0 auto;
-        border-radius: 1.4rem;
-      }
+.hardcover-book-item .hardcover-book-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  margin-top: 0rem;
+}
 
-      .hardcover-book-title {
-        margin-top: 0.5rem;
-        font-weight: bold;
-      }
-    }
-  }
+ .hardcover-book-item .hardcover-book-image {
+  height: 14rem;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 0.2rem;
+}
+// Author name below cover
+.hardcover-book-item .hardcover-book-author {
+  margin-top: 0.5rem;
+  font-weight: normal;
+  color: var(--text);
 }

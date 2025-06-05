@@ -9,15 +9,20 @@ layout: default
 <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
   <div class="homepage-hardcover-container">
     <h2>Currently Reading</h2>
-    <div class="homepage-hardcover-books">
+    <ul class="hardcover-book-container">
       {% assign books = site.data.hardcover_currently_reading.data.list_books %}
       {% for entry in books %}
-      <div class="homepage-hardcover-book">
-        <img src="/{{ entry.book.image.filepath }}" alt="{{ entry.book.title }}" class="hardcover-book-image" />
+      <li class="hardcover-book-item">
         <p class="hardcover-book-title">{{ entry.book.title }}</p>
-      </div>
+        <img src="/{{ entry.book.image.filepath }}" alt="{{ entry.book.title }}" class="hardcover-book-image" />
+        <p class="hardcover-book-author">
+          {% for contrib in entry.book.contributions %}
+            By {{ contrib.author.name }}{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+        </p>
+      </li>
       {% endfor %}
-    </div>
+    </ul>
   </div>
   <div class="homepage-mastodon-post-container">
     <h2>Latest Fediverse Post</h2>

@@ -25,9 +25,9 @@ module Jekyll
       token = ENV['HARDCOVER_AUTHORIZATION'] || ENV['HARDCOVER_TOKEN']
       return unless token && !token.empty?
 
-      # GraphQL query to fetch books with status_id = 2 (currently reading)
+      # GraphQL query to fetch books with status_id = 2 (currently reading), including author
       query = <<~GRAPHQL
-        query books_currently_reading {
+        query list {
           list_books(
             where: {user_books: {user_id: {_eq: 35418}, status_id: {_eq: 2}}}
             distinct_on: book_id
@@ -37,6 +37,11 @@ module Jekyll
               title
               image {
                 url
+              }
+              contributions {
+                author {
+                  name
+                }
               }
             }
           }
