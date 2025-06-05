@@ -1,11 +1,11 @@
 # parse arguments KEY=VALUE
 while [ $# -gt 0 ]; do
   case "$1" in
-    *=*)
-      varname=$(echo "$1" | cut -d= -f1)
-      varvalue=$(echo "$1" | cut -d= -f2-)
-      eval "$varname=\"$varvalue\""
-      ;;
+  *=*)
+    varname=$(echo "$1" | cut -d= -f1)
+    varvalue=$(echo "$1" | cut -d= -f2-)
+    eval "$varname=\"$varvalue\""
+    ;;
   esac
   shift
 done
@@ -32,3 +32,5 @@ git pull
 rm -rf $NGINX_DIR/*
 docker run --rm -v $JEKYLL_DIR:/srv/jekyll -u $(id -u):$(id -g) $JEKYLL_BUILDER_IMAGE build
 cp -r $JEKYLL_DIR/_site/* $NGINX_DIR
+chmod -R 755 $NGINX_DIR
+
