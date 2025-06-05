@@ -2,6 +2,8 @@ require 'net/http'
 require 'uri'
 require 'json'
 require 'fileutils'
+require 'open-uri'
+require 'mini_magick'
 
 module Jekyll
   # Generator plugin to fetch currently reading books from Hardcover API
@@ -61,6 +63,35 @@ module Jekyll
       rescue StandardError => e
         Jekyll.logger.warn "Hardcover API error:", e.message
         return
+      end
+
+      # Download and convert each book image to WebP, and add local filepath to JSON
+      if (books = result.dig("data", "list_books")).is_a?(Array)
+        images_dir = File.join(site.source, 'assets', 'images', 'hardcover')
+        FileUtils.mkdir_p(images_dir)
+        books.each do |entry|
+          image_info = entry.dig("book", "image")
+          next unless image_info && image_info["url"]
+          image_url = image_info["url"]
+          begin
+            uri = URI.parse(image_url)
+            ext = File.extname(uri.path)
+            basename = File.basename(uri.path, ext)
+            webp_filename = "#{basename}.webp"
+            webp_path = File.join(images_dir, webp_filename)
+            # Skip if already exists
+            unless File.exist?(webp_path)
+              fetched = URI.open(image_url)
+              image = MiniMagick::Image.read(fetched)
+              image.format "webp"
+              image.write webp_path
+            end
+            # Save relative filepath
+            image_info["filepath"] = File.join('assets', 'images', 'hardcover', webp_filename)
+          rescue StandardError => e
+            Jekyll.logger.warn "Hardcover image error for #{image_url}:", e.message
+          end
+        end
       end
 
       # Write result to _data/hardcover_currently_reading.json
