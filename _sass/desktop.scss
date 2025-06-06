@@ -50,10 +50,10 @@
       height: 30vh;
     }
     img:hover {
-      border-radius: 0.5rem;
+    /*   border-radius: 0.5rem; */
       cursor: pointer;
       border: none;
-      animation: img_border_breathe 0.7s infinite alternate ease-in-out; 
+    /*   animation: img_border_breathe 0.7s infinite alternate ease-in-out;  */
     }
   }
   .limit-homepage-posts
@@ -150,8 +150,13 @@
     }
   }
   .hardcover-book-item:hover {
+    animation: initial_card_breathe 0.3s forwards;
     .hardcover-book-image {
       filter: none;
+    }
+    .hardcover-book-title {
+      animation: a_breathe 0.7s infinite alternate ease-in-out;
+      color: var(--link-underline);
     }
   }
   .project-box:hover, .post-list-item:hover, .table-of-contents:hover {
