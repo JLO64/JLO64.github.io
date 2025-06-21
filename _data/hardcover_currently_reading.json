@@ -1,0 +1,30 @@
+{
+  "data": {
+    "me": [
+      {
+        "user_books": [
+          {
+            "user_book_reads": [
+              {
+                "edition": {
+                  "title": "Katamari Damacy",
+                  "image": {
+                    "url": "https://assets.hardcover.app/edition/30534421/e3f79670df0a2a146e1427f452da00eeddd5679f.jpeg",
+                    "filepath": "assets/images/hardcover/e3f79670df0a2a146e1427f452da00eeddd5679f.webp"
+                  },
+                  "contributions": [
+                    {
+                      "author": {
+                        "name": "L.E. Hall"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

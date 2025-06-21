@@ -27,20 +27,20 @@ module Jekyll
 
       # GraphQL query to fetch books with status_id = 2 (currently reading), including author
       query = <<~GRAPHQL
-        query list {
-          list_books(
-            where: {user_books: {user_id: {_eq: 35418}, status_id: {_eq: 2}}}
-            distinct_on: book_id
-            offset: 0
-          ) {
-            book {
-              title
-              image {
-                url
-              }
-              contributions {
-                author {
-                  name
+        query BooksCurrentlyReading {
+          me {
+            user_books(where: {status_id: {_eq: 2}}) {
+              user_book_reads {
+                edition {
+                  title
+                  image {
+                    url
+                  }
+                  contributions {
+                    author {
+                      name
+                    }
+                  }
                 }
               }
             }
@@ -71,30 +71,33 @@ module Jekyll
       end
 
       # Download and convert each book image to WebP, and add local filepath to JSON
-      if (books = result.dig("data", "list_books")).is_a?(Array)
+      user_books = result.dig("data", "me", 0, "user_books")
+      if user_books.is_a?(Array)
         images_dir = File.join(site.source, 'assets', 'images', 'hardcover')
         FileUtils.mkdir_p(images_dir)
-        books.each do |entry|
-          image_info = entry.dig("book", "image")
-          next unless image_info && image_info["url"]
-          image_url = image_info["url"]
-          begin
-            uri = URI.parse(image_url)
-            ext = File.extname(uri.path)
-            basename = File.basename(uri.path, ext)
-            webp_filename = "#{basename}.webp"
-            webp_path = File.join(images_dir, webp_filename)
-            # Skip if already exists
-            unless File.exist?(webp_path)
-              fetched = URI.open(image_url)
-              image = MiniMagick::Image.read(fetched)
-              image.format "webp"
-              image.write webp_path
+        user_books.each do |user_book|
+          user_book["user_book_reads"].each do |read|
+            image_info = read.dig("edition", "image")
+            next unless image_info && image_info["url"]
+            image_url = image_info["url"]
+            begin
+              uri = URI.parse(image_url)
+              ext = File.extname(uri.path)
+              basename = File.basename(uri.path, ext)
+              webp_filename = "#{basename}.webp"
+              webp_path = File.join(images_dir, webp_filename)
+              # Skip if already exists
+              unless File.exist?(webp_path)
+                fetched = URI.open(image_url)
+                image = MiniMagick::Image.read(fetched)
+                image.format "webp"
+                image.write webp_path
+              end
+              # Save relative filepath
+              image_info["filepath"] = File.join('assets', 'images', 'hardcover', webp_filename)
+            rescue StandardError => e
+              Jekyll.logger.warn "Hardcover image error for #{image_url}:", e.message
             end
-            # Save relative filepath
-            image_info["filepath"] = File.join('assets', 'images', 'hardcover', webp_filename)
-          rescue StandardError => e
-            Jekyll.logger.warn "Hardcover image error for #{image_url}:", e.message
           end
         end
       end

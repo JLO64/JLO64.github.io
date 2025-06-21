@@ -10,17 +10,19 @@ layout: default
   <div class="homepage-hardcover-container">
     <h2>Currently Reading</h2>
     <ul class="hardcover-book-container">
-      {% assign books = site.data.hardcover_currently_reading.data.list_books %}
-      {% for entry in books %}
+      {% assign books = site.data.hardcover_currently_reading.data.me[0].user_books %}
+      {% for user_book in books %}
+        {% for read in user_book.user_book_reads %}
       <li class="hardcover-book-item">
-        <p class="hardcover-book-title">{{ entry.book.title }}</p>
-        <img src="/{{ entry.book.image.filepath }}" alt="{{ entry.book.title }}" class="hardcover-book-image" />
+        <p class="hardcover-book-title">{{ read.edition.title }}</p>
+        <img src="/{{ read.edition.image.filepath }}" alt="{{ read.edition.title }}" class="hardcover-book-image" />
         <p class="hardcover-book-author">
-          {% for contrib in entry.book.contributions %}
+          {% for contrib in read.edition.contributions %}
             By {{ contrib.author.name }}{% unless forloop.last %}, {% endunless %}
           {% endfor %}
         </p>
       </li>
+        {% endfor %}
       {% endfor %}
     </ul>
   </div>
