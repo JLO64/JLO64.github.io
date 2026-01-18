@@ -12,7 +12,7 @@ layout: default
     <ul class="hardcover-book-container">
       {% assign books = site.data.hardcover_currently_reading.data.me[0].user_books %}
       {% for user_book in books %}
-        {% for read in user_book.user_book_reads %}
+        {% assign read = user_book.user_book_reads[0] %}
       <li class="hardcover-book-item">
         <p class="hardcover-book-title">{{ read.edition.title }}</p>
         <img src="/{{ read.edition.image.filepath }}" alt="{{ read.edition.title }}" class="hardcover-book-image" />
@@ -22,7 +22,6 @@ layout: default
           {% endfor %}
         </p>
       </li>
-        {% endfor %}
       {% endfor %}
     </ul>
   </div>
