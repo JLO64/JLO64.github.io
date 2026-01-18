@@ -28,7 +28,9 @@ fi
 if [ -z "$HARDCOVER_TOKEN" ]; then
   # Try to load from .env file if not provided as argument
   if [ -f "$JEKYLL_DIR/.env" ]; then
-    export $(grep -v '^#' "$JEKYLL_DIR/.env" | xargs)
+    set -a
+    source "$JEKYLL_DIR/.env"
+    set +a
   fi
 
   if [ -z "$HARDCOVER_TOKEN" ]; then
