@@ -1,3 +1,7 @@
+#!/bin/bash
+set -e  # Exit on error
+set -u  # Exit on undefined variable
+
 # parse arguments KEY=VALUE
 while [ $# -gt 0 ]; do
   case "$1" in
@@ -29,7 +33,7 @@ if [ -z "$HARDCOVER_TOKEN" ]; then
   # Try to load from .env file if not provided as argument
   if [ -f "$JEKYLL_DIR/.env" ]; then
     set -a
-    source "$JEKYLL_DIR/.env"
+    . "$JEKYLL_DIR/.env"
     set +a
   fi
 
@@ -39,11 +43,13 @@ if [ -z "$HARDCOVER_TOKEN" ]; then
   fi
 fi
 
-cd $JEKYLL_DIR
+# Ensure PATH includes common binary locations
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+cd "$JEKYLL_DIR" || { echo "Failed to cd to $JEKYLL_DIR"; exit 1; }
 git reset --hard HEAD
 git pull
-rm -rf $NGINX_DIR/*
-docker run --rm -v $JEKYLL_DIR:/srv/jekyll -e HARDCOVER_TOKEN="$HARDCOVER_TOKEN" -u $(id -u):$(id -g) $JEKYLL_BUILDER_IMAGE build
-cp -r $JEKYLL_DIR/_site/* $NGINX_DIR
-chmod -R 755 $NGINX_DIR
-
+rm -rf "$NGINX_DIR"/*
+docker run --rm -v "$JEKYLL_DIR":/srv/jekyll -e HARDCOVER_TOKEN="$HARDCOVER_TOKEN" -u "$(id -u):$(id -g)" "$JEKYLL_BUILDER_IMAGE" build
+cp -r "$JEKYLL_DIR"/_site/* "$NGINX_DIR"
+chmod -R 755 "$NGINX_DIR"
