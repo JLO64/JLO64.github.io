@@ -58,8 +58,9 @@ Use `uvx rodney --local` to browse the site programmatically. The `.rodney/` dir
 
 **Server deploy** (`server_build_script.sh`):
 - Accepts `KEY=VALUE` args or reads from `.env`
-- Pulls latest git, builds via Docker, copies `_site/` to the NGINX directory
+- Pulls latest git, builds via Docker **twice**, copies `_site/` to the NGINX directory
 - Required args: `JEKYLL_DIR`, `NGINX_DIR`, `HARDCOVER_TOKEN`
+- **Why two builds?** Jekyll loads `_data/` before running generator plugins, so files written by plugins (e.g. `hardcover_currently_reading.json`) are only available on the *next* build. The first build fetches and writes the data; the second build renders the site using it.
 
 ## Data Files
 
