@@ -36,7 +36,7 @@ module Jekyll
                 }
               }
             }
-            book { id title }
+            book { id title slug }
           }
         }
       }
@@ -89,6 +89,7 @@ module Jekyll
           "book_id"        => ub.dig("book", "id"),
           "edition_id"     => edition["id"],
           "title"          => edition["title"] || ub.dig("book", "title"),
+          "slug"           => ub.dig("book", "slug"),
           "authors"        => authors,
           "rating"         => ub["rating"],
           "started_at"     => read["started_at"],

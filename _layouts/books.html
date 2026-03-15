@@ -10,7 +10,11 @@ layout: default
 
 {% for year_group in sorted_years %}
   <div class="books-year-section">
-    <h2 class="books-year-heading">{{ year_group.name }}</h2>
+    {% if year_group.name == "2025" %}
+      <h2 class="books-year-heading">2025 &amp; Earlier</h2>
+    {% else %}
+      <h2 class="books-year-heading">{{ year_group.name }}</h2>
+    {% endif %}
     <ul class="hardcover-book-container">
       {% assign sorted_books = year_group.items | sort: "last_read_date" | reverse %}
       {% for book in sorted_books %}
@@ -18,7 +22,13 @@ layout: default
         {% if book.cover_filepath %}
           <img src="/{{ book.cover_filepath }}" alt="{{ book.title }}" class="hardcover-book-image" />
         {% endif %}
-        <p class="hardcover-book-title">{{ book.title }}</p>
+        <p class="hardcover-book-title">
+          {% if book.slug %}
+            <a href="https://hardcover.app/books/{{ book.slug }}" target="_blank" rel="noreferrer">{{ book.title }}</a>
+          {% else %}
+            {{ book.title }}
+          {% endif %}
+        </p>
         <p class="hardcover-book-author">
           {% for author in book.authors %}
             {{ author }}{% unless forloop.last %}, {% endunless %}
@@ -26,11 +36,6 @@ layout: default
         </p>
         {% if book.rating %}
           <p class="books-book-rating">{{ book.rating }} / 5</p>
-        {% endif %}
-        {% if book.finished_at %}
-          <p class="books-book-date">{{ book.finished_at }}</p>
-        {% elsif book.last_read_date %}
-          <p class="books-book-date">{{ book.last_read_date }}</p>
         {% endif %}
       </li>
       {% endfor %}

@@ -4,6 +4,7 @@
     "book_id": 214074,
     "edition_id": 23767873,
     "title": "Blood Music",
+    "slug": "blood-music",
     "authors": [
       "Greg Bear"
     ],
@@ -21,6 +22,7 @@
     "book_id": 194655,
     "edition_id": 32156344,
     "title": "Tau Zero",
+    "slug": "tau-zero",
     "authors": [
       "Poul Anderson"
     ],
@@ -38,6 +40,7 @@
     "book_id": 1819790,
     "edition_id": 31942921,
     "title": "Railtown: The Fight for the Los Angeles Metro Rail and the Future of the City",
+    "slug": "railtown",
     "authors": [
       "Ethan N. Elkind"
     ],
@@ -55,6 +58,7 @@
     "book_id": 374556,
     "edition_id": 30405583,
     "title": "The Call of The Wild",
+    "slug": "the-call-of-the-wild",
     "authors": [
       "Jack London"
     ],
@@ -72,6 +76,7 @@
     "book_id": 1598537,
     "edition_id": 31670718,
     "title": "Arbitrium",
+    "slug": "arbitrium",
     "authors": [
       "Anjali Sachdeva"
     ],
@@ -89,6 +94,7 @@
     "book_id": 560141,
     "edition_id": 30520446,
     "title": "The Next Invasion",
+    "slug": "the-next-invasion",
     "authors": [
       "Robert Reed"
     ],
@@ -106,6 +112,7 @@
     "book_id": 1712746,
     "edition_id": 31809414,
     "title": "The Nvidia Way: Jensen Huang and the Making of a Tech Giant",
+    "slug": "the-nvidia-way-jensen-huang-and-the-making-of-a-tech-giant",
     "authors": [
       "Tae   Kim"
     ],
@@ -123,6 +130,7 @@
     "book_id": 487009,
     "edition_id": 30433765,
     "title": "With fire and sword",
+    "slug": "with-fire-and-sword",
     "authors": [
       "Henryk Sienkiewicz"
     ],
@@ -140,6 +148,7 @@
     "book_id": 188628,
     "edition_id": 30404892,
     "title": "Foundation",
+    "slug": "foundation",
     "authors": [
       "Isaac Asimov"
     ],
@@ -157,6 +166,7 @@
     "book_id": 268150,
     "edition_id": 24366858,
     "title": "Do Androids Dream of Electric Sheep?",
+    "slug": "do-androids-dream-of-electric-sheep",
     "authors": [
       "Philip K. Dick"
     ],
@@ -174,6 +184,7 @@
     "book_id": 312460,
     "edition_id": 30426415,
     "title": "Dune",
+    "slug": "dune",
     "authors": [
       "Frank Herbert",
       "Brian Herbert"
@@ -192,6 +203,7 @@
     "book_id": 347189,
     "edition_id": 30404893,
     "title": "Foundation and Empire",
+    "slug": "foundation-and-empire",
     "authors": [
       "Isaac Asimov"
     ],
@@ -209,6 +221,7 @@
     "book_id": 356467,
     "edition_id": 30400732,
     "title": "Animal Farm",
+    "slug": "animal-farm",
     "authors": [
       "George Orwell"
     ],
@@ -226,6 +239,7 @@
     "book_id": 361784,
     "edition_id": 20615477,
     "title": "A Canticle for Leibowitz",
+    "slug": "a-canticle-for-leibowitz",
     "authors": [
       "Walter M. Miller Jr.",
       "Mary Doria Russell"
@@ -244,6 +258,7 @@
     "book_id": 374134,
     "edition_id": 30402815,
     "title": "2001: A Space Odyssey",
+    "slug": "2001",
     "authors": [
       "Arthur C. Clarke",
       "Michael Moorcock",
@@ -263,6 +278,7 @@
     "book_id": 374328,
     "edition_id": 3299811,
     "title": "Brave New World",
+    "slug": "brave-new-world",
     "authors": [
       "Aldous Huxley"
     ],
@@ -280,6 +296,7 @@
     "book_id": 375938,
     "edition_id": 6336191,
     "title": "Fahrenheit 451",
+    "slug": "fahrenheit-451",
     "authors": [
       "Ray Bradbury"
     ],
@@ -297,6 +314,7 @@
     "book_id": 377938,
     "edition_id": 24693117,
     "title": "The Lord of the Rings",
+    "slug": "the-lord-of-the-rings",
     "authors": [
       "J.R.R. Tolkien"
     ],
@@ -314,6 +332,7 @@
     "book_id": 379760,
     "edition_id": 4675245,
     "title": "1984",
+    "slug": "1984",
     "authors": [
       "George Orwell"
     ],
@@ -331,6 +350,7 @@
     "book_id": 427393,
     "edition_id": 30447906,
     "title": "Dune Messiah",
+    "slug": "dune-messiah",
     "authors": [
       "Frank Herbert"
     ],
@@ -348,6 +368,7 @@
     "book_id": 427798,
     "edition_id": 4998878,
     "title": "The Hitchhiker's Guide to the Galaxy",
+    "slug": "the-hitchhikers-guide-to-the-galaxy",
     "authors": [
       "Douglas Adams"
     ],
@@ -365,6 +386,7 @@
     "book_id": 473869,
     "edition_id": 22062767,
     "title": "The Count of Monte Cristo",
+    "slug": "the-count-of-monte-cristo",
     "authors": [
       "Alexandre Dumas"
     ],
@@ -382,6 +404,7 @@
     "book_id": 480139,
     "edition_id": 30420112,
     "title": "Flowers for Algernon",
+    "slug": "flowers-for-algernon",
     "authors": [
       "Daniel Keyes"
     ],
@@ -399,6 +422,7 @@
     "book_id": 2459845,
     "edition_id": 8548995,
     "title": "The Hobbit",
+    "slug": "the-hobbit",
     "authors": [
       "J.R.R. Tolkien",
       "Christopher Tolkien"
@@ -417,6 +441,7 @@
     "book_id": 46423,
     "edition_id": 14936552,
     "title": "Foundation's edge",
+    "slug": "foundations-edge",
     "authors": [
       "Isaac Asimov"
     ],
@@ -434,6 +459,7 @@
     "book_id": 50772,
     "edition_id": 18334136,
     "title": "Speaker for the Dead",
+    "slug": "speaker-for-the-dead",
     "authors": [
       "Orson Scott Card"
     ],
@@ -451,6 +477,7 @@
     "book_id": 77104,
     "edition_id": 5138650,
     "title": "The Eye of the World",
+    "slug": "the-eye-of-the-world",
     "authors": [
       "Robert Jordan"
     ],
@@ -468,6 +495,7 @@
     "book_id": 94363,
     "edition_id": 25421331,
     "title": "Foundation and Earth",
+    "slug": "foundation-and-earth",
     "authors": [
       "Isaac Asimov"
     ],
@@ -485,6 +513,7 @@
     "book_id": 122240,
     "edition_id": 22583711,
     "title": "Slaughterhouse 5",
+    "slug": "slaughterhouse-five",
     "authors": [
       "Kurt Vonnegut"
     ],
@@ -502,6 +531,7 @@
     "book_id": 136548,
     "edition_id": 30404895,
     "title": "Second Foundation",
+    "slug": "second-foundation",
     "authors": [
       "Isaac Asimov"
     ],
@@ -519,6 +549,7 @@
     "book_id": 158268,
     "edition_id": 28435848,
     "title": "Ender's Game",
+    "slug": "enders-game",
     "authors": [
       "Orson Scott Card"
     ],
@@ -536,6 +567,7 @@
     "book_id": 26363,
     "edition_id": 30406910,
     "title": "Ready Player One",
+    "slug": "ready-player-one",
     "authors": [
       "Ernest Cline"
     ],
@@ -553,6 +585,7 @@
     "book_id": 1879356,
     "edition_id": 32017389,
     "title": "Human Resources: A Tor Original",
+    "slug": "human-resources",
     "authors": [
       "Adrian Tchaikovsky"
     ],
@@ -570,6 +603,7 @@
     "book_id": 655247,
     "edition_id": 30636823,
     "title": "The Defenders",
+    "slug": "the-defenders",
     "authors": [
       "Philip K. Dick"
     ],
@@ -587,6 +621,7 @@
     "book_id": 500144,
     "edition_id": 30449815,
     "title": "The Killing Star",
+    "slug": "the-killing-star",
     "authors": [
       "Charles Pellegrino",
       "George Zebrowski"
@@ -605,6 +640,7 @@
     "book_id": 99422,
     "edition_id": 30399508,
     "title": "Artemis",
+    "slug": "artemis",
     "authors": [
       "Andy Weir",
       "Rosario Dawson"
@@ -623,6 +659,7 @@
     "book_id": 87312,
     "edition_id": 3659606,
     "title": "The Metamorphosis of Prime Intellect",
+    "slug": "the-metamorphosis-of-prime-intellect",
     "authors": [
       "Roger Williams"
     ],
