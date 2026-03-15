@@ -15,6 +15,7 @@ theme_config:
 exclude:
   - docs
   - _data/most_recent_mastodon_post.yml
+  - .rodney
 
 highlighter: rouge
 

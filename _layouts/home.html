@@ -7,10 +7,11 @@ layout: default
   <p style="text-align: center; max-width: 34rem; margin: 0 auto;">{{ site.description }}</p>
 </div>  
 <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+  {% assign books = site.data.hardcover_currently_reading.data.me[0].user_books %}
+  {% if books.size > 0 %}
   <div class="homepage-hardcover-container">
     <h2>Currently Reading</h2>
     <ul class="hardcover-book-container">
-      {% assign books = site.data.hardcover_currently_reading.data.me[0].user_books %}
       {% for user_book in books %}
         {% assign read = user_book.user_book_reads[0] %}
       <li class="hardcover-book-item">
@@ -25,6 +26,7 @@ layout: default
       {% endfor %}
     </ul>
   </div>
+  {% endif %}
   <div class="homepage-mastodon-post-container">
     <h2>Latest Fediverse Post</h2>
       <div class="homepage-mastodon-post">
