@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<h1>Books</h1>
+<p>All books I have read, sorted by year.</p>
+
+{% assign books_by_year = site.data.hardcover_all_read | group_by: "year" %}
+{% assign sorted_years = books_by_year | sort: "name" | reverse %}
+
+{% for year_group in sorted_years %}
+  <div class="books-year-section">
+    <h2 class="books-year-heading">{{ year_group.name }}</h2>
+    <ul class="hardcover-book-container">
+      {% assign sorted_books = year_group.items | sort: "last_read_date" | reverse %}
+      {% for book in sorted_books %}
+      <li class="hardcover-book-item">
+        {% if book.cover_filepath %}
+          <img src="/{{ book.cover_filepath }}" alt="{{ book.title }}" class="hardcover-book-image" />
+        {% endif %}
+        <p class="hardcover-book-title">{{ book.title }}</p>
+        <p class="hardcover-book-author">
+          {% for author in book.authors %}
+            {{ author }}{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+        </p>
+        {% if book.rating %}
+          <p class="books-book-rating">{{ book.rating }} / 5</p>
+        {% endif %}
+        {% if book.finished_at %}
+          <p class="books-book-date">{{ book.finished_at }}</p>
+        {% elsif book.last_read_date %}
+          <p class="books-book-date">{{ book.last_read_date }}</p>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endfor %}
