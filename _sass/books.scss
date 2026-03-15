@@ -2,6 +2,24 @@
   margin-bottom: 2rem;
 }
 
+// Smaller cards on the Books page — scoped so homepage cards are unaffected
+.books-year-section .hardcover-book-item {
+  width: 9rem;
+  padding: 0.6rem;
+}
+
+.books-year-section .hardcover-book-item .hardcover-book-image {
+  height: 10rem;
+}
+
+.books-year-section .hardcover-book-item .hardcover-book-title {
+  font-size: 0.8rem;
+}
+
+.books-year-section .hardcover-book-item .hardcover-book-author {
+  font-size: 0.75rem;
+}
+
 .books-year-heading {
   border-bottom: 1px solid var(--text);
   padding-bottom: 0.3rem;
