@@ -36,6 +36,25 @@
     "cover_filepath": "assets/images/hardcover/27558a9ef8eb85c69929d4b6be43872fada82f00.webp"
   },
   {
+    "id": 13374761,
+    "book_id": 500144,
+    "edition_id": 30449815,
+    "title": "The Killing Star",
+    "slug": "the-killing-star",
+    "authors": [
+      "Charles Pellegrino",
+      "George Zebrowski"
+    ],
+    "rating": 3.5,
+    "started_at": "2026-03-11",
+    "finished_at": "2026-03-12",
+    "last_read_date": "2026-03-12",
+    "date_added": "2026-03-12",
+    "year": "2026",
+    "cover_url": "https://assets.hardcover.app/external_data/40953882/84ab4cd83c0f07f24d2034a68479a64af8c6dc50.jpeg",
+    "cover_filepath": "assets/images/hardcover/84ab4cd83c0f07f24d2034a68479a64af8c6dc50.webp"
+  },
+  {
     "id": 12085857,
     "book_id": 1819790,
     "edition_id": 31942921,
@@ -142,24 +161,6 @@
     "year": "2025",
     "cover_url": "https://assets.hardcover.app/external_data/536836/ccf772582cf1c929453364e687680576712a5b57.jpeg",
     "cover_filepath": "assets/images/hardcover/ccf772582cf1c929453364e687680576712a5b57.webp"
-  },
-  {
-    "id": 7527799,
-    "book_id": 188628,
-    "edition_id": 30404892,
-    "title": "Foundation",
-    "slug": "foundation",
-    "authors": [
-      "Isaac Asimov"
-    ],
-    "rating": null,
-    "started_at": null,
-    "finished_at": null,
-    "last_read_date": "2025-05-19",
-    "date_added": "2025-05-19",
-    "year": "2025",
-    "cover_url": "https://assets.hardcover.app/editions/30404892/5661545646660324.jpg",
-    "cover_filepath": "assets/images/hardcover/5661545646660324.webp"
   },
   {
     "id": 7527835,
@@ -563,6 +564,24 @@
     "cover_filepath": "assets/images/hardcover/4430587892e367395499f249b810cea57f9a4028.webp"
   },
   {
+    "id": 7527799,
+    "book_id": 188628,
+    "edition_id": 30404892,
+    "title": "Foundation",
+    "slug": "foundation",
+    "authors": [
+      "Isaac Asimov"
+    ],
+    "rating": null,
+    "started_at": null,
+    "finished_at": null,
+    "last_read_date": "2025-05-19",
+    "date_added": "2025-05-19",
+    "year": "2025",
+    "cover_url": "https://assets.hardcover.app/editions/30404892/5661545646660324.jpg",
+    "cover_filepath": "assets/images/hardcover/5661545646660324.webp"
+  },
+  {
     "id": 7527804,
     "book_id": 26363,
     "edition_id": 30406910,
@@ -615,25 +634,6 @@
     "year": "2025",
     "cover_url": "https://assets.hardcover.app/external_data/960093/745d068ad2302e10e3a523a5334197aabe83ef2a.jpeg",
     "cover_filepath": "assets/images/hardcover/745d068ad2302e10e3a523a5334197aabe83ef2a.webp"
-  },
-  {
-    "id": 13374761,
-    "book_id": 500144,
-    "edition_id": 30449815,
-    "title": "The Killing Star",
-    "slug": "the-killing-star",
-    "authors": [
-      "Charles Pellegrino",
-      "George Zebrowski"
-    ],
-    "rating": 4.0,
-    "started_at": "2026-03-11",
-    "finished_at": "2026-03-12",
-    "last_read_date": null,
-    "date_added": "2026-03-12",
-    "year": "2026",
-    "cover_url": "https://assets.hardcover.app/external_data/40953882/84ab4cd83c0f07f24d2034a68479a64af8c6dc50.jpeg",
-    "cover_filepath": "assets/images/hardcover/84ab4cd83c0f07f24d2034a68479a64af8c6dc50.webp"
   },
   {
     "id": 7527811,
