@@ -3,7 +3,9 @@ layout: default
 ---
 
 <h1>Books</h1>
-<p>A list of books I've read. As you can tell I lean heavily towards Science Fiction. The data on this page is sourced from my Hardcover account (@JLO64).</p>
+<p>A list of books I've read. As you can tell I lean heavily towards Science Fiction. The data on this page is sourced from my Hardcover account (<a href="https://hardcover.app/@JLO64" target="_blank" rel="noreferrer">@JLO64</a>).</p>
+
+<p>I generally reccomend books that I give a 4 or higher. The exception is <a href="https://hardcover.app/books/the-metamorphosis-of-prime-intellect" target="_blank" rel="noreferrer">The Metamorphosis of Prime Intellect</a> which I don't consider to be a bad book (though I could see why some would say that), but it's too wild/fetishy to be a casual read. Read it only if you're into AI/LLMs and the moral/ethical implications behind them.</p>
 
 {% assign books_by_year = site.data.hardcover_all_read | group_by: "year" %}
 {% assign sorted_years = books_by_year | sort: "name" | reverse %}
