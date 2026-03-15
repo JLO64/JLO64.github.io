@@ -51,5 +51,6 @@ git reset --hard HEAD
 git pull
 rm -rf "$NGINX_DIR"/*
 docker run --rm -v "$JEKYLL_DIR":/srv/jekyll -e HARDCOVER_TOKEN="$HARDCOVER_TOKEN" -u "$(id -u):$(id -g)" "$JEKYLL_BUILDER_IMAGE" build
+docker run --rm -v "$JEKYLL_DIR":/srv/jekyll -e HARDCOVER_TOKEN="$HARDCOVER_TOKEN" -u "$(id -u):$(id -g)" "$JEKYLL_BUILDER_IMAGE" build
 cp -r "$JEKYLL_DIR"/_site/* "$NGINX_DIR"
 chmod -R 755 "$NGINX_DIR"
