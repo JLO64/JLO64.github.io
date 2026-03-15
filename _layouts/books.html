@@ -7,6 +7,33 @@ layout: default
 
 <p>I generally reccomend books that I give a 4 or higher. The exception is <a href="https://hardcover.app/books/the-metamorphosis-of-prime-intellect" target="_blank" rel="noreferrer">The Metamorphosis of Prime Intellect</a> which I don't consider to be a bad book (though I could see why some would say that), but it's too wild/fetishy to be a casual read. Read it only if you're into AI/LLMs and the moral/ethical implications behind them.</p>
 
+{% assign currently_reading = site.data.hardcover_currently_reading.data.me[0].user_books %}
+{% if currently_reading.size > 0 %}
+<div class="books-year-section">
+  <h2 class="books-year-heading">Currently Reading</h2>
+  <ul class="hardcover-book-container">
+    {% for user_book in currently_reading %}
+      {% assign read = user_book.user_book_reads[0] %}
+      <li class="hardcover-book-item">
+        <img src="/{{ read.edition.image.filepath }}" alt="{{ read.edition.title }}" class="hardcover-book-image" />
+        <p class="hardcover-book-title">
+          {% if user_book.book.slug %}
+            <a href="https://hardcover.app/books/{{ user_book.book.slug }}" target="_blank" rel="noreferrer">{{ read.edition.title }}</a>
+          {% else %}
+            {{ read.edition.title }}
+          {% endif %}
+        </p>
+        <p class="hardcover-book-author">
+          {% for contrib in read.edition.contributions %}
+            {{ contrib.author.name }}{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+        </p>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+
 {% assign books_by_year = site.data.hardcover_all_read | group_by: "year" %}
 {% assign sorted_years = books_by_year | sort: "name" | reverse %}
 

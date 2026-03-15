@@ -36,7 +36,13 @@ Personal blog for Julian Lopez, built with Jekyll and deployed via Docker. Live 
 
 ## Environment Variables
 
-Store in `.env` at the repo root (gitignored). The `.env` parser in `server_build_script.sh` handles JWT tokens with special characters.
+Store in `.env` at the repo root (gitignored). The file is sourced directly by bash in `server_build_script.sh`, so values containing spaces (like `Bearer <token>`) **must be quoted**:
+
+```sh
+HARDCOVER_TOKEN="Bearer eyJhbGci..."
+```
+
+Without quotes, bash interprets the space as a command separator — `HARDCOVER_TOKEN=Bearer` gets set as an env var and the rest of the token is executed as a command, causing a "command not found" error.
 
 | Variable | Purpose |
 |---|---|

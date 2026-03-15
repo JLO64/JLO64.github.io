@@ -15,11 +15,17 @@ layout: default
       {% for user_book in books %}
         {% assign read = user_book.user_book_reads[0] %}
       <li class="hardcover-book-item">
-        <p class="hardcover-book-title">{{ read.edition.title }}</p>
         <img src="/{{ read.edition.image.filepath }}" alt="{{ read.edition.title }}" class="hardcover-book-image" />
+        <p class="hardcover-book-title">
+          {% if user_book.book.slug %}
+            <a href="https://hardcover.app/books/{{ user_book.book.slug }}" target="_blank" rel="noreferrer">{{ read.edition.title }}</a>
+          {% else %}
+            {{ read.edition.title }}
+          {% endif %}
+        </p>
         <p class="hardcover-book-author">
           {% for contrib in read.edition.contributions %}
-            By {{ contrib.author.name }}{% unless forloop.last %}, {% endunless %}
+            {{ contrib.author.name }}{% unless forloop.last %}, {% endunless %}
           {% endfor %}
         </p>
       </li>

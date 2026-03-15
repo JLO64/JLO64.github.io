@@ -30,6 +30,7 @@ module Jekyll
         query BooksCurrentlyReading {
           me {
             user_books(where: {status_id: {_eq: 2}}) {
+              book { slug }
               user_book_reads {
                 edition {
                   title
