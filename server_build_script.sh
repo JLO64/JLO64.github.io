@@ -29,7 +29,7 @@ if [ -z "$JEKYLL_BUILDER_IMAGE" ]; then
   echo "JEKYLL_BUILDER_IMAGE is not set. Exiting."
   exit 1
 fi
-if [ -z "$HARDCOVER_TOKEN" ]; then
+if [ -z "${HARDCOVER_TOKEN:-}" ]; then
   # Try to load from .env file if not provided as argument
   if [ -f "$JEKYLL_DIR/.env" ]; then
     set -a
@@ -37,7 +37,7 @@ if [ -z "$HARDCOVER_TOKEN" ]; then
     set +a
   fi
 
-  if [ -z "$HARDCOVER_TOKEN" ]; then
+  if [ -z "${HARDCOVER_TOKEN:-}" ]; then
     echo "HARDCOVER_TOKEN is not set and .env file not found. Exiting."
     exit 1
   fi
