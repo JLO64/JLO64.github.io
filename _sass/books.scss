@@ -14,6 +14,10 @@
 
 .books-year-section .hardcover-book-item .hardcover-book-title {
   font-size: 0.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .books-year-section .hardcover-book-item .hardcover-book-author {
