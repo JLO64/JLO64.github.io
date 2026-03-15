@@ -27,8 +27,8 @@
 
 .hardcover-book-item .hardcover-book-title {
   font-weight: bold;
-  margin-bottom: 0.5rem;
-  margin-top: 0rem;
+  margin-bottom: 0rem;
+  margin-top: 0.2rem;
   color: var(--link-text);
 }
 
@@ -41,7 +41,7 @@
 }
 // Author name below cover
 .hardcover-book-item .hardcover-book-author {
-  margin-top: 0.5rem;
+  margin: 0.25rem 0rem;
   font-weight: normal;
   color: var(--text);
 }

@@ -15,7 +15,7 @@
 .books-year-section .hardcover-book-item .hardcover-book-title {
   font-size: 0.8rem;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -31,8 +31,7 @@
 }
 
 .books-book-rating {
-  margin-top: 0.3rem;
-  margin-bottom: 0;
+  margin: 0rem;
   font-size: 0.85rem;
   color: var(--link-text);
 }

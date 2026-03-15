@@ -3,7 +3,7 @@ layout: default
 ---
 
 <h1>Books</h1>
-<p>All books I have read, sorted by year.</p>
+<p>A list of books I've read. As you can tell I lean heavily towards Science Fiction. The data on this page is sourced from my Hardcover account (@JLO64).</p>
 
 {% assign books_by_year = site.data.hardcover_all_read | group_by: "year" %}
 {% assign sorted_years = books_by_year | sort: "name" | reverse %}
