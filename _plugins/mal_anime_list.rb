@@ -6,12 +6,11 @@ require 'open-uri'
 require 'mini_magick'
 
 module Jekyll
-  # Generator plugin to fetch watching/on_hold/completed/dropped anime from
-  # MyAnimeList and persist to _data/mal_anime_list.json. Falls back to the
-  # committed file if the API is unavailable or credentials are missing.
-  #
-  # Each entry includes a `status` field and a `sort_date` (finish_date,
-  # start_date, or updated_at — whichever is available first) for page sorting.
+  # Generator plugin to fetch all anime from MyAnimeList in a single request
+  # and persist to _data/mal_anime_list.json. Also derives
+  # _data/mal_currently_watching.json for the homepage section.
+  # Falls back to committed files if the API is unavailable or credentials
+  # are missing.
   #
   # Reads from .env:
   #   MAL_ACCESS_TOKEN     — OAuth Bearer token (set via _scripts/mal_auth.rb)
@@ -23,7 +22,6 @@ module Jekyll
     safe true
 
     MAL_USERNAME = 'JLO64'
-    MAL_STATUSES = %w[watching on_hold completed dropped].freeze
     MAL_FIELDS   = 'id,title,main_picture,my_list_status{status,score,num_episodes_watched,finish_date,start_date,updated_at},num_episodes'
 
     def generate(site)
@@ -41,45 +39,59 @@ module Jekyll
       images_dir = File.join(site.source, 'assets', 'images', 'mal')
       FileUtils.mkdir_p(images_dir)
 
-      all_anime = []
+      raw_entries = fetch_all(auth_header)
+      unless raw_entries
+        Jekyll.logger.warn "MAL:", "API fetch failed — keeping existing mal_anime_list.json"
+        return
+      end
 
-      MAL_STATUSES.each do |status|
-        sleep 1
-        entries = fetch_by_status(status, auth_header)
-        next unless entries
+      all_anime          = []
+      currently_watching = []
 
-        entries.each do |entry|
-          node = entry['node']
-          next unless node
+      raw_entries.each do |entry|
+        node = entry['node']
+        next unless node
 
-          list_status    = node['my_list_status'] || {}
-          cover_url      = node.dig('main_picture', 'large') || node.dig('main_picture', 'medium')
-          cover_filepath = download_cover(cover_url, node['id'], images_dir)
+        list_status = node['my_list_status'] || {}
+        status      = list_status['status']
+        next unless status
 
-          # Best available date for sorting; fall back to '0000-00-00' so
-          # entries without any date sort to the end after reversing.
-          updated_at_date = list_status['updated_at']&.slice(0, 10)
-          sort_date = list_status['finish_date'] ||
-                      list_status['start_date']  ||
-                      updated_at_date            ||
-                      '0000-00-00'
+        cover_url      = node.dig('main_picture', 'large') || node.dig('main_picture', 'medium')
+        cover_filepath = download_cover(cover_url, node['id'], images_dir)
 
-          all_anime << {
+        # Best available date for sorting; fall back to '0000-00-00' so
+        # entries without any date sort to the end after reversing.
+        updated_at_date = list_status['updated_at']&.slice(0, 10)
+        sort_date = list_status['finish_date'] ||
+                    list_status['start_date']  ||
+                    updated_at_date            ||
+                    '0000-00-00'
+
+        all_anime << {
+          'id'                   => node['id'],
+          'title'                => node['title'],
+          'status'               => status,
+          'cover_url'            => cover_url,
+          'cover_filepath'       => cover_filepath,
+          'score'                => list_status['score'],
+          'num_episodes'         => node['num_episodes'],
+          'num_episodes_watched' => list_status['num_episodes_watched'],
+          'finish_date'          => list_status['finish_date'],
+          'start_date'           => list_status['start_date'],
+          'sort_date'            => sort_date
+        }
+
+        if status == 'watching'
+          currently_watching << {
             'id'                   => node['id'],
             'title'                => node['title'],
-            'status'               => status,
             'cover_url'            => cover_url,
             'cover_filepath'       => cover_filepath,
             'score'                => list_status['score'],
             'num_episodes'         => node['num_episodes'],
-            'num_episodes_watched' => list_status['num_episodes_watched'],
-            'finish_date'          => list_status['finish_date'],
-            'start_date'           => list_status['start_date'],
-            'sort_date'            => sort_date
+            'num_episodes_watched' => list_status['num_episodes_watched']
           }
         end
-
-        Jekyll.logger.info "MAL:", "Fetched #{entries.size} #{status} anime"
       end
 
       if all_anime.empty?
@@ -87,9 +99,14 @@ module Jekyll
         return
       end
 
-      FileUtils.mkdir_p(File.join(site.source, '_data'))
+      data_dir = File.join(site.source, '_data')
+      FileUtils.mkdir_p(data_dir)
+
       File.write(data_file, JSON.pretty_generate(all_anime))
       Jekyll.logger.info "MAL:", "Synced #{all_anime.size} total anime to mal_anime_list.json"
+
+      File.write(File.join(data_dir, 'mal_currently_watching.json'), JSON.pretty_generate(currently_watching))
+      Jekyll.logger.info "MAL:", "Synced #{currently_watching.size} currently watching to mal_currently_watching.json"
     end
 
     private
@@ -188,7 +205,7 @@ module Jekyll
       File.write(env_path, lines.join)
     end
 
-    def fetch_by_status(status, auth_header)
+    def fetch_all(auth_header)
       all_entries = []
       offset      = 0
       limit       = 1000
@@ -196,7 +213,7 @@ module Jekyll
       loop do
         fields_enc = URI.encode_www_form_component(MAL_FIELDS)
         url = "https://api.myanimelist.net/v2/users/#{MAL_USERNAME}/animelist" \
-              "?status=#{status}&fields=#{fields_enc}&limit=#{limit}&offset=#{offset}"
+              "?fields=#{fields_enc}&limit=#{limit}&offset=#{offset}"
 
         uri  = URI.parse(url)
         http = Net::HTTP.new(uri.host, uri.port)
@@ -220,7 +237,7 @@ module Jekyll
 
       all_entries
     rescue StandardError => e
-      Jekyll.logger.warn "MAL API error (#{status}):", e.message
+      Jekyll.logger.warn "MAL API error:", e.message
       nil
     end
 
