@@ -15,4 +15,7 @@ _data/most_recent_mastodon_post.yml
 _scripts/description-data.jsonl
 # assets/images/hardcover/ — committed for API resilience
 _data/hardcover_currently_reading.json
+# assets/images/mal/ — committed for API resilience
+_data/mal_currently_watching.json
+_data/mal_all_completed.json
 .rodney/

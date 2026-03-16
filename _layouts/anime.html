@@ -1,0 +1,110 @@
+---
+layout: default
+---
+
+<h1>Anime</h1>
+<p>A list of anime I've watched. The data on this page is sourced from my MyAnimeList account (<a href="https://myanimelist.net/profile/JLO64" target="_blank" rel="noreferrer">JLO64</a>).</p>
+
+{% assign watching  = site.data.mal_anime_list | where: "status", "watching"  | sort: "sort_date" | reverse %}
+{% assign on_hold   = site.data.mal_anime_list | where: "status", "on_hold"   | sort: "sort_date" | reverse %}
+{% assign completed = site.data.mal_anime_list | where: "status", "completed" | sort: "sort_date" | reverse %}
+{% assign dropped   = site.data.mal_anime_list | where: "status", "dropped"   | sort: "sort_date" | reverse %}
+
+{% if watching.size > 0 %}
+<div class="anime-year-section">
+  <h2 class="anime-year-heading">Watching</h2>
+  <ul class="hardcover-book-container">
+    {% for show in watching %}
+    <li class="hardcover-book-item">
+      {% if show.cover_filepath %}
+        <img src="/{{ show.cover_filepath }}" alt="{{ show.title }}" class="hardcover-book-image" />
+      {% endif %}
+      <p class="hardcover-book-title">
+        <a href="https://myanimelist.net/anime/{{ show.id }}" target="_blank" rel="noreferrer">{{ show.title }}</a>
+      </p>
+      {% if show.num_episodes_watched %}
+        {% assign total = show.num_episodes | plus: 0 %}
+        {% if total > 0 %}
+          <p class="anime-episodes">{{ show.num_episodes_watched }} / {{ show.num_episodes }} eps</p>
+        {% else %}
+          <p class="anime-episodes">{{ show.num_episodes_watched }} eps watched</p>
+        {% endif %}
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+
+{% if on_hold.size > 0 %}
+<div class="anime-year-section">
+  <h2 class="anime-year-heading">On-Hold</h2>
+  <ul class="hardcover-book-container">
+    {% for show in on_hold %}
+    <li class="hardcover-book-item">
+      {% if show.cover_filepath %}
+        <img src="/{{ show.cover_filepath }}" alt="{{ show.title }}" class="hardcover-book-image" />
+      {% endif %}
+      <p class="hardcover-book-title">
+        <a href="https://myanimelist.net/anime/{{ show.id }}" target="_blank" rel="noreferrer">{{ show.title }}</a>
+      </p>
+      {% if show.num_episodes_watched %}
+        {% assign total = show.num_episodes | plus: 0 %}
+        {% if total > 0 %}
+          <p class="anime-episodes">{{ show.num_episodes_watched }} / {{ show.num_episodes }} eps</p>
+        {% else %}
+          <p class="anime-episodes">{{ show.num_episodes_watched }} eps watched</p>
+        {% endif %}
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+
+{% if completed.size > 0 %}
+<div class="anime-year-section">
+  <h2 class="anime-year-heading">Completed</h2>
+  <ul class="hardcover-book-container">
+    {% for show in completed %}
+    <li class="hardcover-book-item">
+      {% if show.cover_filepath %}
+        <img src="/{{ show.cover_filepath }}" alt="{{ show.title }}" class="hardcover-book-image" />
+      {% endif %}
+      <p class="hardcover-book-title">
+        <a href="https://myanimelist.net/anime/{{ show.id }}" target="_blank" rel="noreferrer">{{ show.title }}</a>
+      </p>
+      {% if show.score and show.score > 0 %}
+        <p class="anime-score">{{ show.score }} / 10</p>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+
+{% if dropped.size > 0 %}
+<div class="anime-year-section">
+  <h2 class="anime-year-heading">Dropped</h2>
+  <ul class="hardcover-book-container">
+    {% for show in dropped %}
+    <li class="hardcover-book-item">
+      {% if show.cover_filepath %}
+        <img src="/{{ show.cover_filepath }}" alt="{{ show.title }}" class="hardcover-book-image" />
+      {% endif %}
+      <p class="hardcover-book-title">
+        <a href="https://myanimelist.net/anime/{{ show.id }}" target="_blank" rel="noreferrer">{{ show.title }}</a>
+      </p>
+      {% if show.num_episodes_watched %}
+        {% assign total = show.num_episodes | plus: 0 %}
+        {% if total > 0 %}
+          <p class="anime-episodes">{{ show.num_episodes_watched }} / {{ show.num_episodes }} eps</p>
+        {% else %}
+          <p class="anime-episodes">{{ show.num_episodes_watched }} eps watched</p>
+        {% endif %}
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}

@@ -33,6 +33,31 @@ layout: default
     </ul>
   </div>
   {% endif %}
+  {% if site.data.mal_currently_watching.size > 0 %}
+  <div class="homepage-mal-container">
+    <h2>Currently Watching</h2>
+    <ul class="hardcover-book-container">
+      {% for show in site.data.mal_currently_watching %}
+      <li class="hardcover-book-item">
+        {% if show.cover_filepath %}
+          <img src="/{{ show.cover_filepath }}" alt="{{ show.title }}" class="hardcover-book-image" />
+        {% endif %}
+        <p class="hardcover-book-title">
+          <a href="https://myanimelist.net/anime/{{ show.id }}" target="_blank" rel="noreferrer">{{ show.title }}</a>
+        </p>
+        {% if show.num_episodes_watched %}
+          {% assign total = show.num_episodes | plus: 0 %}
+          {% if total > 0 %}
+            <p class="hardcover-book-author">{{ show.num_episodes_watched }} / {{ show.num_episodes }} eps</p>
+          {% else %}
+            <p class="hardcover-book-author">{{ show.num_episodes_watched }} eps watched</p>
+          {% endif %}
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
   <div class="homepage-mastodon-post-container">
     <h2>Latest Fediverse Post</h2>
       <div class="homepage-mastodon-post">
