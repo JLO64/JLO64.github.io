@@ -81,6 +81,11 @@ module Jekyll
         Jekyll.logger.info "MAL:", "Fetched #{entries.size} #{status} anime"
       end
 
+      if all_anime.empty?
+        Jekyll.logger.warn "MAL:", "No anime returned from API — keeping existing mal_anime_list.json"
+        return
+      end
+
       FileUtils.mkdir_p(File.join(site.source, '_data'))
       File.write(data_file, JSON.pretty_generate(all_anime))
       Jekyll.logger.info "MAL:", "Synced #{all_anime.size} total anime to mal_anime_list.json"

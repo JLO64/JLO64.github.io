@@ -81,6 +81,11 @@ module Jekyll
         Jekyll.logger.info "MAL Manga:", "Fetched #{entries.size} #{status} manga"
       end
 
+      if all_manga.empty?
+        Jekyll.logger.warn "MAL Manga:", "No manga returned from API — keeping existing mal_manga_list.json"
+        return
+      end
+
       FileUtils.mkdir_p(File.join(site.source, '_data'))
       File.write(data_file, JSON.pretty_generate(all_manga))
       Jekyll.logger.info "MAL Manga:", "Synced #{all_manga.size} total manga to mal_manga_list.json"
