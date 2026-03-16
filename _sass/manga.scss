@@ -1,0 +1,46 @@
+// Homepage currently reading manga container
+.homepage-mal-manga-container {
+  width: 90vw;
+}
+
+// Manga page sections (smaller cards, matching anime/books page)
+.manga-year-section {
+  margin-bottom: 2rem;
+}
+
+.manga-year-section .hardcover-book-item {
+  width: 9rem;
+  padding: 0.6rem;
+}
+
+.manga-year-section .hardcover-book-item .hardcover-book-image {
+  height: 10rem;
+}
+
+.manga-year-section .hardcover-book-item .hardcover-book-title {
+  font-size: 0.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.manga-year-heading {
+  border-bottom: 1px solid var(--text);
+  padding-bottom: 0.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.manga-score {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--link-text);
+}
+
+.manga-chapters {
+  margin-top: 0.2rem;
+  margin-bottom: 0;
+  font-size: 0.8rem;
+  color: var(--text);
+  opacity: 0.7;
+}

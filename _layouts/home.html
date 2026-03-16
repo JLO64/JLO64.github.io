@@ -58,6 +58,31 @@ layout: default
     </ul>
   </div>
   {% endif %}
+  {% if site.data.mal_currently_reading_manga.size > 0 %}
+  <div class="homepage-mal-manga-container">
+    <h2>Currently Reading Manga</h2>
+    <ul class="hardcover-book-container">
+      {% for manga in site.data.mal_currently_reading_manga %}
+      <li class="hardcover-book-item">
+        {% if manga.cover_filepath %}
+          <img src="/{{ manga.cover_filepath }}" alt="{{ manga.title }}" class="hardcover-book-image" />
+        {% endif %}
+        <p class="hardcover-book-title">
+          <a href="https://myanimelist.net/manga/{{ manga.id }}" target="_blank" rel="noreferrer">{{ manga.title }}</a>
+        </p>
+        {% if manga.num_chapters_read %}
+          {% assign total = manga.num_chapters | plus: 0 %}
+          {% if total > 0 %}
+            <p class="hardcover-book-author">{{ manga.num_chapters_read }} / {{ manga.num_chapters }} ch</p>
+          {% else %}
+            <p class="hardcover-book-author">{{ manga.num_chapters_read }} ch read</p>
+          {% endif %}
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
   <div class="homepage-mastodon-post-container">
     <h2>Latest Fediverse Post</h2>
       <div class="homepage-mastodon-post">
