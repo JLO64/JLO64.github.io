@@ -44,6 +44,7 @@ module Jekyll
       all_manga = []
 
       MAL_STATUSES.each do |status|
+        sleep 1
         entries = fetch_by_status(status, auth_header)
         next unless entries
 
