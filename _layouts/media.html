@@ -3,12 +3,13 @@ layout: default
 ---
 
 <h1>Media</h1>
-<p>A highlight reel of my favorite anime, manga, and books — only the 10/10s and 5/5s.</p>
+<p>This page contains what I consider to be the best of the best within the media I consume.</p>
+<p>Be sure to click on "View All" to navigate to the individual pages. Hopefully you'll find something you'll like there!</p>
 
 {% assign top_anime = site.data.mal_anime_list | where: "score", 10 | sort: "title" %}
 {% if top_anime.size > 0 %}
 <div class="media-section-header">
-  <h2>Anime</h2>
+  <h2>Favorite Anime</h2>
   <a href="/anime">View all →</a>
 </div>
 <div class="anime-year-section">
@@ -31,7 +32,7 @@ layout: default
 {% assign top_manga = site.data.mal_manga_list | where: "score", 10 | sort: "title" %}
 {% if top_manga.size > 0 %}
 <div class="media-section-header">
-  <h2>Manga</h2>
+  <h2>Favorite Manga</h2>
   <a href="/manga">View all →</a>
 </div>
 <div class="manga-year-section">
@@ -54,7 +55,7 @@ layout: default
 {% assign top_books = site.data.hardcover_all_read | where_exp: "book", "book.rating == 5.0" | sort: "title" %}
 {% if top_books.size > 0 %}
 <div class="media-section-header">
-  <h2>Books</h2>
+  <h2>Favorite Books</h2>
   <a href="/books">View all →</a>
 </div>
 <div class="books-year-section">
