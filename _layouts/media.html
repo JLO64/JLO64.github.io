@@ -22,7 +22,6 @@ layout: default
       <p class="hardcover-book-title">
         <a href="https://myanimelist.net/anime/{{ show.id }}" target="_blank" rel="noreferrer">{{ show.title }}</a>
       </p>
-      <p class="anime-score">{{ show.score }} / 10</p>
     </li>
     {% endfor %}
   </ul>
@@ -45,7 +44,6 @@ layout: default
       <p class="hardcover-book-title">
         <a href="https://myanimelist.net/manga/{{ manga.id }}" target="_blank" rel="noreferrer">{{ manga.title }}</a>
       </p>
-      <p class="manga-score">{{ manga.score }} / 10</p>
     </li>
     {% endfor %}
   </ul>
@@ -77,7 +75,6 @@ layout: default
           {{ author }}{% unless forloop.last %}, {% endunless %}
         {% endfor %}
       </p>
-      <p class="books-book-rating">{{ book.rating }} / 5</p>
     </li>
     {% endfor %}
   </ul>
