@@ -1,6 +1,7 @@
 // Homepage currently reading manga container
 .homepage-mal-manga-container {
-  width: 90vw;
+  width: fit-content;
+  max-width: 90vw;
 }
 
 // Manga page sections (smaller cards, matching anime/books page)

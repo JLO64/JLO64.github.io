@@ -5,10 +5,10 @@ layout: default
 <h1>Anime</h1>
 <p>A list of anime I've watched. The data on this page is sourced from my MyAnimeList account (<a href="https://myanimelist.net/profile/JLO64" target="_blank" rel="noreferrer">JLO64</a>).</p>
 
-{% assign watching  = site.data.mal_anime_list | where: "status", "watching"  | sort: "sort_date" | reverse %}
-{% assign on_hold   = site.data.mal_anime_list | where: "status", "on_hold"   | sort: "sort_date" | reverse %}
-{% assign completed = site.data.mal_anime_list | where: "status", "completed" | sort: "sort_date" | reverse %}
-{% assign dropped   = site.data.mal_anime_list | where: "status", "dropped"   | sort: "sort_date" | reverse %}
+{% assign watching  = site.data.mal_anime_list | where: "status", "watching"  | sort: "score" | reverse %}
+{% assign on_hold   = site.data.mal_anime_list | where: "status", "on_hold"   | sort: "score" | reverse %}
+{% assign completed = site.data.mal_anime_list | where: "status", "completed" | sort: "score" | reverse %}
+{% assign dropped   = site.data.mal_anime_list | where: "status", "dropped"   | sort: "score" | reverse %}
 
 {% if watching.size > 0 %}
 <div class="anime-year-section">
@@ -22,13 +22,8 @@ layout: default
       <p class="hardcover-book-title">
         <a href="https://myanimelist.net/anime/{{ show.id }}" target="_blank" rel="noreferrer">{{ show.title }}</a>
       </p>
-      {% if show.num_episodes_watched %}
-        {% assign total = show.num_episodes | plus: 0 %}
-        {% if total > 0 %}
-          <p class="anime-episodes">{{ show.num_episodes_watched }} / {{ show.num_episodes }} eps</p>
-        {% else %}
-          <p class="anime-episodes">{{ show.num_episodes_watched }} eps watched</p>
-        {% endif %}
+      {% if show.score and show.score > 0 %}
+        <p class="anime-score">{{ show.score }} / 10</p>
       {% endif %}
     </li>
     {% endfor %}
@@ -48,13 +43,8 @@ layout: default
       <p class="hardcover-book-title">
         <a href="https://myanimelist.net/anime/{{ show.id }}" target="_blank" rel="noreferrer">{{ show.title }}</a>
       </p>
-      {% if show.num_episodes_watched %}
-        {% assign total = show.num_episodes | plus: 0 %}
-        {% if total > 0 %}
-          <p class="anime-episodes">{{ show.num_episodes_watched }} / {{ show.num_episodes }} eps</p>
-        {% else %}
-          <p class="anime-episodes">{{ show.num_episodes_watched }} eps watched</p>
-        {% endif %}
+      {% if show.score and show.score > 0 %}
+        <p class="anime-score">{{ show.score }} / 10</p>
       {% endif %}
     </li>
     {% endfor %}
@@ -95,13 +85,8 @@ layout: default
       <p class="hardcover-book-title">
         <a href="https://myanimelist.net/anime/{{ show.id }}" target="_blank" rel="noreferrer">{{ show.title }}</a>
       </p>
-      {% if show.num_episodes_watched %}
-        {% assign total = show.num_episodes | plus: 0 %}
-        {% if total > 0 %}
-          <p class="anime-episodes">{{ show.num_episodes_watched }} / {{ show.num_episodes }} eps</p>
-        {% else %}
-          <p class="anime-episodes">{{ show.num_episodes_watched }} eps watched</p>
-        {% endif %}
+      {% if show.score and show.score > 0 %}
+        <p class="anime-score">{{ show.score }} / 10</p>
       {% endif %}
     </li>
     {% endfor %}

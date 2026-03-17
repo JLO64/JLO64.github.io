@@ -1,6 +1,7 @@
 // Styles for Currently Reading section
 .homepage-hardcover-container {
-  width: 90vw;
+  width: fit-content;
+  max-width: 90vw;
 }
 
 // Grid container for book cards

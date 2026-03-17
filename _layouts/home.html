@@ -10,7 +10,7 @@ layout: default
   {% assign books = site.data.hardcover_currently_reading.data.me[0].user_books %}
   {% if books.size > 0 %}
   <div class="homepage-hardcover-container">
-    <h2>Currently Reading</h2>
+    <h2>Books I'm Reading</h2>
     <ul class="hardcover-book-container">
       {% for user_book in books %}
         {% assign read = user_book.user_book_reads[0] %}
@@ -23,11 +23,6 @@ layout: default
             {{ read.edition.title }}
           {% endif %}
         </p>
-        <p class="hardcover-book-author">
-          {% for contrib in read.edition.contributions %}
-            {{ contrib.author.name }}{% unless forloop.last %}, {% endunless %}
-          {% endfor %}
-        </p>
       </li>
       {% endfor %}
     </ul>
@@ -35,7 +30,7 @@ layout: default
   {% endif %}
   {% if site.data.mal_currently_watching.size > 0 %}
   <div class="homepage-mal-container">
-    <h2>Currently Watching</h2>
+    <h2>Anime I'm Watching</h2>
     <ul class="hardcover-book-container">
       {% for show in site.data.mal_currently_watching %}
       <li class="hardcover-book-item">
@@ -45,14 +40,6 @@ layout: default
         <p class="hardcover-book-title">
           <a href="https://myanimelist.net/anime/{{ show.id }}" target="_blank" rel="noreferrer">{{ show.title }}</a>
         </p>
-        {% if show.num_episodes_watched %}
-          {% assign total = show.num_episodes | plus: 0 %}
-          {% if total > 0 %}
-            <p class="hardcover-book-author">{{ show.num_episodes_watched }} / {{ show.num_episodes }} eps</p>
-          {% else %}
-            <p class="hardcover-book-author">{{ show.num_episodes_watched }} eps watched</p>
-          {% endif %}
-        {% endif %}
       </li>
       {% endfor %}
     </ul>
@@ -60,7 +47,7 @@ layout: default
   {% endif %}
   {% if site.data.mal_currently_reading_manga.size > 0 %}
   <div class="homepage-mal-manga-container">
-    <h2>Currently Reading Manga</h2>
+    <h2>Manga I'm Reading</h2>
     <ul class="hardcover-book-container">
       {% for manga in site.data.mal_currently_reading_manga %}
       <li class="hardcover-book-item">
@@ -70,14 +57,6 @@ layout: default
         <p class="hardcover-book-title">
           <a href="https://myanimelist.net/manga/{{ manga.id }}" target="_blank" rel="noreferrer">{{ manga.title }}</a>
         </p>
-        {% if manga.num_chapters_read %}
-          {% assign total = manga.num_chapters | plus: 0 %}
-          {% if total > 0 %}
-            <p class="hardcover-book-author">{{ manga.num_chapters_read }} / {{ manga.num_chapters }} ch</p>
-          {% else %}
-            <p class="hardcover-book-author">{{ manga.num_chapters_read }} ch read</p>
-          {% endif %}
-        {% endif %}
       </li>
       {% endfor %}
     </ul>

@@ -5,10 +5,10 @@ layout: default
 <h1>Manga</h1>
 <p>A list of manga I've read. The data on this page is sourced from my MyAnimeList account (<a href="https://myanimelist.net/profile/JLO64" target="_blank" rel="noreferrer">JLO64</a>).</p>
 
-{% assign reading   = site.data.mal_manga_list | where: "status", "reading"   | sort: "sort_date" | reverse %}
-{% assign on_hold   = site.data.mal_manga_list | where: "status", "on_hold"   | sort: "sort_date" | reverse %}
-{% assign completed = site.data.mal_manga_list | where: "status", "completed" | sort: "sort_date" | reverse %}
-{% assign dropped   = site.data.mal_manga_list | where: "status", "dropped"   | sort: "sort_date" | reverse %}
+{% assign reading   = site.data.mal_manga_list | where: "status", "reading"   | sort: "score" | reverse %}
+{% assign on_hold   = site.data.mal_manga_list | where: "status", "on_hold"   | sort: "score" | reverse %}
+{% assign completed = site.data.mal_manga_list | where: "status", "completed" | sort: "score" | reverse %}
+{% assign dropped   = site.data.mal_manga_list | where: "status", "dropped"   | sort: "score" | reverse %}
 
 {% if reading.size > 0 %}
 <div class="manga-year-section">
@@ -22,13 +22,8 @@ layout: default
       <p class="hardcover-book-title">
         <a href="https://myanimelist.net/manga/{{ manga.id }}" target="_blank" rel="noreferrer">{{ manga.title }}</a>
       </p>
-      {% if manga.num_chapters_read %}
-        {% assign total = manga.num_chapters | plus: 0 %}
-        {% if total > 0 %}
-          <p class="manga-chapters">{{ manga.num_chapters_read }} / {{ manga.num_chapters }} ch</p>
-        {% else %}
-          <p class="manga-chapters">{{ manga.num_chapters_read }} ch read</p>
-        {% endif %}
+      {% if manga.score and manga.score > 0 %}
+        <p class="manga-score">{{ manga.score }} / 10</p>
       {% endif %}
     </li>
     {% endfor %}
@@ -48,13 +43,8 @@ layout: default
       <p class="hardcover-book-title">
         <a href="https://myanimelist.net/manga/{{ manga.id }}" target="_blank" rel="noreferrer">{{ manga.title }}</a>
       </p>
-      {% if manga.num_chapters_read %}
-        {% assign total = manga.num_chapters | plus: 0 %}
-        {% if total > 0 %}
-          <p class="manga-chapters">{{ manga.num_chapters_read }} / {{ manga.num_chapters }} ch</p>
-        {% else %}
-          <p class="manga-chapters">{{ manga.num_chapters_read }} ch read</p>
-        {% endif %}
+      {% if manga.score and manga.score > 0 %}
+        <p class="manga-score">{{ manga.score }} / 10</p>
       {% endif %}
     </li>
     {% endfor %}
@@ -95,13 +85,8 @@ layout: default
       <p class="hardcover-book-title">
         <a href="https://myanimelist.net/manga/{{ manga.id }}" target="_blank" rel="noreferrer">{{ manga.title }}</a>
       </p>
-      {% if manga.num_chapters_read %}
-        {% assign total = manga.num_chapters | plus: 0 %}
-        {% if total > 0 %}
-          <p class="manga-chapters">{{ manga.num_chapters_read }} / {{ manga.num_chapters }} ch</p>
-        {% else %}
-          <p class="manga-chapters">{{ manga.num_chapters_read }} ch read</p>
-        {% endif %}
+      {% if manga.score and manga.score > 0 %}
+        <p class="manga-score">{{ manga.score }} / 10</p>
       {% endif %}
     </li>
     {% endfor %}

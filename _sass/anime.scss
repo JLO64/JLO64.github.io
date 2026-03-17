@@ -1,6 +1,7 @@
 // Homepage currently watching container
 .homepage-mal-container {
-  width: 90vw;
+  width: fit-content;
+  max-width: 90vw;
 }
 
 // Anime page sections (smaller cards, matching books page)
