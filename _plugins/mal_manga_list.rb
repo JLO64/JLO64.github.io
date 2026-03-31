@@ -1,262 +1,173 @@
 require 'net/http'
 require 'uri'
 require 'json'
+require 'date'
 require 'fileutils'
 require 'open-uri'
 require 'mini_magick'
 
 module Jekyll
-  # Generator plugin to fetch all manga from MyAnimeList in a single request
-  # and persist to _data/mal_manga_list.json. Also derives
+  # Generator plugin to fetch all manga from MyAnimeList via the public
+  # load.json endpoint (no API token required) and persist to
+  # _data/mal_manga_list.json. Also derives
   # _data/mal_currently_reading_manga.json for the homepage section.
-  # Falls back to committed files if the API is unavailable or credentials
-  # are missing.
-  #
-  # Reads from .env:
-  #   MAL_ACCESS_TOKEN     — OAuth Bearer token (set via _scripts/mal_auth.rb)
-  #   MAL_REFRESH_TOKEN    — OAuth refresh token for auto-renewal
-  #   MAL_TOKEN_EXPIRES_AT — Unix timestamp of access token expiry
-  #   MAL_Client_ID        — API client ID (fallback if no OAuth tokens)
-  #   MAL_Client_Secret    — API client secret (needed for token refresh)
+  # Falls back to committed files if the network is unavailable.
   class MalMangaListGenerator < Generator
     safe true
 
-    MAL_USERNAME     = 'JLO64'
-    MAL_MANGA_FIELDS = 'id,title,main_picture,my_list_status{status,score,num_chapters_read,num_volumes_read,finish_date,start_date,updated_at},num_chapters,num_volumes'
+    MAL_USERNAME = 'JLO64'
+    PAGE_SIZE    = 300
+
+    STATUS_MAP = {
+      1 => 'reading',
+      2 => 'completed',
+      3 => 'on_hold',
+      4 => 'dropped',
+      6 => 'plan_to_read'
+    }.freeze
 
     def generate(site)
-      env_path = File.join(site.source, '.env')
-      load_env(env_path)
-
       data_file = File.join(site.source, '_data', 'mal_manga_list.json')
-
-      auth_header = resolve_auth_header(env_path)
-      unless auth_header
-        Jekyll.logger.warn "MAL Manga:", "No credentials — using cached mal_manga_list.json" if File.exist?(data_file)
-        return
-      end
-
       images_dir = File.join(site.source, 'assets', 'images', 'mal')
       FileUtils.mkdir_p(images_dir)
 
-      raw_entries = fetch_all(auth_header)
-      unless raw_entries
-        Jekyll.logger.warn "MAL Manga:", "API fetch failed — keeping existing mal_manga_list.json"
+      raw = fetch_all
+      unless raw
+        Jekyll.logger.warn 'MAL Manga:', 'API fetch failed — keeping existing mal_manga_list.json'
+        return
+      end
+
+      if raw.empty?
+        Jekyll.logger.warn 'MAL Manga:', 'No manga returned — keeping existing mal_manga_list.json'
         return
       end
 
       all_manga         = []
       currently_reading = []
 
-      raw_entries.each do |entry|
-        node = entry['node']
-        next unless node
+      raw.each do |entry|
+        manga_id   = entry['manga_id']
+        status_int = entry['status']
+        status_str = STATUS_MAP[status_int] || "unknown_#{status_int}"
 
-        list_status = node['my_list_status'] || {}
-        status      = list_status['status']
-        next unless status
+        finish_date  = parse_date(entry['finish_date_string'])
+        start_date   = parse_date(entry['start_date_string'])
+        created_date = entry['created_at']&.then { |t| Time.at(t).strftime('%Y-%m-%d') rescue nil }
+        sort_date    = finish_date || start_date || created_date || '0000-00-00'
 
-        cover_url      = node.dig('main_picture', 'large') || node.dig('main_picture', 'medium')
-        cover_filepath = download_cover(cover_url, node['id'], images_dir)
+        cover_url      = canonical_cover_url(entry['manga_image_path'], 'manga')
+        cover_filepath = download_cover(cover_url, "mal_manga_#{manga_id}", images_dir)
 
-        updated_at_date = list_status['updated_at']&.slice(0, 10)
-        sort_date = list_status['finish_date'] ||
-                    list_status['start_date']  ||
-                    updated_at_date            ||
-                    '0000-00-00'
+        title = entry['title_localized'].to_s.strip
+        title = entry['manga_title'].to_s.strip if title.empty?
 
-        all_manga << {
-          'id'                 => node['id'],
-          'title'              => node['title'],
-          'status'             => status,
-          'cover_url'          => cover_url,
-          'cover_filepath'     => cover_filepath,
-          'score'              => list_status['score'],
-          'num_chapters'       => node['num_chapters'],
-          'num_chapters_read'  => list_status['num_chapters_read'],
-          'num_volumes'        => node['num_volumes'],
-          'num_volumes_read'   => list_status['num_volumes_read'],
-          'finish_date'        => list_status['finish_date'],
-          'start_date'         => list_status['start_date'],
-          'sort_date'          => sort_date
+        record = {
+          'id'                => manga_id,
+          'title'             => title,
+          'status'            => status_str,
+          'cover_url'         => cover_url,
+          'cover_filepath'    => cover_filepath,
+          'score'             => entry['score'],
+          'num_chapters'      => entry['manga_num_chapters'],
+          'num_chapters_read' => entry['num_read_chapters'],
+          'num_volumes'       => entry['manga_num_volumes'],
+          'num_volumes_read'  => entry['num_read_volumes'],
+          'finish_date'       => finish_date,
+          'start_date'        => start_date,
+          'sort_date'         => sort_date
         }
 
-        if status == 'reading'
-          currently_reading << {
-            'id'                => node['id'],
-            'title'             => node['title'],
-            'cover_url'         => cover_url,
-            'cover_filepath'    => cover_filepath,
-            'score'             => list_status['score'],
-            'num_chapters'      => node['num_chapters'],
-            'num_chapters_read' => list_status['num_chapters_read'],
-            'num_volumes'       => node['num_volumes'],
-            'num_volumes_read'  => list_status['num_volumes_read']
-          }
-        end
-      end
-
-      if all_manga.empty?
-        Jekyll.logger.warn "MAL Manga:", "No manga returned from API — keeping existing mal_manga_list.json"
-        return
+        all_manga << record
+        currently_reading << record.slice(
+          'id', 'title', 'cover_url', 'cover_filepath', 'score',
+          'num_chapters', 'num_chapters_read', 'num_volumes', 'num_volumes_read'
+        ) if status_str == 'reading'
       end
 
       data_dir = File.join(site.source, '_data')
       FileUtils.mkdir_p(data_dir)
 
       File.write(data_file, JSON.pretty_generate(all_manga))
-      Jekyll.logger.info "MAL Manga:", "Synced #{all_manga.size} total manga to mal_manga_list.json"
+      Jekyll.logger.info 'MAL Manga:', "Synced #{all_manga.size} total manga to mal_manga_list.json"
 
       File.write(File.join(data_dir, 'mal_currently_reading_manga.json'), JSON.pretty_generate(currently_reading))
-      Jekyll.logger.info "MAL Manga:", "Synced #{currently_reading.size} currently reading to mal_currently_reading_manga.json"
+      Jekyll.logger.info 'MAL Manga:', "Synced #{currently_reading.size} currently reading to mal_currently_reading_manga.json"
     end
 
     private
 
-    def load_env(env_path)
-      return unless File.exist?(env_path)
-      File.foreach(env_path) do |line|
-        next if line.strip.start_with?('#') || line.strip.empty?
-        key, value = line.strip.split('=', 2)
-        ENV[key] ||= value
-      end
-    end
-
-    def resolve_auth_header(env_path)
-      access_token  = ENV['MAL_ACCESS_TOKEN']
-      refresh_token = ENV['MAL_REFRESH_TOKEN']
-      client_id     = ENV['MAL_Client_ID']
-
-      if access_token && !access_token.empty?
-        expires_at = ENV['MAL_TOKEN_EXPIRES_AT'].to_i
-        if refresh_token && !refresh_token.empty? && Time.now.to_i >= expires_at - 86400
-          access_token = refresh_access_token(env_path) || access_token
-        end
-        return ['Authorization', "Bearer #{access_token}"]
-      end
-
-      return ['X-MAL-CLIENT-ID', client_id] if client_id && !client_id.empty?
-
-      nil
-    end
-
-    def refresh_access_token(env_path)
-      client_id     = ENV['MAL_Client_ID']
-      client_secret = ENV['MAL_Client_Secret']
-      refresh_token = ENV['MAL_REFRESH_TOKEN']
-      return nil unless client_id && client_secret && refresh_token
-
-      Jekyll.logger.info "MAL Manga:", "Refreshing access token..."
-
-      uri  = URI.parse('https://myanimelist.net/v1/oauth2/token')
-      http = Net::HTTP.new(uri.host, uri.port)
-      http.use_ssl = true
-
-      req = Net::HTTP::Post.new(uri.request_uri)
-      req['Content-Type'] = 'application/x-www-form-urlencoded'
-      req.body = URI.encode_www_form(
-        client_id:     client_id,
-        client_secret: client_secret,
-        grant_type:    'refresh_token',
-        refresh_token: refresh_token
-      )
-
-      res = http.request(req)
-      unless res.is_a?(Net::HTTPSuccess)
-        Jekyll.logger.warn "MAL Manga:", "Token refresh failed (#{res.code}) — using existing token"
-        return nil
-      end
-
-      data        = JSON.parse(res.body)
-      new_access  = data['access_token']
-      new_refresh = data['refresh_token']
-      new_expires = Time.now.to_i + data['expires_in'].to_i
-
-      update_env_file(env_path, {
-        'MAL_ACCESS_TOKEN'     => new_access,
-        'MAL_REFRESH_TOKEN'    => new_refresh,
-        'MAL_TOKEN_EXPIRES_AT' => new_expires.to_s
-      })
-
-      ENV['MAL_ACCESS_TOKEN']     = new_access
-      ENV['MAL_REFRESH_TOKEN']    = new_refresh
-      ENV['MAL_TOKEN_EXPIRES_AT'] = new_expires.to_s
-
-      Jekyll.logger.info "MAL Manga:", "Token refreshed (expires #{Time.at(new_expires).strftime('%Y-%m-%d')})"
-      new_access
-    rescue StandardError => e
-      Jekyll.logger.warn "MAL Manga token refresh error:", e.message
-      nil
-    end
-
-    def update_env_file(env_path, updates)
-      return unless File.exist?(env_path)
-      lines = File.readlines(env_path)
-      updates.each do |key, value|
-        found = false
-        lines = lines.map do |line|
-          if line.strip.start_with?("#{key}=")
-            found = true
-            "#{key}=#{value}\n"
-          else
-            line
-          end
-        end
-        lines << "#{key}=#{value}\n" unless found
-      end
-      File.write(env_path, lines.join)
-    end
-
-    def fetch_all(auth_header)
+    def fetch_all
       all_entries = []
-      offset      = 0
-      limit       = 1000
+      offset = 0
 
       loop do
-        fields_enc = URI.encode_www_form_component(MAL_MANGA_FIELDS)
-        url = "https://api.myanimelist.net/v2/users/#{MAL_USERNAME}/mangalist" \
-              "?fields=#{fields_enc}&limit=#{limit}&offset=#{offset}"
+        url = "https://myanimelist.net/mangalist/#{MAL_USERNAME}/load.json?offset=#{offset}&status=7"
+        uri = URI.parse(url)
 
-        uri  = URI.parse(url)
         http = Net::HTTP.new(uri.host, uri.port)
         http.use_ssl = true
+        http.open_timeout = 10
+        http.read_timeout = 20
 
-        request = Net::HTTP::Get.new(uri.request_uri)
-        request[auth_header[0]] = auth_header[1]
+        req = Net::HTTP::Get.new(uri.request_uri)
+        req['User-Agent'] = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
+        req['Accept'] = 'application/json, text/javascript, */*'
 
-        response = http.request(request)
-        break unless response.is_a?(Net::HTTPSuccess)
+        res = http.request(req)
+        unless res.is_a?(Net::HTTPSuccess)
+          Jekyll.logger.warn 'MAL Manga:', "HTTP #{res.code} at offset #{offset} — stopping pagination"
+          break
+        end
 
-        result  = JSON.parse(response.body)
-        entries = result['data'] || []
-        all_entries.concat(entries)
+        page = JSON.parse(res.body)
+        break if page.empty?
 
-        break if entries.size < limit
-        break unless result.dig('paging', 'next')
+        all_entries.concat(page)
+        break if page.size < PAGE_SIZE
 
-        offset += limit
+        offset += PAGE_SIZE
+        sleep 0.5
       end
 
       all_entries
     rescue StandardError => e
-      Jekyll.logger.warn "MAL Manga API error:", e.message
+      Jekyll.logger.warn 'MAL Manga API error:', e.message
       nil
     end
 
-    def download_cover(url, manga_id, images_dir)
+    # Convert MAL's "MM-DD-YY" date strings to "YYYY-MM-DD".
+    def parse_date(str)
+      return nil if str.nil? || str.strip.empty?
+      Date.strptime(str.strip, '%m-%d-%y').strftime('%Y-%m-%d')
+    rescue ArgumentError
+      nil
+    end
+
+    # Reconstruct a canonical large-image URL from the CDN thumbnail URL.
+    # CDN:       https://cdn.myanimelist.net/r/192x272/images/manga/3/269402.jpg?s=abc
+    # Canonical: https://myanimelist.net/images/manga/3/269402l.jpg
+    def canonical_cover_url(cdn_url, type)
+      return nil unless cdn_url
+      match = cdn_url.match(%r{/(images/#{type}/[^?]+)})
+      return cdn_url unless match
+      path = match[1].sub(/(\.\w+)\z/, 'l\1')
+      "https://myanimelist.net/#{path}"
+    rescue StandardError
+      cdn_url
+    end
+
+    def download_cover(url, basename, images_dir)
       return nil unless url
 
-      filename = "mal_manga_#{manga_id}.webp"
-      filepath = File.join(images_dir, filename)
-
+      filepath = File.join(images_dir, "#{basename}.webp")
       unless File.exist?(filepath)
         fetched = URI.open(url)
-        image   = MiniMagick::Image.read(fetched)
+        image = MiniMagick::Image.read(fetched)
         image.format 'webp'
         image.write filepath
       end
 
-      File.join('assets', 'images', 'mal', filename)
+      File.join('assets', 'images', 'mal', "#{basename}.webp")
     rescue StandardError => e
       Jekyll.logger.warn "MAL Manga image error for #{url}:", e.message
       nil

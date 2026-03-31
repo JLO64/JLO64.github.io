@@ -31,6 +31,8 @@ Personal blog for Julian Lopez, built with Jekyll and deployed via Docker. Live 
 
 - **`hardcover_all_read.rb`** — Fetches all read books (status_id=3) from Hardcover's GraphQL API at build time. Downloads and converts cover images to WebP. Writes to `_data/hardcover_all_read.json`. Only overwrites the file on a successful API call — falls back to the committed file if the API is unavailable.
 - **`hardcover_currently_reading.rb`** — Fetches currently-reading books (status_id=2) from Hardcover's GraphQL API at build time. Requires `HARDCOVER_TOKEN` (or `HARDCOVER_AUTHORIZATION`) env var. Downloads and converts cover images to WebP. Writes to `_data/hardcover_currently_reading.json`.
+- **`mal_anime_list.rb`** — Fetches all anime from the public MAL `load.json` endpoint (no API token required) at build time. Downloads and converts cover images to WebP. Writes to `_data/mal_anime_list.json` and `_data/mal_currently_watching.json`. Falls back to existing files on network failure.
+- **`mal_manga_list.rb`** — Same as above for manga. Writes to `_data/mal_manga_list.json` and `_data/mal_currently_reading_manga.json`.
 - **`mastodon_feed.rb`** — Fetches the latest Mastodon post from the RSS feed at `gotosocial.julianlopez.net`. Downloads and converts images to WebP. Writes to `_data/most_recent_mastodon_post.yml`.
 - **`python.rb`** — Pre-processes post links: rewrites `[text](post-name.md)` → `[text]({% post_url post-name %})`.
 
@@ -47,6 +49,7 @@ Without quotes, bash interprets the space as a command separator — `HARDCOVER_
 | Variable | Purpose |
 |---|---|
 | `HARDCOVER_TOKEN` | Hardcover API auth token (JWT) |
+| `MAL_Client_ID` | MAL API client ID — only needed if you want to use the official API directly; not required for the `load.json` scraping approach used by the plugins |
 
 ## Build & Deploy
 
@@ -74,6 +77,10 @@ Use `uvx rodney --local` to browse the site programmatically. The `.rodney/` dir
 |---|---|---|
 | `_data/hardcover_all_read.json` | Yes | Persisted book history — do not delete |
 | `_data/hardcover_currently_reading.json` | No | Regenerated each build |
+| `_data/mal_anime_list.json` | Yes | Persisted anime history — do not delete |
+| `_data/mal_manga_list.json` | Yes | Persisted manga history — do not delete |
+| `_data/mal_currently_watching.json` | No | Regenerated each build |
+| `_data/mal_currently_reading_manga.json` | No | Regenerated each build |
 | `_data/most_recent_mastodon_post.yml` | No | Regenerated each build |
 
 **Important:** Jekyll loads `_data` files before running generator plugins. A plugin that writes to `_data` is always one build behind — the new data is used in the next build. This is why `hardcover_all_read.json` is committed: it's always present and up-to-date from the previous build.
@@ -81,8 +88,11 @@ Use `uvx rodney --local` to browse the site programmatically. The `.rodney/` dir
 ## Auto-generated Files (do not edit manually)
 
 - `_data/hardcover_currently_reading.json`
+- `_data/mal_currently_watching.json`
+- `_data/mal_currently_reading_manga.json`
 - `_data/most_recent_mastodon_post.yml`
 - `assets/images/hardcover/*.webp`
+- `assets/images/mal/*.webp`
 
 ## Jekyll Configuration Highlights (`_config.yml`)
 
