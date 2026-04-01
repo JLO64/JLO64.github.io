@@ -6,6 +6,28 @@ layout: default
 <p>This page contains what I consider to be the best of the best within the media I consume.</p>
 <p>Be sure to click on "View All" to navigate to the individual pages. Hopefully you'll find something you'll like there!</p>
 
+{% assign top_games = site.data.hltb_games_list | where: "review_score", 100 | sort: "title" %}
+{% if top_games.size > 0 %}
+<div class="media-section-header">
+  <h2>Favorite Games</h2>
+  <a href="/games">View all →</a>
+</div>
+<div class="books-year-section">
+  <ul class="hardcover-book-container">
+    {% for game in top_games %}
+    <li class="hardcover-book-item">
+      {% if game.cover_filepath %}
+        <img src="/{{ game.cover_filepath }}" alt="{{ game.title }}" class="hardcover-book-image" />
+      {% endif %}
+      <p class="hardcover-book-title">
+        <a href="https://howlongtobeat.com/game/{{ game.game_id }}" target="_blank" rel="noreferrer">{{ game.title }}</a>
+      </p>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+
 {% assign top_anime = site.data.mal_anime_list | where: "score", 10 | sort: "title" %}
 {% if top_anime.size > 0 %}
 <div class="media-section-header">

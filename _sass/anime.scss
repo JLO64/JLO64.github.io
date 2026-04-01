@@ -38,6 +38,29 @@
   color: var(--link-text);
 }
 
+.hltb-platform {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--link-text);
+}
+
+.hltb-small-cards .hardcover-book-item {
+  width: 9rem;
+  padding: 0.6rem;
+}
+
+.hltb-small-cards .hardcover-book-item .hardcover-book-image {
+  height: 10rem;
+}
+
+.hltb-small-cards .hardcover-book-item .hardcover-book-title {
+  font-size: 0.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .anime-episodes {
   margin-top: 0.2rem;
   margin-bottom: 0;

@@ -62,6 +62,28 @@ layout: default
     </ul>
   </div>
   {% endif %}
+  {% if site.data.hltb_currently_playing.size > 0 %}
+  <div class="homepage-hltb-container">
+    <h2>Currently Playing</h2>
+    <div class="hltb-small-cards">
+    <ul class="hardcover-book-container">
+      {% for game in site.data.hltb_currently_playing %}
+      <li class="hardcover-book-item">
+        {% if game.cover_filepath %}
+          <img src="/{{ game.cover_filepath }}" alt="{{ game.title }}" class="hardcover-book-image" />
+        {% endif %}
+        <p class="hardcover-book-title">
+          <a href="https://howlongtobeat.com/game/{{ game.game_id }}" target="_blank" rel="noreferrer">{{ game.title }}</a>
+        </p>
+        {% if game.platform %}
+          <p class="hltb-platform">{{ game.platform }}{% if game.platform == "PC" and game.storefront %} ({{ game.storefront }}){% endif %}</p>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    </div>
+  </div>
+  {% endif %}
   <div class="homepage-mastodon-post-container">
     <h2>Latest Fediverse Post</h2>
       <div class="homepage-mastodon-post">

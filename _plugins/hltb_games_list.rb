@@ -70,7 +70,7 @@ module Jekyll
           'storefront'     => entry['play_storefront'],
           'cover_url'      => cover_url,
           'cover_filepath' => cover_filepath,
-          'review_score'   => entry['review_score']&.>(0) ? entry['review_score'] : nil,
+          'review_score'   => entry['review_score']&.>(0) ? (entry['review_score'] / 10.0).then { |s| s == s.to_i ? s.to_i : s } : nil,
           'review_notes'   => entry['review_notes'].to_s.strip.then { |s| s.empty? ? nil : s },
           'comp_main'      => seconds_to_hours(entry['comp_main']),
           'comp_plus'      => seconds_to_hours(entry['comp_plus']),
@@ -84,7 +84,7 @@ module Jekyll
 
         all_games << record
         currently_playing << record.slice(
-          'id', 'game_id', 'title', 'cover_url', 'cover_filepath', 'platform'
+          'id', 'game_id', 'title', 'cover_url', 'cover_filepath', 'platform', 'storefront'
         ) if status_str == 'playing'
       end
 

@@ -1,0 +1,107 @@
+---
+layout: default
+---
+
+<h1>Games</h1>
+<p>A list of games I've played. The data on this page is sourced from my <a href="https://howlongtobeat.com/user/JLO64/games" target="_blank" rel="noreferrer">HowLongToBeat account</a>.</p>
+
+{% assign playing   = site.data.hltb_games_list | where: "status", "playing"   | sort: "title" %}
+{% assign on_hold   = site.data.hltb_games_list | where: "status", "on_hold"   | sort: "title" %}
+{% assign completed = site.data.hltb_games_list | where: "status", "completed" | sort: "review_score" | reverse %}
+{% assign retired   = site.data.hltb_games_list | where: "status", "retired"   | sort: "title" %}
+
+{% if playing.size > 0 %}
+<div class="anime-year-section">
+  <h2 class="anime-year-heading">Playing</h2>
+  <ul class="hardcover-book-container">
+    {% for game in playing %}
+    <li class="hardcover-book-item">
+      {% if game.cover_filepath %}
+        <img src="/{{ game.cover_filepath }}" alt="{{ game.title }}" class="hardcover-book-image" />
+      {% endif %}
+      <p class="hardcover-book-title">
+        <a href="https://howlongtobeat.com/game/{{ game.game_id }}" target="_blank" rel="noreferrer">{{ game.title }}</a>
+      </p>
+      {% if game.review_score %}
+        <p class="anime-score">{{ game.review_score }} / 10</p>
+      {% endif %}
+      {% if game.platform %}
+        <p class="hltb-platform">{{ game.platform }}{% if game.platform == "PC" and game.storefront %} ({{ game.storefront }}){% endif %}</p>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+
+{% if on_hold.size > 0 %}
+<div class="anime-year-section">
+  <h2 class="anime-year-heading">On Hold</h2>
+  <ul class="hardcover-book-container">
+    {% for game in on_hold %}
+    <li class="hardcover-book-item">
+      {% if game.cover_filepath %}
+        <img src="/{{ game.cover_filepath }}" alt="{{ game.title }}" class="hardcover-book-image" />
+      {% endif %}
+      <p class="hardcover-book-title">
+        <a href="https://howlongtobeat.com/game/{{ game.game_id }}" target="_blank" rel="noreferrer">{{ game.title }}</a>
+      </p>
+      {% if game.review_score %}
+        <p class="anime-score">{{ game.review_score }} / 10</p>
+      {% endif %}
+      {% if game.platform %}
+        <p class="hltb-platform">{{ game.platform }}{% if game.platform == "PC" and game.storefront %} ({{ game.storefront }}){% endif %}</p>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+
+{% if completed.size > 0 %}
+<div class="anime-year-section">
+  <h2 class="anime-year-heading">Completed</h2>
+  <ul class="hardcover-book-container">
+    {% for game in completed %}
+    <li class="hardcover-book-item">
+      {% if game.cover_filepath %}
+        <img src="/{{ game.cover_filepath }}" alt="{{ game.title }}" class="hardcover-book-image" />
+      {% endif %}
+      <p class="hardcover-book-title">
+        <a href="https://howlongtobeat.com/game/{{ game.game_id }}" target="_blank" rel="noreferrer">{{ game.title }}</a>
+      </p>
+      {% if game.review_score %}
+        <p class="anime-score">{{ game.review_score }} / 10</p>
+      {% endif %}
+      {% if game.platform %}
+        <p class="hltb-platform">{{ game.platform }}{% if game.platform == "PC" and game.storefront %} ({{ game.storefront }}){% endif %}</p>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+
+{% if retired.size > 0 %}
+<div class="anime-year-section">
+  <h2 class="anime-year-heading">Retired</h2>
+  <ul class="hardcover-book-container">
+    {% for game in retired %}
+    <li class="hardcover-book-item">
+      {% if game.cover_filepath %}
+        <img src="/{{ game.cover_filepath }}" alt="{{ game.title }}" class="hardcover-book-image" />
+      {% endif %}
+      <p class="hardcover-book-title">
+        <a href="https://howlongtobeat.com/game/{{ game.game_id }}" target="_blank" rel="noreferrer">{{ game.title }}</a>
+      </p>
+      {% if game.review_score %}
+        <p class="anime-score">{{ game.review_score }} / 10</p>
+      {% endif %}
+      {% if game.platform %}
+        <p class="hltb-platform">{{ game.platform }}{% if game.platform == "PC" and game.storefront %} ({{ game.storefront }}){% endif %}</p>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}

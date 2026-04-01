@@ -163,43 +163,6 @@
     "cover_filepath": "assets/images/hardcover/ccf772582cf1c929453364e687680576712a5b57.webp"
   },
   {
-    "id": 7527835,
-    "book_id": 268150,
-    "edition_id": 24366858,
-    "title": "Do Androids Dream of Electric Sheep?",
-    "slug": "do-androids-dream-of-electric-sheep",
-    "authors": [
-      "Philip K. Dick"
-    ],
-    "rating": null,
-    "started_at": null,
-    "finished_at": null,
-    "last_read_date": "2025-05-19",
-    "date_added": "2025-05-19",
-    "year": "2025",
-    "cover_url": "https://assets.hardcover.app/editions/24366858/2403087114756371-912qCxdgTRL._SL1500_.jpg",
-    "cover_filepath": "assets/images/hardcover/2403087114756371-912qCxdgTRL._SL1500_.webp"
-  },
-  {
-    "id": 7527793,
-    "book_id": 312460,
-    "edition_id": 30426415,
-    "title": "Dune",
-    "slug": "dune",
-    "authors": [
-      "Frank Herbert",
-      "Brian Herbert"
-    ],
-    "rating": 4.5,
-    "started_at": null,
-    "finished_at": null,
-    "last_read_date": "2025-05-19",
-    "date_added": "2025-05-19",
-    "year": "2025",
-    "cover_url": "https://assets.hardcover.app/editions/30426415/8362709973192601-9780441013593-us.jpg",
-    "cover_filepath": "assets/images/hardcover/8362709973192601-9780441013593-us.webp"
-  },
-  {
     "id": 7527816,
     "book_id": 347189,
     "edition_id": 30404893,
@@ -216,316 +179,6 @@
     "year": "2025",
     "cover_url": "https://assets.hardcover.app/external_data/59936037/b9f2655f57e1fb8a6ee185f7b4b5f388728b3369.jpeg",
     "cover_filepath": "assets/images/hardcover/b9f2655f57e1fb8a6ee185f7b4b5f388728b3369.webp"
-  },
-  {
-    "id": 7527832,
-    "book_id": 356467,
-    "edition_id": 30400732,
-    "title": "Animal Farm",
-    "slug": "animal-farm",
-    "authors": [
-      "George Orwell"
-    ],
-    "rating": null,
-    "started_at": null,
-    "finished_at": null,
-    "last_read_date": "2025-05-19",
-    "date_added": "2025-05-19",
-    "year": "2025",
-    "cover_url": "https://assets.hardcover.app/external_data/60153774/828b3c8929bab6aa5239889712eac37d48d128c2.jpeg",
-    "cover_filepath": "assets/images/hardcover/828b3c8929bab6aa5239889712eac37d48d128c2.webp"
-  },
-  {
-    "id": 7527840,
-    "book_id": 361784,
-    "edition_id": 20615477,
-    "title": "A Canticle for Leibowitz",
-    "slug": "a-canticle-for-leibowitz",
-    "authors": [
-      "Walter M. Miller Jr.",
-      "Mary Doria Russell"
-    ],
-    "rating": 4.0,
-    "started_at": null,
-    "finished_at": null,
-    "last_read_date": "2025-05-19",
-    "date_added": "2025-05-19",
-    "year": "2025",
-    "cover_url": "https://assets.hardcover.app/edition/20615477/b15a9753b928134c6c5e3079039395bec06df8b2.jpeg",
-    "cover_filepath": "assets/images/hardcover/b15a9753b928134c6c5e3079039395bec06df8b2.webp"
-  },
-  {
-    "id": 7527837,
-    "book_id": 374134,
-    "edition_id": 30402815,
-    "title": "2001: A Space Odyssey",
-    "slug": "2001",
-    "authors": [
-      "Arthur C. Clarke",
-      "Michael Moorcock",
-      "Joe   Wilson"
-    ],
-    "rating": null,
-    "started_at": null,
-    "finished_at": null,
-    "last_read_date": "2025-05-19",
-    "date_added": "2025-05-19",
-    "year": "2025",
-    "cover_url": "https://assets.hardcover.app/external_data/61587160/e046ab6c63d0f4682a5b4515fa4c5bf39def04fa.jpeg",
-    "cover_filepath": "assets/images/hardcover/e046ab6c63d0f4682a5b4515fa4c5bf39def04fa.webp"
-  },
-  {
-    "id": 7527720,
-    "book_id": 374328,
-    "edition_id": 3299811,
-    "title": "Brave New World",
-    "slug": "brave-new-world",
-    "authors": [
-      "Aldous Huxley"
-    ],
-    "rating": 4.5,
-    "started_at": null,
-    "finished_at": null,
-    "last_read_date": "2025-05-19",
-    "date_added": "2025-05-19",
-    "year": "2025",
-    "cover_url": "https://assets.hardcover.app/edition/3299811/3e542fb1d6aed92c0f4e9cd0ac9b2f6892ca97a3.jpeg",
-    "cover_filepath": "assets/images/hardcover/3e542fb1d6aed92c0f4e9cd0ac9b2f6892ca97a3.webp"
-  },
-  {
-    "id": 7527830,
-    "book_id": 375938,
-    "edition_id": 6336191,
-    "title": "Fahrenheit 451",
-    "slug": "fahrenheit-451",
-    "authors": [
-      "Ray Bradbury"
-    ],
-    "rating": null,
-    "started_at": null,
-    "finished_at": null,
-    "last_read_date": "2025-05-19",
-    "date_added": "2025-05-19",
-    "year": "2025",
-    "cover_url": "https://assets.hardcover.app/edition/6336191/3d353406f14fd36043a8bdfb8c3288f90ee4f96c.jpeg",
-    "cover_filepath": "assets/images/hardcover/3d353406f14fd36043a8bdfb8c3288f90ee4f96c.webp"
-  },
-  {
-    "id": 7527795,
-    "book_id": 377938,
-    "edition_id": 24693117,
-    "title": "The Lord of the Rings",
-    "slug": "the-lord-of-the-rings",
-    "authors": [
-      "J.R.R. Tolkien"
-    ],
-    "rating": null,
-    "started_at": null,
-    "finished_at": null,
-    "last_read_date": "2025-05-19",
-    "date_added": "2025-05-19",
-    "year": "2025",
-    "cover_url": "https://assets.hardcover.app/external_data/61546095/ad94fb205bce7e138844909ecb14b1d54f53ae27.jpeg",
-    "cover_filepath": "assets/images/hardcover/ad94fb205bce7e138844909ecb14b1d54f53ae27.webp"
-  },
-  {
-    "id": 7527828,
-    "book_id": 379760,
-    "edition_id": 4675245,
-    "title": "1984",
-    "slug": "1984",
-    "authors": [
-      "George Orwell"
-    ],
-    "rating": null,
-    "started_at": null,
-    "finished_at": null,
-    "last_read_date": "2025-05-19",
-    "date_added": "2025-05-19",
-    "year": "2025",
-    "cover_url": "https://assets.hardcover.app/edition/4675245/24e9e26e-fa4c-4368-a68c-0abc66c92832.png",
-    "cover_filepath": "assets/images/hardcover/24e9e26e-fa4c-4368-a68c-0abc66c92832.webp"
-  },
-  {
-    "id": 7527826,
-    "book_id": 427393,
-    "edition_id": 30447906,
-    "title": "Dune Messiah",
-    "slug": "dune-messiah",
-    "authors": [
-      "Frank Herbert"
-    ],
-    "rating": 4.0,
-    "started_at": null,
-    "finished_at": null,
-    "last_read_date": "2025-05-19",
-    "date_added": "2025-05-19",
-    "year": "2025",
-    "cover_url": "https://assets.hardcover.app/edition/30447906/3d068963494d031eeeb168a4b94344214b912793.jpeg",
-    "cover_filepath": "assets/images/hardcover/3d068963494d031eeeb168a4b94344214b912793.webp"
-  },
-  {
-    "id": 7527829,
-    "book_id": 427798,
-    "edition_id": 4998878,
-    "title": "The Hitchhiker's Guide to the Galaxy",
-    "slug": "the-hitchhikers-guide-to-the-galaxy",
-    "authors": [
-      "Douglas Adams"
-    ],
-    "rating": null,
-    "started_at": null,
-    "finished_at": null,
-    "last_read_date": "2025-05-19",
-    "date_added": "2025-05-19",
-    "year": "2025",
-    "cover_url": "https://assets.hardcover.app/edition/4998878/26e9e386e6b34b5218d85473296c43e4dbef5de5.jpeg",
-    "cover_filepath": "assets/images/hardcover/26e9e386e6b34b5218d85473296c43e4dbef5de5.webp"
-  },
-  {
-    "id": 7527823,
-    "book_id": 473869,
-    "edition_id": 22062767,
-    "title": "The Count of Monte Cristo",
-    "slug": "the-count-of-monte-cristo",
-    "authors": [
-      "Alexandre Dumas"
-    ],
-    "rating": 4.0,
-    "started_at": null,
-    "finished_at": null,
-    "last_read_date": "2025-05-19",
-    "date_added": "2025-05-19",
-    "year": "2025",
-    "cover_url": "https://assets.hardcover.app/edition/22062767/3432f1033b04d23e47edea3a864bb956f3b6346e.jpeg",
-    "cover_filepath": "assets/images/hardcover/3432f1033b04d23e47edea3a864bb956f3b6346e.webp"
-  },
-  {
-    "id": 7527841,
-    "book_id": 480139,
-    "edition_id": 30420112,
-    "title": "Flowers for Algernon",
-    "slug": "flowers-for-algernon",
-    "authors": [
-      "Daniel Keyes"
-    ],
-    "rating": null,
-    "started_at": null,
-    "finished_at": null,
-    "last_read_date": "2025-05-19",
-    "date_added": "2025-05-19",
-    "year": "2025",
-    "cover_url": "https://assets.hardcover.app/edition/30420112/b26c3080-c055-476b-8beb-177cd38780e4.jpg",
-    "cover_filepath": "assets/images/hardcover/b26c3080-c055-476b-8beb-177cd38780e4.webp"
-  },
-  {
-    "id": 7527802,
-    "book_id": 2459845,
-    "edition_id": 8548995,
-    "title": "The Hobbit",
-    "slug": "the-hobbit",
-    "authors": [
-      "J.R.R. Tolkien",
-      "Christopher Tolkien"
-    ],
-    "rating": null,
-    "started_at": null,
-    "finished_at": null,
-    "last_read_date": "2025-05-19",
-    "date_added": "2025-05-19",
-    "year": "2025",
-    "cover_url": "https://assets.hardcover.app/edition/8548995/27d187cb1a0bec4b21ebfc53658388bc8b071256.jpeg",
-    "cover_filepath": "assets/images/hardcover/27d187cb1a0bec4b21ebfc53658388bc8b071256.webp"
-  },
-  {
-    "id": 7527820,
-    "book_id": 46423,
-    "edition_id": 14936552,
-    "title": "Foundation's edge",
-    "slug": "foundations-edge",
-    "authors": [
-      "Isaac Asimov"
-    ],
-    "rating": null,
-    "started_at": null,
-    "finished_at": null,
-    "last_read_date": "2025-05-19",
-    "date_added": "2025-05-19",
-    "year": "2025",
-    "cover_url": "https://assets.hardcover.app/external_data/36288812/cdcfb078287a101c0006302f328c935e7a98d57f.jpeg",
-    "cover_filepath": "assets/images/hardcover/cdcfb078287a101c0006302f328c935e7a98d57f.webp"
-  },
-  {
-    "id": 7527813,
-    "book_id": 50772,
-    "edition_id": 18334136,
-    "title": "Speaker for the Dead",
-    "slug": "speaker-for-the-dead",
-    "authors": [
-      "Orson Scott Card"
-    ],
-    "rating": null,
-    "started_at": null,
-    "finished_at": null,
-    "last_read_date": "2025-05-19",
-    "date_added": "2025-05-19",
-    "year": "2025",
-    "cover_url": "https://assets.hardcover.app/edition/18334136/ff421f495f1df17596b4571785ae8616fa638c8d.jpeg",
-    "cover_filepath": "assets/images/hardcover/ff421f495f1df17596b4571785ae8616fa638c8d.webp"
-  },
-  {
-    "id": 7527831,
-    "book_id": 77104,
-    "edition_id": 5138650,
-    "title": "The Eye of the World",
-    "slug": "the-eye-of-the-world",
-    "authors": [
-      "Robert Jordan"
-    ],
-    "rating": null,
-    "started_at": null,
-    "finished_at": null,
-    "last_read_date": "2025-05-19",
-    "date_added": "2025-05-19",
-    "year": "2025",
-    "cover_url": "https://assets.hardcover.app/book_mappings/7332323/437a620631d0c64a358d4a53c9c19addb3440e26.jpeg",
-    "cover_filepath": "assets/images/hardcover/437a620631d0c64a358d4a53c9c19addb3440e26.webp"
-  },
-  {
-    "id": 7527818,
-    "book_id": 94363,
-    "edition_id": 25421331,
-    "title": "Foundation and Earth",
-    "slug": "foundation-and-earth",
-    "authors": [
-      "Isaac Asimov"
-    ],
-    "rating": null,
-    "started_at": null,
-    "finished_at": null,
-    "last_read_date": "2025-05-19",
-    "date_added": "2025-05-19",
-    "year": "2025",
-    "cover_url": "https://assets.hardcover.app/edition/25421331/bfd38d1b721f300db1241c19a0d65118695277eb.jpeg",
-    "cover_filepath": "assets/images/hardcover/bfd38d1b721f300db1241c19a0d65118695277eb.webp"
-  },
-  {
-    "id": 7527834,
-    "book_id": 122240,
-    "edition_id": 22583711,
-    "title": "Slaughterhouse 5",
-    "slug": "slaughterhouse-five",
-    "authors": [
-      "Kurt Vonnegut"
-    ],
-    "rating": null,
-    "started_at": null,
-    "finished_at": null,
-    "last_read_date": "2025-05-19",
-    "date_added": "2025-05-19",
-    "year": "2025",
-    "cover_url": "https://assets.hardcover.app/external_data/61018169/3ac5372eda7b2907f886965ff4d1109fe55ed3f0.jpeg",
-    "cover_filepath": "assets/images/hardcover/3ac5372eda7b2907f886965ff4d1109fe55ed3f0.webp"
   },
   {
     "id": 7527817,
@@ -564,11 +217,47 @@
     "cover_filepath": "assets/images/hardcover/4430587892e367395499f249b810cea57f9a4028.webp"
   },
   {
-    "id": 7527799,
-    "book_id": 188628,
-    "edition_id": 30404892,
-    "title": "Foundation",
-    "slug": "foundation",
+    "id": 7527813,
+    "book_id": 50772,
+    "edition_id": 18334136,
+    "title": "Speaker for the Dead",
+    "slug": "speaker-for-the-dead",
+    "authors": [
+      "Orson Scott Card"
+    ],
+    "rating": null,
+    "started_at": null,
+    "finished_at": null,
+    "last_read_date": "2025-05-19",
+    "date_added": "2025-05-19",
+    "year": "2025",
+    "cover_url": "https://assets.hardcover.app/edition/18334136/ff421f495f1df17596b4571785ae8616fa638c8d.jpeg",
+    "cover_filepath": "assets/images/hardcover/ff421f495f1df17596b4571785ae8616fa638c8d.webp"
+  },
+  {
+    "id": 7527841,
+    "book_id": 480139,
+    "edition_id": 30420112,
+    "title": "Flowers for Algernon",
+    "slug": "flowers-for-algernon",
+    "authors": [
+      "Daniel Keyes"
+    ],
+    "rating": null,
+    "started_at": null,
+    "finished_at": null,
+    "last_read_date": "2025-05-19",
+    "date_added": "2025-05-19",
+    "year": "2025",
+    "cover_url": "https://assets.hardcover.app/edition/30420112/b26c3080-c055-476b-8beb-177cd38780e4.jpg",
+    "cover_filepath": "assets/images/hardcover/b26c3080-c055-476b-8beb-177cd38780e4.webp"
+  },
+  {
+    "id": 7527818,
+    "book_id": 94363,
+    "edition_id": 25421331,
+    "title": "Foundation and Earth",
+    "slug": "foundation-and-earth",
     "authors": [
       "Isaac Asimov"
     ],
@@ -578,8 +267,209 @@
     "last_read_date": "2025-05-19",
     "date_added": "2025-05-19",
     "year": "2025",
-    "cover_url": "https://assets.hardcover.app/editions/30404892/5661545646660324.jpg",
-    "cover_filepath": "assets/images/hardcover/5661545646660324.webp"
+    "cover_url": "https://assets.hardcover.app/edition/25421331/bfd38d1b721f300db1241c19a0d65118695277eb.jpeg",
+    "cover_filepath": "assets/images/hardcover/bfd38d1b721f300db1241c19a0d65118695277eb.webp"
+  },
+  {
+    "id": 7527820,
+    "book_id": 46423,
+    "edition_id": 14936552,
+    "title": "Foundation's edge",
+    "slug": "foundations-edge",
+    "authors": [
+      "Isaac Asimov"
+    ],
+    "rating": null,
+    "started_at": null,
+    "finished_at": null,
+    "last_read_date": "2025-05-19",
+    "date_added": "2025-05-19",
+    "year": "2025",
+    "cover_url": "https://assets.hardcover.app/external_data/36288812/cdcfb078287a101c0006302f328c935e7a98d57f.jpeg",
+    "cover_filepath": "assets/images/hardcover/cdcfb078287a101c0006302f328c935e7a98d57f.webp"
+  },
+  {
+    "id": 7527826,
+    "book_id": 427393,
+    "edition_id": 30447906,
+    "title": "Dune Messiah",
+    "slug": "dune-messiah",
+    "authors": [
+      "Frank Herbert"
+    ],
+    "rating": 4.0,
+    "started_at": null,
+    "finished_at": null,
+    "last_read_date": "2025-05-19",
+    "date_added": "2025-05-19",
+    "year": "2025",
+    "cover_url": "https://assets.hardcover.app/edition/30447906/3d068963494d031eeeb168a4b94344214b912793.jpeg",
+    "cover_filepath": "assets/images/hardcover/3d068963494d031eeeb168a4b94344214b912793.webp"
+  },
+  {
+    "id": 7527829,
+    "book_id": 427798,
+    "edition_id": 4998878,
+    "title": "The Hitchhiker's Guide to the Galaxy",
+    "slug": "the-hitchhikers-guide-to-the-galaxy",
+    "authors": [
+      "Douglas Adams"
+    ],
+    "rating": null,
+    "started_at": null,
+    "finished_at": null,
+    "last_read_date": "2025-05-19",
+    "date_added": "2025-05-19",
+    "year": "2025",
+    "cover_url": "https://assets.hardcover.app/edition/4998878/26e9e386e6b34b5218d85473296c43e4dbef5de5.jpeg",
+    "cover_filepath": "assets/images/hardcover/26e9e386e6b34b5218d85473296c43e4dbef5de5.webp"
+  },
+  {
+    "id": 7527830,
+    "book_id": 375938,
+    "edition_id": 6336191,
+    "title": "Fahrenheit 451",
+    "slug": "fahrenheit-451",
+    "authors": [
+      "Ray Bradbury"
+    ],
+    "rating": null,
+    "started_at": null,
+    "finished_at": null,
+    "last_read_date": "2025-05-19",
+    "date_added": "2025-05-19",
+    "year": "2025",
+    "cover_url": "https://assets.hardcover.app/edition/6336191/3d353406f14fd36043a8bdfb8c3288f90ee4f96c.jpeg",
+    "cover_filepath": "assets/images/hardcover/3d353406f14fd36043a8bdfb8c3288f90ee4f96c.webp"
+  },
+  {
+    "id": 7527837,
+    "book_id": 374134,
+    "edition_id": 30402815,
+    "title": "2001: A Space Odyssey",
+    "slug": "2001",
+    "authors": [
+      "Arthur C. Clarke",
+      "Michael Moorcock",
+      "Joe   Wilson"
+    ],
+    "rating": null,
+    "started_at": null,
+    "finished_at": null,
+    "last_read_date": "2025-05-19",
+    "date_added": "2025-05-19",
+    "year": "2025",
+    "cover_url": "https://assets.hardcover.app/external_data/61587160/e046ab6c63d0f4682a5b4515fa4c5bf39def04fa.jpeg",
+    "cover_filepath": "assets/images/hardcover/e046ab6c63d0f4682a5b4515fa4c5bf39def04fa.webp"
+  },
+  {
+    "id": 7527834,
+    "book_id": 122240,
+    "edition_id": 22583711,
+    "title": "Slaughterhouse 5",
+    "slug": "slaughterhouse-five",
+    "authors": [
+      "Kurt Vonnegut"
+    ],
+    "rating": null,
+    "started_at": null,
+    "finished_at": null,
+    "last_read_date": "2025-05-19",
+    "date_added": "2025-05-19",
+    "year": "2025",
+    "cover_url": "https://assets.hardcover.app/external_data/61018169/3ac5372eda7b2907f886965ff4d1109fe55ed3f0.jpeg",
+    "cover_filepath": "assets/images/hardcover/3ac5372eda7b2907f886965ff4d1109fe55ed3f0.webp"
+  },
+  {
+    "id": 7527835,
+    "book_id": 268150,
+    "edition_id": 24366858,
+    "title": "Do Androids Dream of Electric Sheep?",
+    "slug": "do-androids-dream-of-electric-sheep",
+    "authors": [
+      "Philip K. Dick"
+    ],
+    "rating": null,
+    "started_at": null,
+    "finished_at": null,
+    "last_read_date": "2025-05-19",
+    "date_added": "2025-05-19",
+    "year": "2025",
+    "cover_url": "https://assets.hardcover.app/editions/24366858/2403087114756371-912qCxdgTRL._SL1500_.jpg",
+    "cover_filepath": "assets/images/hardcover/2403087114756371-912qCxdgTRL._SL1500_.webp"
+  },
+  {
+    "id": 7527831,
+    "book_id": 77104,
+    "edition_id": 5138650,
+    "title": "The Eye of the World",
+    "slug": "the-eye-of-the-world",
+    "authors": [
+      "Robert Jordan"
+    ],
+    "rating": null,
+    "started_at": null,
+    "finished_at": null,
+    "last_read_date": "2025-05-19",
+    "date_added": "2025-05-19",
+    "year": "2025",
+    "cover_url": "https://assets.hardcover.app/book_mappings/7332323/437a620631d0c64a358d4a53c9c19addb3440e26.jpeg",
+    "cover_filepath": "assets/images/hardcover/437a620631d0c64a358d4a53c9c19addb3440e26.webp"
+  },
+  {
+    "id": 7527823,
+    "book_id": 473869,
+    "edition_id": 22062767,
+    "title": "The Count of Monte Cristo",
+    "slug": "the-count-of-monte-cristo",
+    "authors": [
+      "Alexandre Dumas"
+    ],
+    "rating": 4.0,
+    "started_at": null,
+    "finished_at": null,
+    "last_read_date": "2025-05-19",
+    "date_added": "2025-05-19",
+    "year": "2025",
+    "cover_url": "https://assets.hardcover.app/edition/22062767/3432f1033b04d23e47edea3a864bb956f3b6346e.jpeg",
+    "cover_filepath": "assets/images/hardcover/3432f1033b04d23e47edea3a864bb956f3b6346e.webp"
+  },
+  {
+    "id": 7527793,
+    "book_id": 312460,
+    "edition_id": 30426415,
+    "title": "Dune",
+    "slug": "dune",
+    "authors": [
+      "Frank Herbert",
+      "Brian Herbert"
+    ],
+    "rating": 4.5,
+    "started_at": null,
+    "finished_at": null,
+    "last_read_date": "2025-05-19",
+    "date_added": "2025-05-19",
+    "year": "2025",
+    "cover_url": "https://assets.hardcover.app/editions/30426415/8362709973192601-9780441013593-us.jpg",
+    "cover_filepath": "assets/images/hardcover/8362709973192601-9780441013593-us.webp"
+  },
+  {
+    "id": 7527795,
+    "book_id": 377938,
+    "edition_id": 24693117,
+    "title": "The Lord of the Rings",
+    "slug": "the-lord-of-the-rings",
+    "authors": [
+      "J.R.R. Tolkien"
+    ],
+    "rating": null,
+    "started_at": null,
+    "finished_at": null,
+    "last_read_date": "2025-05-19",
+    "date_added": "2025-05-19",
+    "year": "2025",
+    "cover_url": "https://assets.hardcover.app/external_data/61546095/ad94fb205bce7e138844909ecb14b1d54f53ae27.jpeg",
+    "cover_filepath": "assets/images/hardcover/ad94fb205bce7e138844909ecb14b1d54f53ae27.webp"
   },
   {
     "id": 7527804,
@@ -600,22 +490,114 @@
     "cover_filepath": "assets/images/hardcover/2fbbdb84cb357fad28dd89650933288b13f8462f.webp"
   },
   {
-    "id": 7527812,
-    "book_id": 1879356,
-    "edition_id": 32017389,
-    "title": "Human Resources: A Tor Original",
-    "slug": "human-resources",
+    "id": 7527720,
+    "book_id": 374328,
+    "edition_id": 3299811,
+    "title": "Brave New World",
+    "slug": "brave-new-world",
     "authors": [
-      "Adrian Tchaikovsky"
+      "Aldous Huxley"
     ],
-    "rating": 5.0,
-    "started_at": "2025-05-18",
-    "finished_at": "2025-05-18",
-    "last_read_date": "2025-05-18",
+    "rating": 4.5,
+    "started_at": null,
+    "finished_at": null,
+    "last_read_date": "2025-05-19",
     "date_added": "2025-05-19",
     "year": "2025",
-    "cover_url": "https://assets.hardcover.app/external_data/373038/6cb42e4811b6c1677825f101fdf7b121c434c28c.jpeg",
-    "cover_filepath": "assets/images/hardcover/6cb42e4811b6c1677825f101fdf7b121c434c28c.webp"
+    "cover_url": "https://assets.hardcover.app/edition/3299811/3e542fb1d6aed92c0f4e9cd0ac9b2f6892ca97a3.jpeg",
+    "cover_filepath": "assets/images/hardcover/3e542fb1d6aed92c0f4e9cd0ac9b2f6892ca97a3.webp"
+  },
+  {
+    "id": 7527832,
+    "book_id": 356467,
+    "edition_id": 30400732,
+    "title": "Animal Farm",
+    "slug": "animal-farm",
+    "authors": [
+      "George Orwell"
+    ],
+    "rating": null,
+    "started_at": null,
+    "finished_at": null,
+    "last_read_date": "2025-05-19",
+    "date_added": "2025-05-19",
+    "year": "2025",
+    "cover_url": "https://assets.hardcover.app/external_data/60153774/828b3c8929bab6aa5239889712eac37d48d128c2.jpeg",
+    "cover_filepath": "assets/images/hardcover/828b3c8929bab6aa5239889712eac37d48d128c2.webp"
+  },
+  {
+    "id": 7527828,
+    "book_id": 379760,
+    "edition_id": 4675245,
+    "title": "1984",
+    "slug": "1984",
+    "authors": [
+      "George Orwell"
+    ],
+    "rating": null,
+    "started_at": null,
+    "finished_at": null,
+    "last_read_date": "2025-05-19",
+    "date_added": "2025-05-19",
+    "year": "2025",
+    "cover_url": "https://assets.hardcover.app/edition/4675245/24e9e26e-fa4c-4368-a68c-0abc66c92832.png",
+    "cover_filepath": "assets/images/hardcover/24e9e26e-fa4c-4368-a68c-0abc66c92832.webp"
+  },
+  {
+    "id": 7527840,
+    "book_id": 361784,
+    "edition_id": 20615477,
+    "title": "A Canticle for Leibowitz",
+    "slug": "a-canticle-for-leibowitz",
+    "authors": [
+      "Walter M. Miller Jr.",
+      "Mary Doria Russell"
+    ],
+    "rating": 4.0,
+    "started_at": null,
+    "finished_at": null,
+    "last_read_date": "2025-05-19",
+    "date_added": "2025-05-19",
+    "year": "2025",
+    "cover_url": "https://assets.hardcover.app/edition/20615477/b15a9753b928134c6c5e3079039395bec06df8b2.jpeg",
+    "cover_filepath": "assets/images/hardcover/b15a9753b928134c6c5e3079039395bec06df8b2.webp"
+  },
+  {
+    "id": 7527799,
+    "book_id": 188628,
+    "edition_id": 30404892,
+    "title": "Foundation",
+    "slug": "foundation",
+    "authors": [
+      "Isaac Asimov"
+    ],
+    "rating": null,
+    "started_at": null,
+    "finished_at": null,
+    "last_read_date": "2025-05-19",
+    "date_added": "2025-05-19",
+    "year": "2025",
+    "cover_url": "https://assets.hardcover.app/editions/30404892/5661545646660324.jpg",
+    "cover_filepath": "assets/images/hardcover/5661545646660324.webp"
+  },
+  {
+    "id": 7527802,
+    "book_id": 2459845,
+    "edition_id": 8548995,
+    "title": "The Hobbit",
+    "slug": "the-hobbit",
+    "authors": [
+      "J.R.R. Tolkien",
+      "Christopher Tolkien"
+    ],
+    "rating": null,
+    "started_at": null,
+    "finished_at": null,
+    "last_read_date": "2025-05-19",
+    "date_added": "2025-05-19",
+    "year": "2025",
+    "cover_url": "https://assets.hardcover.app/edition/8548995/27d187cb1a0bec4b21ebfc53658388bc8b071256.jpeg",
+    "cover_filepath": "assets/images/hardcover/27d187cb1a0bec4b21ebfc53658388bc8b071256.webp"
   },
   {
     "id": 7527825,
@@ -636,14 +618,31 @@
     "cover_filepath": "assets/images/hardcover/745d068ad2302e10e3a523a5334197aabe83ef2a.webp"
   },
   {
+    "id": 7527812,
+    "book_id": 1879356,
+    "edition_id": 32017389,
+    "title": "Human Resources: A Tor Original",
+    "slug": "human-resources",
+    "authors": [
+      "Adrian Tchaikovsky"
+    ],
+    "rating": 5.0,
+    "started_at": "2025-05-18",
+    "finished_at": "2025-05-18",
+    "last_read_date": "2025-05-18",
+    "date_added": "2025-05-19",
+    "year": "2025",
+    "cover_url": "https://assets.hardcover.app/external_data/373038/6cb42e4811b6c1677825f101fdf7b121c434c28c.jpeg",
+    "cover_filepath": "assets/images/hardcover/6cb42e4811b6c1677825f101fdf7b121c434c28c.webp"
+  },
+  {
     "id": 7527811,
     "book_id": 99422,
     "edition_id": 30399508,
     "title": "Artemis",
     "slug": "artemis",
     "authors": [
-      "Andy Weir",
-      "Rosario Dawson"
+      "Andy Weir"
     ],
     "rating": 4.0,
     "started_at": null,
