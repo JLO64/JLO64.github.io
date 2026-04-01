@@ -47,8 +47,8 @@ fi
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 cd "$JEKYLL_DIR" || { echo "Failed to cd to $JEKYLL_DIR"; exit 1; }
-git reset --hard HEAD
 git pull
+git reset --hard HEAD
 rm -rf "$NGINX_DIR"/*
 docker run --rm -v "$JEKYLL_DIR":/srv/jekyll -e HARDCOVER_TOKEN="$HARDCOVER_TOKEN" -u "$(id -u):$(id -g)" "$JEKYLL_BUILDER_IMAGE" build
 docker run --rm -v "$JEKYLL_DIR":/srv/jekyll -e HARDCOVER_TOKEN="$HARDCOVER_TOKEN" -u "$(id -u):$(id -g)" "$JEKYLL_BUILDER_IMAGE" build
