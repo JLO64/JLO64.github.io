@@ -66,7 +66,7 @@ module Jekyll
           'game_id'        => game_id,
           'title'          => entry['custom_title'].to_s.strip,
           'status'         => status_str,
-          'platform'       => entry['platform'],
+          'platform'       => entry['platform'] == 'Xbox Series X/S' ? 'Xbox Series S' : entry['platform'],
           'storefront'     => entry['play_storefront'],
           'cover_url'      => cover_url,
           'cover_filepath' => cover_filepath,
