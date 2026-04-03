@@ -9,15 +9,6 @@
     "storefront": "Steam"
   },
   {
-    "id": 54381619,
-    "game_id": 86112,
-    "title": "Loop Hero",
-    "cover_url": "https://howlongtobeat.com/games/86112_Loop_Hero.jpg",
-    "cover_filepath": "assets/images/hltb/hltb_game_86112.webp",
-    "platform": "PC",
-    "storefront": "GOG"
-  },
-  {
     "id": 54380927,
     "game_id": 81125,
     "title": "The Gunk",
