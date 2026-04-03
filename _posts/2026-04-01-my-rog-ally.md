@@ -44,17 +44,36 @@ Thankfully, someone came up with the brilliant idea of making a 3D printed adapt
 
 ### Xbox Face Buttons
 
+<picture>
+    <source srcset="/assets/images/posts/2026-04-01/thumbnails/IMG_2264.webp" type="image/webp">
+    <img src="/assets/images/posts/2026-04-01/IMG_2264.jpeg" alt="A close up photo of Xbox styled/colored ABXY buttons" class="blog_image" title="A close up photo of Xbox styled/colored ABXY buttons">
+    <figcaption style="text-align:center">The glitter effect is only visible from this angle</figcaption>
+</picture>
+
 Unlike the other mods I've performed, this one was solely for aesthetics. The face buttons that the Ally comes with aren't bad, but I couldn't help but find their colors weird. Thus I decided to order face buttons that look like an Xbox controller but with a glitter effect. The effect is visible when you view the buttons at an off angle, but not head on.
 
 Overall I feel kinda meh on this one. The Etsy shop I ordered from had other more colorful/artsy designs I regret not getting. The one's I went with aren't bad, they're just not great.
 
 ### eGPU Port Cover
 
+<picture>
+    <source srcset="/assets/images/posts/2026-04-01/thumbnails/IMG_2262.webp" type="image/webp">
+    <img src="/assets/images/posts/2026-04-01/IMG_2262.jpeg" alt="A close up photo of a black port cover but with a single USB-C port exposed" class="blog_image" title="A close up photo of a black port cover but with a single USB-C port exposed">
+    <figcaption style="text-align:center">I also like how the color matches the rest of the Ally</figcaption>
+</picture>
+
 Unlike the latest revisions of the Ally, the original one swapped a USB-C port for a proprietary eGPU port that I (along with practically everybody that owns one) will never use. A major nuisance for me was how it's physically similar enough to the nearby USB port that I'd often accidentally attempt to plug things into it.
 
 $5 from a materials cost perspective is probably a rip off for this cover, but I feel it's well worth it in terms of how well it resolves my issue with the eGPU port. I genuinely believe that most all owners should start with this before moving onto the more difficult mods.
 
 ### 2TB SSD
+
+<picture>
+    <source srcset="/assets/images/posts/2026-04-01/thumbnails/IMG_2261.webp" type="image/webp">
+    <img src="/assets/images/posts/2026-04-01/IMG_2261.jpeg" alt="An Intel M.2 2280 SSD bing held in place by adapters within the inside of an Ally." class="blog_image" title="An Intel M.2 2280 SSD bing held in place by adapters within the inside of an Ally.">
+    <figcaption style="text-align:center">It looks janky, but it works!!</figcaption>
+</picture>
+
 
 From day, one I always wanted to increase the amount of storage my unit has. The intended method is to use the microSD card slot, however due to a poor thermal design it's practically guaranteed to burn out. Thankfully, it's pretty easy to swap the SSD, but the issue there is the form factor.
 
