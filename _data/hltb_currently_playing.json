@@ -18,15 +18,6 @@
     "storefront": "GOG"
   },
   {
-    "id": 54381959,
-    "game_id": 96998,
-    "title": "Nuclear Blaze",
-    "cover_url": "https://howlongtobeat.com/games/96998_Nuclear_Blaze.jpg",
-    "cover_filepath": "assets/images/hltb/hltb_game_96998.webp",
-    "platform": "PC",
-    "storefront": "Steam"
-  },
-  {
     "id": 54380927,
     "game_id": 81125,
     "title": "The Gunk",

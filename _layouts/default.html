@@ -160,18 +160,21 @@
       </div>
     </main>
     <script>
+      let currentPathname = window.location.pathname;
+
       function updateContent(html) {
         const data = new DOMParser().parseFromString(html, 'text/html');
         document.documentElement.scrollTop = 0;
         document.body.querySelector('.w').innerHTML = data.body.querySelector('.w').innerHTML;
         document.title = data.title;
+        currentPathname = window.location.pathname;
         onNavigateOrLoad();
       }
 
       function handleLinkClick(event) {
         const link = event.target.closest('a');
         if (!link) return;
-        
+
         // Ignore if it's an external link, has a target, or is a download
         if (
           !link.href ||
@@ -181,6 +184,11 @@
           link.href.startsWith('tel:') ||
           !link.href.startsWith(window.location.origin)
         ) {
+          return;
+        }
+
+        // Skip same-page anchor links — let the browser scroll natively
+        if (link.pathname === window.location.pathname && link.hash) {
           return;
         }
 
@@ -208,6 +216,11 @@
 
       // Handle back/forward navigation
       window.addEventListener('popstate', async () => {
+        // Skip hash-only changes on the currently loaded page — browser handles scroll natively
+        if (window.location.pathname === currentPathname && window.location.hash) {
+          return;
+        }
+
         const response = await fetch(window.location.href);
         const text = await response.text();
         
