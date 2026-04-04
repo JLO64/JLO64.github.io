@@ -5,10 +5,11 @@ layout: default
 <h1>Games</h1>
 <p>A list of games I've played. The data on this page is sourced from my <a href="https://howlongtobeat.com/user/JLO64/games" target="_blank" rel="noreferrer">HowLongToBeat account</a>.</p>
 
-{% assign playing   = site.data.hltb_games_list | where: "status", "playing"   | sort: "title" %}
-{% assign on_hold   = site.data.hltb_games_list | where: "status", "on_hold"   | sort: "title" %}
-{% assign completed = site.data.hltb_games_list | where: "status", "completed" | sort: "review_score" | reverse %}
-{% assign retired   = site.data.hltb_games_list | where: "status", "retired"   | sort: "title" %}
+{% assign hltb_games = site.data.hltb_games_list | default: "" %}
+{% assign playing   = hltb_games | where: "status", "playing"   | sort: "title" %}
+{% assign on_hold   = hltb_games | where: "status", "on_hold"   | sort: "title" %}
+{% assign completed = hltb_games | where: "status", "completed" | sort: "review_score" | reverse %}
+{% assign retired   = hltb_games | where: "status", "retired"   | sort: "title" %}
 
 {% if playing.size > 0 %}
 <div class="anime-year-section">
