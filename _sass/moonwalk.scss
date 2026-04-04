@@ -98,9 +98,7 @@ ul {
   width: 100vw;
 }
 
-.homepage_flex_divs_projects {
-  width: 100vw;
-}
+
 
 .tag {
   transition: 0.2s ease-in;
@@ -172,53 +170,7 @@ header {
   display: none;
 }
 
-.project-box-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  row-gap: 2rem;
-  .project-box {
-    background: var(--project-box);
-    animation: none;
-    border-radius: 1.4rem;
-    margin: 0rem;
-    display: block;
-    max-width: 80vw;
-    width: 24rem;
-    padding: 1rem;
-    .project-box-top{
-      display: flex;
-      .project-box-image {
-        height: 3.6rem;
-        width: 3.6rem;
-        margin: auto 1rem auto 0rem;
-        background-color: red;
-        transition: filter 0.2s ease-in;
-        transition: border-radius 0.2s ease-in;
-        border-radius: 0.8rem;
-      }
-    }
-    h3 {
-      margin: 0rem;
-      color: var(--link-text)
-    }
-    a {
-      width: fit-content;
-      display: block;
-      font-weight: bold;
-    }
-    h4 {
-      margin: 0rem;
-      color: var(--text)
-    }
-    ul {
-      margin: 0rem;
-    }
-    p {
-      margin: 0rem;
-    }
-  }
-}
+
 
 .homepage-mastodon-post-container {
   width: 100vw;
