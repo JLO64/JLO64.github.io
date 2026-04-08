@@ -9,6 +9,38 @@ div.posts-tags-div{
     margin: 0 1rem;
 }
 
-div.table-of-contents {
+.collapsible-toc {
     margin: 1.6rem 1rem 0 1rem;
+}
+
+.toc-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: inherit;
+}
+
+.toggle-icon {
+    transition: transform 0.2s ease;
+    font-size: 1rem;
+}
+
+.toc-toggle[aria-expanded="true"] .toggle-icon {
+    transform: rotate(90deg);
+}
+
+.toc-content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+}
+
+.toc-toggle[aria-expanded="true"] + .toc-content {
+    max-height: 500px;
 }

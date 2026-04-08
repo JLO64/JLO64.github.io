@@ -1,0 +1,11 @@
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    const tocToggle = document.querySelector('.toc-toggle');
+    if (tocToggle) {
+      tocToggle.addEventListener('click', function() {
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !isExpanded);
+      });
+    }
+  });
+</script>

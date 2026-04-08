@@ -45,10 +45,16 @@ layout: default
   {% assign has_h2_headers = true %}
 {% endif %}
 {% if has_h2_headers %}
-  <div class="table-of-contents">
-    <h2>Table of Contents</h2>
-    {% include toc.html html=content h_max=3 %}
+  <div class="collapsible-toc">
+    <button type="button" class="toc-toggle" aria-expanded="false">
+      <span class="toggle-icon">▶</span>
+      <h2>Table of Contents</h2>
+    </button>
+    <div class="toc-content">
+      {% include toc.html html=content h_max=3 %}
+    </div>
   </div>
 {% endif %}
 
 {% include anchor_headings.html html=content %}
+{% include collapsible_toc_js.html %}
