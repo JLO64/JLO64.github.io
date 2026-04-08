@@ -1,5 +1,18 @@
 [
   {
+    "id": 62164,
+    "title": "Akane-banashi",
+    "status": "watching",
+    "cover_url": "https://myanimelist.net/images/anime/1162/155669l.jpg",
+    "cover_filepath": "assets/images/mal/mal_anime_62164.webp",
+    "score": 9,
+    "num_episodes": 0,
+    "num_episodes_watched": 1,
+    "finish_date": null,
+    "start_date": null,
+    "sort_date": "2026-04-05"
+  },
+  {
     "id": 306,
     "title": "Abenobashi Mahou☆Shoutengai",
     "status": "completed",
