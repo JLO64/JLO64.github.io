@@ -102,11 +102,11 @@ ul {
 
 .tag {
   transition: 0.2s ease-in;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0rem;
   border-radius: 0.8rem;
   padding: 0 0.6rem;
   background-color: var(--card-color);
-  display: block;
+  display: inline-block;
   height: fit-content;
   width: fit-content;
 }
