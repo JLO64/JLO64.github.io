@@ -13,6 +13,7 @@ Personal blog for Julian Lopez, built with Jekyll and deployed via Docker. Live 
 - **Build environment**: Docker (`ruby:3.3.6-alpine`)
 - **Deployment**: Manual via `server_build_script.sh` — no CI/CD
 - **Book API**: Hardcover (GraphQL)
+- **Game data**: HowLongToBeat (internal API, no token required)
 - **Social feed**: Mastodon/GoToSocial RSS
 
 ## Key Directories
@@ -26,6 +27,8 @@ Personal blog for Julian Lopez, built with Jekyll and deployed via Docker. Live 
 | `_sass/` | SCSS source files |
 | `_data/` | Static and auto-generated data files |
 | `assets/images/hardcover/` | Book cover images (committed for API resilience) |
+| `assets/images/hltb/` | HLTB game cover images (committed for API resilience) |
+| `assets/images/posts/` | Post images with generated thumbnails (committed to git) |
 
 ## Custom Plugins (`_plugins/`)
 
@@ -34,6 +37,8 @@ Personal blog for Julian Lopez, built with Jekyll and deployed via Docker. Live 
 - **`mal_anime_list.rb`** — Fetches all anime from the public MAL `load.json` endpoint (no API token required) at build time. Downloads and converts cover images to WebP. Writes to `_data/mal_anime_list.json` and `_data/mal_currently_watching.json`. Falls back to existing files on network failure.
 - **`mal_manga_list.rb`** — Same as above for manga. Writes to `_data/mal_manga_list.json` and `_data/mal_currently_reading_manga.json`.
 - **`mastodon_feed.rb`** — Fetches the latest Mastodon post from the RSS feed at `gotosocial.julianlopez.net`. Downloads and converts images to WebP. Writes to `_data/most_recent_mastodon_post.yml`.
+- **`hltb_games_list.rb`** — Fetches all games from HowLongToBeat via the internal `/api/user/{user_id}/games/list` endpoint (no API token required). Maps list flags to status strings (`playing`, `backlog`, `replay`, `on_hold`, `custom2`, `custom3`, `completed`, `retired`). Downloads and converts cover images to WebP. Writes to `_data/hltb_games_list.json` and `_data/hltb_currently_playing.json`. Falls back to committed files on network failure.
+- **`post_image_thumbnails.rb`** — Scans `assets/images/posts/**/*` for supported image formats (jpg, jpeg, png, gif, webp) and generates 480px-wide WebP thumbnails in a `thumbnails/` subdirectory alongside each original. Skips images that already have a thumbnail. Also copies thumbnails to `_site/` since generators run after static files are copied.
 - **`python.rb`** — Pre-processes post links: rewrites `[text](post-name.md)` → `[text]({% post_url post-name %})`.
 
 ## Environment Variables
