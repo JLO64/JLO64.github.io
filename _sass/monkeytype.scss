@@ -1,0 +1,28 @@
+// Styles for Personal Typing Record section
+.homepage-monkeytype-container {
+  width: fit-content;
+  max-width: 90vw;
+}
+
+.monkeytype-record {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: var(--project-box);
+  border-radius: 1.4rem;
+  text-align: center;
+}
+
+.monkeytype-wpm {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.monkeytype-date {
+  margin: 0.5rem 0 0 0;
+  color: var(--text);
+  font-size: 0.9rem;
+}

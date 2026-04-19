@@ -45,6 +45,14 @@ module Jekyll
       # Extract only the 30-second personal bests (raw API response as-is)
       data = result.dig("data", "30")
 
+      # Convert timestamp to formatted date string (MM/DD/YYYY)
+      data.each do |record|
+        if record['timestamp']
+          timestamp_seconds = record['timestamp'] / 1000
+          record['timestamp'] = Time.at(timestamp_seconds).strftime('%m/%d/%Y')
+        end
+      end
+
       # Write result to _data/monkeytype_personal_bests.json
       data_dir = File.join(site.source, '_data')
       FileUtils.mkdir_p(data_dir) unless Dir.exist?(data_dir)
