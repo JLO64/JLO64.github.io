@@ -38,21 +38,19 @@ done
 
 # NGINX_DIR="/var/www/www" JEKYLL_DIR="/home/julian/jekyll_sites/JLO64.github.io" JEKYLL_BUILDER_IMAGE="blog_jekyll_builder" HARDCOVER_TOKEN="your_token_here"
 
-# add a check that exits if the variables are not set and exit with an error message
-if [ -z "$JEKYLL_DIR" ]; then
+if [ -z "${JEKYLL_DIR:-}" ]; then
   echo "JEKYLL_DIR is not set. Exiting."
   exit 1
 fi
-if [ -z "$NGINX_DIR" ]; then
+if [ -z "${NGINX_DIR:-}" ]; then
   echo "NGINX_DIR is not set. Exiting."
   exit 1
 fi
-if [ -z "$JEKYLL_BUILDER_IMAGE" ]; then
+if [ -z "${JEKYLL_BUILDER_IMAGE:-}" ]; then
   echo "JEKYLL_BUILDER_IMAGE is not set. Exiting."
   exit 1
 fi
 if [ -z "${HARDCOVER_TOKEN:-}" ]; then
-  # Try to load from .env file if not provided as argument
   if [ -f "$JEKYLL_DIR/.env" ]; then
     set -a
     . "$JEKYLL_DIR/.env"
@@ -68,13 +66,25 @@ fi
 # Ensure PATH includes common binary locations
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
-cd "$JEKYLL_DIR" || { echo "Failed to cd to $JEKYLL_DIR"; exit 1; }
-git pull
-git reset --hard HEAD
+# Get the remote URL from the existing repo
+REPO_URL=$(git -C "$JEKYLL_DIR" remote get-url origin)
+
+# Clone into a temp directory and ensure cleanup on exit
+BUILD_DIR=$(mktemp -d)
+trap 'rm -rf "$BUILD_DIR"' EXIT
+
+echo "Cloning $REPO_URL into $BUILD_DIR ..."
+git clone "$REPO_URL" "$BUILD_DIR"
+
+# Copy .env into the clone so plugins can find it if needed
+if [ -f "$JEKYLL_DIR/.env" ]; then
+  cp "$JEKYLL_DIR/.env" "$BUILD_DIR/.env"
+fi
+
 rm -rf "$NGINX_DIR"/*
-docker run --rm -v "$JEKYLL_DIR":/srv/jekyll -e HARDCOVER_TOKEN="$HARDCOVER_TOKEN" -u "$(id -u):$(id -g)" "$JEKYLL_BUILDER_IMAGE" build
-docker run --rm -v "$JEKYLL_DIR":/srv/jekyll -e HARDCOVER_TOKEN="$HARDCOVER_TOKEN" -u "$(id -u):$(id -g)" "$JEKYLL_BUILDER_IMAGE" build
-cp -r "$JEKYLL_DIR"/_site/* "$NGINX_DIR"
+docker run --rm -v "$BUILD_DIR":/srv/jekyll -e HARDCOVER_TOKEN="$HARDCOVER_TOKEN" -u "$(id -u):$(id -g)" "$JEKYLL_BUILDER_IMAGE" build
+docker run --rm -v "$BUILD_DIR":/srv/jekyll -e HARDCOVER_TOKEN="$HARDCOVER_TOKEN" -u "$(id -u):$(id -g)" "$JEKYLL_BUILDER_IMAGE" build
+cp -r "$BUILD_DIR"/_site/* "$NGINX_DIR"
 chmod -R 755 "$NGINX_DIR"
 
 # Calculate build duration
