@@ -5,7 +5,7 @@ layout: default
 <h1>Games</h1>
 <p>A list of games I've played. The data on this page is sourced from my <a href="https://howlongtobeat.com/user/JLO64/games" target="_blank" rel="noreferrer">HowLongToBeat account</a>.</p>
 
-{% assign hltb_games = site.data.hltb_games_list | default: "" %}
+{% assign hltb_games = site.data.hltb_games_list %}
 {% assign playing   = hltb_games | where: "status", "playing"   | sort: "title" %}
 {% assign on_hold   = hltb_games | where: "status", "on_hold"   | sort: "title" %}
 {% assign completed = hltb_games | where: "status", "completed" | sort: "review_score" | reverse %}
