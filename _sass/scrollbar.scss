@@ -1,12 +1,12 @@
 body {
-    scrollbar-color: var(--gold) var(--highlight-med);
+    scrollbar-color: var(--pine) var(--highlight-med);
 }
 body::-webkit-scrollbar {
     width: 0.9rem;
     // height: 20px;
 }
 body::-webkit-scrollbar-thumb {
-    background: var(--gold);
+    background: var(--pine);
     border-radius: 0.3rem;
 }
 body::-webkit-scrollbar-track {

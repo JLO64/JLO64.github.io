@@ -1,5 +1,23 @@
 [
   {
+    "id": 14099394,
+    "book_id": 1248670,
+    "edition_id": 14930107,
+    "title": "The Ones Who Walk Away from Omelas",
+    "slug": "the-ones-who-walk-away-from-omelas-1973",
+    "authors": [
+      "Ursula K. Le Guin"
+    ],
+    "rating": 4.5,
+    "started_at": null,
+    "finished_at": "2026-04-19",
+    "last_read_date": "2026-04-19",
+    "date_added": "2026-04-20",
+    "year": "2026",
+    "cover_url": "https://assets.hardcover.app/external_data/650665/04cf836704be8b588af3803ea6bce26f9ff41f95.jpeg",
+    "cover_filepath": "assets/images/hardcover/04cf836704be8b588af3803ea6bce26f9ff41f95.webp"
+  },
+  {
     "id": 13427270,
     "book_id": 214074,
     "edition_id": 23767873,

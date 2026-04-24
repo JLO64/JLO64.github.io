@@ -7,8 +7,8 @@
   }
 
   a:hover {
-    text-decoration-color: var(--gold);
-    color: var(--gold);
+    text-decoration-color: var(--foam);
+    color: var(--foam);
     text-decoration-thickness: 0.2rem;
     text-underline-offset: 0.4rem;
     animation: a_breathe 0.7s infinite alternate ease-in-out;
@@ -63,8 +63,11 @@
     font-size: 1.8rem;
     text-underline-offset: 0.6rem;
     text-decoration-thickness: 0.3rem;
+    text-decoration-color: var(--rose);
+    color: var(--rose);
     line-height: 1rem;
     font-weight: 800;
+    animation: none;
   }
   .topbar-button:hover {  
     img {
@@ -99,7 +102,7 @@
     }
     .hardcover-book-title {
       animation: a_breathe 0.7s infinite alternate ease-in-out;
-      color: var(--gold);
+      color: var(--foam);
     }
   }
   .post-list-item:hover, .table-of-contents:hover {
