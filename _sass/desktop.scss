@@ -23,7 +23,7 @@
   .h1-website-title:hover {
     font-size: 3.5rem;
     font-weight: 999;
-    border: solid var(--link-underline) 0.8rem;
+    border: solid #c4a7e7 0.8rem;
   }
   picture {
     img {
@@ -65,21 +65,6 @@
     text-decoration-thickness: 0.3rem;
     line-height: 1rem;
     font-weight: 800;
-  }
-  .a-website-title{
-    margin: auto 1rem;
-  }
-  .a-website-title:hover {
-    font-weight: 800;
-    font-size: 3.6vh;
-    line-height: 2rem;
-    padding: 0.15rem 0.4rem;
-    border: solid var(--link-underline) 0.4rem;
-    border-radius: 1.2rem;
-    text-decoration: none;
-    height: fit-content;
-    color: white;
-    animation: none;
   }
   .topbar-button:hover {  
     img {
