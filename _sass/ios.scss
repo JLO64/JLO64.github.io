@@ -1,6 +1,6 @@
 @supports (-webkit-touch-callout: none) {
     html {
-        border: 1vw solid #f6c177;
+        border: 1vw solid var(--gold);
     }
     body {
         border-radius: none;

@@ -22,7 +22,7 @@
   max-width: 80vw;
   margin: 0;
   padding: 1rem;
-  background: var(--project-box);
+  background: var(--overlay);
   border-radius: 1.4rem;
   text-align: center;
 }
@@ -31,7 +31,7 @@
   font-weight: bold;
   margin-bottom: 0rem;
   margin-top: 0.2rem;
-  color: var(--link-text);
+  color: var(--text);
 }
 
  .hardcover-book-item .hardcover-book-image {

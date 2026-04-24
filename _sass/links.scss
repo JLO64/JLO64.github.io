@@ -20,9 +20,9 @@ a[href*="mailto:"]::before{
 
 p{
     a[href*="feed.xml"]:hover{
-        text-shadow: 0 0 1.1rem #F99A39;
-        color: #F99A39;
-        text-decoration-color: #F99A39;
+        text-shadow: 0 0 1.1rem var(--gold);
+        color: var(--gold);
+        text-decoration-color: var(--gold);
         animation: none;
     }
     a[href*="feed.xml"]::before{

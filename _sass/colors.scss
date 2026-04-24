@@ -21,29 +21,30 @@ Highlight High  #56526e     rgb(86, 82, 110)    hsl(249deg, 15%, 38%)
 */
 
 html {
-    --bg: #232136;
-    --bg-secondary: #2a273f;
-    --bg-secondary-opaque: rgba(42, 39, 63, 0.8);
-    --headings: #e0def4;
+    // Rosé Pine Moon
+    --base: #232136;
+    --surface: #2a273f;
+    --surface-opaque: rgba(42, 39, 63, 0.8);
+    --overlay: #393552;
+    --muted: #6e6a86;
+    --subtle: #908caa;
     --text: #e0def4;
-    --highlight: #44415a;
-    --code-text: #e0def4;
-    --tag: #393552;
-    --w-mobile-background: #232136;
-    --scrollbar-foreground: #f6c177;
-    --scrollbar-background: #44415a;
-    --card-color: #393552;
-    --topbar-border: #56526e;
-    --project-box: #393552;
-    --mastodon-box: #393552;
-    --shadow: #000000;
+    --love: #eb6f92;
+    --gold: #f6c177;
+    --rose: #ea9a97;
+    --pine: #3e8fb0;
+    --foam: #9ccfd8;
+    --iris: #c4a7e7;
+    --highlight-low: #2a283e;
+    --highlight-med: #44415a;
+    --highlight-high: #56526e;
 
-    // link colors
-    --link-text: #e0def4;
-    --link-underline: #f6c177;
+    // Non-palette
+    --shadow: #000000;
     --button-hover-border: #f6c177aa;
     --link-underline-hover: #ffffff;
-    --glow: #c4a7e7;
+
+    // Brand colors
     --github: #4B5162;
     --vscode: #23A9F2;
     --obsidian: #633AB7;
@@ -53,5 +54,4 @@ html {
     --jetpens: #9FB22C;
     --jekyll: #BA1C21;
     --julian: #4B5162;
-    --mastodon: #f6c177;
 }

@@ -12,15 +12,15 @@
   // font-size: 3.5rem;
   font-size: 14vmin;
   text-align: center;
-  color: var(--link-text);
+  color: var(--text);
   border-radius: 3rem;
   padding: 1rem;
-  border: solid #c4a7e7 0.5rem;
+  border: solid var(--iris) 0.5rem;
 }
 
 .tag {
   font-family:  "Red Hat Display";
-  color: var(--link-text);
+  color: var(--text);
   font-size: 1rem;
   font-weight: 500;
   text-transform: lowercase;
@@ -37,14 +37,14 @@ body {
 }
 
 a {
-  color: var(--link-text);
-  text-decoration-color: var(--link-underline);
+  color: var(--text);
+  text-decoration-color: var(--gold);
   text-decoration-thickness: 0.1rem;
   text-underline-offset: 0.3rem;
   transition: 0.2s ease-out;
 }
 a:hover {
-  text-decoration-color: var(--link-text);
+  text-decoration-color: var(--text);
 }
 
 p {
@@ -53,7 +53,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--headings);
+  color: var(--text);
   width: fit-content;
   transition: 0.2s ease-out;
   margin-top: 1.5rem;
@@ -77,6 +77,6 @@ h3 {
   margin: 2rem auto;
   text-align: center;
   border-radius: 1rem;
-  border: solid var(--link-underline) 0.2rem;
+  border: solid var(--gold) 0.2rem;
   padding: 1rem;
 }

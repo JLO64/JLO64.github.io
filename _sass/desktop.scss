@@ -7,14 +7,14 @@
   }
 
   a:hover {
-    text-decoration-color: var(--link-underline);
-    color: var(--link-underline);
+    text-decoration-color: var(--gold);
+    color: var(--gold);
     text-decoration-thickness: 0.2rem;
     text-underline-offset: 0.4rem;
     animation: a_breathe 0.7s infinite alternate ease-in-out;
   }
   .tag:hover {
-    box-shadow: 0 0 0 0.2rem var(--card-color);
+    box-shadow: 0 0 0 0.2rem var(--overlay);
     font-weight: 999;
   }
   a li.tag:hover {
@@ -23,7 +23,7 @@
   .h1-website-title:hover {
     font-size: 3.5rem;
     font-weight: 999;
-    border: solid #c4a7e7 0.8rem;
+    border: solid var(--iris) 0.8rem;
   }
   picture {
     img {
@@ -99,7 +99,7 @@
     }
     .hardcover-book-title {
       animation: a_breathe 0.7s infinite alternate ease-in-out;
-      color: var(--link-underline);
+      color: var(--gold);
     }
   }
   .post-list-item:hover, .table-of-contents:hover {

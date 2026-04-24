@@ -46,7 +46,7 @@ a.credit-color-box {
   width: 9.2rem;
   p {
     margin: 0;
-    color: #e0def4;
+    color: var(--text);
     height: 2rem;
     line-height: 2rem;
     padding: 0rem;
@@ -75,7 +75,7 @@ a.club-color-box {
     margin: 0;
     min-width: fit-content;
     width: -webkit-fill-available;
-    color: #e0def4;
+    color: var(--text);
     height: 2rem;
     line-height: 2rem;
     padding: 0 0.8rem;
@@ -116,44 +116,44 @@ a.club-color-box {
 
 .jekyll-credit-box {
   .left {
-    background: #2a273f;
-    color: #e0def4;
+    background: var(--surface);
+    color: var(--text);
   }
   .right {
-    background: #eb6f92;
-    color: #232136 !important;
+    background: var(--love);
+    color: var(--base) !important;
   }
 }
 
 .moonwalk-credit-box {
   .left {
-    background: #2a273f;
-    color: #e0def4;
+    background: var(--surface);
+    color: var(--text);
   }
 
   .right {
-    background: #c4a7e7;
-    color: #232136 !important;
+    background: var(--iris);
+    color: var(--base) !important;
   }
 }
 
 .github-credit-box {
   .left {
-    background: #393552;
-    color: #e0def4;
+    background: var(--overlay);
+    color: var(--text);
   }
   .right {
-    background: #908caa;
-    color: #232136 !important;
+    background: var(--subtle);
+    color: var(--base) !important;
   }
 }
 
 .rss-credit-box {
-  background: #f6c177;
+  background: var(--gold);
   border-radius: 1rem;
   width: -webkit-fill-available;
   p {
-    color: #232136 !important;
+    color: var(--base) !important;
   }
   img {
     width: 1rem;
@@ -165,9 +165,9 @@ a.club-color-box {
 .credit-copyright {
   height: fit-content;
   margin: auto 0rem;
-  border: solid var(--link-underline) 0.5rem;
+  border: solid var(--gold) 0.5rem;
   border-radius: 1rem;
-  background-color: var(--link-underline);
+  background-color: var(--gold);
   max-width: 90%;
   padding: 0.1rem 0.8rem;
   p {

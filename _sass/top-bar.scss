@@ -1,11 +1,11 @@
 .topbar {
   margin: 1rem auto 0;
-  background-color: #232136;
+  background-color: var(--base);
   border-radius: 1.8rem;
   // padding: 0 0.5rem;
   padding: 0 0.2rem;
   width: fit-content;
-  border: 2px solid var(--topbar-border);
+  border: 2px solid var(--highlight-high);
   max-height: 3.5rem;
   overflow-y: hidden;
   transition: max-height 0.25s ease-out;
@@ -60,7 +60,7 @@
 }
 
 .topbar-button {
-  background-color: #232136;
+  background-color: var(--base);
   border: none;
   cursor: pointer;
   margin: 0.7rem 0rem;
