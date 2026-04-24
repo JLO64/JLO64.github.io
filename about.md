@@ -11,7 +11,7 @@ title: About
 </picture>
 
 
-My name is Julian Lopez and this is my personal site! I studied Economics/Mathematics at the University of Southern California which is also where the radio stream on this site is from!
+My name is Julian Lopez and this is my personal site! I studied Economics/Mathematics at the University of Southern California.
 
 I'm also a fourth degree knight within the Knights of Columbus (that's where the name of this website comes from). Currently I'm the chancellor of council #2431 in Alhambra, California which covers the parishes of St Therese, St Thomas More, and (informally) All Souls.
 

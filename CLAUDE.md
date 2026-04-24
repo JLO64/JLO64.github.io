@@ -128,4 +128,3 @@ Internal links to other posts use `.md` filenames (e.g., `[text](other-post.md)`
 - Responsive breakpoints have dedicated files: `_sass/ios.scss`, `_sass/android.scss`, `_sass/desktop.scss`
 - Shared Hardcover book card styles are in `_sass/hardcover.scss` (used by both homepage and Books page)
 - Books page overrides (smaller cards, line-clamped titles) are scoped under `.books-year-section` in `_sass/books.scss`
-- Theme (dark/light) toggle is handled by `_includes/toggle_theme_js.html`

@@ -48,7 +48,7 @@ a.credit-color-box {
   width: 9.2rem;
   p {
     margin: 0;
-    color: #212121;
+    color: #e0def4;
     height: 2rem;
     line-height: 2rem;
     padding: 0rem;
@@ -58,7 +58,6 @@ a.credit-color-box {
   .left {
     border-radius: 1rem 0 0 1rem;
     padding: 0rem 0.3rem 0rem 0.5rem;
-    // padding-left: 0.4rem;
     text-align: center;
     min-width: fit-content;
   }
@@ -78,7 +77,7 @@ a.club-color-box {
     margin: 0;
     min-width: fit-content;
     width: -webkit-fill-available;
-    color: #212121;
+    color: #e0def4;
     height: 2rem;
     line-height: 2rem;
     padding: 0 0.8rem;
@@ -119,44 +118,44 @@ a.club-color-box {
 
 .jekyll-credit-box {
   .left {
-    background: #4A4A4C;
-    color: #CACBCC;
+    background: #2a273f;
+    color: #e0def4;
   }
   .right {
-    background: #d40000;
-    color: #C7C9CA !important;
+    background: #eb6f92;
+    color: #232136 !important;
   }
 }
 
 .moonwalk-credit-box {
   .left {
-    background: white;
-    color: black;
+    background: #2a273f;
+    color: #e0def4;
   }
 
   .right {
-    background: #1E2329;
-    color: #70A8DA !important;
+    background: #c4a7e7;
+    color: #232136 !important;
   }
 }
 
 .github-credit-box {
   .left {
-    background: #F6F8FA;
-    color: #0868DA;
+    background: #393552;
+    color: #e0def4;
   }
   .right {
-    background: #23282F;
-    color: white !important;
+    background: #908caa;
+    color: #232136 !important;
   }
 }
 
 .rss-credit-box {
-  background: #EA7717;
+  background: #f6c177;
   border-radius: 1rem;
   width: -webkit-fill-available;
   p {
-    color: white !important;
+    color: #232136 !important;
   }
   img {
     width: 1rem;

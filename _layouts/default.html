@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: "en" }}" class="html" data-theme="auto">
+<html lang="{{ page.lang | default: "en" }}" class="html">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -45,7 +45,7 @@
     <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico">
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="msapplication-config" content="/assets/images/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#74c0fc">
+    <meta name="theme-color" content="#c4a7e7">
   
     <!-- Google site verification -->
     <meta name="google-site-verification" content="VsNyvMxYvOQFM1OyN-DUCMvUDGYbj3xb6ZmPBbkNLYo" />
@@ -80,9 +80,6 @@
     <div class="topbar-container">
       <div class="topbar">
         <div class="topbar-top-row">
-          <button id="topbar-lightbulb" class="topbar-button">
-            <img>
-          </button>
           <a class="topbar-links" href="/">Home</a>
           <a class="topbar-links" href="/posts">Posts</a>
           <a class="a-website-title noselect">{{ site.title }}</a>
@@ -90,9 +87,6 @@
           <a class="topbar-links" href="/about">About</a>
           <button menu-open id="topbar-menu" class="topbar-button">
             <img src="/assets/svg/bars.svg">
-          </button>
-          <button id="topbar-radio" class="topbar-button">
-            <img src="/assets/svg/circle-play.svg">
           </button>
         </div>
         <div class="topbar-bottom-row">
@@ -103,7 +97,6 @@
         </div>
       </div>
     </div>
-    {% include toggle_theme_js.html %}
     {% include topbar_JS.html %}
     
     <main class="page-content" aria-label="Content">
