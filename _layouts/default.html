@@ -135,95 +135,12 @@
         </div>
       </div>
     </main>
-    <script>
-      let currentPathname = window.location.pathname;
 
-      function updateContent(html) {
-        const data = new DOMParser().parseFromString(html, 'text/html');
-        document.documentElement.scrollTop = 0;
-        document.body.querySelector('.w').innerHTML = data.body.querySelector('.w').innerHTML;
-        document.title = data.title;
-        currentPathname = window.location.pathname;
-        onNavigateOrLoad();
-      }
-
-      function handleLinkClick(event) {
-        const link = event.target.closest('a');
-        if (!link) return;
-
-        // Ignore if it's an external link, has a target, or is a download
-        if (
-          !link.href ||
-          link.target ||
-          link.download ||
-          link.href.startsWith('mailto:') ||
-          link.href.startsWith('tel:') ||
-          !link.href.startsWith(window.location.origin)
-        ) {
-          return;
-        }
-
-        // Skip same-page anchor links — let the browser scroll natively
-        if (link.pathname === window.location.pathname && link.hash) {
-          return;
-        }
-
-        event.preventDefault();
-
-        if (!document.startViewTransition) {
-          // Fallback for browsers without view transitions
-          fetch(link.href)
-            .then(response => response.text())
-            .then(html => {
-              updateContent(html);
-              history.pushState({}, '', link.href);
-            });
-          return;
-        }
-
-        // With view transitions
-        document.startViewTransition(async () => {
-          const response = await fetch(link.href);
-          const text = await response.text();
-          history.pushState({}, '', link.href);
-          updateContent(text);
-        });
-      }
-
-      // Handle back/forward navigation
-      window.addEventListener('popstate', async () => {
-        // Skip hash-only changes on the currently loaded page — browser handles scroll natively
-        if (window.location.pathname === currentPathname && window.location.hash) {
-          return;
-        }
-
-        const response = await fetch(window.location.href);
-        const text = await response.text();
-        
-        if (document.startViewTransition) {
-          document.startViewTransition(() => {
-            updateContent(text);
-          });
-        } else {
-          updateContent(text);
-        }
-      });
-
-      // Add click handler to document
-      document.addEventListener('click', handleLinkClick);
-    </script>
   </body>
   <script type="text/javascript">
     {% include card_hover.js %}
   </script>
   {% include image_dialog.html %}
 
-  <script type="speculationrules">
-    {
-      "prerender": [{
-        "where": {"href_matches": "/*"},
-        "eagerness": "moderate"
-      }]
-    }
-  </script>
+
 </html>
