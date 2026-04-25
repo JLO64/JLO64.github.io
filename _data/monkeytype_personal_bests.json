@@ -1,14 +1,14 @@
 [
   {
-    "acc": 98.17,
-    "consistency": 76.99,
+    "acc": 98.25,
+    "consistency": 81.8,
     "difficulty": "normal",
     "lazyMode": false,
     "language": "english",
     "punctuation": false,
-    "raw": 64.41,
-    "wpm": 64.41,
+    "raw": 68.42,
+    "wpm": 64.82,
     "numbers": false,
-    "timestamp": "04/18/2026"
+    "timestamp": "04/24/2026"
   }
 ]

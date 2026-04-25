@@ -1,3 +1,30 @@
+// Slide-up hover mixin - applies the slide-up fill effect
+// Usage: @include slide-up-hover("pine") for var(--pine), or "gold" for var(--gold)
+@mixin slide-up-hover($color-name) {
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--#{$color-name});
+    transform: translateY(100%);
+    transition: transform 0.3s ease-out;
+    z-index: 0;
+  }
+  &:hover::before {
+    transform: translateY(0);
+  }
+  // Keep all content above the sliding overlay
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
 @keyframes w_breathe {
   0%, 20% {
     box-shadow: 0 0 5rem var(--iris);
