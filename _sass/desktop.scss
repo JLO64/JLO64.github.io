@@ -80,7 +80,7 @@
   }
 
   .homepage-mastodon-post {
-    @include slide-up-hover(pine);
+    @include slide-up-hover(love);
     .mastodon_image, .mastodon_post_image {
       filter: grayscale(100%) sepia(0.2) opacity(0.75);
     }
@@ -108,7 +108,7 @@
     animation: none;
   }
   .post-list-item, .table-of-contents {
-    @include slide-up-hover(pine);
+    @include slide-up-hover(love);
   }
   .post-list-date {
     position: relative;
