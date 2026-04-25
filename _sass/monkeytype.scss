@@ -13,6 +13,7 @@
   background: var(--overlay);
   border-radius: 1.4rem;
   text-align: center;
+  @include slide-up-hover(love);
 }
 
 .monkeytype-wpm {
