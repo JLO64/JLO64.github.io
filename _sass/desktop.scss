@@ -69,15 +69,6 @@
     font-weight: 800;
     animation: none;
   }
-  .topbar-button:hover {  
-    img {
-      filter: invert(57%) sepia(86%) saturate(417%) hue-rotate(182deg) brightness(109%) contrast(98%);
-      height: 2.6rem;
-    }
-  }
-  #topbar-menu {
-    display: none;
-  }
 
   .homepage-mastodon-post {
     @include slide-up-hover(love);
@@ -114,12 +105,7 @@
     position: relative;
     z-index: 1;
   }
-  .topbar {
-    max-height: fit-content;
-  }
-  .topbar-bottom-row {
-    display: none;
-  }
+
   a.credit-color-box:hover, a.club-color-box:hover{
     animation: none;
   }
