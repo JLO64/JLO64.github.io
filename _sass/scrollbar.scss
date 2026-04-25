@@ -1,16 +1,16 @@
 body {
-    scrollbar-color: var(--scrollbar-foreground) var(--scrollbar-background);
+    scrollbar-color: var(--pine) var(--highlight-med);
 }
 body::-webkit-scrollbar {
     width: 0.9rem;
     // height: 20px;
 }
 body::-webkit-scrollbar-thumb {
-    background: var(--scrollbar-foreground);
+    background: var(--pine);
     border-radius: 0.3rem;
 }
 body::-webkit-scrollbar-track {
     // border-left: 1px solid var(--paper-highlight);
-    background: var(--scrollbar-background);
+    background: var(--highlight-med);
 }
 

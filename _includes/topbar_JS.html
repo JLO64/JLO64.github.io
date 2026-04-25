@@ -1,6 +1,5 @@
 <script>
   window.addEventListener('load', mobileMenuInitializer);
-  window.addEventListener('load', radioInitializer);
 
   let menubutton = document.querySelector('#topbar-menu');
   let menubutton_img = menubutton.querySelector('img');
@@ -20,28 +19,6 @@
       showing_topbar_bottom_row = true;
       menubutton_img.src = "/assets/svg/xmark.svg"
     }
-    })
-  }
-
-  let playing_radio = false;
-  const radio_button = document.querySelector('#topbar-radio');
-  const radio_button_img = radio_button.querySelector('img');
-  var KUSC_Stream;
-
-  function radioInitializer () {
-    radio_button.addEventListener('click', () => {
-      if (playing_radio) {
-        playing_radio = false;
-        radio_button_img.src = "/assets/svg/circle-play.svg";
-        KUSC_Stream.pause();
-      }
-      else
-      {
-        playing_radio = true;
-        radio_button_img.src = "/assets/svg/circle-stop.svg";
-        KUSC_Stream = new Audio('http://128.mp3.kusc.live/');
-        KUSC_Stream.play();
-      }
     })
   }
 

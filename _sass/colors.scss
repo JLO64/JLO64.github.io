@@ -1,26 +1,50 @@
-html {
-    --bg: #FFF;
-    --bg-secondary: #f3f4f6;
-    --bg-secondary-opaque: rgba(255, 255, 255, 0.8);
-    --headings: #1e293b;
-    --text: #374151;
-    --highlight: #dedede;
-    --code-text: black;
-    --tag: #dedede;
-    --w-mobile-background: #ffffff;
-    --scrollbar-foreground: #74c0fc;
-    --scrollbar-background: #c0c0c0;
-    --card-color: #cfd2e2;
-    --topbar-border: black;
-    --project-box: #f1faff;
-    --mastodon-box: #f3f3ff;
-    --shadow: grey;
+/*
+Rosé Pine Moon color palette
+https://rosepinetheme.com/palette/
 
-    // link colors
-    --link-text: black;
-    --link-underline: #74c0fc;
-    --button-hover-border: #74c1fcaa;
-    --link-underline-hover: black;
+Role            Hex         RGB                 HSL
+Base            #232136     rgb(35, 33, 54)     hsl(246deg, 24%, 17%)
+Surface         #2a273f     rgb(42, 39, 63)     hsl(248deg, 24%, 20%)
+Overlay         #393552     rgb(57, 53, 82)     hsl(248deg, 21%, 26%)
+Muted           #6e6a86     rgb(110, 106, 134)  hsl(249deg, 12%, 47%)
+Subtle          #908caa     rgb(144, 140, 170)  hsl(248deg, 15%, 61%)
+Text            #e0def4     rgb(224, 222, 244)  hsl(245deg, 50%, 91%)
+Love            #eb6f92     rgb(235, 111, 146)  hsl(343deg, 76%, 68%)
+Gold            #f6c177     rgb(246, 193, 119)  hsl(35deg, 88%, 72%)
+Rose            #ea9a97     rgb(234, 154, 151)  hsl(2deg, 66%, 75%)
+Pine            #3e8fb0     rgb(62, 143, 176)   hsl(197deg, 48%, 47%)
+Foam            #9ccfd8     rgb(156, 207, 216)  hsl(189deg, 43%, 73%)
+Iris            #c4a7e7     rgb(196, 167, 231)  hsl(267deg, 57%, 78%)
+Highlight Low   #2a283e     rgb(42, 40, 62)     hsl(245deg, 22%, 20%)
+Highlight Med   #44415a     rgb(68, 65, 90)     hsl(247deg, 16%, 30%)
+Highlight High  #56526e     rgb(86, 82, 110)    hsl(249deg, 15%, 38%)
+*/
+
+html {
+    // Rosé Pine Moon
+    --base: #232136;
+    --surface: #2a273f;
+    --surface-opaque: rgba(42, 39, 63, 0.8);
+    --overlay: #393552;
+    --muted: #6e6a86;
+    --subtle: #908caa;
+    --text: #e0def4;
+    --love: #eb6f92;
+    --gold: #f6c177;
+    --rose: #ea9a97;
+    --pine: #3e8fb0;
+    --foam: #9ccfd8;
+    --iris: #c4a7e7;
+    --highlight-low: #2a283e;
+    --highlight-med: #44415a;
+    --highlight-high: #56526e;
+
+    // Non-palette
+    --shadow: #000000;
+    --button-hover-border: #f6c177aa;
+    --link-underline-hover: #ffffff;
+
+    // Brand colors
     --github: #4B5162;
     --vscode: #23A9F2;
     --obsidian: #633AB7;
@@ -30,32 +54,4 @@ html {
     --jetpens: #9FB22C;
     --jekyll: #BA1C21;
     --julian: #4B5162;
-    --mastodon: #6364FF;
 }
-// -------------- THEME SWITCHER -------------- //
-@mixin dark-appearance {
-  html, body  {
-      --headings: #74c0fc;
-      --highlight: #a9a9a9;
-      --bg: #000000;
-      --bg-secondary: #323945;
-      --bg-secondary-opaque: rgba(0, 0, 0, 0.8);
-      --text: #adb5bd;
-      --code-text: white;
-      --tag: #323945;
-      --w-mobile-background: #000000;
-      --scrollbar-foreground: #74c0fc;
-      --scrollbar-background: #c0c0c0;
-      --card-color: rgb(26, 31, 53);
-      --topbar-border: #727272;
-      --project-box: #161616;
-      --mastodon-box: #161616;
-      --shadow: black;
-
-      // link colors
-      --link-text: #FFF;
-      --link-underline: #74c0fc;
-      --link-underline-hover: white;
-  };
-}
-html[data-theme="dark"] { @include dark-appearance; }

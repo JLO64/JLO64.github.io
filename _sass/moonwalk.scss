@@ -1,8 +1,9 @@
 html {
   height: 100%;
-  background-color: #74c0fc;
   font: -apple-system-body;
   scroll-padding-top: 6rem;
+  background-color: var(--base);
+  background-image: url("/assets/images/block-field.svg");
 }
 
 body {
@@ -20,21 +21,32 @@ li {
 }
 
 .w {
+  position: relative;
+  z-index: 2;
   margin: 0 auto;
-  padding: 3rem 0.5rem 1.5rem;
-  background: var(--w-mobile-background);
-  // max-width: 62rem;
+  background: var(--surface-opaque);
+  max-width: 90vw;
+  border-radius: 4rem;
+  animation: w_breathe 1s infinite alternate linear;
+  padding: 1.5rem 2.4rem;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.page-content {
+  padding-bottom: 2rem;
+  padding-top: 7rem;
 }
 
 div.highlighter-rouge pre code, pre code.highlighter-rouge {
   display: block;
   overflow-x: auto;
   padding: 2rem;
-  background-color: var(--project-box);
+  background-color: var(--overlay);
   font-family: "Courier New", monospace;
   font-weight: 500;
   font-size: 1.1rem;
-  color: var(--link-text);
+  color: var(--text);
   border-radius: 1rem;
 }
 
@@ -62,11 +74,11 @@ p, b, em, small, li, hr, table, figcaption {
 }
 
 strong {
-  color: var(--link-text);
+  color: var(--text);
 }
 
 blockquote {
-  background-color: var(--bg-secondary);
+  background-color: var(--surface);
   border: 1px var(--border) solid;
 }
 
@@ -105,7 +117,7 @@ ul {
   margin-bottom: 0rem;
   border-radius: 0.8rem;
   padding: 0 0.6rem;
-  background-color: var(--card-color);
+  background-color: var(--overlay);
   display: inline-block;
   height: fit-content;
   width: fit-content;
@@ -138,7 +150,7 @@ picture {
     max-width: 80vw;
     margin: 0rem;
     padding: 1rem;
-    background: var(--project-box);
+    background: var(--overlay);
     border-radius: 1.4rem;
 
     p {
@@ -175,7 +187,7 @@ header {
 .homepage-mastodon-post-container {
   width: 100vw;
   .homepage-mastodon-post {
-    background: var(--mastodon-box);
+    background: var(--overlay);
     animation: none;
     border-radius: 1.4rem;
     margin: auto;
@@ -203,11 +215,11 @@ header {
       }
     }
     a {
-      text-decoration-color: var(--mastodon);
+      text-decoration-color: var(--foam);
     }
     a:hover{
-      text-shadow: 0 0 1.1rem var(--mastodon);
-      color: var(--mastodon);
+      text-shadow: 0 0 1.1rem var(--pine);
+      color: var(--foam);
       animation: none;
     }
     .homepage-mastodon-post-info {
@@ -269,7 +281,7 @@ header {
 }
 
 .table-of-contents{
-  background-color: var(--project-box);
+  background-color: var(--overlay);
   border-radius: 1.4rem;
   padding: 1rem;
   width: fit-content;
@@ -290,33 +302,9 @@ header {
 }
 
 .w-inner {
-  view-transition-name: main-content;
-  // position: relative;
   z-index: 1;
 }
 
 .topbar {
-  view-transition-name: topbar;
-  // position: relative;
-  z-index: 2;
-}
-
-@keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes fade-out {
-  from { opacity: 1; }
-  to { opacity: 0; }
-}
-
-::view-transition-old(main-content) {
-  animation: 90ms cubic-bezier(0.4, 0, 1, 1) both fade-out;
-  z-index: 1;
-}
-
-::view-transition-new(main-content) {
-  animation: 210ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in;
   z-index: 2;
 }

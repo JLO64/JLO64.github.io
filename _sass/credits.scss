@@ -13,8 +13,6 @@
     margin: 0rem;
     li {
       display: block;
-      box-shadow: 0 0.2rem 0.4rem 0.1rem var(--shadow);
-      transition: box-shadow 0.1s ease-in;
     }
     li.club-credits {
       border-radius: 1rem;
@@ -41,31 +39,54 @@
 }
   
 a.credit-color-box {
+  position: relative;
+  overflow: hidden;
   text-decoration: none;
   font-weight: 600;
-  transition: 0.1s;
   display: flex;
-  width: 9.2rem;
+  align-items: center;
+  width: fit-content;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gold);
+    transform: translateY(100%);
+    transition: transform 0.3s ease-out;
+    z-index: 0;
+  }
+  &:hover::before {
+    transform: translateY(0);
+  }
   p {
+    position: relative;
+    z-index: 1;
     margin: 0;
-    color: #212121;
+    color: white;
     height: 2rem;
     line-height: 2rem;
-    padding: 0rem;
+    padding: 0rem 1rem;
     font-size: 0.85rem;
     animation: none !important;
-  }
-  .left {
-    border-radius: 1rem 0 0 1rem;
-    padding: 0rem 0.3rem 0rem 0.5rem;
-    // padding-left: 0.4rem;
     text-align: center;
-    min-width: fit-content;
+    transition: color 0.3s ease-out;
   }
-  .right {
-    border-radius: 0 1rem 1rem 0;
-    text-align: center;
-    width: -webkit-fill-available;
+  &:hover p {
+    color: var(--base);
+  }
+  img {
+    position: relative;
+    z-index: 1;
+    margin-left: 0.8rem;
+    width: 1rem;
+    filter: invert(1);
+    transition: filter 0.3s ease-out;
+  }
+  &:hover img {
+    filter: invert(0);
   }
 }
 
@@ -78,7 +99,7 @@ a.club-color-box {
     margin: 0;
     min-width: fit-content;
     width: -webkit-fill-available;
-    color: #212121;
+    color: var(--text);
     height: 2rem;
     line-height: 2rem;
     padding: 0 0.8rem;
@@ -117,60 +138,30 @@ a.club-color-box {
   margin-top: 0.2rem;
 }
 
-.jekyll-credit-box {
-  .left {
-    background: #4A4A4C;
-    color: #CACBCC;
-  }
-  .right {
-    background: #d40000;
-    color: #C7C9CA !important;
-  }
-}
-
-.moonwalk-credit-box {
-  .left {
-    background: white;
-    color: black;
-  }
-
-  .right {
-    background: #1E2329;
-    color: #70A8DA !important;
-  }
-}
-
+.jekyll-credit-box,
+.moonwalk-credit-box,
 .github-credit-box {
-  .left {
-    background: #F6F8FA;
-    color: #0868DA;
-  }
-  .right {
-    background: #23282F;
-    color: white !important;
-  }
+  background: var(--rose);
+  border-radius: 1rem;
 }
 
 .rss-credit-box {
-  background: #EA7717;
+  background: var(--rose);
   border-radius: 1rem;
-  width: -webkit-fill-available;
-  p {
-    color: white !important;
-  }
   img {
-    width: 1rem;
-    margin: 0rem 0.5rem 0rem 2rem;
-    filter: invert(1);
+    margin-right: 0.5rem;
+  }
+  p {
+    padding-right: 1.2rem;
   }
 }
 
 .credit-copyright {
   height: fit-content;
   margin: auto 0rem;
-  border: solid var(--link-underline) 0.5rem;
+  border: solid var(--pine) 0.5rem;
   border-radius: 1rem;
-  background-color: var(--link-underline);
+  background-color: var(--foam);
   max-width: 90%;
   padding: 0.1rem 0.8rem;
   p {

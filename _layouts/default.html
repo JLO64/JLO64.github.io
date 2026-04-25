@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: "en" }}" class="html" data-theme="auto">
+<html lang="{{ page.lang | default: "en" }}" class="html">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -45,8 +45,8 @@
     <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico">
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="msapplication-config" content="/assets/images/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#74c0fc">
-  
+    <meta name="theme-color" content="#f6c177">
+
     <!-- Google site verification -->
     <meta name="google-site-verification" content="VsNyvMxYvOQFM1OyN-DUCMvUDGYbj3xb6ZmPBbkNLYo" />
   
@@ -80,19 +80,12 @@
     <div class="topbar-container">
       <div class="topbar">
         <div class="topbar-top-row">
-          <button id="topbar-lightbulb" class="topbar-button">
-            <img>
-          </button>
           <a class="topbar-links" href="/">Home</a>
           <a class="topbar-links" href="/posts">Posts</a>
-          <a class="a-website-title noselect">{{ site.title }}</a>
           <a class="topbar-links" href="/media">Media</a>
           <a class="topbar-links" href="/about">About</a>
           <button menu-open id="topbar-menu" class="topbar-button">
             <img src="/assets/svg/bars.svg">
-          </button>
-          <button id="topbar-radio" class="topbar-button">
-            <img src="/assets/svg/circle-play.svg">
           </button>
         </div>
         <div class="topbar-bottom-row">
@@ -103,7 +96,6 @@
         </div>
       </div>
     </div>
-    {% include toggle_theme_js.html %}
     {% include topbar_JS.html %}
     
     <main class="page-content" aria-label="Content">
@@ -115,26 +107,23 @@
             <ul class="smol-credits">
               <li>
                 <a class="credit-color-box jekyll-credit-box" href="https://jekyllrb.com" target="_blank" rel="noreferrer">
-                  <p class="left">Powered by</p>
-                  <p class="right">Jekyll</p>
+                  <p>Powered by Jekyll</p>
                 </a>
               </li>
               <li>
                 <a class="credit-color-box moonwalk-credit-box" href="https://github.com/abhinavs/moonwalk" target="_blank" rel="noreferrer">
-                  <p class="left">Based on</p>
-                  <p class="right">Moonwalk</p>
+                  <p>Based on Moonwalk</p>
                 </a>
               </li>
               <li>
                 <a class="credit-color-box github-credit-box" href="https://github.com/JLO64/JLO64.github.io" target="_blank" rel="noreferrer">
-                  <p class="left">Source on</p>
-                  <p class="right">GitHub</p>
+                  <p>Source on GitHub</p>
                 </a>
               </li>
               <li>
                 <a class="credit-color-box rss-credit-box" href="/feed.xml" target="_blank" rel="noreferrer">
                   <img src="/assets/svg/rss.svg" alt="RSS Feed">
-                  <p>RSS Feed</p>
+                  <p style="padding-left: 0rem;">RSS Feed</p>
                 </a>
               </li>
             </ul>
@@ -143,95 +132,12 @@
         </div>
       </div>
     </main>
-    <script>
-      let currentPathname = window.location.pathname;
 
-      function updateContent(html) {
-        const data = new DOMParser().parseFromString(html, 'text/html');
-        document.documentElement.scrollTop = 0;
-        document.body.querySelector('.w').innerHTML = data.body.querySelector('.w').innerHTML;
-        document.title = data.title;
-        currentPathname = window.location.pathname;
-        onNavigateOrLoad();
-      }
-
-      function handleLinkClick(event) {
-        const link = event.target.closest('a');
-        if (!link) return;
-
-        // Ignore if it's an external link, has a target, or is a download
-        if (
-          !link.href ||
-          link.target ||
-          link.download ||
-          link.href.startsWith('mailto:') ||
-          link.href.startsWith('tel:') ||
-          !link.href.startsWith(window.location.origin)
-        ) {
-          return;
-        }
-
-        // Skip same-page anchor links — let the browser scroll natively
-        if (link.pathname === window.location.pathname && link.hash) {
-          return;
-        }
-
-        event.preventDefault();
-
-        if (!document.startViewTransition) {
-          // Fallback for browsers without view transitions
-          fetch(link.href)
-            .then(response => response.text())
-            .then(html => {
-              updateContent(html);
-              history.pushState({}, '', link.href);
-            });
-          return;
-        }
-
-        // With view transitions
-        document.startViewTransition(async () => {
-          const response = await fetch(link.href);
-          const text = await response.text();
-          history.pushState({}, '', link.href);
-          updateContent(text);
-        });
-      }
-
-      // Handle back/forward navigation
-      window.addEventListener('popstate', async () => {
-        // Skip hash-only changes on the currently loaded page — browser handles scroll natively
-        if (window.location.pathname === currentPathname && window.location.hash) {
-          return;
-        }
-
-        const response = await fetch(window.location.href);
-        const text = await response.text();
-        
-        if (document.startViewTransition) {
-          document.startViewTransition(() => {
-            updateContent(text);
-          });
-        } else {
-          updateContent(text);
-        }
-      });
-
-      // Add click handler to document
-      document.addEventListener('click', handleLinkClick);
-    </script>
   </body>
   <script type="text/javascript">
     {% include card_hover.js %}
   </script>
   {% include image_dialog.html %}
 
-  <script type="speculationrules">
-    {
-      "prerender": [{
-        "where": {"href_matches": "/*"},
-        "eagerness": "moderate"
-      }]
-    }
-  </script>
+
 </html>

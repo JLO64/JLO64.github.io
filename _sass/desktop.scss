@@ -1,36 +1,20 @@
 @media (min-width: 800px) and (orientation: landscape) and (hover: hover) and (pointer: fine) {
-  .background-svg {
-    display: inline;
-  }
-  html, body {
-    background-color: #00000000;
-    border: none;
-    border-radius: 0rem;
+  html {
     font-size: 1.1rem;
   }
   .w {
-    background: var(--bg-secondary-opaque);
     max-width: 60vw;
-    border-radius: 4rem;
-    animation: w_breathe 1s infinite alternate linear;
-    padding: 1.5rem 2.4rem;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-  }
-  .page-content{
-    padding-bottom: 2rem;
-    padding-top: 7rem;
   }
 
   a:hover {
-    text-decoration-color: var(--link-underline);
-    color: var(--link-underline);
+    text-decoration-color: var(--foam);
+    color: var(--foam);
     text-decoration-thickness: 0.2rem;
     text-underline-offset: 0.4rem;
     animation: a_breathe 0.7s infinite alternate ease-in-out;
   }
   .tag:hover {
-    box-shadow: 0 0 0 0.2rem var(--card-color);
+    box-shadow: 0 0 0 0.2rem var(--overlay);
     font-weight: 999;
   }
   a li.tag:hover {
@@ -39,17 +23,15 @@
   .h1-website-title:hover {
     font-size: 3.5rem;
     font-weight: 999;
-    border: solid var(--link-underline) 0.8rem;
+    border: solid var(--iris) 0.8rem;
   }
   picture {
     img {
       height: 30vh;
     }
     img:hover {
-    /*   border-radius: 0.5rem; */
       cursor: pointer;
       border: none;
-    /*   animation: img_border_breathe 0.7s infinite alternate ease-in-out;  */
     }
   }
   .limit-homepage-posts
@@ -63,9 +45,6 @@
   .credits {
     ul {
       justify-content: space-evenly;
-      li:hover{
-        box-shadow: 0 0 0.3rem 0rem var(--shadow);
-      }
     }
   }
   .credit-links{
@@ -84,22 +63,10 @@
     font-size: 1.8rem;
     text-underline-offset: 0.6rem;
     text-decoration-thickness: 0.3rem;
+    text-decoration-color: var(--rose);
+    color: var(--rose);
     line-height: 1rem;
     font-weight: 800;
-  }
-  .a-website-title{
-    margin: auto 1rem;
-  }
-  .a-website-title:hover {
-    font-weight: 800;
-    font-size: 3.6vh;
-    line-height: 2rem;
-    padding: 0.15rem 0.4rem;
-    border: solid var(--link-underline) 0.4rem;
-    border-radius: 1.2rem;
-    text-decoration: none;
-    height: fit-content;
-    color: white;
     animation: none;
   }
   .topbar-button:hover {  
@@ -111,17 +78,14 @@
   #topbar-menu {
     display: none;
   }
-  #topbar-radio {
-    display: block;
-  }
 
   .homepage-mastodon-post {
+    @include slide-up-hover(love);
     .mastodon_image, .mastodon_post_image {
       filter: grayscale(100%) sepia(0.2) opacity(0.75);
     }
   }
   .homepage-mastodon-post:hover {
-    animation: initial_mastodon_card_breathe 0.3s forwards;
     .mastodon_image, .mastodon_post_image {
       filter: none;
     }
@@ -132,17 +96,23 @@
     }
   }
   .hardcover-book-item:hover {
-    animation: initial_card_breathe 0.3s forwards;
     .hardcover-book-image {
       filter: none;
     }
     .hardcover-book-title {
       animation: a_breathe 0.7s infinite alternate ease-in-out;
-      color: var(--link-underline);
+      color: var(--foam);
     }
   }
   .post-list-item:hover, .table-of-contents:hover {
-    animation: initial_card_breathe 0.3s forwards;
+    animation: none;
+  }
+  .post-list-item, .table-of-contents {
+    @include slide-up-hover(love);
+  }
+  .post-list-date {
+    position: relative;
+    z-index: 1;
   }
   .topbar {
     max-height: fit-content;
@@ -152,7 +122,6 @@
   }
   a.credit-color-box:hover, a.club-color-box:hover{
     animation: none;
-    font-weight: 800;
   }
   .h1-website-title {
     font-size: 3.5rem;

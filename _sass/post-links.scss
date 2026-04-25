@@ -32,19 +32,7 @@
             width: 1rem;
              
             margin-right: 0.2rem;
-            background: url('https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg') no-repeat center center / contain;
-            filter: invert(33%) sepia(9%) saturate(938%) hue-rotate(187deg) brightness(91%) contrast(93%);
-        }
-        [data-theme="dark"]{
-            a[href*="github.com"]:not([href*="https://github.com/JLO64"])::before{
-                content: "";
-                display: inline-block;
-                height: 1rem; 
-                width: 1rem;
-                 
-                margin-right: 0.2rem;
-                background: url('https://upload.wikimedia.org/wikipedia/commons/2/24/Github_logo_svg.svg') no-repeat center center / contain;
-            }
+            background: url('https://upload.wikimedia.org/wikipedia/commons/2/24/Github_logo_svg.svg') no-repeat center center / contain;
         }
 
         a[href*="obsidian.md"]:hover{

@@ -101,7 +101,7 @@ layout: default
       {% for post in sorted_posts limit:4 %}
         <li class="post-list-item">
           <a class="post_link" href="{{ post.url | relative_url }}">{{ post.title }}</a><br>
-          {{ post.date | date: site.theme_config.date_format }}
+          <span class="post-list-date">{{ post.date | date: site.theme_config.date_format }}</span>
           <ul class="tag-ul">
             {% assign sorted_tags = post.tags | sort %}
             {% for tag in sorted_tags %}
