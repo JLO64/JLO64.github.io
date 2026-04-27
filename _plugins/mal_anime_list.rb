@@ -14,6 +14,8 @@ module Jekyll
   # Falls back to committed files if the network is unavailable.
   class MalAnimeListGenerator < Generator
     safe true
+    include DataSyncHelpers
+    attr_accessor :site
 
     MAL_USERNAME = 'JLO64'
     PAGE_SIZE    = 300
@@ -27,6 +29,11 @@ module Jekyll
     }.freeze
 
     def generate(site)
+      self.site = site
+      data_file  = '_data/mal_anime_list.json'
+      return if skip_if_data_fresh?(data_file, source: site.source)
+      return if skip_if_data_fresh?(data_file, source: site.source)
+
       data_file  = File.join(site.source, '_data', 'mal_anime_list.json')
       images_dir = File.join(site.source, 'assets', 'images', 'mal')
       FileUtils.mkdir_p(images_dir)

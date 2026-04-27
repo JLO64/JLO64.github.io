@@ -9,8 +9,14 @@ require 'nokogiri'
 module Jekyll
   class MastodonFeedGenerator < Generator
     safe true
+    include DataSyncHelpers
+    attr_accessor :site
 
     def generate(site)
+      self.site = site
+      data_file = '_data/most_recent_mastodon_post.yml'
+      return if skip_if_data_fresh?(data_file, source: site.source)
+
       rss_url = 'https://gotosocial.julianlopez.net/@jlo64/feed.rss' # Replace with your Mastodon RSS feed URL
       rss_content = URI.open(rss_url).read
       rss = RSS::Parser.parse(rss_content, false)
@@ -126,7 +132,5 @@ module Jekyll
         system("jekyll build")
       end
     end
-
   end
-
 end

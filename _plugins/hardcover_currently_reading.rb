@@ -9,8 +9,14 @@ module Jekyll
   # Generator plugin to fetch currently reading books from Hardcover API
   class HardcoverCurrentlyReadingGenerator < Generator
     safe true
+    include DataSyncHelpers
+    attr_accessor :site
 
     def generate(site)
+      self.site = site
+      data_file = '_data/hardcover_currently_reading.json'
+      return if skip_if_data_fresh?(data_file, source: site.source)
+
       # Load environment variables from .env (if present)
       env_path = File.join(site.source, '.env')
       if File.exist?(env_path)

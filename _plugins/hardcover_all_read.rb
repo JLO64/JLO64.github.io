@@ -11,6 +11,8 @@ module Jekyll
   # existing file is left untouched so the site continues to build from cache.
   class HardcoverAllReadGenerator < Generator
     safe true
+    include DataSyncHelpers
+    attr_accessor :site
 
     QUERY = <<~GRAPHQL
       query AllReadBooks {
@@ -43,6 +45,11 @@ module Jekyll
     GRAPHQL
 
     def generate(site)
+      self.site = site
+      data_file = '_data/hardcover_all_read.json'
+      return if skip_if_data_fresh?(data_file, source: site.source)
+      return if skip_if_data_fresh?(data_file, source: site.source)
+
       # Load .env
       env_path = File.join(site.source, '.env')
       if File.exist?(env_path)
