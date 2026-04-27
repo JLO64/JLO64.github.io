@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<h1 class="h1-website-title noselect" style="margin: 2.5rem auto; line-height: 1;">{{ site.title }}</h1>
+<h1 class="h1-website-title homepage-h1 noselect" style="margin: 2.5rem auto; line-height: 1;">{{ site.title }}</h1>
 <div style="margin: 0 auto;" >
   <p style="text-align: center; max-width: 34rem; margin: 0 auto;">{{ site.description }}</p>
 </div>  
@@ -10,7 +10,7 @@ layout: default
   {% assign books = site.data.hardcover_currently_reading.data.me[0].user_books %}
   {% if books.size > 0 %}
   <div class="homepage-hardcover-container">
-    <h2>Books I'm Reading</h2>
+    <h2 class="homepage-section-heading">Books I'm Reading</h2>
     <ul class="hardcover-book-container">
       {% for user_book in books %}
         {% assign read = user_book.user_book_reads[0] %}
@@ -30,7 +30,7 @@ layout: default
   {% endif %}
   {% if site.data.mal_currently_watching.size > 0 %}
   <div class="homepage-mal-container">
-    <h2>Anime I'm Watching</h2>
+    <h2 class="homepage-section-heading">Anime I'm Watching</h2>
     <ul class="hardcover-book-container">
       {% for show in site.data.mal_currently_watching %}
       <li class="hardcover-book-item">
@@ -47,7 +47,7 @@ layout: default
   {% endif %}
   {% if site.data.mal_currently_reading_manga.size > 0 %}
   <div class="homepage-mal-manga-container">
-    <h2>Manga I'm Reading</h2>
+    <h2 class="homepage-section-heading">Manga I'm Reading</h2>
     <ul class="hardcover-book-container">
       {% for manga in site.data.mal_currently_reading_manga %}
       <li class="hardcover-book-item">
@@ -64,7 +64,7 @@ layout: default
   {% endif %}
   {% if site.data.hltb_currently_playing.size > 0 %}
   <div class="homepage-hltb-container">
-    <h2>Currently Playing</h2>
+    <h2 class="homepage-section-heading">Currently Playing</h2>
     <div class="hltb-small-cards">
     <ul class="hardcover-book-container">
       {% for game in site.data.hltb_currently_playing %}
@@ -86,7 +86,7 @@ layout: default
   {% endif %}
   {% if site.data.monkeytype_personal_bests.size > 0 %}
   <div class="homepage-monkeytype-container">
-    <h2>Personal Typing Record</h2>
+    <h2 class="homepage-section-heading">Personal Typing Record</h2>
     <div class="monkeytype-record">
       <a href="https://monkeytype.com/profile/JLO64" target="_blank" rel="noreferrer" class="monkeytype-wpm">{{ site.data.monkeytype_personal_bests[0].wpm }} WPM</a>
       <p class="monkeytype-date">Recorded on {{ site.data.monkeytype_personal_bests[0].timestamp }}</p>
@@ -94,7 +94,7 @@ layout: default
   </div>
   {% endif %}
   <div class="homepage_flex_divs_posts limit-homepage-posts">
-    <h2>Latest Blog Posts</h2>
+    <h2 class="homepage-section-heading">Latest Blog Posts</h2>
     {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
     {% if sorted_posts.size > 0 %}
       <ul class="post-list-container">
@@ -116,7 +116,7 @@ layout: default
     <!-- <a href="/posts">More Posts</a> -->
   </div>
   <div class="homepage-mastodon-post-container">
-    <h2>Latest Fediverse Post</h2>
+    <h2 class="homepage-section-heading">Latest Fediverse Post</h2>
       <div class="homepage-mastodon-post">
         <div class="homepage-mastodon-post-info">
           <img src="/assets/images/mastodon_profile_image.webp" class="mastodon_image"></img>

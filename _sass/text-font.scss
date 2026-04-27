@@ -62,6 +62,17 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   line-height: 3rem;
   margin-top: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.homepage-h1 {
+  width: fit-content;
+}
+
+.homepage-section-heading {
+  width: 100%;
+  text-align: center;
 }
 h2 {
   margin-left: 0rem;
