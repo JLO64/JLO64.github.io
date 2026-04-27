@@ -14,6 +14,8 @@ module Jekyll
   # Falls back to committed files if the network is unavailable.
   class HltbGamesListGenerator < Generator
     safe true
+    include DataSyncHelpers
+    attr_accessor :site
 
     HLTB_USERNAME = 'JLO64'
     HLTB_USER_ID  = 662984
@@ -31,6 +33,12 @@ module Jekyll
     ].freeze
 
     def generate(site)
+      self.site = site
+      data_file  = '_data/hltb_games_list.json'
+      return if skip_if_data_fresh?(data_file, source: site.source)
+      return if skip_if_data_fresh?(data_file, source: site.source)
+
+
       data_file  = File.join(site.source, '_data', 'hltb_games_list.json')
       images_dir = File.join(site.source, 'assets', 'images', 'hltb')
       FileUtils.mkdir_p(images_dir)

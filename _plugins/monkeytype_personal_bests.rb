@@ -7,8 +7,16 @@ module Jekyll
   # Generator plugin to fetch Monkeytype personal bests (time mode, 30s)
   class MonkeytypePersonalBestsGenerator < Generator
     safe true
+    include DataSyncHelpers
+    attr_accessor :site
 
     def generate(site)
+      self.site = site
+      data_file = '_data/monkeytype_personal_bests.json'
+      return if skip_if_data_fresh?(data_file, source: site.source)
+      return if skip_if_data_fresh?(data_file, source: site.source)
+
+
       # Load environment variables from .env (if present)
       env_path = File.join(site.source, '.env')
       if File.exist?(env_path)
