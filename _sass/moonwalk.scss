@@ -37,6 +37,19 @@ li {
   .w {
     padding: 0;
   }
+  .page-content {
+    padding-top: 4rem;
+  }
+  // Disable slide-up hover effect on cards for mobile/touch devices
+  .hardcover-book-item,
+  .monkeytype-record,
+  .homepage-mastodon-post,
+  .post-list-item,
+  .table-of-contents {
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .page-content {
