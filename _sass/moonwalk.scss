@@ -35,10 +35,13 @@ li {
 
 @media (max-width: 799px), (hover: none), (pointer: coarse) {
   .w {
-    padding: 0;
+    padding: 0 0.8rem;
   }
   .page-content {
     padding-top: 4rem !important;
+  }
+  h1:not(.h1-website-title) {
+    padding-top: 2rem;
   }
   // Disable slide-up hover effect on cards for mobile/touch devices
   .hardcover-book-item,
