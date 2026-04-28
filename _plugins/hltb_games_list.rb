@@ -34,9 +34,14 @@ module Jekyll
 
     def generate(site)
       self.site = site
-      data_file  = '_data/hltb_games_list.json'
-      return if skip_if_data_fresh?(data_file, source: site.source)
-      return if skip_if_data_fresh?(data_file, source: site.source)
+      data_file    = '_data/hltb_games_list.json'
+      derived_file = '_data/hltb_currently_playing.json'
+      # Only skip if the primary file is fresh AND the derived file also exists.
+      # On a fresh clone, the primary is committed but the derived is not,
+      # so we must still run to generate it.
+      if skip_if_data_fresh?(data_file, source: site.source) && File.exist?(File.join(site.source, derived_file))
+        return
+      end
 
 
       data_file  = File.join(site.source, '_data', 'hltb_games_list.json')
