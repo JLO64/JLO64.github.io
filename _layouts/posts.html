@@ -5,7 +5,7 @@ layout: default
 <h1>Posts Archive</h1>
 <ul>
   <h2>Tags</h2>
-  <ul class="tag-ul">
+  <ul class="tag-ul" style="padding-inline-start: 0.8rem;">
     {% assign sorted_site_tags = site.tags | sort %}
     {% for tags in sorted_site_tags %}
       {% assign tag = tags[0] %}
