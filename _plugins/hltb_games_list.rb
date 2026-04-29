@@ -105,6 +105,7 @@ module Jekyll
       FileUtils.mkdir_p(data_dir)
 
       File.write(data_file, JSON.pretty_generate(all_games))
+      mark_data_synced('_data/hltb_games_list.json', source: site.source)
       Jekyll.logger.info 'HLTB Games:', "Synced #{all_games.size} total games to hltb_games_list.json"
 
       File.write(File.join(data_dir, 'hltb_currently_playing.json'), JSON.pretty_generate(currently_playing))

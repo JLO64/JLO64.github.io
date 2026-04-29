@@ -62,6 +62,7 @@ module Jekyll
       File.open('_data/most_recent_mastodon_post.yml', 'w') do |file|
         file.write(mastodon_post.to_yaml)
       end
+      mark_data_synced('_data/most_recent_mastodon_post.yml', source: site.source)
 
       if File.exist?(mastodon_profile_image_webp_path)
         file_age = File.mtime(mastodon_profile_image_webp_path)

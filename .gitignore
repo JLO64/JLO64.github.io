@@ -20,3 +20,4 @@ _data/mal_currently_watching.json
 _data/mal_all_completed.json
 _data/hltb_currently_playing.json
 .rodney/
+_data/.sync_*
