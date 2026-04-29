@@ -117,6 +117,7 @@ module Jekyll
       File.open(file_path, 'w') do |f|
         f.write(JSON.pretty_generate(result))
       end
+      mark_data_synced('_data/hardcover_currently_reading.json', source: site.source)
     end
   end
 end

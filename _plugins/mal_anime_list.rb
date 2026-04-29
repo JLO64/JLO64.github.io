@@ -98,6 +98,7 @@ module Jekyll
       FileUtils.mkdir_p(data_dir)
 
       File.write(data_file, JSON.pretty_generate(all_anime))
+      mark_data_synced('_data/mal_anime_list.json', source: site.source)
       Jekyll.logger.info 'MAL Anime:', "Synced #{all_anime.size} total anime to mal_anime_list.json"
 
       File.write(File.join(data_dir, 'mal_currently_watching.json'), JSON.pretty_generate(currently_watching))

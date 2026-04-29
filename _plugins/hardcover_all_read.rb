@@ -48,7 +48,6 @@ module Jekyll
       self.site = site
       data_file = '_data/hardcover_all_read.json'
       return if skip_if_data_fresh?(data_file, source: site.source)
-      return if skip_if_data_fresh?(data_file, source: site.source)
 
       # Load .env
       env_path = File.join(site.source, '.env')
@@ -111,6 +110,7 @@ module Jekyll
 
       FileUtils.mkdir_p(File.join(site.source, '_data'))
       File.write(data_file, JSON.pretty_generate(books))
+      mark_data_synced('_data/hardcover_all_read.json', source: site.source)
       Jekyll.logger.info "Hardcover:", "Synced #{books.size} read books to hardcover_all_read.json"
     end
 

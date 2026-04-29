@@ -14,7 +14,6 @@ module Jekyll
       self.site = site
       data_file = '_data/monkeytype_personal_bests.json'
       return if skip_if_data_fresh?(data_file, source: site.source)
-      return if skip_if_data_fresh?(data_file, source: site.source)
 
 
       # Load environment variables from .env (if present)
@@ -68,6 +67,7 @@ module Jekyll
       File.open(file_path, 'w') do |f|
         f.write(JSON.pretty_generate(data))
       end
+      mark_data_synced('_data/monkeytype_personal_bests.json', source: site.source)
     end
   end
 end
