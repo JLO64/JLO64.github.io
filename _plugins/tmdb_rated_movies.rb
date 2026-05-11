@@ -160,7 +160,11 @@ module Jekyll
       req['Accept'] = 'application/json'
 
       res = http.request(req)
-      return nil unless res.is_a?(Net::HTTPSuccess)
+      unless res.is_a?(Net::HTTPSuccess)
+        Jekyll.logger.warn 'TMDB Movies genre error:',
+                           "HTTP #{res.code}: #{res.body[0, 300]}"
+        return nil
+      end
 
       data = JSON.parse(res.body)
       genres = data['genres'] || []

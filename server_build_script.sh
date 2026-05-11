@@ -50,17 +50,17 @@ if [ -z "${JEKYLL_BUILDER_IMAGE:-}" ]; then
   echo "JEKYLL_BUILDER_IMAGE is not set. Exiting."
   exit 1
 fi
-if [ -z "${HARDCOVER_TOKEN:-}" ]; then
-  if [ -f "$JEKYLL_DIR/.env" ]; then
-    set -a
-    . "$JEKYLL_DIR/.env"
-    set +a
-  fi
 
-  if [ -z "${HARDCOVER_TOKEN:-}" ]; then
-    echo "HARDCOVER_TOKEN is not set and .env file not found. Exiting."
-    exit 1
-  fi
+# Source .env so all API keys are available; takes precedence over any earlier KEY=VALUE args
+if [ -f "$JEKYLL_DIR/.env" ]; then
+  set -a
+  . "$JEKYLL_DIR/.env"
+  set +a
+fi
+
+if [ -z "${HARDCOVER_TOKEN:-}" ]; then
+  echo "HARDCOVER_TOKEN is not set. Exiting."
+  exit 1
 fi
 
 # Ensure PATH includes common binary locations
@@ -82,8 +82,8 @@ if [ -f "$JEKYLL_DIR/.env" ]; then
 fi
 
 rm -rf "$NGINX_DIR"/*
-docker run --rm -v "$BUILD_DIR":/srv/jekyll -e HARDCOVER_TOKEN="$HARDCOVER_TOKEN" -u "$(id -u):$(id -g)" "$JEKYLL_BUILDER_IMAGE" build
-docker run --rm -v "$BUILD_DIR":/srv/jekyll -e HARDCOVER_TOKEN="$HARDCOVER_TOKEN" -u "$(id -u):$(id -g)" "$JEKYLL_BUILDER_IMAGE" build
+docker run --rm -v "$BUILD_DIR":/srv/jekyll -e HARDCOVER_TOKEN="$HARDCOVER_TOKEN" -e TMDB_API_KEY="${TMDB_API_KEY:-}" -e MONKEYTYPE_API_KEY="${MONKEYTYPE_API_KEY:-}" -u "$(id -u):$(id -g)" "$JEKYLL_BUILDER_IMAGE" build
+docker run --rm -v "$BUILD_DIR":/srv/jekyll -e HARDCOVER_TOKEN="$HARDCOVER_TOKEN" -e TMDB_API_KEY="${TMDB_API_KEY:-}" -e MONKEYTYPE_API_KEY="${MONKEYTYPE_API_KEY:-}" -u "$(id -u):$(id -g)" "$JEKYLL_BUILDER_IMAGE" build
 cp -r "$BUILD_DIR"/_site/* "$NGINX_DIR"
 chmod -R 755 "$NGINX_DIR"
 
