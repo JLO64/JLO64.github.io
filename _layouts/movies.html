@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+<h1>Movies</h1>
+<p>A list of movies I've rated. The data on this page is sourced from my <a href="https://www.themoviedb.org/u/JLO64" target="_blank" rel="noreferrer">TMDB account</a>.</p>
+
+{% if site.data.tmdb_rated_movies %}
+{% assign movies_by_year = site.data.tmdb_rated_movies | group_by: "year" %}
+{% assign sorted_years = movies_by_year | sort: "name" | reverse %}
+
+{% for year_group in sorted_years %}
+  <div class="anime-year-section">
+    {% if year_group.name == "2026" %}
+      <h2 class="anime-year-heading">2026</h2>
+    {% elsif year_group.name == "Unknown" %}
+      <h2 class="anime-year-heading">Unknown Year</h2>
+    {% else %}
+      <h2 class="anime-year-heading">{{ year_group.name }}</h2>
+    {% endif %}
+    <ul class="hardcover-book-container">
+      {% assign sorted_movies = year_group.items | sort: "rating" | reverse %}
+      {% for movie in sorted_movies %}
+      <li class="hardcover-book-item">
+        {% if movie.poster_filepath %}
+          <img src="/{{ movie.poster_filepath }}" alt="{{ movie.title }}" class="hardcover-book-image" />
+        {% endif %}
+        <p class="hardcover-book-title">
+          <a href="https://www.themoviedb.org/movie/{{ movie.tmdb_id }}" target="_blank" rel="noreferrer">{{ movie.title }}</a>
+        </p>
+        {% if movie.rating %}
+          <p class="anime-score">{{ movie.rating }} / 10</p>
+        {% endif %}
+        {% if movie.genres.size > 0 %}
+          <p class="hardcover-book-author">
+            {% for genre in movie.genres %}
+              {{ genre }}{% unless forloop.last %}, {% endunless %}
+            {% endfor %}
+          </p>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endfor %}
+{% else %}
+<p>No movie data available yet. Check back soon!</p>
+{% endif %}

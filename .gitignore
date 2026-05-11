@@ -19,5 +19,7 @@ _data/hardcover_currently_reading.json
 _data/mal_currently_watching.json
 _data/mal_all_completed.json
 _data/hltb_currently_playing.json
+_data/tmdb_rated_movies.json
+_data/tmdb_recently_rated_movies.json
 .rodney/
 _data/.sync_*

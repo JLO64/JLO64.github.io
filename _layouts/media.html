@@ -6,6 +6,30 @@ layout: default
 <p>This page contains what I consider to be the best of the best within the media I consume.</p>
 <p>Be sure to click on "View All" to navigate to the individual pages. Hopefully you'll find something you'll like there!</p>
 
+{% if site.data.tmdb_rated_movies %}
+{% assign top_movies = site.data.tmdb_rated_movies | where_exp: "movie", "movie.rating == 10.0" | sort: "title" %}
+{% if top_movies.size > 0 %}
+<div class="media-section-header">
+  <h2>Favorite Movies</h2>
+  <a href="/movies">View all →</a>
+</div>
+<div class="anime-year-section">
+  <ul class="hardcover-book-container">
+    {% for movie in top_movies %}
+    <li class="hardcover-book-item">
+      {% if movie.poster_filepath %}
+        <img src="/{{ movie.poster_filepath }}" alt="{{ movie.title }}" class="hardcover-book-image" />
+      {% endif %}
+      <p class="hardcover-book-title">
+        <a href="https://www.themoviedb.org/movie/{{ movie.tmdb_id }}" target="_blank" rel="noreferrer">{{ movie.title }}</a>
+      </p>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+{% endif %}
+
 {% assign top_games = site.data.hltb_games_list | where: "review_score", 10 | sort: "title" %}
 {% if top_games.size > 0 %}
 <div class="media-section-header">
